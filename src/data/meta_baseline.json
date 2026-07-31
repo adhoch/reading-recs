@@ -1,0 +1,2414 @@
+{
+ "authors": {
+  "Natalie Zina Walschots": {
+   "n": 2,
+   "mean": 5.0
+  },
+  "Tamsyn Muir": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Jim Butcher": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jim  Butcher": {
+   "n": 20,
+   "mean": 4.0
+  },
+  "Lev Grossman": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "Jay Kristoff": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Robert Jackson Bennett": {
+   "n": 4,
+   "mean": 4.0
+  },
+  "Dan Simmons": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jeff VanderMeer": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Peter Watts": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "R.F. Kuang": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "Brian McClellan": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Richard  Bachman": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Richard Bachman": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Claire North": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Joe Abercrombie": {
+   "n": 4,
+   "mean": 3.25
+  },
+  "Thomas  Harris": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Sebastien de Castell": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Benjamin Liar": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Katherine Addison": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Christopher Moore": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "James   Logan": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Richard Swan": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Adrian Tchaikovsky": {
+   "n": 5,
+   "mean": 4.2
+  },
+  "Alisa Kwitney": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Martha Wells": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Django Wexler": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Christopher Buehlman": {
+   "n": 2,
+   "mean": 3.25
+  },
+  "Fonda Lee": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "K.J. Parker": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Stephen  King": {
+   "n": 37,
+   "mean": 3.7
+  },
+  "Charles Stross": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Adam L.G. Nevill": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Scott Hawkins": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Dennis E. Taylor": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Miles  Cameron": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Steven Erikson": {
+   "n": 10,
+   "mean": 4.5
+  },
+  "Matt Dinniman": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Leigh Bardugo": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "C.K. McDonnell": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Beryl  Evans": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Neil Gaiman": {
+   "n": 7,
+   "mean": 4.43
+  },
+  "Alix E. Harrow": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Susanna Clarke": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Becky Chambers": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Olivie Blake": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Ben Aaronovitch": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Robert McCammon": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Robert Jordan": {
+   "n": 3,
+   "mean": 4.0
+  },
+  "Pierce Brown": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Christopher Ruocchio": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Liu Cixin": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Andy Weir": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Vernor Vinge": {
+   "n": 3,
+   "mean": 3.67
+  },
+  "David Cote": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Seth Dickinson": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Naomi Novik": {
+   "n": 5,
+   "mean": 3.6
+  },
+  "Arkady Martine": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Stephen Briggs": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Brandon Sanderson": {
+   "n": 7,
+   "mean": 4.0
+  },
+  "Daniel Abraham": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "V.E. Schwab": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Christopher Paolini": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Terry Pratchett": {
+   "n": 19,
+   "mean": 3.74
+  },
+  "James S.A. Corey": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Helen Lowe": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Scott Lynch": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Richard K. Morgan": {
+   "n": 4,
+   "mean": 3.5
+  },
+  "Erin Morgenstern": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Stephen King": {
+   "n": 5,
+   "mean": 4.8
+  },
+  "Paul Tremblay": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Stephen              Jones": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Bram Stoker": {
+   "n": 2,
+   "mean": 3.0
+  },
+  "Nick Cutter": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "M.R. Carey": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Joe  Hill": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "Dirk Maggs": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Carrie Ryan": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Dan    Brown": {
+   "n": 2,
+   "mean": 2.0
+  },
+  "Joel Rosenberg": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Haruki Murakami": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "David Rakoff": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Max Brooks": {
+   "n": 2,
+   "mean": 5.0
+  },
+  "Guillermo del Toro": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Mira Grant": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Emily St. John Mandel": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "John Birmingham": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Tamora Pierce": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Matthew Stover": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Brent Weeks": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Patrick Rothfuss": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "Suzanne Collins": {
+   "n": 3,
+   "mean": 3.0
+  },
+  "Jack McDevitt": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Lois McMaster Bujold": {
+   "n": 10,
+   "mean": 3.9
+  },
+  "Alastair Reynolds": {
+   "n": 3,
+   "mean": 3.67
+  },
+  "Cormac McCarthy": {
+   "n": 3,
+   "mean": 4.33
+  },
+  "Timothy Zahn": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "J.K. Rowling": {
+   "n": 4,
+   "mean": 3.75
+  },
+  "Mike Shevdon": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Sarah Monette": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "China Mieville": {
+   "n": 3,
+   "mean": 4.0
+  },
+  "Alex Bledsoe": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Philip Pullman": {
+   "n": 2,
+   "mean": 2.5
+  },
+  "C.S. Lewis": {
+   "n": 3,
+   "mean": 3.33
+  },
+  "Robert Charles Wilson": {
+   "n": 3,
+   "mean": 3.33
+  },
+  "Peter F. Hamilton": {
+   "n": 6,
+   "mean": 2.17
+  },
+  "S.M. Stirling": {
+   "n": 2,
+   "mean": 3.0
+  },
+  "Harry Turtledove": {
+   "n": 3,
+   "mean": 3.33
+  },
+  "Kim Harrison": {
+   "n": 2,
+   "mean": 3.0
+  },
+  "Seth Grahame-Smith": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Eric Flint": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Matt Ruff": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "J.D. Robb": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "Patrick Ness": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Dan Wells": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "David Weber": {
+   "n": 2,
+   "mean": 2.0
+  },
+  "David Wellington": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Seanan McGuire": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Mike Carey": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "Richard Kadrey": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Harry Connolly": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Patricia Briggs": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Dean Koontz": {
+   "n": 2,
+   "mean": 4.0
+  },
+  "Rob Thurman": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Chuck Dixon": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Greg Keyes": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Dave Barry": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "C.E. Murphy": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "Simon R. Green": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Christopher Buckley": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "P.G. Wodehouse": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Helen Fielding": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Milan Kundera": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "William Faulkner": {
+   "n": 1,
+   "mean": 1.0
+  },
+  "John Kennedy Toole": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "George R.R. Martin": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "William Makepeace Thackeray": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Alan             Moore": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Mikhail Bulgakov": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jeff Lindsay": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Rick Riordan": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "L. Frank Baum": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jared Diamond": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Daniel Keyes": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Alice Sebold": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "George Eliot": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Paulo Coelho": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Homer": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Joseph Heller": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "F. Scott Fitzgerald": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "J.R.R. Tolkien": {
+   "n": 3,
+   "mean": 4.0
+  },
+  "William Golding": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "George Orwell": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Khaled Hosseini": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Jack Campbell": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "Grant Naylor": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "P.C. Hodgell": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Anthony Burgess": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Norton Juster": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Ken MacLeod": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Robert J. Sawyer": {
+   "n": 3,
+   "mean": 3.0
+  },
+  "China Miéville": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Orson Scott Card": {
+   "n": 3,
+   "mean": 3.33
+  },
+  "Karen Traviss": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Octavia E. Butler": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "Mark Twain": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Michael Crichton": {
+   "n": 3,
+   "mean": 3.67
+  },
+  "Cherie Priest": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Paolo Bacigalupi": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "Mark Charan Newton": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Michael Chabon": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "Justin Cronin": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Ilona Andrews": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "N.K. Jemisin": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Peter V. Brett": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "David Brin": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Iain M. Banks": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Douglas Adams": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "Philip K. Dick": {
+   "n": 2,
+   "mean": 4.5
+  },
+  "Joe Haldeman": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Kim Stanley Robinson": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Walter M. Miller Jr.": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "John Scalzi": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Arthur C. Clarke": {
+   "n": 5,
+   "mean": 4.0
+  },
+  "Margaret Atwood": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Neal Stephenson": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Robert A. Heinlein": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Lois Lowry": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Isaac Asimov": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Madeleine L'Engle": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Frank Herbert": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Garth Ennis": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jennifer Fallon": {
+   "n": 2,
+   "mean": 3.5
+  },
+  "Trudi Canavan": {
+   "n": 3,
+   "mean": 4.0
+  },
+  "Ellen Kushner": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "R. Scott Bakker": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Stephenie Meyer": {
+   "n": 1,
+   "mean": 2.0
+  },
+  "John Connolly": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Stina Leicht": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "David Anthony Durham": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Catherynne M. Valente": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Steven Brust": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Tad Williams": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Gregory Maguire": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Terry Goodkind": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Jasper Fforde": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Terry Brooks": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Thomas Levenson": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Glen Cook": {
+   "n": 11,
+   "mean": 4.0
+  },
+  "Jean Craighead George": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Emma Bull": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Robin Hobb": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Gene Wolfe": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Wilson Rawls": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Stephen Dobyns": {
+   "n": 4,
+   "mean": 5.0
+  },
+  "James Islington": {
+   "n": 2,
+   "mean": 5.0
+  },
+  "Liz Williams": {
+   "n": 1,
+   "mean": 2.5
+  },
+  "Marina & Sergey Dyachenko": {
+   "n": 1,
+   "mean": 4.1
+  },
+  "Daniel O'Malley": {
+   "n": 1,
+   "mean": 4.5
+  },
+  "Kage Baker": {
+   "n": 1,
+   "mean": 4.4
+  }
+ },
+ "series": {
+  "hench": {
+   "name": "Hench",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "locked tomb": {
+   "name": "The Locked Tomb",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "dresden files": {
+   "name": "The Dresden Files",
+   "n": 15,
+   "mean": 3.93,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    16.0,
+    17.0
+   ]
+  },
+  "empire of the vampire": {
+   "name": "Empire of the Vampire",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "shadow of the leviathan": {
+   "name": "Shadow of the Leviathan",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "hyperion cantos": {
+   "name": "Hyperion Cantos",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "southern reach": {
+   "name": "Southern Reach",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "firefall": {
+   "name": "Firefall",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "powder mage": {
+   "name": "Powder Mage",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "devils": {
+   "name": "The Devils",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "hannibal lecter": {
+   "name": "Hannibal Lecter",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "greatcoats": {
+   "name": "Greatcoats",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "wanderlands": {
+   "name": "The Wanderlands",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "cemeteries of amalo": {
+   "name": "The Cemeteries of Amalo",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "last legacy": {
+   "name": "The Last Legacy",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "empire of the wolf": {
+   "name": "Empire of the Wolf",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "rising world": {
+   "name": "The Rising World",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "shadow campaigns": {
+   "name": "The Shadow Campaigns",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "dark lord davi": {
+   "name": "Dark Lord Davi",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "green bone": {
+   "name": "The Green Bone Saga",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "corax": {
+   "name": "Corax Trilogy",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "holly gibney": {
+   "name": "Holly Gibney",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "laundry files": {
+   "name": "Laundry Files",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    10.0
+   ]
+  },
+  "tyrant philosophers": {
+   "name": "The Tyrant Philosophers",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "bobiverse": {
+   "name": "Bobiverse",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "traitor son": {
+   "name": "The Traitor Son Cycle",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "malazan book of the fallen": {
+   "name": "Malazan Book of the Fallen",
+   "n": 10,
+   "mean": 4.5,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0
+   ]
+  },
+  "dungeon crawler carl": {
+   "name": "Dungeon Crawler Carl",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "shadow and bone": {
+   "name": "Shadow and Bone",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "stranger times": {
+   "name": "Stranger Times",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "monk  robot": {
+   "name": "Monk & Robot",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "atlas": {
+   "name": "The Atlas",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "rivers of london": {
+   "name": "Rivers of London",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "wheel of time": {
+   "name": "Wheel of Time",
+   "n": 3,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    3.0,
+    12.0
+   ]
+  },
+  "red rising": {
+   "name": "Red Rising Saga",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "sun eater": {
+   "name": "The Sun Eater",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "remembrance of earths past": {
+   "name": "Remembrance of Earth’s Past",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "zones of thought": {
+   "name": "Zones of Thought",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "masquerade": {
+   "name": "The Masquerade",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "scholomance": {
+   "name": "The Scholomance",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "alex stern": {
+   "name": "Alex Stern",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "murderbot diaries": {
+   "name": "The Murderbot Diaries",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "teixcalaan": {
+   "name": "Teixcalaan",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "dagger and the coin": {
+   "name": "The Dagger and the Coin",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "divine cities": {
+   "name": "The Divine Cities",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "inheritance": {
+   "name": "The Inheritance Cycle",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "discworld": {
+   "name": "Discworld",
+   "n": 15,
+   "mean": 3.53,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    6.0,
+    8.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    19.0,
+    30.0,
+    33.0
+   ]
+  },
+  "expanse": {
+   "name": "The Expanse",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "wall of night": {
+   "name": "The Wall of Night",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "gentleman bastard": {
+   "name": "Gentleman Bastard",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "takeshi kovacs": {
+   "name": "Takeshi Kovacs",
+   "n": 3,
+   "mean": 3.67,
+   "vols": [
+    1.0,
+    2.0,
+    3.0
+   ]
+  },
+  "watch": {
+   "name": "Watch",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "mistborn": {
+   "name": "Mistborn",
+   "n": 4,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "shadows of the apt": {
+   "name": "Shadows of the Apt",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "shining": {
+   "name": "The Shining",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "dark tower": {
+   "name": "Dark Tower",
+   "n": 6,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0
+   ]
+  },
+  "girl with all the gifts": {
+   "name": "The Girl With All the Gifts",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "forest of hands and teeth": {
+   "name": "The Forest of Hands and Teeth",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "robert langdon": {
+   "name": "Robert Langdon",
+   "n": 2,
+   "mean": 2.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "guardians of the flame": {
+   "name": "Guardians of the Flame",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "strain": {
+   "name": "The Strain",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "newsflesh": {
+   "name": "Newsflesh",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "axis of time": {
+   "name": "Axis of Time",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "beka cooper": {
+   "name": "Beka Cooper",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "acts of caine": {
+   "name": "The Acts of Caine",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "stormlight archive": {
+   "name": "The Stormlight Archive",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "lightbringer": {
+   "name": "Lightbringer",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "kingkiller chronicle": {
+   "name": "The Kingkiller Chronicle",
+   "n": 2,
+   "mean": 4.5,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "hunger games": {
+   "name": "The Hunger Games",
+   "n": 3,
+   "mean": 3.0,
+   "vols": [
+    1.0,
+    2.0,
+    3.0
+   ]
+  },
+  "academy": {
+   "name": "The Academy",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    3.0
+   ]
+  },
+  "vorkosigan": {
+   "name": "Vorkosigan Saga",
+   "n": 8,
+   "mean": 3.88,
+   "vols": [
+    1.0,
+    2.0,
+    6.0,
+    7.0,
+    8.0,
+    12.0,
+    13.0,
+    14.0
+   ]
+  },
+  "thrawn": {
+   "name": "Thrawn Trilogy",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "harry potter": {
+   "name": "Harry Potter",
+   "n": 4,
+   "mean": 3.75,
+   "vols": [
+    2.0,
+    4.0,
+    5.0,
+    6.0
+   ]
+  },
+  "courts of the feyre": {
+   "name": "Courts of the Feyre",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "doctrine of labyrinths": {
+   "name": "Doctrine of Labyrinths",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "tufa": {
+   "name": "Tufa",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "his dark materials": {
+   "name": "His Dark Materials",
+   "n": 2,
+   "mean": 2.5,
+   "vols": [
+    1.0
+   ]
+  },
+  "chronicles of narnia": {
+   "name": "Chronicles of Narnia",
+   "n": 2,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "spin": {
+   "name": "Spin",
+   "n": 2,
+   "mean": 3.5,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "nights dawn": {
+   "name": "Night's Dawn",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "nantucket": {
+   "name": "Nantucket",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "atlantis": {
+   "name": "Atlantis",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "worldwar": {
+   "name": "Worldwar",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "temeraire": {
+   "name": "Temeraire",
+   "n": 4,
+   "mean": 3.25,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "hollows": {
+   "name": "The Hollows",
+   "n": 2,
+   "mean": 3.0,
+   "vols": [
+    1.0,
+    10.0
+   ]
+  },
+  "abraham lincoln vampire hunter": {
+   "name": "Abraham Lincoln: Vampire Hunter",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "in death": {
+   "name": "In Death",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    34.0
+   ]
+  },
+  "chaos walking": {
+   "name": "Chaos Walking",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "partials": {
+   "name": "Partials Sequence",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "honor harrington": {
+   "name": "Honor Harrington",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "laura caxton": {
+   "name": "Laura Caxton",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "october daye": {
+   "name": "October Daye",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "felix castor": {
+   "name": "Felix Castor",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "sandman slim": {
+   "name": "Sandman Slim",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "twenty palaces": {
+   "name": "Twenty Palaces",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "magicians": {
+   "name": "The Magicians",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "mercy thompson": {
+   "name": "Mercy Thompson",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "moonlight bay": {
+   "name": "Moonlight Bay",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "cal leandros": {
+   "name": "Cal Leandros",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "timeline191": {
+   "name": "Timeline-191",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "kingdoms of thorn and bone": {
+   "name": "Kingdoms of Thorn and Bone",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "walker papers": {
+   "name": "Walker Papers",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "nightside": {
+   "name": "Nightside",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "jeeves": {
+   "name": "Jeeves",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    9.0
+   ]
+  },
+  "bridget jones": {
+   "name": "Bridget Jones",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "song of ice and fire": {
+   "name": "A Song of Ice and Fire",
+   "n": 2,
+   "mean": 4.5,
+   "vols": [
+    1.0,
+    3.0
+   ]
+  },
+  "john cleaver": {
+   "name": "John Cleaver",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    2.0
+   ]
+  },
+  "dexter": {
+   "name": "Dexter",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "percy jackson and the olympians": {
+   "name": "Percy Jackson and the Olympians",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "oz": {
+   "name": "Oz",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "lord of the rings": {
+   "name": "The Lord of the Rings",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "safehold": {
+   "name": "Safehold",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    6.0
+   ]
+  },
+  "lost fleet": {
+   "name": "The Lost Fleet",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "red dwarf": {
+   "name": "Red Dwarf",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "commonwealth": {
+   "name": "Commonwealth Saga",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "kencyrath": {
+   "name": "Kencyrath",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "engines of light": {
+   "name": "Engines of Light",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "www": {
+   "name": "WWW",
+   "n": 2,
+   "mean": 3.0,
+   "vols": [
+    1.0,
+    3.0
+   ]
+  },
+  "new crobuzon": {
+   "name": "New Crobuzon",
+   "n": 2,
+   "mean": 4.5,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "emberverse": {
+   "name": "Emberverse",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "shadow": {
+   "name": "The Shadow Series",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    2.0
+   ]
+  },
+  "eschaton": {
+   "name": "Eschaton",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    2.0
+   ]
+  },
+  "wesshar wars": {
+   "name": "Wess'har Wars",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "neanderthal parallax": {
+   "name": "Neanderthal Parallax",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "patternist": {
+   "name": "Patternist",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "clockwork century": {
+   "name": "The Clockwork Century",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "inhibitor": {
+   "name": "The Inhibitor Sequence",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "legends of the red sun": {
+   "name": "Legends of the Red Sun",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "void": {
+   "name": "Void",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "passage": {
+   "name": "The Passage",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "land fit for heroes": {
+   "name": "A Land Fit for Heroes",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "kate daniels": {
+   "name": "Kate Daniels",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "demon": {
+   "name": "The Demon Cycle",
+   "n": 2,
+   "mean": 4.5,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "uplift": {
+   "name": "The Uplift Saga",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    2.0
+   ]
+  },
+  "culture": {
+   "name": "Culture",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    2.0
+   ]
+  },
+  "hitchhikers guide to the galaxy": {
+   "name": "The Hitchhiker's Guide to the Galaxy",
+   "n": 2,
+   "mean": 3.5,
+   "vols": [
+    1.0,
+    3.0
+   ]
+  },
+  "enders": {
+   "name": "Ender's Saga",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    3.0
+   ]
+  },
+  "andromeda": {
+   "name": "Andromeda",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "forever war": {
+   "name": "The Forever War",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "mars": {
+   "name": "Mars Trilogy",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "st leibowitz": {
+   "name": "St. Leibowitz",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "old mans war": {
+   "name": "Old Man's War",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "space odyssey": {
+   "name": "Space Odyssey",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "handmaids tale": {
+   "name": "The Handmaid's Tale",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "jurassic park": {
+   "name": "Jurassic Park",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "giver": {
+   "name": "Giver",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "foundation": {
+   "name": "Foundation",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "time quintet": {
+   "name": "Time Quintet",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "dune": {
+   "name": "Dune",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "hythrun chronicles demon child": {
+   "name": "Hythrun Chronicles: Demon Child",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "black magician": {
+   "name": "Black Magician",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    0.5,
+    1.0
+   ]
+  },
+  "tide lords": {
+   "name": "Tide Lords",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "riverside": {
+   "name": "Riverside",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "age of the five": {
+   "name": "Age of the Five",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "prince of nothing": {
+   "name": "The Prince of Nothing",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "twilight": {
+   "name": "Twilight Saga",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "book of lost things": {
+   "name": "The Book of Lost Things",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "long price quartet": {
+   "name": "Long Price Quartet",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "fey and the fallen": {
+   "name": "The Fey and the Fallen",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "acacia": {
+   "name": "Acacia",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "first law": {
+   "name": "The First Law",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "vlad taltos": {
+   "name": "Vlad Taltos",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "memory sorrow and thorn": {
+   "name": "Memory, Sorrow, and Thorn",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "wicked years": {
+   "name": "The Wicked Years",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "sword of truth": {
+   "name": "Sword of Truth",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "thursday next": {
+   "name": "Thursday Next",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "shannara": {
+   "name": "Shannara",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "garrett files": {
+   "name": "Garrett Files",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    4.0,
+    5.0
+   ]
+  },
+  "garrett pi": {
+   "name": "Garrett P.I.",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "chronicles of the black company": {
+   "name": "The Chronicles of the Black Company",
+   "n": 7,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    3.5,
+    4.0
+   ]
+  },
+  "world of the five gods": {
+   "name": "World of the Five Gods",
+   "n": 2,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0
+   ]
+  },
+  "rama": {
+   "name": "Rama",
+   "n": 4,
+   "mean": 4.0,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ]
+  },
+  "codex alera": {
+   "name": "Codex Alera",
+   "n": 6,
+   "mean": 4.17,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0
+   ]
+  },
+  "odd thomas": {
+   "name": "Odd Thomas",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "mountain": {
+   "name": "Mountain",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "farseer": {
+   "name": "Farseer Trilogy",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "london below": {
+   "name": "London Below",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "american gods": {
+   "name": "American Gods",
+   "n": 1,
+   "mean": 5.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "talisman": {
+   "name": "The Talisman",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
+   ]
+  }
+ }
+}

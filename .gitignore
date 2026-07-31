@@ -2,11 +2,18 @@
 dist/
 src/data.js
 
+# NOTE: src/data/ratings.json IS committed — it is the durable record of your
+# ratings, and build.py merges it into books.json.
+
 # never commit these
 *.token
 .env
 secrets*
 goodreads_library_export.csv
+# what the scripts actually open the export as — the same personal data under
+# the name fixmeta.py/rebuild_series.py/allseries.py expect
+library_backup.csv
+*.csv
 *.json.gz
 __pycache__/
 .venv/

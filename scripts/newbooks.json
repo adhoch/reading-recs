@@ -1,0 +1,1436 @@
+{
+ "_note": "Hand tags for books promoted out of ratings.json by promote.py. Same judgement, same scale as books.json — see tagging-schema.md for the axis anchors. Only 'a' is needed when the author can't be inferred from a tagged series sibling; supply 'ax' and the facets to make a book a full graph node rather than a read-only library record. cpace is intentionally absent: it is scraped community data, not a judgement, and sgscrape.py fills it.",
+ "The Jennifer Morgue": {
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "st": "ongoing"
+ },
+ "The Apocalypse Codex": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "st": "ongoing"
+ },
+ "The Rhesus Chart": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   2,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "procedural"
+  ],
+  "st": "ongoing"
+ },
+ "The Annihilation Score": {
+  "ax": [
+   4,
+   2,
+   5,
+   5,
+   3,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "procedural"
+  ],
+  "st": "ongoing"
+ },
+ "The Nightmare Stacks": {
+  "ax": [
+   5,
+   2,
+   3,
+   4,
+   3,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "ongoing"
+ },
+ "The Delirium Brief": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "church",
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "satire"
+  ],
+  "st": "ongoing"
+ },
+ "The Labyrinth Index": {
+  "ax": [
+   5,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "heist",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "noir"
+  ],
+  "st": "ongoing"
+ },
+ "A Conventional Boy": {
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   1,
+   4,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "ongoing"
+ },
+ "The Regicide Report": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "satire"
+  ],
+  "st": "ongoing"
+ },
+ "Quantum of Nightmares": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "heist",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy",
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "satire"
+  ],
+  "st": "ongoing"
+ },
+ "Season of Skulls": {
+  "ax": [
+   3,
+   3,
+   4,
+   4,
+   3,
+   4,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth",
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "satire"
+  ],
+  "st": "ongoing"
+ },
+ "Feed": {
+  "a": "Mira Grant",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "post-apocalyptic",
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Deadline": {
+  "a": "Mira Grant",
+  "ax": [
+   4,
+   2,
+   4,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "post-apocalyptic",
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Blackout": {
+  "a": "Mira Grant",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "post-apocalyptic",
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Furies of Calderon": {
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   3,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Academ's Fury": {
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Cursor's Fury": {
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Captain's Fury": {
+  "ax": [
+   5,
+   1,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Princeps' Fury": {
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "First Lord's Fury": {
+  "ax": [
+   5,
+   1,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Drawing of the Three": {
+  "ax": [
+   5,
+   1,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Waste Lands": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Wizard and Glass": {
+  "ax": [
+   3,
+   3,
+   4,
+   4,
+   4,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Wolves of the Calla": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "st": "complete-series"
+ },
+ "Song of Susannah": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Dark Tower": {
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "horror"
+  ],
+  "st": "complete-series"
+ },
+ "The Wind Through the Keyhole": {
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Black Company": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Shadows Linger": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "The White Rose": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Shadow Games": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Water Sleeps": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Soldiers Live": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Lies Weeping": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "a": "Glen Cook"
+ },
+ "Mistborn: The Well of Ascension": {
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mistborn: The Hero of Ages": {
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   2,
+   3,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mistborn: The Alloy of Law": {
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mistborn: Shadows of Self": {
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mistborn: The Bands of Mourning": {
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mistborn: The Lost Metal": {
+  "ax": [
+   3,
+   1,
+   2,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Doctor Sleep": {
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series"
+ },
+ "Empire of the Vampire": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   3,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Empire of the Dawn": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   3,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "The Golden Enclaves": {
+  "ax": [
+   5,
+   1,
+   4,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "portal"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ }
+}
