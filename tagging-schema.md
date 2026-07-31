@@ -177,8 +177,10 @@ Calibration anchors — match these scales exactly:
   Malazan: Gardens of the Moon: velocity 4, friction 5, interiority 3, prose_shine 5
   Annihilation             : velocity 2, friction 4, interiority 5, prose_shine 5
   A Psalm for the Wild-Built: velocity 1, friction 1, interiority 5, darkness 1
-  Magic Bites              : formula 5, romance_load 5
+  Magic Bites              : formula 5, romance_load 5, prose_shine 2
   Murderbot: All Systems Red: velocity 5, friction 1, interiority 4
+  Foundation               : velocity 3, prose_shine 3, darkness 3
+  The Sword of Shannara    : velocity 4, prose_shine 2, formula 5
 
 For each book below output:
 { "title", "author", "milieu": [], "engine": "", "engine_alt": [],
@@ -190,6 +192,40 @@ Books:
 <batch>
 ```
 
-At ~$0.02/batch on Sonnet, the full library runs about 17 batches. Worth spot-checking
-the `friction` column by hand — it's the axis a model is least able to judge from
-metadata alone, and it's the one that matters most for you.
+At ~$0.02/batch on Sonnet, the full library runs about 17 batches.
+
+### Measured: never merge two taggers without correcting the offset first
+
+84 books were tagged twice, independently, by two models given this document and
+the same anchors. The result, fitted on the library:
+
+```
+tagger A's tags for those 84                 grouped-CV r  0.690
+tagger B's tags, raw                                       0.472
+tagger B's tags, per-axis mean offset removed              0.700
+```
+
+They agree on judgement — per-axis correlation between them runs 0.74 to 0.92,
+and removing a constant per axis recovers everything and then some. What they
+disagree on is where the middle of each scale sits:
+
+| axis | B minus A | why |
+|---|---|---|
+| velocity | **+0.96** | anchored at 1, 2, 4, 5, 5 — nothing at 3 |
+| prose_shine | **+0.56** | every anchor was a 5 — no scale below it |
+| formula | +0.24 | one anchor, at the top |
+| darkness, friction, interiority, romance_load | ±0.13 | concrete, or anchored across the range |
+
+So the anchors did not prevent drift; they only prevented it where they spanned
+the range. `Foundation` and `The Sword of Shannara` are above to pin the middle
+and the bottom of velocity and prose_shine, which had neither.
+
+The operational rule: a tagging batch from a new source is not mergeable as-is.
+Tag ~20 books that are already tagged, take the mean difference per axis, and
+subtract it. Mixing uncorrected scales cost 0.22 of correlation here — far more
+than any disagreement about the books themselves.
+
+Worth spot-checking the `friction` column by hand — it's the axis a model is
+least able to judge from metadata alone, and it's the one that matters most for
+you. (Note that friction turned out to be one of the *stable* axes across the
+two taggers: 0.90 correlation, 73% exact. The unstable one was velocity.)
