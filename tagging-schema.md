@@ -194,36 +194,59 @@ Books:
 
 At ~$0.02/batch on Sonnet, the full library runs about 17 batches.
 
-### Measured: never merge two taggers without correcting the offset first
+### Measured: offsets dominate, and anchors do not fix them
 
-84 books were tagged twice, independently, by two models given this document and
-the same anchors. The result, fitted on the library:
+84 books were tagged four times: by A (this repo's tagger), by B and C
+independently with this document and its anchors, and by C again with the
+anchor block removed and nothing else changed.
+
+Fitted on the library, swapping each rater in for those 84 books:
 
 ```
-tagger A's tags for those 84                 grouped-CV r  0.690
-tagger B's tags, raw                                       0.472
-tagger B's tags, per-axis mean offset removed              0.700
+rater             raw     offset-corrected
+A (baseline)     0.690         0.690
+B anchored       0.472         0.700
+C anchored       0.638         0.706
+C unanchored     0.638         0.700
 ```
 
-They agree on judgement — per-axis correlation between them runs 0.74 to 0.92,
-and removing a constant per axis recovers everything and then some. What they
-disagree on is where the middle of each scale sits:
+Three things follow, and the second was a surprise.
 
-| axis | B minus A | why |
-|---|---|---|
-| velocity | **+0.96** | anchored at 1, 2, 4, 5, 5 — nothing at 3 |
-| prose_shine | **+0.56** | every anchor was a 5 — no scale below it |
-| formula | +0.24 | one anchor, at the top |
-| darkness, friction, interiority, romance_load | ±0.13 | concrete, or anchored across the range |
+**Every rater is equivalent once the offset is removed.** 0.690 to 0.706 is
+noise. No tagger here is better than another; they are differently calibrated.
 
-So the anchors did not prevent drift; they only prevented it where they spanned
-the range. `Foundation` and `The Sword of Shannara` are above to pin the middle
-and the bottom of velocity and prose_shine, which had neither.
+**The anchors buy almost nothing.** Same model, same books, anchors the only
+variable: mean absolute difference between C-anchored and C-unanchored is 0.20,
+against 0.39-0.45 between different raters. Both produce grouped-CV r of exactly
+0.638 raw. An earlier version of this file claimed velocity drifts about a point
+per batch without anchors and added two more to fix it. The controlled run does
+not support that. The anchors were retained because the unanchored run emitted
+two values outside the vocabulary (`mode: mystery`, `hidden-world-occult` filed
+under milieu) where the anchored runs emitted at most one — they appear to help
+compliance, not calibration.
 
-The operational rule: a tagging batch from a new source is not mergeable as-is.
-Tag ~20 books that are already tagged, take the mean difference per axis, and
-subtract it. Mixing uncorrected scales cost 0.22 of correlation here — far more
-than any disagreement about the books themselves.
+**Mixing uncorrected scales is the only thing that actually costs anything.**
+B raw scores 0.472 against 0.690, because 139 books in the training set are on
+A's scale and 84 are on B's. That is a bigger loss than any other choice
+documented in this project.
+
+Where the raters sit, mean across the 84:
+
+| | velocity | friction | interiority | prose_shine |
+|---|---|---|---|---|
+| A | 3.17 | 2.11 | 2.90 | 3.29 |
+| B | 4.13 | 2.00 | 2.88 | 3.85 |
+| C | 3.76 | 2.39 | 3.26 | 3.33 |
+
+A is the low outlier on velocity, not B the high one: two independent raters
+both put it 0.6 to 1.0 above A. And A's own batch sits about 0.4 to 0.8 away
+from the original 274 on several axes when compared like-for-like on 3-star
+books, so this is not a property of outside taggers. Everyone has their own
+ruler, including whoever tagged first.
+
+The operational rule: a batch from any source, including a later run by the
+same model, is not mergeable as-is. Overlap ~20 already-tagged books, take the
+mean difference per axis, subtract it. Do that and the source stops mattering.
 
 Worth spot-checking the `friction` column by hand — it's the axis a model is
 least able to judge from metadata alone, and it's the one that matters most for
