@@ -10,7 +10,7 @@
   },
   "Jim Butcher": {
    "n": 20,
-   "mean": 4.15
+   "mean": 4.1
   },
   "Lev Grossman": {
    "n": 2,
@@ -54,7 +54,7 @@
   },
   "Joe Abercrombie": {
    "n": 4,
-   "mean": 3.38
+   "mean": 3.25
   },
   "Thomas Harris": {
    "n": 1,
@@ -114,7 +114,7 @@
   },
   "Stephen King": {
    "n": 37,
-   "mean": 4.05
+   "mean": 3.96
   },
   "Charles Stross": {
    "n": 14,
@@ -229,8 +229,8 @@
    "mean": 4.0
   },
   "Brandon Sanderson": {
-   "n": 8,
-   "mean": 4.62
+   "n": 9,
+   "mean": 4.44
   },
   "Daniel Abraham": {
    "n": 2,
@@ -246,7 +246,7 @@
   },
   "Terry Pratchett": {
    "n": 19,
-   "mean": 3.94
+   "mean": 3.77
   },
   "James S.A. Corey": {
    "n": 2,
@@ -290,7 +290,7 @@
   },
   "Joe Hill": {
    "n": 2,
-   "mean": 3.5
+   "mean": 3.25
   },
   "Dirk Maggs": {
    "n": 1,
@@ -366,7 +366,7 @@
   },
   "Alastair Reynolds": {
    "n": 3,
-   "mean": 3.67
+   "mean": 3.45
   },
   "Cormac McCarthy": {
    "n": 3,
@@ -398,19 +398,19 @@
   },
   "Philip Pullman": {
    "n": 2,
-   "mean": 2.5
+   "mean": 2.25
   },
   "C.S. Lewis": {
    "n": 3,
-   "mean": 3.33
+   "mean": 3.22
   },
   "Robert Charles Wilson": {
    "n": 3,
-   "mean": 3.33
+   "mean": 3.22
   },
   "Peter F. Hamilton": {
    "n": 6,
-   "mean": 2.17
+   "mean": 2.11
   },
   "S.M. Stirling": {
    "n": 2,
@@ -422,7 +422,7 @@
   },
   "Kim Harrison": {
    "n": 2,
-   "mean": 3.0
+   "mean": 2.5
   },
   "Seth Grahame-Smith": {
    "n": 1,
@@ -638,7 +638,7 @@
   },
   "Orson Scott Card": {
    "n": 3,
-   "mean": 3.33
+   "mean": 2.89
   },
   "Karen Traviss": {
    "n": 1,
@@ -890,7 +890,7 @@
   "dresden files": {
    "name": "The Dresden Files",
    "n": 15,
-   "mean": 4.0,
+   "mean": 3.5,
    "vols": [
     1.0,
     2.0,
@@ -1283,7 +1283,7 @@
   "discworld": {
    "name": "Discworld",
    "n": 15,
-   "mean": 5.0,
+   "mean": 3.33,
    "vols": [
     1.0,
     2.0,
@@ -1567,7 +1567,7 @@
   "his dark materials": {
    "name": "His Dark Materials",
    "n": 2,
-   "mean": 2.5,
+   "mean": 2.0,
    "vols": [
     1.0
    ]
@@ -1635,7 +1635,7 @@
   "hollows": {
    "name": "The Hollows",
    "n": 2,
-   "mean": 3.0,
+   "mean": 2.0,
    "vols": [
     1.0,
     10.0
@@ -2433,6 +2433,22 @@
   },
   "green bone saga": {
    "name": "The Green Bone Saga",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "commonwealth saga": {
+   "name": "Commonwealth Saga",
+   "n": 1,
+   "mean": 2.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "inheritance cycle": {
+   "name": "The Inheritance Cycle",
    "n": 1,
    "mean": 3.0,
    "vols": [

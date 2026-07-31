@@ -113,6 +113,36 @@ def export_authors():
         return {}
 
 
+SGEXPORT = [f for f in os.listdir(ROOT) if f.startswith("storygraph") and f.endswith(".csv")]
+
+
+def export_ratings():
+    """Ratings that live only in an export, never in the app.
+
+    Most of the library was rated on Goodreads or StoryGraph years before this
+    project existed. Those books are real ratings with no books.json record, and
+    tagging one is pointless if promote.py cannot then see its rating."""
+    import csv
+    out = {}
+    for name, tcol, acol, rcol in (
+            ("library_backup.csv", "Title", "Author", "My Rating"),
+            *[(f, "Title", "Authors", "Star Rating") for f in SGEXPORT]):
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8", newline="") as f:
+            for row in csv.DictReader(f):
+                try:
+                    r = float(row.get(rcol) or 0)
+                except ValueError:
+                    continue
+                if not (1 <= r <= 5):
+                    continue
+                key = snorm(re.sub(r"\s*\(.*?\)", "", row[tcol]))
+                out.setdefault(key, (row[tcol].strip(), aname(row.get(acol) or ""), r))
+    return out
+
+
 def status_for_series(series_key, books):
     for b in books:
         if b.get("ser") and snorm(b["ser"]) == series_key:
@@ -231,6 +261,18 @@ def main():
     idx = title_index(books)
     from_export = export_authors()
     orphans = {t: v for t, v in ratings.items() if not find_book(t, idx)}
+    # Hand-tagged books whose rating exists only in an export get pulled in too,
+    # so a tagging pass over the back catalogue does not need every rating
+    # re-entered through the app first.
+    if "--from-export" in sys.argv[1:]:
+        exp = export_ratings()
+        for title in hand:
+            if title.startswith("_") or find_book(title, idx) or title in orphans:
+                continue
+            hit = exp.get(snorm(re.sub(r"\s*\(.*?\)", "", title)))
+            if hit:
+                orphans[title] = hit[2]
+                hand[title].setdefault("a", hit[1])
 
     # A rating can name a book the library already has under a different title:
     # books.json calls Mistborn's first volume "Mistborn", ISFDB and the rating

@@ -1432,5 +1432,1214 @@
    "adventure"
   ],
   "st": "complete-series"
+ },
+ "Urban Shaman": {
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   3,
+   2,
+   5
+  ],
+  "en": "investigation",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing"
+ },
+ "Angels & Demons": {
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   2,
+   5
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "st": "ongoing"
+ },
+ "The Da Vinci Code": {
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   2,
+   5
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "st": "ongoing"
+ },
+ "Dauntless": {
+  "ax": [
+   3,
+   2,
+   2,
+   3,
+   2,
+   2,
+   5
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "A Perfect Blood": {
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   4,
+   2,
+   5
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Shadow of the Hegemon": {
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "The Windup Girl": {
+  "ax": [
+   2,
+   4,
+   4,
+   5,
+   2,
+   5,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "Pandora's Star": {
+  "ax": [
+   2,
+   5,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Reality Dysfunction": {
+  "ax": [
+   2,
+   5,
+   3,
+   5,
+   2,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series"
+ },
+ "The Golden Compass": {
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "portal"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Lightning Thief": {
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   2,
+   4
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Under the Dome": {
+  "ax": [
+   3,
+   2,
+   3,
+   5,
+   1,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "Twilight": {
+  "ax": [
+   2,
+   1,
+   4,
+   2,
+   5,
+   2,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Light Fantastic": {
+  "ax": [
+   3,
+   2,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "ongoing"
+ },
+ "Terminal World": {
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "The Martian": {
+  "ax": [
+   5,
+   1,
+   2,
+   2,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "standalone"
+ },
+ "Dracula": {
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "Warbreaker": {
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "The Lion, the Witch and the Wardrobe": {
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "portal"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Eragon": {
+  "ax": [
+   3,
+   2,
+   2,
+   3,
+   2,
+   2,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Startide Rising": {
+  "ax": [
+   3,
+   4,
+   3,
+   3,
+   1,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Shadow of the Torturer": {
+  "ax": [
+   2,
+   5,
+   5,
+   4,
+   2,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "The Strain": {
+  "ax": [
+   4,
+   1,
+   2,
+   5,
+   1,
+   2,
+   3
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series"
+ },
+ "Foundation": {
+  "ax": [
+   3,
+   2,
+   2,
+   3,
+   1,
+   3,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Darkly Dreaming Dexter": {
+  "ax": [
+   4,
+   1,
+   4,
+   5,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "villain-protagonist"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "complete-series"
+ },
+ "Fool Moon": {
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "ongoing"
+ },
+ "Best Served Cold": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "The Heroes": {
+  "ax": [
+   3,
+   3,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "Horns": {
+  "ax": [
+   3,
+   2,
+   5,
+   4,
+   3,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "Snow Crash": {
+  "ax": [
+   4,
+   3,
+   2,
+   3,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "satire"
+  ],
+  "st": "standalone"
+ },
+ "The Troop": {
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "Spin": {
+  "ax": [
+   2,
+   3,
+   4,
+   4,
+   3,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Pet Sematary": {
+  "ax": [
+   3,
+   2,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "Needful Things": {
+  "ax": [
+   3,
+   2,
+   3,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "The Hunger Games": {
+  "ax": [
+   5,
+   1,
+   3,
+   4,
+   3,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Dragonbone Chair": {
+  "ax": [
+   2,
+   5,
+   3,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Wizard's First Rule": {
+  "ax": [
+   3,
+   2,
+   2,
+   4,
+   3,
+   2,
+   4
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Mort": {
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   2,
+   4,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "ongoing"
+ },
+ "The Color of Magic": {
+  "ax": [
+   3,
+   2,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "ongoing"
  }
 }
