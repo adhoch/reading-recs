@@ -85,8 +85,13 @@ def series_gaps(all_series, rated):
     return out
 
 
-def blocked(books, ratings):
-    """Ratings that cannot become library records for want of an author."""
+def blocked(books, ratings, all_series, next_series):
+    """Ratings that cannot become library records for want of an author.
+
+    This must ask the same question promote.py asks -- can an author be
+    inferred? -- not the looser "is this title in an export?". The loose test
+    listed nine books as needing you when promote.py could file all but two of
+    them from a series sibling.""" 
     have = {stem(b["t"]) for b in books}
     known = set()
     for fn in ("library_backup.csv", *[f for f in os.listdir(ROOT)
@@ -96,10 +101,26 @@ def blocked(books, ratings):
             continue
         with open(p, encoding="utf-8", newline="") as f:
             known |= {stem(r["Title"]) for r in csv.DictReader(f)}
-    tagged_series = {snorm(b["ser"]) for b in books if b.get("ser")}
+    by_series = {}
+    for b in books:
+        if b.get("ser"):
+            by_series.setdefault(snorm(b["ser"]), b["a"])
     out = []
     for title in ratings:
         if stem(title) in have or stem(title) in known:
+            continue
+        key = name = None
+        for src in (all_series, next_series):
+            for k, e in src.items():
+                for v in (e.get("vols") or e.get("next") or []):
+                    if snorm(v.get("t", "")) == snorm(title):
+                        key, name = k, e.get("name")
+                        break
+                if key:
+                    break
+            if key:
+                break
+        if key and (by_series.get(key) or by_series.get(snorm(name or ""))):
             continue
         out.append({"t": title, "a": "", "why": "blocked"})
     return out
@@ -113,7 +134,7 @@ def main():
 
     q = {"read": storygraph_unrated(rated),
          "gap": series_gaps(allser, rated),
-         "blocked": blocked(books, ratings)}
+         "blocked": blocked(books, ratings, allser, load("next_in_series"))}
     for k, v in q.items():
         print(f"  {k:<9}{len(v):>4}")
     print(f"  {'total':<9}{sum(len(v) for v in q.values()):>4}")

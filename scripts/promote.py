@@ -85,11 +85,20 @@ def locate_in_series(title, all_series, next_series):
     return None, None, None
 
 
-def author_for_series(series_key, books):
-    """The author of an already-tagged volume of the same series."""
+def author_for_series(series_key, books, series_name=None):
+    """The author of an already-tagged volume of the same series.
+
+    all_series.json keys four series short -- "corax" where books.json says
+    "Corax Trilogy" -- so an exact key match misses a sibling that is sitting
+    right there. The display name is the thing both sources agree on, which is
+    the same reconciliation buildShelves does in the viewer."""
     for b in books:
         if b.get("ser") and snorm(b["ser"]) == series_key:
             return b["a"]
+    if series_name:
+        for b in books:
+            if b.get("ser") and snorm(b["ser"]) == snorm(series_name):
+                return b["a"]
     return None
 
 
@@ -143,10 +152,14 @@ def export_ratings():
     return out
 
 
-def status_for_series(series_key, books):
+def status_for_series(series_key, books, series_name=None):
     for b in books:
         if b.get("ser") and snorm(b["ser"]) == series_key:
             return b.get("st")
+    if series_name:
+        for b in books:
+            if b.get("ser") and snorm(b["ser"]) == snorm(series_name):
+                return b.get("st")
     return None
 
 
@@ -318,7 +331,7 @@ def main():
         spec = hand.get(title, {})
         key, name, ordinal = locate_in_series(title, all_series, next_series)
         author = (spec.get("a")
-                  or (author_for_series(key, books) if key else None)
+                  or (author_for_series(key, books, name) if key else None)
                   or from_export.get(snorm(title)))
         if not author:
             blocked.append((title, "no author — not in the export and no tagged sibling "
@@ -336,7 +349,7 @@ def main():
             rec["en"] = spec["en"]
             for k in FACET_KEYS:
                 rec[k] = spec.get(k, [])
-            rec["st"] = spec.get("st") or status_for_series(key, books) or "standalone"
+            rec["st"] = spec.get("st") or status_for_series(key, books, name) or "standalone"
             rec["cpace"] = spec.get("cpace")
             if spec.get("nrev") is not None:
                 rec["nrev"] = spec["nrev"]

@@ -21,7 +21,7 @@
    "mean": 4.33
   },
   "Robert Jackson Bennett": {
-   "n": 4,
+   "n": 5,
    "mean": 4.0
   },
   "Dan Simmons": {
@@ -97,8 +97,8 @@
    "mean": 4.0
   },
   "Django Wexler": {
-   "n": 2,
-   "mean": 4.0
+   "n": 4,
+   "mean": 4.25
   },
   "Christopher Buehlman": {
    "n": 2,
@@ -109,7 +109,7 @@
    "mean": 3.0
   },
   "K.J. Parker": {
-   "n": 1,
+   "n": 3,
    "mean": 5.0
   },
   "Stephen King": {
@@ -321,8 +321,8 @@
    "mean": 5.0
   },
   "Guillermo del Toro": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 3.5
   },
   "Mira Grant": {
    "n": 3,
@@ -413,12 +413,12 @@
    "mean": 2.25
   },
   "S.M. Stirling": {
-   "n": 2,
-   "mean": 3.0
+   "n": 4,
+   "mean": 3.75
   },
   "Harry Turtledove": {
-   "n": 3,
-   "mean": 3.33
+   "n": 5,
+   "mean": 3.6
   },
   "Kim Harrison": {
    "n": 2,
@@ -1026,10 +1026,12 @@
   },
   "shadow campaigns": {
    "name": "The Shadow Campaigns",
-   "n": 1,
-   "mean": 4.0,
+   "n": 3,
+   "mean": 4.33,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "dark lord davi": {
@@ -1266,10 +1268,11 @@
   },
   "divine cities": {
    "name": "The Divine Cities",
-   "n": 1,
-   "mean": 3.0,
+   "n": 2,
+   "mean": 3.5,
    "vols": [
-    1.0
+    1.0,
+    2
    ]
   },
   "inheritance": {
@@ -1424,10 +1427,11 @@
   },
   "strain": {
    "name": "The Strain",
-   "n": 1,
-   "mean": 3.0,
+   "n": 2,
+   "mean": 3.5,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "newsflesh": {
@@ -1600,10 +1604,12 @@
   },
   "nantucket": {
    "name": "Nantucket",
-   "n": 1,
-   "mean": 3.0,
+   "n": 3,
+   "mean": 4.0,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "atlantis": {
@@ -1616,10 +1622,12 @@
   },
   "worldwar": {
    "name": "Worldwar",
-   "n": 1,
+   "n": 3,
    "mean": 4.0,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "temeraire": {
@@ -2418,10 +2426,12 @@
   },
   "corax trilogy": {
    "name": "Corax Trilogy",
-   "n": 1,
+   "n": 3,
    "mean": 5.0,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "red rising saga": {
