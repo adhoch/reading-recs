@@ -394,3 +394,157 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
 .sync-adv input:focus{border-color:var(--dim)}
 .sync-note{font-size:10.5px;color:var(--quest);margin-top:7px;line-height:1.45;min-height:1em}
 .sync-note.bad{color:var(--campaign-war)}
+
+/* ---- split layout: graph above, book below ----
+   Both halves derive from one --split-at value so they can never disagree and
+   leave a gap or an overlap. */
+:root{--split-at:50vh}
+.views .split-btn{margin-left:7px;border-left:1px solid var(--rule)}
+.views .split-btn.on{background:var(--vellum);color:var(--field);border-color:var(--vellum)}
+body.split .stage{height:var(--split-at);min-height:0;max-height:var(--split-at)}
+body.split .rail.right{
+  position:fixed; left:264px; right:0; top:var(--split-at); bottom:0; width:auto;
+  border-left:none; border-top:1px solid var(--rule);
+  transform:none; z-index:12; background:var(--field2);
+  overflow-y:auto; padding:20px 26px 30px}
+body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
+@media (max-width:1000px){
+  :root{--split-at:42vh}
+  body.split .rail.right{left:0;bottom:56px;padding:16px}
+  body.split .tabbar{z-index:30}
+}
+.sb{gap:8px}
+.sb-fit{font-family:var(--mono);font-size:10.5px;color:var(--faint);min-width:30px;text-align:right}
+.notin{font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rule);margin-left:8px}
+.minirate{display:inline-flex;gap:1px;flex:0 0 auto}
+.minirate .ms{background:none;border:none;padding:1px 2px;font-size:12px;line-height:1;
+  color:var(--rule);cursor:pointer;transition:color .1s}
+.minirate .ms:hover,.minirate:hover .ms{color:var(--dim)}
+.minirate .ms.on{color:var(--heist)}
+.minirate .ms:hover~.ms{color:var(--rule)}
+.marklink{background:none;border:1px solid var(--rule);padding:2px 7px;font-size:9px;
+  letter-spacing:.1em;color:var(--faint);cursor:pointer;text-transform:uppercase;font-family:var(--mono)}
+.marklink:hover{color:var(--heist);border-color:var(--heist)}
+
+/* ---- polish pass ---- */
+/* Shelf rows are now three-part (number · title · stars). Give them a stable
+   grid so titles don't jitter as ratings appear, and keep the stars from
+   crowding the title on narrow rails. */
+.sb{display:grid;grid-template-columns:30px 1fr auto auto;align-items:baseline;gap:9px}
+.sb-t{min-width:0}
+.minirate .ms{padding:2px 2px}
+.sb:hover .minirate .ms{color:var(--dim)}
+.sb:hover .minirate .ms.on{color:var(--heist)}
+
+/* A rated row should read as settled, an unrated one as an open question. */
+.sb:not(.unread){background:linear-gradient(90deg,rgba(191,138,74,.055),transparent 42%)}
+
+/* Series header: the count of what's outstanding is the useful number, so
+   give it more presence than the source credit. */
+.xrow{font-size:10.5px;color:var(--dim)}
+.shelf-n small{opacity:.55}
+
+/* Detail panel rhythm: the blocks had inconsistent spacing as they accumulated. */
+.facet{margin-bottom:13px}
+.d-title{line-height:1.18}
+.why{margin-top:14px}
+
+/* Focus states were only on some controls. */
+.ms:focus-visible,.sb:focus-visible,.shelf-h:focus-visible{
+  outline:2px solid var(--heist);outline-offset:2px}
+
+/* Long author/series names shouldn't push the counts off the row. */
+.shelf-h{gap:12px}
+.shelf-n{min-width:0}
+
+/* Split view: the detail panel is wide there, so let the blurb breathe rather
+   than clamping to the narrow-rail measure. */
+body.split .blurb{max-height:none;-webkit-mask-image:none;mask-image:none}
+body.split .blurb-more{display:none}
+body.split #detail{max-width:1100px}
+
+@media (max-width:1000px){
+  /* stars must be thumb-sized; the row becomes two lines rather than cramming */
+  .sb{grid-template-columns:28px 1fr auto;grid-template-areas:"v t f" "r r r";row-gap:2px}
+  .sb-v{grid-area:v} .sb-t{grid-area:t} .sb-fit{grid-area:f}
+  .minirate{grid-area:r;justify-self:start;gap:4px;margin-top:2px}
+  .minirate .ms{font-size:19px;padding:7px 6px}
+}
+.fsbox{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+#fs-stamp{color:var(--quest);font-family:var(--mono);font-size:9.5px}
+
+/* ---- shelves + list: second pass ----
+   Both views were built at rail width and then inherited a 1500px stage. A row
+   that puts the name at x=176 and its numbers at x=1300 has 1100px of nothing in
+   between, and the eye stops carrying the association across it. Everything below
+   is either that problem or a consequence of it. */
+/* 860 puts the title column at ~490px. Wider and a short title like "Bird Box"
+   strands half a screen from its own numbers; narrower and the long ones all
+   ellipsize. */
+:root{--measure:860px}
+#shelf-rows,.shelf-bar,.lv-head,.lv-rows{max-width:var(--measure);margin-left:auto;margin-right:auto}
+
+/* The scroll container reserves its top band with padding, but padding does not
+   clip: rows scrolled up into it kept painting *above* the sticky filter bar and
+   collided with the floating view tabs. The sticky element has to own that band
+   rather than start below it, so it absorbs the reserve as its own padding and
+   pulls itself up by the same amount. */
+:root{--view-pad:62px}
+.shelf-bar,.lv-head{top:0;padding-top:var(--view-pad);margin-top:calc(-1 * var(--view-pad));
+  z-index:4}
+/* Sticky headers sit at the padding-box top, so browser-driven scrolling
+   (keyboard, in-page anchors) would otherwise land a row underneath them. */
+.listview{scroll-padding-top:calc(var(--view-pad) + 46px)}
+/* A long bibliography — Discworld runs to forty volumes — loses its own name off
+   the top while you are still inside it. */
+.shelf.open .shelf-h{position:sticky;top:calc(var(--view-pad) + 40px);z-index:1;
+  background:var(--field);padding:5px 0;margin:-5px 0}
+
+/* The source credit was #38304A on #17131C: a contrast ratio of about 1.5:1,
+   which is not dim, it is invisible. */
+.shelf-n small{color:var(--faint);opacity:1;font-size:8.5px}
+/* "4.5★ · 12" gave no clue what 12 counted. */
+.shelf-m em{font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--faint);margin-left:6px}
+
+/* List: the fit bar used to span the whole title column — ~990px encoding a
+   spread of 3.4 to 5.0, so adjacent rows differed by a couple of pixels while the
+   bar shouted louder than anything else on screen. It also read as a progress bar
+   to 100%. Now it underlines its own number, where the comparison is short enough
+   to actually make. */
+.lv-n.hi{position:relative;padding-bottom:6px}
+.lv-bar{position:absolute;left:auto;right:0;bottom:0;height:2px;display:block;
+  max-width:100%;opacity:.85}
+.lv-row{padding:9px 24px}
+.lv-t{display:block}
+
+/* Fit is banded here for the same reason the ranked panel bands it: the residual
+   is +/-0.63, so a table ordering 4.99 above 4.93 to two decimals is asserting a
+   precision the model does not have. */
+.lv-band{display:flex;justify-content:space-between;max-width:var(--measure);
+  margin:0 auto;padding:16px 24px 5px;font-family:var(--mono);font-size:9px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.lv-band+.lv-row{border-top:1px solid var(--rule)}
+.lv-sort{white-space:nowrap}
+
+/* Shelf narrowing: the text box answers "where is X", the status buttons answer
+   "what have I actually got going". */
+.shelf-bar{flex-wrap:wrap}
+#shelf-find{flex:0 1 190px;background:var(--field);border:1px solid var(--rule);
+  color:var(--vellum);font-family:var(--serif);font-size:12px;padding:6px 9px;outline:none}
+#shelf-find:focus{border-color:var(--dim)}
+#shelf-find::placeholder{color:var(--faint);font-style:italic}
+#sf-all,#sf-started,#sf-open{margin-left:0}
+#sf-all{margin-left:6px}
+.shelf-hint{flex:1 0 100%;margin-left:0;padding-top:2px}
+/* A shelf with no bibliography can't claim completeness, and shouldn't look as
+   settled as one that can. */
+.shelf-u.thin{color:var(--rule);font-style:italic;text-transform:none;letter-spacing:0}
+
+@media (max-width:1000px){
+  :root{--measure:none}
+  .lv-row{padding:11px 16px}
+  .lv-band{padding:14px 16px 5px}
+  .shelf.open .shelf-h{top:0}
+}

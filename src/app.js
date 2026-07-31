@@ -1,3 +1,9 @@
+const GRAPH=(window.__DATA__&&window.__DATA__.graph)||null;
+const CLUSTERS=(GRAPH&&GRAPH.clusters)||[];
+/* Hues spaced widely enough that neighbouring clusters never read as the same
+   family. Eleven groups is close to the limit for categorical colour. */
+const CLUSTER_COLORS=["#c9873f","#6f8fbe","#a8607a","#5f9e86","#b08bc9",
+  "#c2a24a","#7d8fa8","#bd6f52","#68a6b8","#9d7cb0","#8a9a5b"];
 const ENGINES=["investigation","heist","campaign-war","mystery-box","ascent-of-power","institutional-politics","survival","quest"];
 const AXES=[
   {k:0,n:"velocity",dir:"min",note:"how hard the plot pulls"},
@@ -32,21 +38,40 @@ const links=[];
     if(w>0)raw.push({s:i,t:j,w,sh});
   }
   raw.sort((a,b)=>b.w-a.w);
-  const deg=new Array(nodes.length).fill(0);
-  raw.forEach(e=>{
-    if(e.w>=6||deg[e.s]<4||deg[e.t]<4){
-      links.push({source:nodes[e.s],target:nodes[e.t],w:e.w,shared:[...new Set(e.sh)]});
-      deg[e.s]++;deg[e.t]++;
+  if(GRAPH&&GRAPH.edges){
+    /* Precomputed k-nearest-neighbour edges: each book keeps only its four
+       strongest links. Drawing all 17,456 shared-tag pairs gave a graph with
+       modularity 0.18 — statistically a single blob. Keeping the top four per
+       book gives 0.72 and eleven legible clusters. */
+    const idx=new Map(raw.map(e=>[e.s+":"+e.t,e]));
+    for(const [x,y] of GRAPH.edges.map(e=>[e[0],e[1]])){
+      const e=idx.get(x+":"+y)||idx.get(y+":"+x);
+      links.push({source:nodes[x],target:nodes[y],
+        w:e?e.w:2,shared:e?[...new Set(e.sh)]:[],
+        same:nodes[x].cl===nodes[y].cl});
     }
-  });
+  } else {
+    const deg=new Array(nodes.length).fill(0);
+    raw.forEach(e=>{
+      if(e.w>=6||deg[e.s]<4||deg[e.t]<4){
+        links.push({source:nodes[e.s],target:nodes[e.t],w:e.w,shared:[...new Set(e.sh)]});
+        deg[e.s]++;deg[e.t]++;
+      }
+    });
+  }
 }
+
 
 /* ---------- state ---------- */
 const limits={};AXES.forEach(a=>limits[a.k]=a.dir==="min"?1:5);
 let showRead=true,showRec=true,offEngines=new Set();
 let hover=null,selected=null;
 const REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
-let flat=false,spin=true,spotlight=true;
+/* Autorotation is off unless you turn it on — it competes with reading labels,
+   and the preference sticks. */
+let flat=false,spotlight=true,cluster=true;
+let spin=(()=>{try{return localStorage.getItem("reading-network:spin")==="1"}catch(e){return false}})();
+const offClusters=new Set();
 /* Three ways in, because one is never enough for 274 books:
    graph = how books relate · field = why the model scores them · list = pick one */
 let view="mood";
@@ -69,12 +94,59 @@ function passes(b){
   if(b.r>0&&!showRead)return false;
   if(b.r===0&&!showRec)return false;
   if(offEngines.has(b.en))return false;
+  if(cluster&&offClusters.has(b.cl))return false;
   if(!AXES.every(a=>a.dir==="min"?b.ax[a.k]>=limits[a.k]:b.ax[a.k]<=limits[a.k]))return false;
   if(activeTags.size){
     const T=b._tags||(b._tags=tagsOf(b));
     for(const t of activeTags)if(!T.has(t))return false;
   }
   return true;
+}
+
+/* ---------- cluster clouds ---------- */
+/* A soft translucent hull behind each group. Convex hull of the member points,
+   expanded outward from the centroid and drawn with a quadratic-curve pass so
+   the outline reads as a cloud rather than a polygon. */
+let CLOUDS_DONE=false;
+function hull(pts){
+  if(pts.length<3)return pts;
+  const p=pts.slice().sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+  const cross=(o,a,b)=>(a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);
+  const lo=[],up=[];
+  for(const q of p){while(lo.length>=2&&cross(lo[lo.length-2],lo[lo.length-1],q)<=0)lo.pop();lo.push(q);}
+  for(let i=p.length-1;i>=0;i--){const q=p[i];
+    while(up.length>=2&&cross(up[up.length-2],up[up.length-1],q)<=0)up.pop();up.push(q);}
+  lo.pop();up.pop();
+  return lo.concat(up);
+}
+function drawClouds(){
+  if(!cluster||!CLUSTERS.length)return;
+  for(let ci=0;ci<CLUSTERS.length;ci++){
+    const mem=nodes.filter(n=>n.cl===ci&&passes(n));
+    if(mem.length<3)continue;
+    const pts=mem.map(n=>[n.PX,n.PY]);
+    let cx=0,cy=0;
+    for(const p of pts){cx+=p[0];cy+=p[1];}
+    cx/=pts.length;cy/=pts.length;
+    const h=hull(pts);
+    if(h.length<3)continue;
+    const pad=mem.length>20?34:26;
+    const ex=h.map(([x,y])=>{
+      const dx=x-cx,dy=y-cy,d=Math.hypot(dx,dy)||1;
+      return [x+dx/d*pad, y+dy/d*pad];
+    });
+    ctx.beginPath();
+    for(let i=0;i<ex.length;i++){
+      const a=ex[i],b=ex[(i+1)%ex.length];
+      const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2;
+      if(i===0)ctx.moveTo(mx,my); else ctx.quadraticCurveTo(a[0],a[1],mx,my);
+    }
+    ctx.closePath();
+    ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],flat?.10:.065,0);
+    ctx.fill();
+    ctx.strokeStyle=shadeHex(CLUSTER_COLORS[ci],flat?.22:.13,0);
+    ctx.lineWidth=1;ctx.stroke();
+  }
 }
 
 /* ---------- canvas ---------- */
@@ -102,6 +174,15 @@ const BANDMID=[4.8,4.4,4.0];
 const ratingOf=n=>n.r>0?n.r:BANDMID[band(n.p)];
 const SIZE=v=>3.2+(v-1)*2.1;                 // 1 star -> 3.2px, 5 star -> 11.6px
 const radius=n=>SIZE(ratingOf(n));
+let colorBy="cluster";
+const nodeHex=n=>(colorBy==="cluster"&&n.cl!=null&&CLUSTER_COLORS[n.cl])?CLUSTER_COLORS[n.cl]:(COLOR[n.en]||"#888");
+function shadeHex(hex,a,fog){
+  const h=(hex||"#888").replace("#","");
+  const c=[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];
+  const f=Math.max(0,Math.min(1,fog||0));
+  const m=t=>Math.round(c[t]+(FIELD_RGB[t]-c[t])*f);
+  return `rgba(${m(0)},${m(1)},${m(2)},${a})`;
+}
 
 let userZoomed=false;
 function drawFieldAxes(){
@@ -189,6 +270,18 @@ nodes.forEach((n,i)=>{                       // spherical Fibonacci seed
   n.vx=n.vy=n.vz=0;
 });
 
+/* Anchor each cluster on a ring and pull its members toward it. Springs alone
+   leave groups interleaved no matter how much repulsion you add — separation
+   has to be imposed by the layout, as in a community map. */
+let CLUSTER_ANCHORS=[];
+(function(){
+  const k=Math.max(1,CLUSTERS.length), R=460;
+  for(let i=0;i<k;i++){
+    const a=(i/k)*Math.PI*2;
+    CLUSTER_ANCHORS.push({x:Math.cos(a)*R, y:Math.sin(a)*R*0.70, z:((i%3)-1)*150});
+  }
+})();
+
 function step(){
   if(view==="field"){        // pinned layout: springs and repulsion would fight
     for(const n of nodes){   // the pins, so the graph forces are skipped entirely
@@ -219,9 +312,18 @@ function step(){
       b.vx-=dx*w;b.vy-=dy*w;b.vz-=dz*w;
     }
   }
+  if(cluster){
+    for(const n of nodes){
+      const a=CLUSTER_ANCHORS[n.cl];
+      if(!a)continue;
+      n.vx+=(a.x-n.x)*.024*alpha; n.vy+=(a.y-n.y)*.024*alpha;
+      if(!flat)n.vz+=(a.z-n.z)*.024*alpha;
+    }
+  }
+  const grav=cluster?.012:.055;
   for(const n of nodes){                     // gravity toward origin
-    n.vx+=-n.x*.055*alpha; n.vy+=-n.y*.055*alpha;
-    n.vz+=flat? -n.z*.34 : -n.z*.055*alpha;  // flat mode collapses depth
+    n.vx+=-n.x*grav*alpha; n.vy+=-n.y*grav*alpha;
+    n.vz+=flat? -n.z*.34 : -n.z*grav*alpha;  // flat mode collapses depth
     n.vx*=VDECAY;n.vy*=VDECAY;n.vz*=VDECAY;
     const vmax=140, v2=n.vx*n.vx+n.vy*n.vy+n.vz*n.vz;  // clamp runaway velocity
     if(v2>vmax*vmax){const s=vmax/Math.sqrt(v2);n.vx*=s;n.vy*=s;n.vz*=s;}
@@ -270,6 +372,7 @@ function project(){
 function draw(){
   project();
   ctx.clearRect(0,0,W,H);
+  drawClouds();                 // behind everything, so edges and dots sit on top
   const focus=hover??selected;
   const near=new Set();
   if(focus!==null)for(const l of links){
@@ -324,16 +427,16 @@ function draw(){
         const t=tier(n);
         for(let h=t;h>=1;h--){                 // halo rings: one per band, never continuous
           ctx.beginPath();ctx.arc(n.PX,n.PY,rr+h*4.5*n.PK,0,6.2832);
-          ctx.strokeStyle=shade(n.en,a*(.3-h*.06),n.fog*.5);
+          ctx.strokeStyle=shadeHex(nodeHex(n),a*(.3-h*.06),n.fog*.5);
           ctx.lineWidth=Math.max(.8,1.4*n.PK);ctx.stroke();
         }
         ctx.beginPath();ctx.arc(n.PX,n.PY,rr,0,6.2832);
-        ctx.fillStyle=shade(n.en,a*.3,n.fog);ctx.fill();
-        ctx.strokeStyle=shade(n.en,a,n.fog*.5);
+        ctx.fillStyle=shadeHex(nodeHex(n),a*.3,n.fog);ctx.fill();
+        ctx.strokeStyle=shadeHex(nodeHex(n),a,n.fog*.5);
         ctx.lineWidth=Math.max(1.4,2.6*n.PK);ctx.stroke();
       }else{
         ctx.beginPath();ctx.arc(n.PX,n.PY,rr,0,6.2832);
-        ctx.fillStyle=shade(n.en,a,n.fog);ctx.fill();
+        ctx.fillStyle=shadeHex(nodeHex(n),a,n.fog);ctx.fill();
       }
       if(isF||n.id===selected){
         ctx.beginPath();ctx.arc(n.PX,n.PY,rr+5,0,6.2832);
@@ -359,6 +462,30 @@ function draw(){
           txt:rec?nm+"  "+n.p.toFixed(1):nm,
           y:n.PY+rr+5+(rec?tier(n)*4*n.PK:0)});
       }
+    }
+  }
+
+  // Cluster names, drawn at each group's centroid before book titles claim space
+  CLOUDS_DONE=false;
+  if(cluster&&focus===null&&CLUSTERS.length){
+    ctx.textAlign="center";ctx.textBaseline="middle";
+    for(let ci=0;ci<CLUSTERS.length;ci++){
+      const mem=nodes.filter(n=>n.cl===ci&&passes(n));
+      if(mem.length<4)continue;
+      let x=0,y=0,k=0;
+      for(const n of mem){x+=n.PX;y+=n.PY;k+=n.PK;}
+      x/=mem.length;y/=mem.length;k/=mem.length;
+      const lab=(CLUSTERS[ci].label||"").toUpperCase();
+      ctx.font="600 "+Math.max(9,10.5*Math.min(1.2,k))+"px 'IBM Plex Mono',ui-monospace,monospace";
+      const w=ctx.measureText(lab).width;
+      const cy=y-46*k;
+      ctx.fillStyle=shade("field",.72,0);
+      ctx.fillRect(x-w/2-8,cy-9,w+16,18);
+      ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],.95,0);
+      ctx.fillText(lab,x,cy);
+      ctx.font="9px 'IBM Plex Mono',ui-monospace,monospace";
+      ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],.45,0);
+      ctx.fillText(mem.length+" books",x,cy+15);
     }
   }
 
@@ -422,9 +549,9 @@ function draw(){
       ctx.textAlign="center";ctx.textBaseline="middle";
       ctx.fillStyle=shade("field",.92,0);
       ctx.fillRect(bx-w/2-7,by-8,w+14,16);
-      ctx.strokeStyle=shade(f.en,.5,0);ctx.lineWidth=1;
+      ctx.strokeStyle=shadeHex(nodeHex(f),.5,0);ctx.lineWidth=1;
       ctx.strokeRect(bx-w/2-7,by-8,w+14,16);
-      ctx.fillStyle=shade(f.en,.95,0);
+      ctx.fillStyle=shadeHex(nodeHex(f),.95,0);
       ctx.fillText(txt,bx,by);
     }
   }
@@ -545,7 +672,7 @@ function renderRanked(){
     }
     h+='<div class="rank" data-id="'+n.id+'"><span class="rank-s">'+n.p.toFixed(1)+'</span>'+
        '<span class="rank-t">'+n.t+'<i>'+n.a+'</i></span>'+
-       '<span class="rank-bar"><div style="width:'+Math.round((n.p-3.5)/1.5*100)+'%;background:'+COLOR[n.en]+'"></div></span></div>';
+       '<span class="rank-bar"><div style="width:'+Math.round((n.p-3.5)/1.5*100)+'%;background:'+nodeHex(n)+'"></div></span></div>';
   });
   h+='<p class="caveat">Scored from the seven register axes only — the facets turned out to carry '+
      'no predictive signal, so they build the graph but not the score. Model agrees with past ratings '+
@@ -578,8 +705,11 @@ function predBlock(b){
      3. GitHub gist   — optional cross-device sync with a token you supply
    Layer 1 covers the common case; 2 and 3 exist because a browser profile is
    not a backup. Nothing is sent anywhere unless you configure layer 3. */
-const LS_KEY="reading-network:ratings", LS_TOK="reading-network:gist";
-let myRatings={};
+const LS_KEY="reading-network:ratings", LS_LOG="reading-network:log", LS_TOK="reading-network:gist";
+let myRatings={}, ratingLog=[];
+/* Ratings committed to src/data/ratings.json arrive baked into the data, so the
+   app starts from whatever git already knows. */
+const COMMITTED=(window.__DATA__&&window.__DATA__.ratings&&window.__DATA__.ratings.ratings)||{};
 let storageOK=(()=>{try{localStorage.setItem("__t","1");localStorage.removeItem("__t");return true}
   catch(e){return false}})();
 
@@ -588,12 +718,17 @@ function loadRatings(){
   try{
     const raw=localStorage.getItem(LS_KEY);
     if(raw)myRatings=JSON.parse(raw)||{};
-  }catch(e){myRatings={}}
+    const lg=localStorage.getItem(LS_LOG);
+    if(lg)ratingLog=JSON.parse(lg)||[];
+  }catch(e){myRatings={};ratingLog=[]}
 }
 function saveRatings(){
   if(!storageOK)return false;
-  try{localStorage.setItem(LS_KEY,JSON.stringify(myRatings));return true}
-  catch(e){return false}
+  try{
+    localStorage.setItem(LS_KEY,JSON.stringify(myRatings));
+    localStorage.setItem(LS_LOG,JSON.stringify(ratingLog.slice(-500)));
+    return true;
+  }catch(e){return false}
 }
 /* Ratings are stored by title and re-applied to the baked-in data at load, so a
    rebuilt data file keeps your ratings as long as titles are unchanged. */
@@ -608,29 +743,130 @@ function applyRatings(){
   }
   return n;
 }
+/* Title is the join key for every rating, but the bibliographies and the library
+   disagree on a handful of titles — ISFDB lists "The Atrocity Archive" where
+   Goodreads has "The Atrocity Archives". Rating from a series list then files a
+   second, orphaned record for a book already in the library. Titles are matched
+   normalised, and a singular/plural match is only accepted when exactly one book
+   could be meant. */
+const tnorm=t=>String(t).toLowerCase().replace(/^(the|a|an)\s+/,"")
+  .replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim();
+const TITLE_IDX=(()=>{
+  const exact=new Map(), stem=new Map();
+  for(const n of nodes){
+    exact.set(tnorm(n.t),n);
+    const s=tnorm(n.t).replace(/s$/,"");
+    stem.set(s, stem.has(s) ? null : n);        // null marks an ambiguous stem
+  }
+  return {exact,stem};
+})();
+function nodeForTitle(t){
+  return TITLE_IDX.exact.get(tnorm(t)) || TITLE_IDX.stem.get(tnorm(t).replace(/s$/,"")) || null;
+}
+/* The library's spelling wins, so a rating always lands on one key. */
+const canonicalTitle=t=>{const n=nodeForTitle(t);return n?n.t:t;};
+
+/* Rate anything with a title, whether or not it exists as a node. Series lists
+   contain volumes that were never in Goodreads, and those still need a record. */
+function setRatingByTitle(title,v,note){
+  title=canonicalTitle(title);
+  const was=myRatings[title]??null;
+  if(v===0)delete myRatings[title]; else myRatings[title]=v;
+  const n=nodeForTitle(title);
+  if(n){ if(n._origR===undefined)n._origR=n.r; n.r = v===0 ? (n._origR||0) : v; }
+  ratingLog.push({t:title,from:was,to:v||null,at:new Date().toISOString(),...(note?{note}:{})});
+  saveRatings(); scheduleFileWrite();
+  if(gistToken()&&gistId())scheduleGistPush();
+}
+/* named distinctly from ratingOf(node), which is the sizing helper */
+function myRatingFor(title){
+  title=canonicalTitle(title);
+  if(Object.prototype.hasOwnProperty.call(myRatings,title))return myRatings[title];
+  const n=nodeForTitle(title);
+  return n&&n.r>0?n.r:null;
+}
 function setRating(b,v){
   if(b._origR===undefined)b._origR=b.r;
+  const was = myRatings[b.t] ?? (b._origR||null);
   if(v===0){ delete myRatings[b.t]; b.r=b._origR||0; }
   else { myRatings[b.t]=v; b.r=v; }
+  // every change leaves a dated entry, so there is an audit trail rather than
+  // just a final state — useful when reconciling against git later
+  ratingLog.push({t:b.t,from:was,to:v||null,at:new Date().toISOString()});
   saveRatings();
+  scheduleFileWrite();
   if(gistToken()&&gistId())scheduleGistPush();
 }
 function ratingsCount(){return Object.keys(myRatings).length}
 
-/* ---- layer 2: file ---- */
+/* ---- layer 2a: a real file on disk ----
+   The File System Access API hands back a persistent handle, so after picking
+   ratings.json once, every later rating writes straight to that file — point it
+   at src/data/ratings.json in your checkout and the repo updates as you rate.
+   Chrome/Edge only; Safari and Firefox fall back to download/import below. */
+const CAN_FS = typeof window.showSaveFilePicker === "function";
+let fileHandle=null, fsTimer=null;
+async function pickRatingsFile(mode){
+  try{
+    if(mode==="open"){
+      [fileHandle]=await window.showOpenFilePicker({
+        types:[{description:"Ratings JSON",accept:{"application/json":[".json"]}}]});
+      const txt=await (await fileHandle.getFile()).text();
+      let inc=JSON.parse(txt||"{}");
+      if(inc.log&&Array.isArray(inc.log))ratingLog=inc.log.concat(ratingLog).slice(-500);
+      if(inc.ratings)inc=inc.ratings;
+      let n=0;
+      for(const [k,v] of Object.entries(inc))
+        if(typeof v==="number"&&v>=1&&v<=5){myRatings[k]=v;n++;}
+      saveRatings();applyRatings();update();renderDetail();kick();
+      syncNote(`Linked ${fileHandle.name} — ${n} rating${n===1?"":"s"} loaded. Changes now write straight to it.`);
+    }else{
+      fileHandle=await window.showSaveFilePicker({suggestedName:"ratings.json",
+        types:[{description:"Ratings JSON",accept:{"application/json":[".json"]}}]});
+      await writeRatingsFile();
+      syncNote(`Writing to ${fileHandle.name}. Changes save automatically.`);
+    }
+    renderSync();
+  }catch(e){ if(e&&e.name!=="AbortError")syncNote(String(e.message),true); }
+}
+async function writeRatingsFile(){
+  if(!fileHandle)return;
+  try{
+    const w=await fileHandle.createWritable();
+    await w.write(JSON.stringify(ratingsFile(),null,1));
+    await w.close();
+    const el=document.getElementById("fs-stamp");
+    if(el)el.textContent="saved "+new Date().toLocaleTimeString();
+  }catch(e){ syncNote("Couldn't write the file: "+e.message,true); }
+}
+function scheduleFileWrite(){ if(!fileHandle)return;
+  clearTimeout(fsTimer); fsTimer=setTimeout(writeRatingsFile,600); }
+
+/* ---- layer 2b: download / import ---- */
+function ratingsFile(){
+  return {_note:"Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
+          updated:new Date().toISOString(),
+          ratings:{...COMMITTED,...myRatings},
+          log:ratingLog.slice(-500)};
+}
 function downloadRatings(){
-  const blob=new Blob([JSON.stringify(myRatings,null,1)],{type:"application/json"});
+  // same shape as src/data/ratings.json, so this file can be dropped straight in
+  const blob=new Blob([JSON.stringify(ratingsFile(),null,1)],{type:"application/json"});
   const a=document.createElement("a");
   a.href=URL.createObjectURL(blob);
-  a.download="reading-ratings-"+new Date().toISOString().slice(0,10)+".json";
+  a.download="ratings.json";
   a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),2000);
 }
 function importRatingsFile(file){
   const fr=new FileReader();
   fr.onload=()=>{
     try{
-      const inc=JSON.parse(fr.result);
+      let inc=JSON.parse(fr.result);
       if(typeof inc!=="object"||Array.isArray(inc))throw new Error("not an object");
+      if(inc.ratings&&typeof inc.ratings==="object"){          // full file form
+        if(Array.isArray(inc.log))ratingLog=inc.log.concat(ratingLog).slice(-500);
+        inc=inc.ratings;
+      }
       let added=0;
       for(const [k,v] of Object.entries(inc)){
         if(typeof v==="number"&&v>=1&&v<=5){myRatings[k]=v;added++;}
@@ -665,7 +901,7 @@ async function gistApi(path,opts){
 async function gistPush(){
   if(!gistToken())return syncNote("Add a GitHub token first.",true);
   const body={description:"reading-network ratings",
-    files:{"ratings.json":{content:JSON.stringify(myRatings,null,1)}}};
+    files:{"ratings.json":{content:JSON.stringify(ratingsFile(),null,1)}}};
   try{
     let id=gistId();
     const out = id ? await gistApi("/gists/"+id,{method:"PATCH",body:JSON.stringify(body)})
@@ -681,7 +917,8 @@ async function gistPull(){
     const g=await gistApi("/gists/"+gistId());
     const f=g.files&&g.files["ratings.json"];
     if(!f)throw new Error("no ratings.json in that gist");
-    const inc=JSON.parse(f.content);
+    let inc=JSON.parse(f.content);
+    if(inc.ratings)inc=inc.ratings;
     myRatings={...myRatings,...inc};
     saveRatings(); applyRatings(); update(); renderDetail(); kick();
     syncNote(`Pulled ${Object.keys(inc).length} ratings.`);
@@ -720,6 +957,7 @@ function tagConfidence(b){
 const MOOD_SHOW=45;
 const META=window.__DATA__.meta;
 const NEXTSER=window.__DATA__.next_in_series;
+const ALLSER=window.__DATA__.all_series;
 const snorm=x=>String(x).toLowerCase().replace(/^(the|a)\s+/,"").replace(/[^a-z0-9 ]/g,"").trim();
 
 const AXMU=(()=>{const a=nodes=>0;return null;})();
@@ -817,7 +1055,7 @@ function renderDetail(){
     <div class="eyebrow">${b.r===0?"Recommended":"Read"}</div>
     <div class="d-title">${b.t}</div>
     <div class="d-author"><button class="xlink" data-nav="author" data-k="${b.a.replace(/"/g,"&quot;")}">${b.a}</button></div>
-    <div class="d-rating" style="border-color:${COLOR[b.en]};color:${COLOR[b.en]}">
+    <div class="d-rating" style="border-color:${nodeHex(b)};color:${nodeHex(b)}">
       ${b.r===0?"not yet read":b.r+" of 5"}</div>
     ${b.blurb?`<div class="blurb-wrap"><div class="blurb ${b._open?"open":""}" id="blurb">${b.blurb}</div>${
       b.blurb.length>360?`<button class="blurb-more" id="blurb-more">${b._open?"less":"more"}</button>`:""}</div>`:""}
@@ -921,6 +1159,30 @@ function renderDetail(){
   });
 }
 
+/* ---------- cluster legend ---------- */
+(function(){
+  const el=document.getElementById("clegend");
+  if(!el||!CLUSTERS.length)return;
+  el.innerHTML=CLUSTERS.map(c=>
+    `<div class="leg" data-cl="${c.id}"><i style="background:${CLUSTER_COLORS[c.id]}"></i>${
+      c.label} <b>${c.n}</b></div>`).join("");
+  el.querySelectorAll(".leg").forEach(d=>d.onclick=()=>{
+    const ci=+d.dataset.cl;
+    // clicking a group focuses it: everything else drops back
+    const on=d.classList.toggle("off");
+    offClusters[on?"add":"delete"](ci);
+    update();
+  });
+  const set=(c)=>{cluster=c;
+    colorBy=c?"cluster":"engine";
+    document.getElementById("c-on").classList.toggle("on",c);
+    document.getElementById("c-off").classList.toggle("on",!c);
+    el.style.display=c?"":"none";
+    reheat(.9);update();};
+  document.getElementById("c-on").onclick=()=>set(true);
+  document.getElementById("c-off").onclick=()=>set(false);
+})();
+
 /* ---------- controls ---------- */
 const axesEl=document.getElementById("axes");
 AXES.forEach(a=>{
@@ -953,7 +1215,13 @@ document.getElementById("t-read").onclick=e=>{showRead=!showRead;e.target.classL
 document.getElementById("t-rec").onclick=e=>{showRec=!showRec;e.target.classList.toggle("on",showRec);update()};
 document.getElementById("m-depth").onclick=()=>setMode(false);
 document.getElementById("m-flat").onclick=()=>setMode(true);
-document.getElementById("m-spin").onclick=e=>{spin=!spin;e.target.classList.toggle("on",spin);kick()};
+document.getElementById("m-spin").onclick=e=>{
+  spin=!spin; e.target.classList.toggle("on",spin);
+  try{localStorage.setItem("reading-network:spin",spin?"1":"0")}catch(err){}
+  kick();
+};
+// reflect the stored preference on load
+document.getElementById("m-spin").classList.toggle("on",spin);
 document.getElementById("m-spot").onclick=e=>{spotlight=!spotlight;e.target.classList.toggle("on",spotlight);kick()};
 function setMode(f){
   if(flat&&!f)                                // z is exactly 0 and the forces are symmetric,
@@ -1150,14 +1418,29 @@ function renderList(){
               lvSort==="cpace"?(n.cpace??0):(n.nrev??0);
   rows.sort((a,b)=>lvDesc?key(b)-key(a):key(a)-key(b));
   if(!rows.length){lvRows.innerHTML='<div class="fr-none" style="padding:24px">No unread books match these filters.</div>';return;}
+  /* Banded, like the ranked panel, and for the same reason: residual sd is 0.63,
+     so a table that ranks 4.99 above 4.93 to two decimals is claiming a precision
+     the model does not have. Bands only mean anything while the sort is by fit,
+     descending — sorting by pace and keeping fit headers would be nonsense. */
+  const banded=lvSort==="p"&&lvDesc;
+  let last=-1;
   lvRows.innerHTML=rows.map(n=>{
     const pace=n.cpace!=null?n.cpace.toFixed(1):"—";
     const known=n.nrev?(n.nrev>=1000?Math.round(n.nrev/1000)+"k":n.nrev):"—";
     const w=Math.max(0,Math.min(1,((n.praw??n.p)-3)/2))*100;
-    return `<div class="lv-row" data-id="${n.id}">
-      <div><span class="lv-t">${n.t}<span class="lv-a">${n.a}</span></span>
-        <div class="lv-bar"><i style="width:${w.toFixed(0)}%;background:${COLOR[n.en]}"></i></div></div>
-      <div class="lv-n hi">${n.p.toFixed(2)}</div>
+    let head="";
+    if(banded){
+      const bd=band(n.p);
+      if(bd!==last){
+        last=bd;
+        head=`<div class="lv-band"><span>${BANDS[bd][1]} fit</span><span>${
+          bd===0?"4.6+":bd===1?"4.2–4.6":"below 4.2"}</span></div>`;
+      }
+    }
+    return `${head}<div class="lv-row" data-id="${n.id}">
+      <div class="lv-t">${n.t}<span class="lv-a">${n.a}</span></div>
+      <div class="lv-n hi">${n.p.toFixed(1)}
+        <i class="lv-bar" style="width:${w.toFixed(0)}%;background:${nodeHex(n)}"></i></div>
       <div class="lv-n">${n.ax[0]}</div>
       <div class="lv-n">${pace}</div>
       <div class="lv-n">${known}</div></div>`;}).join("");
@@ -1167,12 +1450,24 @@ function renderList(){
     kick();
   });
 }
+/* Clicking a header toggled direction with nothing on screen to say which way it
+   had gone, so the caret is the only affordance for a state the table already had. */
+const LV_LABEL=new Map([...document.querySelectorAll(".lv-sort")].map(b=>[b.dataset.k,b.textContent]));
+function syncSortHeads(){
+  document.querySelectorAll(".lv-sort").forEach(x=>{
+    const on=x.dataset.k===lvSort;
+    x.classList.toggle("on",on);
+    x.textContent=LV_LABEL.get(x.dataset.k)+(on?(lvDesc?" ↓":" ↑"):"");
+    x.setAttribute("aria-sort",on?(lvDesc?"descending":"ascending"):"none");
+  });
+}
 document.querySelectorAll(".lv-sort").forEach(b=>b.onclick=()=>{
   const k=b.dataset.k;
   if(lvSort===k)lvDesc=!lvDesc; else {lvSort=k;lvDesc=true;}
-  document.querySelectorAll(".lv-sort").forEach(x=>x.classList.toggle("on",x.dataset.k===lvSort));
+  syncSortHeads();
   renderList();
 });
+syncSortHeads();
 /* ---------- tonight ---------- */
 /* The actual job: "what do I read next, given how I feel right now." Criteria
    score rather than filter, so a demanding combination degrades to the closest
@@ -1285,6 +1580,15 @@ function renderSync(){
   el.innerHTML=`
     <div class="sync-stat">${ratingsCount()} rating${ratingsCount()===1?"":"s"} saved${
       storageOK?" in this browser":" (browser storage unavailable)"}</div>
+    ${CAN_FS?`<div class="fsbox">
+      <div class="btnrow">
+        <button id="fs-link">${fileHandle?"Change file":"Link a ratings.json"}</button>
+        <button id="fs-open">Open existing</button>
+      </div>
+      <div class="sync-help">${fileHandle
+        ? `Writing to <b>${fileHandle.name}</b> on every change. <span id="fs-stamp"></span>`
+        : "Pick a file once and every rating writes straight to it — point it at <b>src/data/ratings.json</b> in your checkout."}</div>
+    </div>`:`<div class="sync-help">This browser can't write files directly; use the backup below. (Chrome and Edge can.)</div>`}
     <div class="btnrow">
       <button id="sy-save">Download backup</button>
       <button id="sy-load">Import file</button>
@@ -1305,6 +1609,10 @@ function renderSync(){
     </details>
     <div class="sync-note" id="sync-note"></div>`;
   const $=x=>document.getElementById(x);
+  if(CAN_FS){
+    $("fs-link").onclick=()=>pickRatingsFile("save");
+    $("fs-open").onclick=()=>pickRatingsFile("open");
+  }
   $("sy-save").onclick=downloadRatings;
   $("sy-load").onclick=()=>$("sy-file").click();
   $("sy-file").onchange=e=>{ if(e.target.files[0])importRatingsFile(e.target.files[0]); };
@@ -1319,7 +1627,7 @@ function renderSync(){
 /* Grouped browsing: the question "what else by someone I trust" and "which
    series am I mid-way through" are asked repeatedly; the graph answers neither. */
 const shelfRows=document.getElementById("shelf-rows"), shelfView=document.getElementById("shelfview");
-let shelfMode="author", shelfOpen=new Set();
+let shelfMode="author", shelfOpen=new Set(), shelfQuery="", shelfStatus="all";
 function buildShelves(){
   const g=new Map();
   if(shelfMode==="author"){
@@ -1338,9 +1646,27 @@ function buildShelves(){
       if(!g.has(k))g.set(k,{key:k,name:n.ser,read:[],unread:[],extra:[]});
       (n.r>0?g.get(k).read:g.get(k).unread).push(n);
     }
-    for(const [k,e] of Object.entries(NEXTSER)){
+    /* The three sources don't agree on series keys: all_series.json keys four of
+       them short — "corax", "mars", "traitor son", "demon" — where books.json
+       and next_in_series.json use the full name. Keyed naively that splits one
+       series into two shelves, one holding the books and one the bibliography,
+       and Corax Trilogy appeared twice. The display name is the thing all three
+       do agree on, so it reconciles them. */
+    const resolve=(k,name)=>{
+      if(g.has(k))return k;
+      for(const [gk,gv] of g)if(snorm(gv.name)===snorm(name))return gk;
+      return k;
+    };
+    for(const [k0,e] of Object.entries(NEXTSER)){
+      const k=resolve(k0,e.name);
       if(!g.has(k))g.set(k,{key:k,name:e.name,read:[],unread:[],extra:[]});
       g.get(k).extra=e.next; g.get(k).src=e.src;
+    }
+    // full bibliographies: every volume, rated or not, so gaps are visible
+    for(const [k0,e] of Object.entries(ALLSER)){
+      const k=resolve(k0,e.name);
+      if(!g.has(k))g.set(k,{key:k,name:e.name,read:[],unread:[],extra:[]});
+      const v=g.get(k); v.full=e.vols; v.src=e.src;
     }
     for(const v of g.values()){
       const m=META.series[v.key];
@@ -1349,38 +1675,109 @@ function buildShelves(){
   }
   return [...g.values()].filter(v=>v.n>=1||v.unread.length||v.extra.length);
 }
+/* Counted once per shelf so the filter, the header and the body can never
+   disagree. When a full bibliography exists it is the authority on what is
+   unread: v.unread only knows about volumes that made it into the library, which
+   is why Laundry Files read "complete" with three volumes still unrated. */
+function shelfStats(v){
+  const seen=new Set();
+  const vols=(v.full||[]).filter(x=>{
+    const k=canonicalTitle(x.t);
+    return seen.has(k) ? false : (seen.add(k), true);
+  });
+  const unread = v.full ? vols.filter(x=>!myRatingFor(x.t)).length
+                        : v.unread.length+v.extra.length;
+  const read = v.full ? vols.length-unread : (v.n||v.read.length);
+  /* Whether anything outside the library knows how long this series is. 87 of
+     144 series shelves are a single book with no bibliography at all — those
+     were labelled "complete", which is a claim about the world rather than a
+     fact about the shelf. Discworld says complete on the strength of owning
+     Small Gods. */
+  const known = !!(v.full || v.extra.length);
+  return {vols,unread,read,known};
+}
 function renderShelves(){
   let rows=buildShelves();
-  // most useful first: things you rate highly that still have something unread
-  rows.sort((a,b)=>{
-    const ua=a.unread.length+a.extra.length, ub=b.unread.length+b.extra.length;
-    if((ua>0)!==(ub>0))return ub-ua;
-    return (b.mean||0)-(a.mean||0) || b.n-a.n || a.name.localeCompare(b.name);
+  rows.forEach(v=>v._s=shelfStats(v));
+  const total=rows.length;
+  /* 183 authors in one flat column is a wall. Two narrowing tools, because they
+     answer different questions: the text box for "where is X", the status
+     buttons for "what have I actually got going". */
+  const q=shelfQuery.trim().toLowerCase();
+  rows=rows.filter(v=>{
+    if(q&&!v.name.toLowerCase().includes(q))return false;
+    if(shelfStatus==="started")return v._s.read>0;
+    if(shelfStatus==="open")return v._s.read>0&&v._s.unread>0;
+    return true;
   });
-  document.getElementById("shelf-hint").textContent =
-    `${rows.length} ${shelfMode==="author"?"authors":"series"} · ${rows.filter(r=>r.unread.length+r.extra.length).length} with something unread`;
-  shelfRows.innerHTML=rows.map(v=>{
-    const open=shelfOpen.has(v.key), un=v.unread.length+v.extra.length;
+  /* Most useful first, where useful means "someone you have a track record with
+     and unfinished business". Sorting on mean alone put every author you rated a
+     single book 5★ above Jim Butcher at twenty — a perfect average over one book
+     is not evidence. Damping by log of the count ranks depth of relationship
+     without letting a long mediocre series outrank a short loved one. */
+  const pull=v=>(v.mean||0)*Math.log2(1+(v.n||0));
+  rows.sort((a,b)=>{
+    if((a._s.unread>0)!==(b._s.unread>0))return b._s.unread-a._s.unread;
+    return pull(b)-pull(a) || b.n-a.n || a.name.localeCompare(b.name);
+  });
+  const noun=shelfMode==="author"?"authors":"series";
+  document.getElementById("shelf-hint").textContent = rows.length===total
+    ? `${total} ${noun} · ${rows.filter(r=>r._s.unread>0).length} with something unread`
+    : `${rows.length} of ${total} ${noun}`;
+  if(!rows.length)shelfRows.innerHTML=
+    `<div class="fr-none" style="padding:26px 24px">Nothing matches that filter.</div>`;
+  else shelfRows.innerHTML=rows.map(v=>{
+    const open=shelfOpen.has(v.key), un=v._s.unread, vols=v._s.vols;
     const body=[
       ...v.read.sort((a,b)=>(a.vol||99)-(b.vol||99)).map(n=>
         `<div class="sb" data-id="${n.id}"><span class="sb-v">${n.vol?"#"+(n.vol%1?n.vol:n.vol|0):""}</span>
-          <span class="sb-t">${n.t}</span><span class="sb-r">${n.r}★</span></div>`),
-      ...v.unread.sort((a,b)=>(b.praw??b.p)-(a.praw??a.p)).map(n=>
-        `<div class="sb unread" data-id="${n.id}"><span class="sb-v">${n.vol?"#"+(n.vol%1?n.vol:n.vol|0):""}</span>
-          <span class="sb-t">${n.t}</span><span class="sb-r">${n.p.toFixed(2)}</span></div>`),
-      ...v.extra.map(x=>
+          <span class="sb-t">${n.t}</span>
+          <span class="minirate" data-title="${n.t.replace(/"/g,"&quot;")}">${[1,2,3,4,5].map(v=>
+            `<button class="ms${n.r>=v?" on":""}" data-v="${v}">★</button>`).join("")}</span></div>`),
+      ...v.unread.sort((a,b)=>(b.praw??b.p)-(a.praw??a.p)).map(n=>{
+        const cur=myRatingFor(n.t);
+        return `<div class="sb${cur?"":" unread"}" data-id="${n.id}">
+          <span class="sb-v">${n.vol?"#"+(n.vol%1?n.vol:n.vol|0):""}</span>
+          <span class="sb-t">${n.t}</span>
+          <span class="sb-fit">${cur?"":n.p.toFixed(2)}</span>
+          <span class="minirate" data-title="${n.t.replace(/"/g,"&quot;")}">${[1,2,3,4,5].map(v=>
+            `<button class="ms${cur>=v?" on":""}" data-v="${v}">★</button>`).join("")}</span></div>`;}),
+      ...(v.full? [] : v.extra.map(x=>
         `<div class="sb unread ext"><span class="sb-v">${x.ord?"#"+x.ord:""}</span>
-          <span class="sb-t">${x.t}</span><span class="sb-r">${x.yr||""}</span></div>`)
+          <span class="sb-t">${x.t}</span><span class="sb-r">${x.yr||""}</span></div>`))
     ].join("");
+    // when a full bibliography exists it replaces the piecemeal lists: every
+    // volume in order, so a book you read but never logged shows as a gap
+    /* ISFDB lists the novel and the collection that reprints it as separate
+       volumes — "The Atrocity Archive" and "The Atrocity Archives". Both now
+       resolve to the same library book, so rendering both would show one book
+       twice, rated twice, from a single rating. */
+    const fullBody = v.full ? vols.map(x=>{
+      const n=nodeForTitle(x.t);
+      const cur=myRatingFor(x.t);
+      const esc=canonicalTitle(x.t).replace(/"/g,"&quot;");
+      return `<div class="sb${cur?"":" unread"}"${n?` data-id="${n.id}"`:""}>
+        <span class="sb-v">${x.ord?"#"+x.ord:""}</span>
+        <span class="sb-t">${x.t}${n?"":`<em class="notin">not in library</em>`}</span>
+        <span class="sb-fit">${!cur&&n?n.p.toFixed(2):""}</span>
+        <span class="minirate" data-title="${esc}">${[1,2,3,4,5].map(v=>
+          `<button class="ms${cur>=v?" on":""}" data-v="${v}" title="${v} star${v>1?"s":""}">★</button>`).join("")}
+        </span></div>`;}).join("") : "";
     // cross-link: from an author shelf jump to their series, and vice versa
     const cross=shelfMode==="author"
       ? [...new Set([...v.read,...v.unread].filter(n=>n.ser).map(n=>n.ser))].slice(0,3)
       : [...new Set([...v.read,...v.unread].map(n=>n.a))].slice(0,2);
     return `<div class="shelf${open?" open":""}" data-k="${v.key}">
       <div class="shelf-h"><span class="shelf-n">${v.name}${v.src?`<small>${v.src}</small>`:""}</span>
-        ${v.mean?`<span class="shelf-m">${v.mean}★ · ${v.n}</span>`:`<span class="shelf-u">unrated</span>`}
-        <span class="shelf-u">${un?un+" unread":"complete"}</span></div>
-      <div class="shelf-body">${body}${cross.length?`<div class="xrow">${
+        ${v.mean?`<span class="shelf-m">${v.mean}★<em>over ${v.n}</em></span>`:`<span class="shelf-u">unrated</span>`}
+        <span class="shelf-u${un||v._s.known?"":" thin"}">${
+          un ? un+" unread"
+             : v._s.known ? "complete"
+             : v._s.read+" in library"}</span></div>
+      <div class="shelf-body">${v.full?fullBody:body}${
+        v.full?(()=>{const miss=vols.filter(x=>!myRatingFor(x.t)).length;
+        return `<div class="xrow">${miss?`${miss} of ${vols.length} still unrated — star anything you've read`
+                                     :`all ${vols.length} rated`}</div>`;})():""}${cross.length?`<div class="xrow">${
         shelfMode==="author"?"Series:":"By:"} ${cross.map(c=>
         `<button class="xlink" data-jump="${shelfMode==="author"?"series":"author"}" data-k="${
           (shelfMode==="author"?snorm(c):c).replace(/"/g,"&quot;")}">${c}</button>`).join(" · ")}</div>`:""}
@@ -1389,6 +1786,14 @@ function renderShelves(){
     const k=h.parentElement.dataset.k;
     shelfOpen.has(k)?shelfOpen.delete(k):shelfOpen.add(k);
     h.parentElement.classList.toggle("open");
+  });
+  shelfRows.querySelectorAll(".minirate .ms").forEach(btn=>btn.onclick=e=>{
+    e.stopPropagation();
+    const title=btn.closest(".minirate").dataset.title, v=+btn.dataset.v;
+    setRatingByTitle(title, myRatingFor(title)===v?0:v, "rated from series list");
+    renderShelves(); renderSync(); update();
+    if(selected!==null)renderDetail();
+    syncNote(`${title} — ${myRatingFor(title)?myRatingFor(title)+"★":"rating cleared"}`);
   });
   shelfRows.querySelectorAll("[data-jump]").forEach(d=>d.onclick=e=>{
     e.stopPropagation(); gotoShelf(d.dataset.jump,d.dataset.k);
@@ -1400,6 +1805,17 @@ function renderShelves(){
     kick();
   });
 }
+document.getElementById("shelf-find").addEventListener("input",e=>{
+  shelfQuery=e.target.value; renderShelves();
+});
+{
+  const modes=[["sf-all","all"],["sf-started","started"],["sf-open","open"]];
+  for(const [id,key] of modes)document.getElementById(id).onclick=()=>{
+    shelfStatus=key;
+    modes.forEach(([i])=>document.getElementById(i).classList.toggle("on",i===id));
+    renderShelves();
+  };
+}
 document.getElementById("sh-auth").onclick=()=>{shelfMode="author";
   document.getElementById("sh-auth").classList.add("on");
   document.getElementById("sh-ser").classList.remove("on");shelfOpen.clear();renderShelves();};
@@ -1408,6 +1824,7 @@ document.getElementById("sh-ser").onclick=()=>{shelfMode="series";
   document.getElementById("sh-auth").classList.remove("on");shelfOpen.clear();renderShelves();};
 
 function setView(v){
+  if(splitOn&&v!=="graph")setSplit(false);
   view=v;
   for(const [id,name] of [["v-mood","mood"],["v-graph","graph"],["v-shelf","shelf"],["v-list","list"]]){
     const b=document.getElementById(id);
@@ -1424,6 +1841,22 @@ function setView(v){
   if(v==="graph"){userZoomed=false;reheat(.85);}
   update();
 }
+/* Split puts the graph over the detail panel — for reading about a book while
+   still seeing where it sits. It layers on top of the graph view rather than
+   being a fourth view, since the other three are already full-screen lists. */
+let splitOn=false;
+function setSplit(on){
+  splitOn=on;
+  document.body.classList.toggle("split",on);
+  document.getElementById("v-split").classList.toggle("on",on);
+  if(on&&view!=="graph")setView("graph");
+  if(on&&selected===null&&nodes.length){
+    const best=nodes.filter(n=>n.r===0).sort((x,y)=>(y.praw??y.p)-(x.praw??x.p))[0];
+    if(best){selected=best.id;renderDetail();}
+  }
+  resize();kick();
+}
+document.getElementById("v-split").onclick=()=>setSplit(!splitOn);
 document.getElementById("v-mood").onclick=()=>setView("mood");
 document.getElementById("v-graph").onclick=()=>setView("graph");
 document.getElementById("v-shelf").onclick=()=>setView("shelf");
@@ -1492,6 +1925,12 @@ function update(){
   if(selected===null)renderRanked();
   renderTagFilter();
   kick();
+}
+/* Counted rather than written down: the header read "274 books" for as long as it
+   took to add fourteen. */
+{
+  const el=document.getElementById("lede-count");
+  if(el)el.textContent=`Taxonomy v1.2 · ${nodes.length} books · StoryGraph-validated`;
 }
 window.addEventListener("resize",resize);
 cv.style.cursor="grab";

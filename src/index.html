@@ -10,7 +10,7 @@
 <body>
 <div class="shell">
   <aside class="rail">
-    <div class="eyebrow">Taxonomy v1.2 · 274 books · StoryGraph-validated</div>
+    <div class="eyebrow" id="lede-count">Taxonomy v1.2 · StoryGraph-validated</div>
     <h1>What lands,<br>and <em>why</em></h1>
     <p class="blurb">Books connect by shared facets. They're judged by register.
       Drag to orbit, scroll to zoom, hover to isolate a book's relatives.</p>
@@ -18,7 +18,7 @@
     <div class="btnrow">
       <button id="m-depth" class="on">Depth</button>
       <button id="m-flat">Flat</button>
-      <button id="m-spin" class="on">Drift</button>
+      <button id="m-spin">Drift</button>
       <button id="m-spot" class="on">Spotlight unread</button>
     </div>
     <div class="divider"></div>
@@ -37,6 +37,13 @@
     <div class="divider"></div>
     <div class="eyebrow">Dot size · rating</div>
     <div class="sizekey" id="sizekey"></div>
+    <div class="divider"></div>
+    <div class="eyebrow">Groups</div>
+    <div class="btnrow" style="margin-bottom:9px">
+      <button id="c-on" class="on">Cluster</button>
+      <button id="c-off">By engine</button>
+    </div>
+    <div class="legend" id="clegend"></div>
     <div class="divider"></div>
     <div class="eyebrow">Plot engine</div>
     <div class="legend" id="legend"></div>
@@ -60,6 +67,7 @@
       <button id="v-graph" role="tab" aria-selected="false">Graph</button>
       <button id="v-shelf" role="tab" aria-selected="false">Shelves</button>
       <button id="v-list" role="tab" aria-selected="false">List</button>
+      <button id="v-split" class="split-btn" title="Graph above, book below">Split</button>
     </div>
     <div class="finder">
       <input id="find" type="search" placeholder="Find a book" autocomplete="off" spellcheck="false"
@@ -82,6 +90,11 @@
       <div class="shelf-bar">
         <button id="sh-auth" class="on">By author</button>
         <button id="sh-ser">By series</button>
+        <input id="shelf-find" placeholder="filter by name…" autocomplete="off"
+               aria-label="Filter shelves by name">
+        <button id="sf-all" class="on">All</button>
+        <button id="sf-started">Started</button>
+        <button id="sf-open">Unfinished</button>
         <span class="shelf-hint" id="shelf-hint"></span>
       </div>
       <div id="shelf-rows"></div>
