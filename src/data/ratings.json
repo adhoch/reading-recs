@@ -1,0 +1,313 @@
+{
+ "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
+ "updated": "2026-07-31T04:34:08.321Z",
+ "ratings": {
+  "The Fuller Memorandum": 5,
+  "The Atrocity Archives": 5,
+  "The Jennifer Morgue": 4,
+  "The Apocalypse Codex": 5,
+  "The Rhesus Chart": 5,
+  "The Annihilation Score": 5,
+  "The Nightmare Stacks": 5,
+  "The Delirium Brief": 4,
+  "The Labyrinth Index": 5,
+  "A Conventional Boy": 4,
+  "The Regicide Report": 4,
+  "Quantum of Nightmares": 5,
+  "Season of Skulls": 4,
+  "Feed": 4,
+  "Deadline": 4,
+  "Blackout": 4,
+  "Vita Nostra": 4,
+  "Furies of Calderon": 4,
+  "Academ's Fury": 5,
+  "Cursor's Fury": 4,
+  "Captain's Fury": 5,
+  "Princeps' Fury": 4,
+  "First Lord's Fury": 5,
+  "The Drawing of the Three": 5,
+  "The Waste Lands": 5,
+  "Wizard and Glass": 5,
+  "Wolves of the Calla": 5,
+  "Song of Susannah": 4,
+  "The Dark Tower": 4,
+  "The Wind Through the Keyhole": 5,
+  "The Black Company": 5,
+  "The White Rose": 4,
+  "Shadows Linger": 5,
+  "Lies Weeping": 5,
+  "Water Sleeps": 5,
+  "Soldiers Live": 5,
+  "Shadow Games": 4,
+  "The Black Company: Glittering Stone I": 5,
+  "The Black Company: Glittering Stone II": 5,
+  "The Black Company Goes South": 5,
+  "Annals of the Black Company": 5,
+  "Mistborn: The Well of Ascension": 5,
+  "Mistborn: The Hero of Ages": 5,
+  "Mistborn: The Alloy of Law": 4,
+  "Mistborn: Shadows of Self": 5,
+  "Mistborn: The Bands of Mourning": 5,
+  "Mistborn: The Lost Metal": 3,
+  "Doctor Sleep": 4,
+  "Empire of the Vampire": 5,
+  "Empire of the Dawn": 4,
+  "The Last Graduate": 5,
+  "The Golden Enclaves": 5,
+  "Mistborn": 5
+ },
+ "log": [
+  {
+   "t": "Furies of Calderon",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:30:11.403Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Academ's Fury",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:12.139Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Cursor's Fury",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:30:12.843Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Captain's Fury",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:13.659Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Princeps' Fury",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:30:14.371Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "First Lord's Fury",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:15.027Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Drawing of the Three",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:21.699Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Waste Lands",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:25.211Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Wizard and Glass",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:28.451Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Wolves of the Calla",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:29.453Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Song of Susannah",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:30:31.218Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Dark Tower",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:30:33.643Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Wind Through the Keyhole",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:30:35.995Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Black Company",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:31:39.018Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The White Rose",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:31:40.466Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Shadows Linger",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:31:43.594Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Lies Weeping",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:31:46.330Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Water Sleeps",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:31:49.218Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Soldiers Live",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:31:52.154Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Shadow Games",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:31:55.002Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Black Company: Glittering Stone I",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:01.930Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Black Company: Glittering Stone II",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:02.746Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Black Company Goes South",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:03.546Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Annals of the Black Company",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:04.713Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Final Empire",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:10.483Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Well of Ascension",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:11.474Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Hero of Ages",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:12.217Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Alloy of Law",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:32:14.002Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: Shadows of Self",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:14.834Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Bands of Mourning",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:16.234Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Mistborn: The Lost Metal",
+   "from": null,
+   "to": 3,
+   "at": "2026-07-31T04:32:17.282Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Doctor Sleep",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:32:29.690Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Empire of the Vampire",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:32:36.234Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Empire of the Dawn",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T04:32:39.210Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Last Graduate",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:34:06.849Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Golden Enclaves",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T04:34:07.713Z",
+   "note": "rated from series list"
+  }
+ ]
+}
