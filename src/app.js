@@ -680,8 +680,8 @@ function renderRanked(){
      the same error the tagging made. */
   h+='<p class="caveat">Scored from the seven register axes only — the facets turned out to carry '+
      'no predictive signal, so they build the graph but not the score. Against books retagged by '+
-     'raters who never saw a rating, the model agrees at about r=0.67, residual ±0.7 — the committed '+
-     'r='+MODEL.r+' is optimistic because the original tags were made with the ratings visible. '+
+     'raters who never saw a rating, the model agrees at r=0.65, residual ±0.74 — the committed '+
+     'r='+MODEL.r+' was measured against tags made with the ratings visible. '+
      'Gaps smaller than the residual are noise, which is why these sit in bands rather than a '+
      'strict ranking.</p>';
   el.innerHTML=h;
