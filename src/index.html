@@ -67,6 +67,7 @@
       <button id="v-graph" role="tab" aria-selected="false">Graph</button>
       <button id="v-shelf" role="tab" aria-selected="false">Shelves</button>
       <button id="v-list" role="tab" aria-selected="false">List</button>
+      <button id="v-needs" role="tab" aria-selected="false">Needs you<i id="needs-n"></i></button>
       <button id="v-split" class="split-btn" title="Graph above, book below">Split</button>
     </div>
     <div class="finder">
@@ -108,6 +109,14 @@
         <button class="lv-sort" data-k="nrev">Known</button>
       </div>
       <div class="lv-rows" id="lv-rows"></div>
+    </div>
+    <div class="listview" id="needsview" hidden>
+      <div class="needs-top">
+        <h2 class="mood-q">Things only you can answer</h2>
+        <p class="mood-sub">Nothing here is a recommendation. Each one is a hole in
+          the data that the scrapers and I can't fill.</p>
+      </div>
+      <div id="needs-rows"></div>
     </div>
     <div class="void" id="void" hidden>
       <p>No books match these filters.</p>

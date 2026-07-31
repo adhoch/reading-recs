@@ -24,7 +24,8 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 DIST = os.path.join(ROOT, "dist")
-DATA_FILES = ["books", "model", "meta", "next_in_series", "all_series", "ratings", "graph"]
+DATA_FILES = ["books", "model", "meta", "next_in_series", "all_series", "ratings", "graph",
+              "needs_input"]
 
 GOOGLE_FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -45,7 +46,7 @@ def load_data():
     for name in DATA_FILES:
         path = os.path.join(SRC, "data", f"{name}.json")
         if not os.path.exists(path):
-            if name in ("ratings", "all_series", "graph"):        # optional
+            if name in ("ratings", "all_series", "graph", "needs_input"):  # optional
                 out[name] = {"ratings": {}, "log": []} if name == "ratings" else {}
                 continue
             sys.exit(f"missing data file: {path}")
