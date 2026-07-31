@@ -29,3 +29,4 @@ sg_retry.json
 context/
 tagging-blind-set.json
 tagging-my-answers.json
+tagging-prompt*.txt
