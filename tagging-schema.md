@@ -244,6 +244,43 @@ from the original 274 on several axes when compared like-for-like on 3-star
 books, so this is not a property of outside taggers. Everyone has their own
 ruler, including whoever tagged first.
 
+### Measured: run-to-run noise is half of what looks like model disagreement
+
+Four runs of one model, same prompt, same books, nothing varied:
+
+```
+within-model, 4 independent runs   mean absolute difference 0.22  (0.20-0.26)
+between-model, three systems       mean absolute difference 0.43
+                                   ratio 1.94x
+```
+
+Model identity is real but smaller than it looked: half the apparent
+disagreement between two systems is just sampling. And the anchor effect
+measured above, 0.19 to 0.20, is **indistinguishable from this noise floor** —
+which settles the anchor question rather than leaving it at "small".
+
+Per-axis, the four runs' means vary by an sd of 0.03 (romance_load) to 0.15
+(formula). Their velocity means cluster at 3.37-3.60 while A sits at 3.17,
+below all four runs of a different model, and B at 4.13 above all of them. That
+is a third independent line of evidence that A reads velocity low.
+
+### Measured: ensemble diversity, not ensemble size
+
+```
+A+B+C, three different systems          0.743
+four runs of one model                  0.685
+A + those four runs                     0.634
+A+B+C + one run                         0.687
+A+B+C + all four runs                   0.688
+```
+
+Adding correlated raters actively damages the ensemble. Four samples of one
+model give that model four sevenths of the vote, and the blend collapses toward
+its opinion. Three diverse raters beat seven correlated ones by 0.055.
+
+So more taggers is not the lever. Different taggers is, and it saturates at
+three.
+
 The operational rule: a batch from any source, including a later run by the
 same model, is not mergeable as-is. Overlap ~20 already-tagged books, take the
 mean difference per axis, subtract it. Do that and the source stops mattering.

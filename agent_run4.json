@@ -1,0 +1,2651 @@
+{
+  "Urban Shaman — C.E. Murphy": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 3,
+    "engine": "ascent-of-power",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Angels & Demons — Dan Brown": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 1,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 1,
+    "formula": 4,
+    "engine": "investigation",
+    "engine_alt": [
+      "heist"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "church",
+      "bureaucracy"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "procedural",
+      "adventure"
+    ],
+    "status": "ongoing"
+  },
+  "The Da Vinci Code — Dan Brown": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 1,
+    "formula": 4,
+    "engine": "investigation",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "church"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "procedural",
+      "adventure"
+    ],
+    "status": "ongoing"
+  },
+  "Dauntless — Jack Campbell": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 4,
+    "engine": "campaign-war",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "A Perfect Blood — Kim Harrison": {
+    "velocity": 4,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 3,
+    "romance_load": 3,
+    "prose_shine": 2,
+    "formula": 4,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "alt-history",
+      "contemporary-earth"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "guild-corp",
+      "criminal-org"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "noir",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Shadow of the Hegemon — Orson Scott Card": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "campaign-war"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "procedural"
+    ],
+    "status": "ongoing"
+  },
+  "The Windup Girl — Paolo Bacigalupi": {
+    "velocity": 2,
+    "friction": 4,
+    "interiority": 3,
+    "darkness": 5,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "near-future",
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "guild-corp",
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "noir"
+    ],
+    "status": "standalone"
+  },
+  "Pandora's Star — Peter F. Hamilton": {
+    "velocity": 3,
+    "friction": 4,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "guild-corp",
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "The Reality Dysfunction — Peter F. Hamilton": {
+    "velocity": 3,
+    "friction": 5,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "military",
+      "guild-corp",
+      "bureaucracy"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "horror",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "The Golden Compass — Philip Pullman": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "secondary-world",
+      "portal"
+    ],
+    "system": [
+      "mythic",
+      "hard-magic"
+    ],
+    "institution": [
+      "church",
+      "academy",
+      "bureaucracy"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "The Lightning Thief — Rick Riordan": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth",
+      "portal"
+    ],
+    "system": [
+      "mythic"
+    ],
+    "institution": [
+      "academy"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure",
+      "comedy"
+    ],
+    "status": "complete-series"
+  },
+  "Under the Dome — Stephen King": {
+    "velocity": 5,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 5,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "mystery-box",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military",
+      "church"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "Twilight — Stephenie Meyer": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 4,
+    "darkness": 2,
+    "romance_load": 5,
+    "prose_shine": 1,
+    "formula": 2,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "The Light Fantastic — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 1,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "academy",
+      "guild-corp"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Terminal World — Alastair Reynolds": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "quest",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "far-future",
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "guild-corp",
+      "military"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "The Martian — Andy Weir": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "solo-competent",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "procedural"
+    ],
+    "status": "standalone"
+  },
+  "Dracula — Bram Stoker": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "historical-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "church"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror",
+      "procedural"
+    ],
+    "status": "standalone"
+  },
+  "Warbreaker — Brandon Sanderson": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "church",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "The Lion, the Witch and the Wardrobe — C.S. Lewis": {
+    "velocity": 3,
+    "friction": 1,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "campaign-war"
+    ],
+    "milieu": [
+      "portal",
+      "secondary-world"
+    ],
+    "system": [
+      "mythic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Eragon — Christopher Paolini": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "ascent-of-power",
+      "campaign-war"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Startide Rising — David Brin": {
+    "velocity": 3,
+    "friction": 4,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "The Shadow of the Torturer — Gene Wolfe": {
+    "velocity": 2,
+    "friction": 5,
+    "interiority": 4,
+    "darkness": 4,
+    "romance_load": 2,
+    "prose_shine": 5,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "cosmic-weird"
+    ],
+    "institution": [
+      "guild-corp"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "The Strain — Guillermo del Toro": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult",
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "criminal-org"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Foundation — Isaac Asimov": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "ascent-of-power"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "church",
+      "guild-corp"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "procedural",
+      "satire"
+    ],
+    "status": "ongoing"
+  },
+  "Darkly Dreaming Dexter — Jeff Lindsay": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "villain-protagonist"
+    ],
+    "mode": [
+      "noir",
+      "horror",
+      "comedy"
+    ],
+    "status": "complete-series"
+  },
+  "Fool Moon — Jim Butcher": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 4,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult",
+      "hard-magic"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "noir",
+      "adventure"
+    ],
+    "status": "ongoing"
+  },
+  "Best Served Cold — Joe Abercrombie": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 5,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "heist",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "criminal-org",
+      "military"
+    ],
+    "cast": [
+      "ensemble-crew",
+      "villain-protagonist"
+    ],
+    "mode": [
+      "noir",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "The Heroes — Joe Abercrombie": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "campaign-war",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "satire"
+    ],
+    "status": "standalone"
+  },
+  "Horns — Joe Hill": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 3,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird",
+      "mythic"
+    ],
+    "institution": [
+      "church"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Snow Crash — Neal Stephenson": {
+    "velocity": 4,
+    "friction": 3,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "investigation",
+    "engine_alt": [
+      "mystery-box",
+      "heist"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological",
+      "mythic"
+    ],
+    "institution": [
+      "criminal-org",
+      "guild-corp",
+      "church"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "satire",
+      "comedy",
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "The Troop — Nick Cutter": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror"
+    ],
+    "status": "standalone"
+  },
+  "Spin — Robert Charles Wilson": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 4,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 2,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "cosmic-weird"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "tragedy",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Pet Sematary — Stephen King": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 4,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Needful Things — Stephen King": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "bureaucracy",
+      "church"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "satire",
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "The Hunger Games — Suzanne Collins": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 3,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "The Dragonbone Chair — Tad Williams": {
+    "velocity": 2,
+    "friction": 5,
+    "interiority": 3,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "institutional-politics",
+      "campaign-war"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "academy",
+      "church",
+      "military"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "Wizard's First Rule — Terry Goodkind": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 4,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "ascent-of-power",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "Mort — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "ascent-of-power",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mythic",
+      "hard-magic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "The Color of Magic — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 1,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "academy",
+      "guild-corp"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Celebrity in Death — J.D. Robb": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 3,
+    "prose_shine": 2,
+    "formula": 5,
+    "engine": "investigation",
+    "engine_alt": [],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "guild-corp"
+    ],
+    "cast": [
+      "solo-competent",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "noir",
+      "procedural"
+    ],
+    "status": "ongoing"
+  },
+  "All the Fiends of Hell — Adam L.G. Nevill": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth",
+      "post-apocalyptic"
+    ],
+    "system": [
+      "cosmic-weird"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror"
+    ],
+    "status": "standalone"
+  },
+  "Palimpsest — Catherynne M. Valente": {
+    "velocity": 2,
+    "friction": 4,
+    "interiority": 5,
+    "darkness": 3,
+    "romance_load": 4,
+    "prose_shine": 5,
+    "formula": 1,
+    "engine": "quest",
+    "engine_alt": [],
+    "milieu": [
+      "unplaceable",
+      "portal"
+    ],
+    "system": [
+      "cosmic-weird",
+      "mythic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Fool — Christopher Moore": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "historical-earth"
+    ],
+    "system": [
+      "mundane",
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "bureaucracy",
+      "church"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "comedy",
+      "satire",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Partials — Dan Wells": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "post-apocalyptic",
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Fear Nothing — Dean Koontz": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "adventure",
+      "procedural",
+      "horror"
+    ],
+    "status": "stalled"
+  },
+  "Life, the Universe and Everything — Douglas Adams": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 1,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 2,
+    "engine": "quest",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "cosmic-weird",
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Infinity Welcomes Careful Drivers — Grant Naylor": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "far-future",
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "guild-corp",
+      "military"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Harry Potter and the Chamber of Secrets — J.K. Rowling": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 3,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "contemporary-earth",
+      "portal"
+    ],
+    "system": [
+      "hidden-world-occult",
+      "hard-magic"
+    ],
+    "institution": [
+      "academy",
+      "bureaucracy"
+    ],
+    "cast": [
+      "naive-initiate",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "adventure",
+      "comedy",
+      "horror"
+    ],
+    "status": "complete-series"
+  },
+  "The Silverblood Promise — James Logan": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "investigation",
+    "engine_alt": [
+      "heist"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "guild-corp",
+      "criminal-org"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "adventure",
+      "noir"
+    ],
+    "status": "ongoing"
+  },
+  "Medalon — Jennifer Fallon": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "quest",
+      "campaign-war"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "church",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "CryoBurn — Lois McMaster Bujold": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "investigation",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "guild-corp",
+      "bureaucracy"
+    ],
+    "cast": [
+      "solo-competent"
+    ],
+    "mode": [
+      "comedy",
+      "procedural",
+      "adventure"
+    ],
+    "status": "ongoing"
+  },
+  "Nights of Villjamur — Mark Charan Newton": {
+    "velocity": 2,
+    "friction": 4,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "investigation",
+      "survival"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military",
+      "academy"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "noir"
+    ],
+    "status": "complete-series"
+  },
+  "Sphere — Michael Crichton": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 1,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "survival",
+      "investigation"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird",
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror",
+      "procedural"
+    ],
+    "status": "standalone"
+  },
+  "Throne of Jade — Naomi Novik": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "alt-history"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Black Powder War — Naomi Novik": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "campaign-war"
+    ],
+    "milieu": [
+      "alt-history"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "Empire of Ivory — Naomi Novik": {
+    "velocity": 3,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "institutional-politics",
+      "survival"
+    ],
+    "milieu": [
+      "alt-history"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy"
+    ],
+    "status": "complete-series"
+  },
+  "Xenocide — Orson Scott Card": {
+    "velocity": 2,
+    "friction": 4,
+    "interiority": 4,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "investigation",
+      "mystery-box"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "church",
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "tragedy",
+      "procedural"
+    ],
+    "status": "ongoing"
+  },
+  "The Dreaming Void — Peter F. Hamilton": {
+    "velocity": 3,
+    "friction": 4,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "institutional-politics",
+      "quest"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird",
+      "mythic"
+    ],
+    "institution": [
+      "guild-corp",
+      "bureaucracy",
+      "church"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Rage — Richard Bachman": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 5,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "mundane"
+    ],
+    "institution": [
+      "academy"
+    ],
+    "cast": [
+      "villain-protagonist"
+    ],
+    "mode": [
+      "tragedy",
+      "horror"
+    ],
+    "status": "standalone"
+  },
+  "Woken Furies — Richard K. Morgan": {
+    "velocity": 4,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 5,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "investigation",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "far-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "church",
+      "military",
+      "criminal-org"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "noir",
+      "tragedy",
+      "horror"
+    ],
+    "status": "complete-series"
+  },
+  "Nightlife — Rob Thurman": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 3,
+    "engine": "survival",
+    "engine_alt": [
+      "investigation"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "noir",
+      "horror",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Blind Lake — Robert Charles Wilson": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 4,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "investigation",
+      "survival"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "cosmic-weird",
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "guild-corp"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "procedural",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Wake — Robert J. Sawyer": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "ascent-of-power",
+    "engine_alt": [
+      "investigation",
+      "mystery-box"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Wonder — Robert J. Sawyer": {
+    "velocity": 3,
+    "friction": 1,
+    "interiority": 3,
+    "darkness": 2,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "ascent-of-power",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Hominids — Robert J. Sawyer": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 3,
+    "romance_load": 2,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "investigation",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "portal",
+      "alt-history"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "academy",
+      "bureaucracy"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "procedural",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Mélusine — Sarah Monette": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 5,
+    "darkness": 5,
+    "romance_load": 2,
+    "prose_shine": 4,
+    "formula": 2,
+    "engine": "survival",
+    "engine_alt": [
+      "quest",
+      "investigation"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic"
+    ],
+    "institution": [
+      "academy",
+      "criminal-org",
+      "guild-corp"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "tragedy",
+      "noir",
+      "horror"
+    ],
+    "status": "complete-series"
+  },
+  "Abraham Lincoln: Vampire Hunter — Seth Grahame-Smith": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 1,
+    "engine": "campaign-war",
+    "engine_alt": [
+      "investigation",
+      "quest"
+    ],
+    "milieu": [
+      "alt-history",
+      "historical-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror",
+      "satire",
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "Something from the Nightside — Simon R. Green": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 4,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth",
+      "portal"
+    ],
+    "system": [
+      "hidden-world-occult",
+      "mythic"
+    ],
+    "institution": [
+      "criminal-org"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "noir",
+      "horror",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "The Girl Who Loved Tom Gordon — Stephen King": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 4,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "horror",
+      "tragedy",
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "The Dark Half — Stephen King": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "investigation",
+      "mystery-box"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "bureaucracy",
+      "academy"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Dreamcatcher — Stephen King": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird",
+      "technological"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "The Tommyknockers — Stephen King": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 1,
+    "engine": "mystery-box",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "cosmic-weird",
+      "technological"
+    ],
+    "institution": [
+      "military"
+    ],
+    "cast": [
+      "dual-strand"
+    ],
+    "mode": [
+      "horror",
+      "tragedy"
+    ],
+    "status": "standalone"
+  },
+  "Cell — Stephen King": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 5,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 1,
+    "engine": "survival",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "contemporary-earth",
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological",
+      "cosmic-weird"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "horror",
+      "adventure"
+    ],
+    "status": "standalone"
+  },
+  "Bag of Bones — Stephen King": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 4,
+    "darkness": 4,
+    "romance_load": 3,
+    "prose_shine": 4,
+    "formula": 1,
+    "engine": "investigation",
+    "engine_alt": [
+      "survival"
+    ],
+    "milieu": [
+      "contemporary-earth"
+    ],
+    "system": [
+      "hidden-world-occult"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "damaged-loner"
+    ],
+    "mode": [
+      "horror",
+      "tragedy",
+      "noir"
+    ],
+    "status": "standalone"
+  },
+  "Catching Fire — Suzanne Collins": {
+    "velocity": 5,
+    "friction": 1,
+    "interiority": 3,
+    "darkness": 4,
+    "romance_load": 3,
+    "prose_shine": 2,
+    "formula": 3,
+    "engine": "survival",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "military"
+    ],
+    "cast": [
+      "solo-competent",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "adventure",
+      "tragedy",
+      "procedural"
+    ],
+    "status": "complete-series"
+  },
+  "Mockingjay — Suzanne Collins": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 4,
+    "darkness": 5,
+    "romance_load": 3,
+    "prose_shine": 2,
+    "formula": 2,
+    "engine": "campaign-war",
+    "engine_alt": [
+      "institutional-politics",
+      "survival"
+    ],
+    "milieu": [
+      "post-apocalyptic"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy"
+    ],
+    "cast": [
+      "solo-competent",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "tragedy",
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "The Sword of Shannara — Terry Brooks": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 2,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "campaign-war"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "academy",
+      "military"
+    ],
+    "cast": [
+      "naive-initiate",
+      "ensemble-crew"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "ongoing"
+  },
+  "Equal Rites — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 1,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 3,
+    "engine": "ascent-of-power",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "academy",
+      "guild-corp"
+    ],
+    "cast": [
+      "naive-initiate"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Wyrd Sisters — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "quest"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Witches Abroad — Terry Pratchett": {
+    "velocity": 3,
+    "friction": 2,
+    "interiority": 1,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "quest",
+    "engine_alt": [
+      "institutional-politics"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mythic",
+      "hard-magic"
+    ],
+    "institution": [
+      "none"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Feet of Clay — Terry Pratchett": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "investigation",
+    "engine_alt": [],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "hard-magic",
+      "mythic"
+    ],
+    "institution": [
+      "bureaucracy",
+      "guild-corp"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire",
+      "procedural",
+      "noir"
+    ],
+    "status": "complete-series"
+  },
+  "Hogfather — Terry Pratchett": {
+    "velocity": 4,
+    "friction": 2,
+    "interiority": 2,
+    "darkness": 3,
+    "romance_load": 1,
+    "prose_shine": 4,
+    "formula": 3,
+    "engine": "investigation",
+    "engine_alt": [
+      "mystery-box"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mythic",
+      "hard-magic"
+    ],
+    "institution": [
+      "academy",
+      "guild-corp"
+    ],
+    "cast": [
+      "ensemble-crew"
+    ],
+    "mode": [
+      "comedy",
+      "satire"
+    ],
+    "status": "complete-series"
+  },
+  "Heir to the Empire — Timothy Zahn": {
+    "velocity": 4,
+    "friction": 1,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 2,
+    "engine": "institutional-politics",
+    "engine_alt": [
+      "campaign-war",
+      "investigation"
+    ],
+    "milieu": [
+      "secondary-world"
+    ],
+    "system": [
+      "mythic",
+      "technological"
+    ],
+    "institution": [
+      "military",
+      "bureaucracy",
+      "academy"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "adventure"
+    ],
+    "status": "complete-series"
+  },
+  "Rainbows End — Vernor Vinge": {
+    "velocity": 3,
+    "friction": 3,
+    "interiority": 2,
+    "darkness": 2,
+    "romance_load": 1,
+    "prose_shine": 3,
+    "formula": 1,
+    "engine": "investigation",
+    "engine_alt": [
+      "mystery-box",
+      "institutional-politics"
+    ],
+    "milieu": [
+      "near-future"
+    ],
+    "system": [
+      "technological"
+    ],
+    "institution": [
+      "bureaucracy",
+      "academy",
+      "military"
+    ],
+    "cast": [
+      "multi-pov-sprawl"
+    ],
+    "mode": [
+      "procedural",
+      "satire",
+      "adventure"
+    ],
+    "status": "standalone"
+  }
+}
