@@ -24,3 +24,6 @@ sg_rows.jsonl
 sg_todo.json
 sg_calib.json
 sg_retry.json
+
+# conversation exports, kept locally as working notes
+context/
