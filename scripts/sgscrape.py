@@ -1,4 +1,4 @@
-import json, os, re, sys, unicodedata
+import json, os, re, sys, unicodedata, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 from playwright.sync_api import sync_playwright
 
@@ -20,7 +20,10 @@ def surname(a):
 
 def find_id(pg, title, author):
     """Search StoryGraph and return the UUID whose title+author best matches."""
-    q = re.sub(r"\s+", "+", f"{title} {author}")
+    # Percent-encoded, not just space-substituted: "The City & the City" put a
+    # bare ampersand in the query string, which ended search_term early and
+    # returned no match for a book StoryGraph has.
+    q = urllib.parse.quote_plus(f"{title} {author}".strip())
     pg.goto(f"https://app.thestorygraph.com/browse?search_term={q}",
             wait_until="domcontentloaded", timeout=90000)
     try:   # real results are UUID hrefs; /books/new is the "add book" link
