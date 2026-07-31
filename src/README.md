@@ -34,13 +34,6 @@ regenerating `books.json` keeps your ratings as long as titles don't change.
 Un-rating restores the original value rather than zeroing it. If a browser
 blocks storage the UI says so and falls back to the file layer.
 
-**1b. A real file on disk (Chrome/Edge).** *Link a ratings.json* opens a file
-picker and keeps the handle; every rating then writes straight to that file.
-Point it at `src/data/ratings.json` in your checkout and rating a book updates
-the repo directly — commit when you like. *Open existing* loads and links a file
-in one step. Safari and Firefox lack the File System Access API and fall back to
-the download/import layer.
-
 **2. A file (portable).** *Download backup* writes
 `reading-ratings-YYYY-MM-DD.json`; *Import file* merges one back. Account-free,
 and the thing to use before clearing browser data — a browser profile is not a
@@ -61,51 +54,6 @@ gist is one token and one paste.
 + leave-one-out CV); the page can only record ratings. To fold them in, export
 and either hand them back for a refit or merge into `data/books.json` and
 rebuild.
-
-## When you rate something that isn't in the library yet
-
-The series shelves list every volume a bibliography knows about, most of which
-have no `books.json` record. Rating one of those used to leave the rating
-stranded: `build.py` joins on title, found nothing, and dropped it silently —
-twelve Laundry Files ratings while the author line still read *2 books, 4.0★*.
-
-`python3 scripts/promote.py` closes that gap. It reports by default and needs
-`--write` to act, and it is safe to run twice.
-
-```
-python3 scripts/promote.py            what would happen
-python3 scripts/promote.py --write    apply, then python3 build.py
-```
-
-There are two destinations, because they cost different amounts:
-
-| | what it takes | what you get |
-|---|---|---|
-| **aggregates** | nothing beyond the rating | counts as read; folds into the author and series means; shows in the series shelf |
-| **library** | the seven axes and the facets, by hand, in `scripts/newbooks.json` | all of the above, plus a dot in the graph, edges to its relatives, and a row the model could train on |
-
-Authors are inferred from an already-tagged volume of the same series. When no
-sibling is tagged the book is reported rather than guessed at — supply an `a`
-in `newbooks.json` and re-run.
-
-Two things a promoted book deliberately does **not** get. `cpace`, `moods`,
-`nrev` and `blurb` are scraped community data, not judgement, so they stay empty
-until `sgscrape.py` fills them. `kingsim` is omitted outright: the formula that
-produced the values already in `books.json` is not in this repo and does not
-reproduce from the description above, and a fabricated number would be worse
-than an absent one.
-
-Cluster membership is inherited from the book's strongest neighbour rather than
-recomputed, so adding a book never reshuffles the colours of everything already
-on screen. The cost is that a new book can land in a cluster whose *label* fits
-it poorly — *Feed* sits in Corporate Space Opera, having arrived via
-`technological` + `guild-corp`. Re-running `clusters.py` would relabel properly,
-at the price of moving every existing book.
-
-`meta_baseline.json` is a snapshot of the author and series aggregates as they
-came from the Goodreads export. That export is not in this repo, so without the
-snapshot a rebuild would quietly lower every count to what `books.json` alone
-can see. It is written once, then read on every run.
 
 ## Where the tags come from
 
@@ -147,11 +95,5 @@ tag means, edit `tagging-schema.md`.
 |---|---|---|
 | `books.json` moods/pace/blurbs | `sgscrape.py`, `sgdesc.py` | StoryGraph via Playwright; ~10 s per book, single worker |
 | `next_in_series.json` | `nextvol.py` (Wikidata), `isfdb.py` (ISFDB) | ISFDB is better for SFF; FantasticFiction is manual only |
-| `meta.json` | `fixmeta.py`, then `promote.py` | `fixmeta.py` merges the Goodreads export; `promote.py` folds in every rating made since |
-| ratings with no record | `promote.py` | see above; needs hand tags in `scripts/newbooks.json` for full library membership |
+| `meta.json` | `fixmeta.py` | merges the Goodreads export with ratings given in chat |
 | `model.json` | refit in Python | Ridge + LOO; r = 0.713, residual ±0.63 |
-
-Note that `fixmeta.py`, `rebuild_series.py` and `allseries.py` read inputs that
-are not in this repo (`library_backup.csv`, `series_wd.json`, `isfdb_cache.json`)
-and cannot currently be run. Their outputs are committed; `promote.py` was
-written to work from what is actually here.
