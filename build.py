@@ -24,7 +24,7 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 DIST = os.path.join(ROOT, "dist")
-DATA_FILES = ["books", "model", "meta", "next_in_series"]
+DATA_FILES = ["books", "model", "meta", "next_in_series", "all_series", "ratings", "graph"]
 
 GOOGLE_FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -45,10 +45,31 @@ def load_data():
     for name in DATA_FILES:
         path = os.path.join(SRC, "data", f"{name}.json")
         if not os.path.exists(path):
+            if name in ("ratings", "all_series", "graph"):        # optional
+                out[name] = {"ratings": {}, "log": []} if name == "ratings" else {}
+                continue
             sys.exit(f"missing data file: {path}")
         with open(path, encoding="utf-8") as f:
             out[name] = json.load(f)
+    merge_ratings(out)
     return out
+
+
+def merge_ratings(data):
+    """Ratings committed to src/data/ratings.json are folded into the book
+    records at build time, so a rating made in the browser becomes permanent the
+    moment it is exported and committed. Titles are the join key."""
+    rat = (data.get("ratings") or {}).get("ratings") or {}
+    if not rat:
+        return
+    idx = {b["t"]: b for b in data["books"]}
+    n = 0
+    for title, value in rat.items():
+        b = idx.get(title)
+        if b and isinstance(value, (int, float)) and 1 <= value <= 5:
+            b["r"] = value
+            n += 1
+    print(f"  merged {n} committed rating(s) from src/data/ratings.json")
 
 
 def write_dev_shim(data):
