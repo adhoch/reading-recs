@@ -1,0 +1,12 @@
+# generated — rebuild with: python3 build.py
+dist/
+src/data.js
+
+# never commit these
+*.token
+.env
+secrets*
+goodreads_library_export.csv
+*.json.gz
+__pycache__/
+.venv/

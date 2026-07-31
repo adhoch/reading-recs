@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading Network — a taxonomy of what lands</title>
+<!--FONTS-->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="rail">
+    <div class="eyebrow">Taxonomy v1.2 · 274 books · StoryGraph-validated</div>
+    <h1>What lands,<br>and <em>why</em></h1>
+    <p class="blurb">Books connect by shared facets. They're judged by register.
+      Drag to orbit, scroll to zoom, hover to isolate a book's relatives.</p>
+    <div class="eyebrow">View</div>
+    <div class="btnrow">
+      <button id="m-depth" class="on">Depth</button>
+      <button id="m-flat">Flat</button>
+      <button id="m-spin" class="on">Drift</button>
+      <button id="m-spot" class="on">Spotlight unread</button>
+    </div>
+    <div class="divider"></div>
+    <div class="eyebrow">Register filter</div>
+    <div class="btnrow">
+      <button id="preset-fit">My fit window</button>
+      <button id="preset-clear" class="on">No filter</button>
+    </div>
+    <div id="axes"></div>
+    <div class="divider"></div>
+    <div class="eyebrow">Show</div>
+    <div class="btnrow">
+      <button id="t-read" class="on">Read</button>
+      <button id="t-rec" class="on">Recommended</button>
+    </div>
+    <div class="divider"></div>
+    <div class="eyebrow">Dot size · rating</div>
+    <div class="sizekey" id="sizekey"></div>
+    <div class="divider"></div>
+    <div class="eyebrow">Plot engine</div>
+    <div class="legend" id="legend"></div>
+    <div class="divider"></div>
+    <div class="eyebrow">Your ratings</div>
+    <div id="syncbox"></div>
+    <div class="divider"></div>
+    <div class="eyebrow" id="tag-head">Filter by tag</div>
+    <input id="tag-search" placeholder="find a tag…" autocomplete="off">
+    <div id="tagfilter"></div>
+  </aside>
+
+  <main class="stage">
+    <canvas id="cv"></canvas>
+    <header class="topbar" id="topbar">
+      <span class="topbar-t">What lands, and <em>why</em></span>
+      <span class="topbar-n" id="topbar-n"></span>
+    </header>
+    <div class="views" role="tablist" aria-label="View">
+      <button id="v-mood" class="on" role="tab" aria-selected="true">Tonight</button>
+      <button id="v-graph" role="tab" aria-selected="false">Graph</button>
+      <button id="v-shelf" role="tab" aria-selected="false">Shelves</button>
+      <button id="v-list" role="tab" aria-selected="false">List</button>
+    </div>
+    <div class="finder">
+      <input id="find" type="search" placeholder="Find a book" autocomplete="off" spellcheck="false"
+             aria-label="Find a book by title or author">
+      <div id="find-results" role="listbox" aria-label="Matching books"></div>
+    </div>
+    <div class="hint" id="hint">Drag to orbit · hover a book to isolate its relatives · press <b>/</b> to find a title</div>
+    <div class="readout" id="readout"></div>
+    <div class="listview" id="moodview">
+      <div class="mood-top">
+        <h2 class="mood-q">What are you in the mood for?</h2>
+        <p class="mood-sub">Pick as many as you like — or none, and I'll just show the best fits.</p>
+        <div id="mood-picks"></div>
+        <div class="mood-actions"><button id="mood-clear">Clear</button>
+          <span class="mood-count" id="mood-count"></span></div>
+      </div>
+      <div id="mood-results"></div>
+    </div>
+    <div class="listview" id="shelfview" hidden>
+      <div class="shelf-bar">
+        <button id="sh-auth" class="on">By author</button>
+        <button id="sh-ser">By series</button>
+        <span class="shelf-hint" id="shelf-hint"></span>
+      </div>
+      <div id="shelf-rows"></div>
+    </div>
+    <div class="listview" id="listview" hidden>
+      <div class="lv-head">
+        <span>Title</span>
+        <button class="lv-sort on" data-k="p">Fit</button>
+        <button class="lv-sort" data-k="ax0">Pull</button>
+        <button class="lv-sort" data-k="cpace">Readers' pace</button>
+        <button class="lv-sort" data-k="nrev">Known</button>
+      </div>
+      <div class="lv-rows" id="lv-rows"></div>
+    </div>
+    <div class="void" id="void" hidden>
+      <p>No books match these filters.</p>
+      <button id="void-clear">Clear all filters</button>
+    </div>
+  </main>
+
+  <aside class="rail right" id="detail">
+    <div class="eyebrow">Selection</div>
+    <p class="empty">Nothing selected. Tap a book to see its tags and register profile.</p>
+  </aside>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<nav class="tabbar" id="tabbar">
+  <button id="tab-controls" type="button">Filter</button>
+  <button id="tab-detail" type="button">Book</button>
+  <button id="tab-graph" class="on" type="button">Graph</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
