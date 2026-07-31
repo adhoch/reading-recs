@@ -149,7 +149,52 @@ tag means, edit `tagging-schema.md`.
 | `next_in_series.json` | `nextvol.py` (Wikidata), `isfdb.py` (ISFDB) | ISFDB is better for SFF; FantasticFiction is manual only |
 | `meta.json` | `fixmeta.py`, then `promote.py` | `fixmeta.py` merges the Goodreads export; `promote.py` folds in every rating made since |
 | ratings with no record | `promote.py` | see above; needs hand tags in `scripts/newbooks.json` for full library membership |
-| `model.json` | refit in Python | Ridge + LOO; r = 0.713, residual ±0.63 |
+| `model.json` | `fit.py` | Ridge, leave-one-series-out; committed r = 0.713 |
+
+## What the model is actually worth
+
+The committed `model.json` reports r = 0.713 and the current library
+cross-validates at 0.743. **Both are optimistic. The honest figure is about
+0.67**, explaining roughly 45% of the variance in a rating rather than 55%.
+
+The original 274 books were tagged in conversation, with the ratings visible.
+Forty of them were retagged blind by two independent raters who were told
+nothing about any rating, on a set spanning the full 2-to-5 range so no
+restriction confound applies:
+
+| axis | tagged with ratings visible | tagged blind |
+|---|---|---|
+| velocity | +0.71 | +0.35 |
+| prose_shine | +0.37 | +0.29 |
+| formula | −0.32 | −0.25 |
+| friction | −0.40 | −0.19 |
+| interiority | −0.10 | **+0.26** |
+
+Velocity survives — it is a real axis, not an artifact — but roughly a third of
+its apparent strength came from the tagger knowing the answer. Swapping those
+forty books for their blind tags moves the whole model from 0.743 to 0.668.
+
+`interiority` moves the other way. It looked useless when tagged with ratings
+in view and is a modest positive signal when tagged blind, so contamination
+does not only inflate; it can also hide.
+
+### Why velocity is not replaced by something measured
+
+Community data reconstructs a blind tagger's velocity well — r = 0.71,
+MAD 0.32 — which looks like grounds for computing the axis instead of guessing
+it. It is not. On books held out of that reconstruction entirely:
+
+```
+original hand velocity (contaminated)   +0.70
+blind hand velocity, two raters         +0.33
+computed from community data            +0.03
+```
+
+The computed value predicts the tag and not the rating. Whatever velocity
+carries about what you like lives in the part community pace and moods cannot
+reach. Replacing the axis with it drops the model to 0.605; adding it alongside
+is worth +0.004.
+
 
 Note that `fixmeta.py`, `rebuild_series.py` and `allseries.py` read inputs that
 are not in this repo (`library_backup.csv`, `series_wd.json`, `isfdb_cache.json`)

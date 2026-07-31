@@ -674,10 +674,16 @@ function renderRanked(){
        '<span class="rank-t">'+n.t+'<i>'+n.a+'</i></span>'+
        '<span class="rank-bar"><div style="width:'+Math.round((n.p-3.5)/1.5*100)+'%;background:'+nodeHex(n)+'"></div></span></div>';
   });
+  /* The committed r is measured against tags made with the ratings in view, so
+     it flatters itself. Forty books retagged blind put the honest figure near
+     0.67 — see docs-data.md. Quoting the optimistic number on the page would be
+     the same error the tagging made. */
   h+='<p class="caveat">Scored from the seven register axes only — the facets turned out to carry '+
-     'no predictive signal, so they build the graph but not the score. Model agrees with past ratings '+
-     'at r='+MODEL.r+', residual ±'+MODEL.sd+'. Gaps smaller than that are noise, which is why these '+
-     'sit in bands rather than a strict ranking.</p>';
+     'no predictive signal, so they build the graph but not the score. Against books retagged by '+
+     'raters who never saw a rating, the model agrees at about r=0.67, residual ±0.7 — the committed '+
+     'r='+MODEL.r+' is optimistic because the original tags were made with the ratings visible. '+
+     'Gaps smaller than the residual are noise, which is why these sit in bands rather than a '+
+     'strict ranking.</p>';
   el.innerHTML=h;
   el.querySelectorAll(".rank").forEach(d=>d.onclick=()=>{
     selected=+d.dataset.id;renderDetail();revealDetail();kick();});

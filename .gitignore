@@ -30,3 +30,7 @@ context/
 tagging-blind-set.json
 tagging-my-answers.json
 tagging-prompt*.txt
+retest-blind-set.json
+retest-blind-set.json
+tagging-prompt-retest.txt
+retest_rater*.json

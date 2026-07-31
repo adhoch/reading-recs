@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-07-31T16:17:11.054Z",
+ "updated": "2026-07-31T16:17:41.233Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -60,7 +60,8 @@
   "The Shadow Throne": 5,
   "The Price of Valor": 4,
   "Tilting the Balance": 4,
-  "Upsetting the Balance": 4
+  "Upsetting the Balance": 4,
+  "Island in the Sea of Time": 4
  },
  "log": [
   {
@@ -131,6 +132,13 @@
    "from": null,
    "to": 4,
    "at": "2026-07-31T16:17:10.439Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Island in the Sea of Time",
+   "from": null,
+   "to": 4,
+   "at": "2026-07-31T16:17:40.624Z",
    "note": "rated from series list"
   }
  ]
