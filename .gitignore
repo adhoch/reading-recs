@@ -27,3 +27,5 @@ sg_retry.json
 
 # conversation exports, kept locally as working notes
 context/
+tagging-blind-set.json
+tagging-my-answers.json

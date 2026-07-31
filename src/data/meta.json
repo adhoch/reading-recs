@@ -45,8 +45,8 @@
    "mean": 4.0
   },
   "Richard Bachman": {
-   "n": 1,
-   "mean": 4.0
+   "n": 2,
+   "mean": 3.5
   },
   "Claire North": {
    "n": 2,
@@ -74,7 +74,7 @@
   },
   "Christopher Moore": {
    "n": 2,
-   "mean": 3.5
+   "mean": 3.25
   },
   "James Logan": {
    "n": 1,
@@ -114,7 +114,7 @@
   },
   "Stephen King": {
    "n": 37,
-   "mean": 3.96
+   "mean": 3.85
   },
   "Charles Stross": {
    "n": 14,
@@ -206,7 +206,7 @@
   },
   "Vernor Vinge": {
    "n": 3,
-   "mean": 3.67
+   "mean": 3.45
   },
   "David Cote": {
    "n": 1,
@@ -217,8 +217,8 @@
    "mean": 5.0
   },
   "Naomi Novik": {
-   "n": 5,
-   "mean": 4.44
+   "n": 6,
+   "mean": 4.0
   },
   "Arkady Martine": {
    "n": 1,
@@ -246,7 +246,7 @@
   },
   "Terry Pratchett": {
    "n": 19,
-   "mean": 3.77
+   "mean": 3.57
   },
   "James S.A. Corey": {
    "n": 2,
@@ -262,7 +262,7 @@
   },
   "Richard K. Morgan": {
    "n": 4,
-   "mean": 3.38
+   "mean": 3.25
   },
   "Erin Morgenstern": {
    "n": 1,
@@ -362,7 +362,7 @@
   },
   "Lois McMaster Bujold": {
    "n": 10,
-   "mean": 3.9
+   "mean": 3.81
   },
   "Alastair Reynolds": {
    "n": 3,
@@ -378,7 +378,7 @@
   },
   "J.K. Rowling": {
    "n": 4,
-   "mean": 3.75
+   "mean": 3.56
   },
   "Mike Shevdon": {
    "n": 1,
@@ -406,11 +406,11 @@
   },
   "Robert Charles Wilson": {
    "n": 3,
-   "mean": 3.22
+   "mean": 3.11
   },
   "Peter F. Hamilton": {
    "n": 6,
-   "mean": 2.11
+   "mean": 2.25
   },
   "S.M. Stirling": {
    "n": 2,
@@ -446,7 +446,7 @@
   },
   "Dan Wells": {
    "n": 2,
-   "mean": 3.5
+   "mean": 3.25
   },
   "David Weber": {
    "n": 2,
@@ -478,7 +478,7 @@
   },
   "Dean Koontz": {
    "n": 2,
-   "mean": 4.0
+   "mean": 3.5
   },
   "Rob Thurman": {
    "n": 1,
@@ -638,7 +638,7 @@
   },
   "Orson Scott Card": {
    "n": 3,
-   "mean": 2.89
+   "mean": 2.78
   },
   "Karen Traviss": {
    "n": 1,
@@ -654,7 +654,7 @@
   },
   "Michael Crichton": {
    "n": 3,
-   "mean": 3.67
+   "mean": 3.45
   },
   "Cherie Priest": {
    "n": 1,
@@ -698,7 +698,7 @@
   },
   "Douglas Adams": {
    "n": 2,
-   "mean": 3.5
+   "mean": 3.25
   },
   "Philip K. Dick": {
    "n": 2,
@@ -758,7 +758,7 @@
   },
   "Jennifer Fallon": {
    "n": 2,
-   "mean": 3.5
+   "mean": 3.25
   },
   "Trudi Canavan": {
    "n": 3,
@@ -1283,7 +1283,7 @@
   "discworld": {
    "name": "Discworld",
    "n": 15,
-   "mean": 3.33,
+   "mean": 3.12,
    "vols": [
     1.0,
     2.0,
@@ -1298,6 +1298,7 @@
     15.0,
     16.0,
     19.0,
+    20.0,
     30.0,
     33.0
    ]
@@ -1330,7 +1331,7 @@
   "takeshi kovacs": {
    "name": "Takeshi Kovacs",
    "n": 3,
-   "mean": 3.67,
+   "mean": 3.0,
    "vols": [
     1.0,
     2.0,
@@ -1532,7 +1533,7 @@
   "harry potter": {
    "name": "Harry Potter",
    "n": 4,
-   "mean": 3.75,
+   "mean": 3.0,
    "vols": [
     2.0,
     4.0,
@@ -1624,7 +1625,7 @@
   "temeraire": {
    "name": "Temeraire",
    "n": 4,
-   "mean": 3.25,
+   "mean": 3.0,
    "vols": [
     1.0,
     2.0,
@@ -2048,7 +2049,7 @@
   "hitchhikers guide to the galaxy": {
    "name": "The Hitchhiker's Guide to the Galaxy",
    "n": 2,
-   "mean": 3.5,
+   "mean": 3.0,
    "vols": [
     1.0,
     3.0
@@ -2449,6 +2450,14 @@
   },
   "inheritance cycle": {
    "name": "The Inheritance Cycle",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1.0
+   ]
+  },
+  "partials sequence": {
+   "name": "Partials Sequence",
    "n": 1,
    "mean": 3.0,
    "vols": [
