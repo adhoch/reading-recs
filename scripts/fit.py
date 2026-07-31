@@ -35,7 +35,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "data")
 AXES = ["velocity", "friction", "interiority", "darkness",
         "romance_load", "prose_shine", "formula", "community_pace"]
-LAMBDA = 1.0
+LAMBDA = 5.0
 
 snorm = lambda x: re.sub(r"[^a-z0-9 ]", "", re.sub(r"^(the|a)\s+", "", str(x).lower())).strip()
 
@@ -128,8 +128,40 @@ def main():
     print(f"  {'intercept':<16}{model['intercept']:>+11.4f}{b:>+10.4f}{b - model['intercept']:>+9.4f}")
 
     grp_r, grp_sd = cv(rows, True)
+
+    if "--rescore" in sys.argv[1:]:
+        # Rescore from the committed model rather than fitting a new one.
+        #
+        # model.json is not a fossil: it reproduces a ridge fit at lambda=5 on
+        # the original 95 rated books to a mean coefficient difference of
+        # 0.0038, so it is a real model and, on the numbers above, a better one
+        # than anything refitting the current library produces. What is stale is
+        # praw and p, which came from an earlier fit -- 115 of the original 274
+        # reproduce from the committed coefficients and the rest are off by
+        # about 0.03. This puts every book on the one verified model without
+        # changing which model that is.
+        w = np.array(model["coef"], float)
+        moved = 0
+        for bk in books:
+            praw = model["intercept"] + float(np.array(features(bk)) @ w)
+            p = round(min(5.0, max(1.0, praw)), 1)
+            if abs(bk.get("p", p) - p) > 1e-9:
+                moved += 1
+            bk["praw"], bk["p"] = round(praw, 3), p
+            bk["weber_risk"] = (not bk["r"]) and bk["ax"][5] <= 2 and bk["ax"][6] >= 4
+        print(f"\nrescored {len(books)} books from the committed model; "
+              f"{moved} displayed scores change")
+        if not write:
+            print("dry run — add --write to apply")
+            return
+        with open(os.path.join(DATA, "books.json"), "w", encoding="utf-8") as f:
+            json.dump(books, f, ensure_ascii=False, separators=(",", ":"))
+        print("wrote src/data/books.json — next: python3 build.py")
+        return
+
     if not write:
-        print("\ndry run — pass --write to replace model.json and rescore every book")
+        print("\ndry run — pass --write to refit, or --rescore to recompute "
+              "p/praw from the committed model without refitting")
         return
     out = {"intercept": round(b, 4), "coef": [round(float(c), 4) for c in w],
            "sd": round(grp_sd, 2), "r": round(grp_r, 3)}
