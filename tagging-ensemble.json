@@ -1,0 +1,758 @@
+{
+ "Urban Shaman": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Angels & Demons": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "The Da Vinci Code": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Dauntless": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 5
+ },
+ "A Perfect Blood": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 4,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Shadow of the Hegemon": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "The Windup Girl": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Pandora's Star": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "The Reality Dysfunction": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "The Golden Compass": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "The Lightning Thief": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Under the Dome": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Twilight": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 4,
+  "darkness": 2,
+  "romance_load": 5,
+  "prose_shine": 2,
+  "formula": 3
+ },
+ "The Light Fantastic": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Terminal World": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "The Martian": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Dracula": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Warbreaker": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "The Lion, the Witch and the Wardrobe": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "Eragon": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Startide Rising": {
+  "velocity": 3,
+  "friction": 3,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "The Shadow of the Torturer": {
+  "velocity": 1,
+  "friction": 5,
+  "interiority": 5,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 5,
+  "formula": 2
+ },
+ "The Strain": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 2,
+  "formula": 3
+ },
+ "Foundation": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "Darkly Dreaming Dexter": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 4,
+  "darkness": 4,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Fool Moon": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 4
+ },
+ "Best Served Cold": {
+  "velocity": 4,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "The Heroes": {
+  "velocity": 3,
+  "friction": 3,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Horns": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 4,
+  "romance_load": 3,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Snow Crash": {
+  "velocity": 4,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "The Troop": {
+  "velocity": 4,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Spin": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 4,
+  "darkness": 4,
+  "romance_load": 3,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "Pet Sematary": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Needful Things": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "The Hunger Games": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 3,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "The Dragonbone Chair": {
+  "velocity": 2,
+  "friction": 5,
+  "interiority": 4,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "Wizard's First Rule": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 4,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Mort": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "The Color of Magic": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Celebrity in Death": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 2,
+  "formula": 5
+ },
+ "All the Fiends of Hell": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Palimpsest": {
+  "velocity": 1,
+  "friction": 4,
+  "interiority": 5,
+  "darkness": 3,
+  "romance_load": 4,
+  "prose_shine": 5,
+  "formula": 1
+ },
+ "Fool": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "Partials": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 4,
+  "romance_load": 3,
+  "prose_shine": 2,
+  "formula": 3
+ },
+ "Fear Nothing": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 3
+ },
+ "Life, the Universe and Everything": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Infinity Welcomes Careful Drivers": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Harry Potter and the Chamber of Secrets": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 4
+ },
+ "The Silverblood Promise": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Medalon": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 2,
+  "formula": 3
+ },
+ "CryoBurn": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Nights of Villjamur": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "Sphere": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Throne of Jade": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 2,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Black Powder War": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 4
+ },
+ "Empire of Ivory": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 4
+ },
+ "Xenocide": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 5,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "The Dreaming Void": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Rage": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Woken Furies": {
+  "velocity": 3,
+  "friction": 3,
+  "interiority": 3,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Nightlife": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "Blind Lake": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 4,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Wake": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 2,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "Wonder": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Hominids": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 3,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "Mélusine": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 5,
+  "darkness": 5,
+  "romance_load": 3,
+  "prose_shine": 4,
+  "formula": 2
+ },
+ "Abraham Lincoln: Vampire Hunter": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 2
+ },
+ "Something from the Nightside": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 4,
+  "romance_load": 2,
+  "prose_shine": 2,
+  "formula": 4
+ },
+ "The Girl Who Loved Tom Gordon": {
+  "velocity": 3,
+  "friction": 1,
+  "interiority": 5,
+  "darkness": 4,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "The Dark Half": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Dreamcatcher": {
+  "velocity": 3,
+  "friction": 3,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "The Tommyknockers": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Cell": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 5,
+  "romance_load": 1,
+  "prose_shine": 3,
+  "formula": 1
+ },
+ "Bag of Bones": {
+  "velocity": 2,
+  "friction": 3,
+  "interiority": 5,
+  "darkness": 4,
+  "romance_load": 4,
+  "prose_shine": 4,
+  "formula": 1
+ },
+ "Catching Fire": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 3,
+  "darkness": 4,
+  "romance_load": 3,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Mockingjay": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 4,
+  "darkness": 5,
+  "romance_load": 3,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "The Sword of Shannara": {
+  "velocity": 3,
+  "friction": 3,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 2,
+  "formula": 5
+ },
+ "Equal Rites": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Wyrd Sisters": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Witches Abroad": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 2,
+  "darkness": 2,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Feet of Clay": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Hogfather": {
+  "velocity": 3,
+  "friction": 2,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 1,
+  "prose_shine": 4,
+  "formula": 3
+ },
+ "Heir to the Empire": {
+  "velocity": 4,
+  "friction": 1,
+  "interiority": 2,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 3
+ },
+ "Rainbows End": {
+  "velocity": 2,
+  "friction": 4,
+  "interiority": 3,
+  "darkness": 3,
+  "romance_load": 2,
+  "prose_shine": 3,
+  "formula": 1
+ }
+}
