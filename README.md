@@ -3,7 +3,7 @@
 A personal book recommendation viewer built over a Goodreads export: a rated
 library, a fitted preference model, and four ways to ask "what do I read next."
 
-**[Live site](https://USERNAME.github.io/reading-network/)** — replace with your Pages URL.
+**[Live site](https://adhoch.github.io/reading-recs/)**
 
 ## Build
 
