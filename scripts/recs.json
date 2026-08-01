@@ -1,0 +1,73 @@
+{
+ "_note": "Unread books added to fill registers the library had nothing to recommend from. Tagged by hand on the same scale as books.json — see tagging-schema.md. ax order: velocity, friction, interiority, darkness, romance_load, prose_shine, formula. No rating: these are recommendations, so scripts/addrecs.py files them with r=0 and lets model.json score them. cpace is absent by design — it is scraped community data, not a judgement.",
+
+ "Going Postal": {"a": "Terry Pratchett", "ser": "Discworld",
+  "ax": [4,1,2,2,2,4,2], "en": "heist", "ea": ["ascent-of-power"],
+  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["bureaucracy"],
+  "ca": ["solo-competent"], "mo": ["comedy","satire"], "st": "complete-series"},
+
+ "Wyrd Sisters": {"a": "Terry Pratchett", "ser": "Discworld",
+  "ax": [4,1,2,2,1,4,2], "en": "quest", "ea": [],
+  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["none"],
+  "ca": ["ensemble-crew"], "mo": ["comedy","satire"], "st": "complete-series"},
+
+ "The Eye of the World": {"a": "Robert Jordan", "ser": "The Wheel of Time",
+  "ax": [3,3,2,2,2,3,4], "en": "quest", "ea": ["campaign-war"],
+  "mi": ["secondary-world"], "sy": ["hard-magic","mythic"], "in": ["none"],
+  "ca": ["multi-pov-sprawl"], "mo": ["adventure"], "st": "complete-series"},
+
+ "Assassin's Apprentice": {"a": "Robin Hobb", "ser": "The Farseer Trilogy",
+  "ax": [3,2,4,3,2,4,2], "en": "ascent-of-power", "ea": [],
+  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["none"],
+  "ca": ["naive-initiate"], "mo": ["tragedy"], "st": "complete-series"},
+
+ "Port of Shadows": {"a": "Glen Cook", "ser": "The Chronicles of the Black Company",
+  "ax": [3,3,2,4,1,3,3], "en": "campaign-war", "ea": [],
+  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["military"],
+  "ca": ["ensemble-crew"], "mo": ["noir"], "st": "complete-series"},
+
+ "Old Man's War": {"a": "John Scalzi", "ser": "Old Man's War",
+  "ax": [5,1,2,3,2,3,2], "en": "campaign-war", "ea": [],
+  "mi": ["far-future"], "sy": ["technological"], "in": ["military"],
+  "ca": ["solo-competent"], "mo": ["adventure"], "st": "complete-series"},
+
+ "The Forever War": {"a": "Joe Haldeman",
+  "ax": [4,2,3,4,2,4,1], "en": "campaign-war", "ea": [],
+  "mi": ["far-future"], "sy": ["technological"], "in": ["military"],
+  "ca": ["solo-competent"], "mo": ["tragedy"], "st": "standalone"},
+
+ "The Once and Future King": {"a": "T.H. White",
+  "ax": [2,3,4,3,3,5,1], "en": "quest", "ea": ["institutional-politics"],
+  "mi": ["historical-earth"], "sy": ["mythic"], "in": ["church"],
+  "ca": ["ensemble-crew"], "mo": ["tragedy"], "st": "standalone"},
+
+ "Lud-in-the-Mist": {"a": "Hope Mirrlees",
+  "ax": [3,3,3,3,1,5,1], "en": "mystery-box", "ea": ["investigation"],
+  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["bureaucracy"],
+  "ca": ["solo-competent"], "mo": ["adventure"], "st": "standalone"},
+
+ "Unsouled": {"a": "Will Wight", "ser": "Cradle",
+  "ax": [5,1,2,2,1,3,4], "en": "ascent-of-power", "ea": [],
+  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["academy"],
+  "ca": ["naive-initiate"], "mo": ["adventure"], "st": "complete-series"},
+
+ "He Who Fights with Monsters": {"a": "Shirtaloon", "ser": "He Who Fights with Monsters",
+  "ax": [4,1,3,2,1,2,4], "en": "ascent-of-power", "ea": ["quest"],
+  "mi": ["portal"], "sy": ["hard-magic"], "in": ["guild-corp"],
+  "ca": ["solo-competent"], "mo": ["comedy","adventure"], "st": "ongoing"},
+
+ "The Rage of Dragons": {"a": "Evan Winter", "ser": "The Burning",
+  "ax": [5,2,2,4,2,4,2], "en": "campaign-war", "ea": ["ascent-of-power"],
+  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["military"],
+  "ca": ["damaged-loner"], "mo": ["tragedy"], "st": "ongoing"},
+
+ "The Priory of the Orange Tree": {"a": "Samantha Shannon",
+  "ax": [3,3,3,3,3,4,1], "en": "campaign-war", "ea": ["institutional-politics"],
+  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["church"],
+  "ca": ["multi-pov-sprawl"], "mo": ["adventure"], "st": "standalone"},
+
+ "Space Opera": {"a": "Catherynne M. Valente",
+  "ax": [3,3,2,2,2,4,1], "en": "quest", "ea": [],
+  "mi": ["far-future"], "sy": ["technological"], "in": ["none"],
+  "ca": ["ensemble-crew"], "mo": ["comedy","satire"], "st": "standalone"}
+}

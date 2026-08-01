@@ -9,8 +9,8 @@
    "mean": 4.0
   },
   "Jim Butcher": {
-   "n": 20,
-   "mean": 4.1
+   "n": 34,
+   "mean": 4.09
   },
   "Lev Grossman": {
    "n": 2,
@@ -85,16 +85,16 @@
    "mean": 3.0
   },
   "Adrian Tchaikovsky": {
-   "n": 5,
-   "mean": 4.28
+   "n": 6,
+   "mean": 4.4
   },
   "Alisa Kwitney": {
    "n": 1,
    "mean": 5.0
   },
   "Martha Wells": {
-   "n": 2,
-   "mean": 4.0
+   "n": 9,
+   "mean": 4.33
   },
   "Django Wexler": {
    "n": 4,
@@ -113,12 +113,12 @@
    "mean": 5.0
   },
   "Stephen King": {
-   "n": 37,
-   "mean": 3.85
+   "n": 39,
+   "mean": 4.04
   },
   "Charles Stross": {
-   "n": 14,
-   "mean": 4.57
+   "n": 15,
+   "mean": 4.6
   },
   "Adam L.G. Nevill": {
    "n": 1,
@@ -129,8 +129,8 @@
    "mean": 5.0
   },
   "Dennis E. Taylor": {
-   "n": 1,
-   "mean": 4.0
+   "n": 6,
+   "mean": 4.17
   },
   "Miles Cameron": {
    "n": 1,
@@ -141,8 +141,8 @@
    "mean": 4.6
   },
   "Matt Dinniman": {
-   "n": 1,
-   "mean": 4.0
+   "n": 7,
+   "mean": 4.43
   },
   "Leigh Bardugo": {
    "n": 2,
@@ -157,8 +157,8 @@
    "mean": 5.0
   },
   "Neil Gaiman": {
-   "n": 7,
-   "mean": 4.51
+   "n": 8,
+   "mean": 4.45
   },
   "Alix E. Harrow": {
    "n": 1,
@@ -169,8 +169,8 @@
    "mean": 4.0
   },
   "Becky Chambers": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 3.25
   },
   "Olivie Blake": {
    "n": 1,
@@ -189,8 +189,8 @@
    "mean": 4.0
   },
   "Pierce Brown": {
-   "n": 1,
-   "mean": 4.0
+   "n": 3,
+   "mean": 3.83
   },
   "Christopher Ruocchio": {
    "n": 1,
@@ -201,8 +201,8 @@
    "mean": 4.0
   },
   "Andy Weir": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 4.0
   },
   "Vernor Vinge": {
    "n": 3,
@@ -229,24 +229,24 @@
    "mean": 4.0
   },
   "Brandon Sanderson": {
-   "n": 9,
-   "mean": 4.44
+   "n": 12,
+   "mean": 4.38
   },
   "Daniel Abraham": {
    "n": 2,
    "mean": 4.75
   },
   "V.E. Schwab": {
-   "n": 1,
-   "mean": 4.0
+   "n": 2,
+   "mean": 3.5
   },
   "Christopher Paolini": {
    "n": 1,
    "mean": 3.0
   },
   "Terry Pratchett": {
-   "n": 19,
-   "mean": 3.57
+   "n": 35,
+   "mean": 3.91
   },
   "James S.A. Corey": {
    "n": 2,
@@ -257,12 +257,12 @@
    "mean": 4.0
   },
   "Scott Lynch": {
-   "n": 1,
+   "n": 3,
    "mean": 5.0
   },
   "Richard K. Morgan": {
-   "n": 4,
-   "mean": 3.25
+   "n": 6,
+   "mean": 4.0
   },
   "Erin Morgenstern": {
    "n": 1,
@@ -333,7 +333,7 @@
    "mean": 5.0
   },
   "John Birmingham": {
-   "n": 1,
+   "n": 3,
    "mean": 4.0
   },
   "Tamora Pierce": {
@@ -362,7 +362,7 @@
   },
   "Lois McMaster Bujold": {
    "n": 10,
-   "mean": 3.81
+   "mean": 3.91
   },
   "Alastair Reynolds": {
    "n": 3,
@@ -485,8 +485,8 @@
    "mean": 3.0
   },
   "Chuck Dixon": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 3.5
   },
   "Greg Keyes": {
    "n": 1,
@@ -637,16 +637,16 @@
    "mean": 4.0
   },
   "Orson Scott Card": {
-   "n": 3,
-   "mean": 2.78
+   "n": 5,
+   "mean": 3.67
   },
   "Karen Traviss": {
    "n": 1,
    "mean": 4.0
   },
   "Octavia E. Butler": {
-   "n": 2,
-   "mean": 4.5
+   "n": 3,
+   "mean": 4.67
   },
   "Mark Twain": {
    "n": 1,
@@ -721,7 +721,7 @@
    "mean": 4.0
   },
   "Arthur C. Clarke": {
-   "n": 5,
+   "n": 6,
    "mean": 4.0
   },
   "Margaret Atwood": {
@@ -729,8 +729,8 @@
    "mean": 4.0
   },
   "Neal Stephenson": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 4.0
   },
   "Robert A. Heinlein": {
    "n": 1,
@@ -777,8 +777,8 @@
    "mean": 2.0
   },
   "John Connolly": {
-   "n": 1,
-   "mean": 4.0
+   "n": 2,
+   "mean": 4.25
   },
   "Stina Leicht": {
    "n": 1,
@@ -821,8 +821,8 @@
    "mean": 5.0
   },
   "Glen Cook": {
-   "n": 11,
-   "mean": 4.45
+   "n": 15,
+   "mean": 4.47
   },
   "Jean Craighead George": {
    "n": 1,
@@ -833,7 +833,7 @@
    "mean": 4.0
   },
   "Robin Hobb": {
-   "n": 1,
+   "n": 3,
    "mean": 4.0
   },
   "Gene Wolfe": {
@@ -867,6 +867,70 @@
   "Kage Baker": {
    "n": 1,
    "mean": 4.4
+  },
+  "Ken Grimwood": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Mark Lawrence": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Lee Child": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "James Oswald": {
+   "n": 11,
+   "mean": 4.05
+  },
+  "Laurell K. Hamilton": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Guillermo del Toro, Chuck Hogan": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Harlan Ellison": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Clive Barker": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Benedict Jacka": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Cassandra Clare": {
+   "n": 1,
+   "mean": 3.0
+  },
+  "Mary Doria Russell": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Paul Cornell": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Stephen King, Richard Bachman": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Albert Camus": {
+   "n": 1,
+   "mean": 4.5
+  },
+  "Elie Wiesel": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Lynn Flewelling": {
+   "n": 1,
+   "mean": 3.5
   }
  },
  "series": {
@@ -889,8 +953,8 @@
   },
   "dresden files": {
    "name": "The Dresden Files",
-   "n": 15,
-   "mean": 3.5,
+   "n": 16,
+   "mean": 4.0,
    "vols": [
     1.0,
     2.0,
@@ -905,6 +969,8 @@
     11.0,
     12.0,
     13.0,
+    14.0,
+    15.0,
     16.0,
     17.0
    ]
@@ -1094,10 +1160,14 @@
   },
   "bobiverse": {
    "name": "Bobiverse",
-   "n": 1,
-   "mean": 4.0,
+   "n": 5,
+   "mean": 4.2,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
    ]
   },
   "traitor son": {
@@ -1127,10 +1197,16 @@
   },
   "dungeon crawler carl": {
    "name": "Dungeon Crawler Carl",
-   "n": 1,
-   "mean": 4.0,
+   "n": 7,
+   "mean": 4.43,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0
    ]
   },
   "shadow and bone": {
@@ -1244,8 +1320,8 @@
   },
   "murderbot diaries": {
    "name": "The Murderbot Diaries",
-   "n": 1,
-   "mean": 5.0,
+   "n": 8,
+   "mean": 4.5,
    "vols": [
     1.0
    ]
@@ -1285,23 +1361,34 @@
   },
   "discworld": {
    "name": "Discworld",
-   "n": 15,
-   "mean": 3.12,
+   "n": 24,
+   "mean": 3.92,
    "vols": [
     1.0,
     2.0,
     3.0,
     4.0,
+    5.0,
     6.0,
     8.0,
+    10.0,
     11.0,
     12.0,
     13.0,
     14.0,
     15.0,
     16.0,
+    17.0,
+    18.0,
     19.0,
     20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0,
+    25.0,
+    26.0,
+    27.0,
     30.0,
     33.0
    ]
@@ -1325,16 +1412,18 @@
   },
   "gentleman bastard": {
    "name": "Gentleman Bastard",
-   "n": 1,
+   "n": 3,
    "mean": 5.0,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "takeshi kovacs": {
    "name": "Takeshi Kovacs",
    "n": 3,
-   "mean": 3.0,
+   "mean": 4.33,
    "vols": [
     1.0,
     2.0,
@@ -1363,9 +1452,10 @@
   "shadows of the apt": {
    "name": "Shadows of the Apt",
    "n": 1,
-   "mean": 4.0,
+   "mean": 5.0,
    "vols": [
-    1.0
+    1.0,
+    8.0
    ]
   },
   "shining": {
@@ -1446,10 +1536,12 @@
   },
   "axis of time": {
    "name": "Axis of Time",
-   "n": 1,
+   "n": 3,
    "mean": 4.0,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "beka cooper": {
@@ -1470,10 +1562,11 @@
   },
   "stormlight archive": {
    "name": "The Stormlight Archive",
-   "n": 1,
-   "mean": 5.0,
+   "n": 2,
+   "mean": 4.5,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "lightbringer": {
@@ -2016,7 +2109,7 @@
   "land fit for heroes": {
    "name": "A Land Fit for Heroes",
    "n": 1,
-   "mean": 3.0,
+   "mean": 4.0,
    "vols": [
     1.0
    ]
@@ -2333,8 +2426,8 @@
   },
   "chronicles of the black company": {
    "name": "The Chronicles of the Black Company",
-   "n": 7,
-   "mean": 4.71,
+   "n": 11,
+   "mean": 4.64,
    "vols": [
     1.0,
     2.0,
@@ -2410,8 +2503,8 @@
   },
   "american gods": {
    "name": "American Gods",
-   "n": 1,
-   "mean": 5.0,
+   "n": 2,
+   "mean": 4.5,
    "vols": [
     1.0
    ]
@@ -2436,8 +2529,8 @@
   },
   "red rising saga": {
    "name": "Red Rising Saga",
-   "n": 1,
-   "mean": 4.0,
+   "n": 3,
+   "mean": 3.83,
    "vols": [
     1.0
    ]
@@ -2448,6 +2541,14 @@
    "mean": 3.0,
    "vols": [
     1.0
+   ]
+  },
+  "broken empire": {
+   "name": "The Broken Empire",
+   "n": 1,
+   "mean": 3.0,
+   "vols": [
+    1
    ]
   },
   "commonwealth saga": {

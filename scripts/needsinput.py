@@ -91,8 +91,21 @@ def blocked(books, ratings, all_series, next_series):
     This must ask the same question promote.py asks -- can an author be
     inferred? -- not the looser "is this title in an export?". The loose test
     listed nine books as needing you when promote.py could file all but two of
-    them from a series sibling.""" 
+    them from a series sibling.
+
+    An author supplied by hand in newbooks.json counts as inferred: it is the
+    documented way to answer this exact question. Without that, a title stayed
+    on the queue after it had been answered, because promoting it untagged puts
+    it in the meta.json aggregates rather than in books.json, and this function
+    only looked at books.json."""
     have = {stem(b["t"]) for b in books}
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "newbooks.json"), encoding="utf-8") as f:
+            have |= {stem(t) for t, spec in json.load(f).items()
+                     if t != "_note" and isinstance(spec, dict) and spec.get("a")}
+    except (OSError, ValueError):
+        pass
     known = set()
     for fn in ("library_backup.csv", *[f for f in os.listdir(ROOT)
                                        if f.startswith("storygraph") and f.endswith(".csv")]):

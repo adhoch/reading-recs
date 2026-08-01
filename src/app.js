@@ -2,8 +2,15 @@ const GRAPH=(window.__DATA__&&window.__DATA__.graph)||null;
 const CLUSTERS=(GRAPH&&GRAPH.clusters)||[];
 /* Hues spaced widely enough that neighbouring clusters never read as the same
    family. Eleven groups is close to the limit for categorical colour. */
-const CLUSTER_COLORS=["#c9873f","#6f8fbe","#a8607a","#5f9e86","#b08bc9",
-  "#c2a24a","#7d8fa8","#bd6f52","#68a6b8","#9d7cb0","#8a9a5b"];
+/* Eleven groups is more than colour alone can carry, so colour here is the
+   second encoding -- each group is also named on the canvas and sits in its own
+   region. What the palette must guarantee is that *neighbouring* groups never
+   blur together, and in ring order neighbouring index means neighbouring on
+   screen. Re-stepped against #17131C to pass all six checks on the adjacent
+   pairlist (worst CVD 9.0, normal 19.7); the hand-picked set it replaces failed
+   at CVD 5.3 with eight of eleven reading as grey. */
+const CLUSTER_COLORS=["#977bc1","#8a7411","#cd5d80","#4c5cbd","#9c4a33","#099194",
+  "#ce7c01","#007152","#9a4792","#029ce8","#79a15c"];
 const ENGINES=["investigation","heist","campaign-war","mystery-box","ascent-of-power","institutional-politics","survival","quest"];
 const AXES=[
   {k:0,n:"velocity",dir:"min",note:"how hard the plot pulls"},
@@ -76,7 +83,19 @@ const offClusters=new Set();
    graph = how books relate · field = why the model scores them · list = pick one */
 let view="mood";
 let yaw=.6,pitch=-.32,yawT=.6,pitchT=-.32,zoom=1;
-const FOCAL=880,DIST=880;
+const FOCAL=880;
+/* The camera sits at DIST in front of the origin. Fixed at 880 it was *inside*
+   the cloud once the library passed ~300 books: nodes swung behind the camera
+   plane, hit the projection clamp, and magnified 7x, which pinned the zoom at
+   its floor and left the graph a small blob in an empty frame. It now backs off
+   to keep the whole cloud in front of it. */
+let DIST=880;
+let panX=0,panY=0;    // fitView centres the frame on the graph, not on the origin
+function setCamera(){
+  let r=0;
+  for(const n of nodes){const d=Math.hypot(n.x,n.y,n.z); if(d>r)r=d;}
+  DIST=Math.max(880, r*1.6);
+}
 const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(reduceMotion)spin=false;
 
@@ -124,10 +143,28 @@ function drawClouds(){
   for(let ci=0;ci<CLUSTERS.length;ci++){
     const mem=nodes.filter(n=>n.cl===ci&&passes(n));
     if(mem.length<3)continue;
-    const pts=mem.map(n=>[n.PX,n.PY]);
-    let cx=0,cy=0;
-    for(const p of pts){cx+=p[0];cy+=p[1];}
-    cx/=pts.length;cy/=pts.length;
+    const all=mem.map(n=>[n.PX,n.PY]);
+    /* Hull the core, not every member. A convex hull is stretched by its
+       furthest point, so one sub-series flung out by the layout dragged a
+       group's cloud across a third of the frame and made a tight group look
+       like it sprawled -- Epic Campaigns reads as the broadest cloud on screen
+       while being the tightest group in the data (11% of its edge weight leaves
+       it, 95% one engine). Outliers still draw as their own coloured dots; the
+       cloud just stops claiming ground the group does not hold.
+
+       Centre and cutoff are both medians because a mean and a standard
+       deviation are moved by the very points being tested for. */
+    const med=a=>{const q=a.slice().sort((x,y)=>x-y),m=q.length>>1;
+      return q.length%2?q[m]:(q[m-1]+q[m])/2;};
+    const cx=med(all.map(q=>q[0])), cy=med(all.map(q=>q[1]));
+    const dist=all.map(q=>Math.hypot(q[0]-cx,q[1]-cy));
+    const cut=Math.max(1,med(dist))*2.2;
+    let pts=all.filter((q,i)=>dist[i]<=cut);
+    // never trim away so much that the cloud stops covering the group
+    if(pts.length<Math.max(3,all.length*0.75)){
+      const ord=all.map((q,i)=>[dist[i],q]).sort((a,b)=>a[0]-b[0]);
+      pts=ord.slice(0,Math.max(3,Math.ceil(all.length*0.75))).map(x=>x[1]);
+    }
     const h=hull(pts);
     if(h.length<3)continue;
     const pad=mem.length>20?34:26;
@@ -142,9 +179,9 @@ function drawClouds(){
       if(i===0)ctx.moveTo(mx,my); else ctx.quadraticCurveTo(a[0],a[1],mx,my);
     }
     ctx.closePath();
-    ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],flat?.10:.065,0);
+    ctx.fillStyle=shadeHex(CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length],flat?.10:.065,0);
     ctx.fill();
-    ctx.strokeStyle=shadeHex(CLUSTER_COLORS[ci],flat?.22:.13,0);
+    ctx.strokeStyle=shadeHex(CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length],flat?.22:.13,0);
     ctx.lineWidth=1;ctx.stroke();
   }
 }
@@ -155,7 +192,7 @@ let W=0,H=0;const DPR=Math.min(devicePixelRatio||1,2);
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue("--"+n).trim();
 const COLOR={};ENGINES.forEach(e=>COLOR[e]=css(e));
 const V=css("vellum"),DIMC=css("dim"),FAINT=css("faint"),FIELD=css("field");
-const RGB={};[...ENGINES,"vellum","dim","faint","field"].forEach(k=>{
+const RGB={};[...ENGINES,"vellum","dim","faint","field","accent","rule"].forEach(k=>{
   const h=(COLOR[k]||css(k)).replace("#","");
   RGB[k]=[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];
 });
@@ -175,7 +212,13 @@ const ratingOf=n=>n.r>0?n.r:BANDMID[band(n.p)];
 const SIZE=v=>3.2+(v-1)*2.1;                 // 1 star -> 3.2px, 5 star -> 11.6px
 const radius=n=>SIZE(ratingOf(n));
 let colorBy="cluster";
-const nodeHex=n=>(colorBy==="cluster"&&n.cl!=null&&CLUSTER_COLORS[n.cl])?CLUSTER_COLORS[n.cl]:(COLOR[n.en]||"#888");
+/* Twenty groups is far past what hue can carry, so a group wears its FAMILY's
+   colour -- the five parts of Epic Campaigns share one hue and are told apart
+   by their own outline and their own name. That keeps the eleven validated
+   hues rather than inventing nine more that would fail the checks. */
+const famOf=ci=>(CLUSTERS[ci]&&CLUSTERS[ci].fam!=null)?CLUSTERS[ci].fam:ci;
+const nodeHex=n=>(colorBy==="cluster"&&n.cl!=null&&CLUSTER_COLORS[famOf(n.cl)%CLUSTER_COLORS.length])
+  ?CLUSTER_COLORS[famOf(n.cl)%CLUSTER_COLORS.length]:(COLOR[n.en]||"#888");
 function shadeHex(hex,a,fog){
   const h=(hex||"#888").replace("#","");
   const c=[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];
@@ -193,7 +236,7 @@ function drawFieldAxes(){
     const x1=gx*cy, z1=gx*sy;
     const y2=gy*cp-z1*sp, z2=gy*sp+z1*cp;
     const k=FOCAL/Math.max(120,z2+DIST);
-    return [W/2+x1*k*zoom, H/2+y2*k*zoom];
+    return [W/2+panX+x1*k*zoom, H/2+panY+y2*k*zoom];  // same pan as project(), or the grid slides off its own books
   };
   const S=115, R=2*S+40;
   ctx.save();
@@ -215,7 +258,7 @@ function drawFieldAxes(){
   // name the corner the model says is his
   ctx.font="italic 12.5px Spectral,Georgia,serif";
   ctx.textAlign="left";ctx.textBaseline="middle";
-  ctx.fillStyle=shade("heist",.55,0);
+  ctx.fillStyle=shade("accent",.55,0);
   const q=P(-R+14,-R+30); ctx.fillText("immersive slow burns — your corner",q[0],q[1]);
   ctx.fillStyle=shade("faint",.45,0);
   const q2=P(S*0.6,R-16); ctx.fillText("fast, but you rate these lower",q2[0],q2[1]);
@@ -232,26 +275,60 @@ function fieldTarget(n){
   return {x:(pace-3)*118, y:-(pull-3)*118 - spread, z:0};
 }
 function fitView(){
+  setCamera();
   if(userZoomed)return;
-  // Fit across a full yaw sweep at the CURRENT pitch. Drift only spins yaw, so
-  // this is invariant under the automatic motion and never jitters — while
-  // being far tighter than a whole-sphere worst case, which assumed a solid
-  // shell and wasted ~40% of the frame. Tilting hard by hand can still push a
-  // node near the edge; that is a deliberate trade for a readable default view.
-  let worst=1;
+  /* Fit the box the graph actually occupies, not the square it might occupy.
+     Two things were throwing away most of the frame: the scale came from
+     Math.min(W,H), so a 1356x975 canvas was fitted as if it were 975 wide and
+     surrendered 380px; and the extent was measured as max|x|, which centres a
+     lopsided cloud off-centre and pads the empty side to match the full one.
+     Measuring a real bounding box and panning to its middle fixes both.
+
+     Drift decides which box. Spinning, the frame must hold every yaw or the
+     graph would swim in and out of its own edges, so the envelope is swept.
+     Still, the box is the one on screen -- fitView only runs while the cloud is
+     settling, never during a drag, so a hand-turned view keeps its framing and
+     is simply allowed to overhang, which is what turning something means. */
+  const sweep=spin&&!REDUCED;
+  let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
   const cb=Math.cos(pitch), sb=Math.sin(pitch);
-  for(let i=0;i<16;i++){
-    const a=i*Math.PI/8, ca=Math.cos(a), sa=Math.sin(a);
+  const steps=sweep?16:1;
+  for(let i=0;i<steps;i++){
+    const a=sweep?i*Math.PI/8:yaw, ca=Math.cos(a), sa=Math.sin(a);
     for(const n of nodes){
       const x=n.x*ca-n.z*sa, z0=n.x*sa+n.z*ca;
       const y=n.y*cb-z0*sb, z=n.y*sb+z0*cb;
-      const k=FOCAL/Math.max(40,DIST-z);
-      const e=Math.max(Math.abs(x*k),Math.abs(y*k))+radius(n)*k+4;
-      if(e>worst)worst=e;
+      // Must match project() exactly or the frame is fitted to a projection
+      // that never happens. This read DIST-z clamped at 40 while project()
+      // uses z+DIST clamped at 120 — the wrong sign and a clamp allowing 22x
+      // magnification against a real maximum of 7.3x, so the graph was fitted
+      // to an imaginary worst case roughly three times too large and sat as a
+      // small blob in an empty canvas.
+      const k=FOCAL/Math.max(120,z+DIST), r=radius(n)*k+4;
+      if(x*k-r<minX)minX=x*k-r; if(x*k+r>maxX)maxX=x*k+r;
+      if(y*k-r<minY)minY=y*k-r; if(y*k+r>maxY)maxY=y*k+r;
     }
   }
+  /* The view tabs and the in-range readout float ON the canvas, so the drawable
+     rectangle is not the canvas. While the fit was loose enough to leave a wide
+     margin this never showed; once it stopped wasting the margin, titles slid
+     under the tab row. Ask the DOM for the bands rather than hard-coding them —
+     the tab row wraps to two lines on a narrow window. */
   const pad=W<600?14:22;
-  zoom=Math.max(.16,Math.min(2.2,(Math.min(W,H)/2-pad)/worst));
+  const cvTop=cv.getBoundingClientRect().top;
+  const band=(sel,fallback)=>{const el=document.querySelector(sel);
+    if(!el)return fallback;const r=el.getBoundingClientRect();
+    return r.height?Math.max(fallback,r.bottom-cvTop+8):fallback;};
+  const insetTop=Math.min(H*0.28,band(".views",pad));
+  const insetBottom=Math.min(H*0.2,(()=>{const el=document.getElementById("readout");
+    if(!el)return pad;const r=el.getBoundingClientRect();
+    return r.height?Math.max(pad,cvTop+H-r.top+8):pad;})());
+  const boxW=Math.max(80,W-pad*2), boxH=Math.max(80,H-insetTop-insetBottom);
+  zoom=Math.max(.16,Math.min(2.2,Math.min(boxW/Math.max(1,maxX-minX),
+                                          boxH/Math.max(1,maxY-minY))));
+  // land the graph's middle on the middle of the drawable box, not the canvas
+  panX=(W/2)-W/2-(minX+maxX)/2*zoom;
+  panY=(insetTop+H-insetBottom)/2-H/2-(minY+maxY)/2*zoom;
 }
 function resize(){
   const r=cv.parentElement.getBoundingClientRect();
@@ -275,10 +352,17 @@ nodes.forEach((n,i)=>{                       // spherical Fibonacci seed
    has to be imposed by the layout, as in a community map. */
 let CLUSTER_ANCHORS=[];
 (function(){
-  const k=Math.max(1,CLUSTERS.length), R=460;
+  const k=Math.max(1,CLUSTERS.length);
+  /* A fixed 460 ring put the eleven anchors ~263 apart while the clusters
+     themselves grew to ~330 across, so they could not help overlapping and the
+     grouping the layout exists to show was invisible. Spacing has to scale with
+     how much cloud each cluster occupies, which grows with the library:
+     measured separation ratio 1.28 -> 1.66 and nearest-neighbour purity
+     0.81 -> 0.88 across the change. */
+  const R=Math.max(460, 21*Math.sqrt(DATA.length*k));
   for(let i=0;i<k;i++){
     const a=(i/k)*Math.PI*2;
-    CLUSTER_ANCHORS.push({x:Math.cos(a)*R, y:Math.sin(a)*R*0.70, z:((i%3)-1)*150});
+    CLUSTER_ANCHORS.push({x:Math.cos(a)*R, y:Math.sin(a)*R*0.70, z:((i%3)-1)*R*0.33});
   }
 })();
 
@@ -320,7 +404,7 @@ function step(){
       if(!flat)n.vz+=(a.z-n.z)*.024*alpha;
     }
   }
-  const grav=cluster?.012:.055;
+  const grav=cluster?.020:.055;
   for(const n of nodes){                     // gravity toward origin
     n.vx+=-n.x*grav*alpha; n.vy+=-n.y*grav*alpha;
     n.vz+=flat? -n.z*.34 : -n.z*grav*alpha;  // flat mode collapses depth
@@ -361,7 +445,7 @@ function project(){
     const x1=n.x*cy-n.z*sy, z1=n.x*sy+n.z*cy;
     const y2=n.y*cp-z1*sp,  z2=n.y*sp+z1*cp;
     const zc=z2+DIST, k=FOCAL/Math.max(120,zc);
-    n.PX=W/2+x1*k*zoom; n.PY=H/2+y2*k*zoom; n.PK=k*zoom; n.PZ=zc;
+    n.PX=W/2+panX+x1*k*zoom; n.PY=H/2+panY+y2*k*zoom; n.PK=k*zoom; n.PZ=zc;
     if(zc<near)near=zc; if(zc>far)far=zc;
   }
   const span=Math.max(1,far-near);
@@ -394,6 +478,17 @@ function draw(){
   // chip still convey the full set.
   const placed=[],labelQueue=[];    // labels resolved after nodes, nearest-first
   const labelCap=W<620?6:99;
+  /* How many titles the frame can carry: roughly one per 9000 square pixels,
+     which on a 1350x975 stage is about 18 and on a phone about 5. Chosen by
+     rank (predicted fit for the unread), so the labels that survive are the
+     ones worth reading rather than the ones that happened to win a collision. */
+  const labelRank=new Set();
+  if(focus===null){
+    const budget=Math.max(4,Math.min(26,Math.round(W*H/9000)));
+    nodes.filter(n=>n.r===0&&passes(n))
+      .sort((a,b)=>(b.praw??b.p)-(a.praw??a.p))
+      .slice(0,budget).forEach(n=>labelRank.add(n.id));
+  }
   let namable=null;
   if(focus!==null&&labelCap<99){
     namable=new Set(
@@ -442,14 +537,19 @@ function draw(){
         ctx.beginPath();ctx.arc(n.PX,n.PY,rr+5,0,6.2832);
         ctx.strokeStyle=shade("vellum",.75,0);ctx.lineWidth=1;ctx.stroke();
       }
-      // labels: focus, its neighbours, and near-camera 5-star anchors
+      // labels: focus, its neighbours, and near-camera top-rated anchors
       // Label density has to scale with the frame: on a phone, labelling all
       // 179 recommendations turns the centre into a smear. Near-camera, top-band
       // books earn a name; the rest are reachable by tapping.
       const small=W<620;
+      /* A budget, not a rule. Labelling every recommendation meant 175 titles
+         competing for one screen: the collision resolver then dropped most of
+         them, so what survived was whichever happened to be nearest the camera
+         rather than whichever was worth reading. Rank first, draw the top of
+         the ranking, and let hover and search reach the rest. */
       const anchor=live&&(small
-        ? (rec&&tier(n)>=2&&n.fog<.3) || (n.r===5&&n.fog<.16&&!spotlight)
-        : (rec||(n.r===5&&n.fog<.34&&!spotlight)));
+        ? (rec&&labelRank.has(n.id)) || (n.r>=4.5&&n.fog<.16&&!spotlight)
+        : (rec&&labelRank.has(n.id)) || (n.r>=4.5&&n.fog<.34&&!spotlight));
       // when something is focused, ONLY the focus and its neighbours get named —
       // anchor labels would otherwise compete with the answer to "what relates"
       const show=focus!==null
@@ -478,13 +578,29 @@ function draw(){
       const lab=(CLUSTERS[ci].label||"").toUpperCase();
       ctx.font="600 "+Math.max(9,10.5*Math.min(1.2,k))+"px 'IBM Plex Mono',ui-monospace,monospace";
       const w=ctx.measureText(lab).width;
-      const cy=y-46*k;
-      ctx.fillStyle=shade("field",.72,0);
-      ctx.fillRect(x-w/2-8,cy-9,w+16,18);
-      ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],.95,0);
+      /* Group names used to be painted at the centroid regardless of what was
+         already there, so four of them stacked on one another in the middle of
+         the frame. They now take a slot from the same reservation list the book
+         titles use, stepping up or down before giving up. */
+      let cy=y-46*k;
+      const bx=x-w/2-8, bw=w+16;
+      const clash=t=>placed.some(p=>bx<p[2]&&p[0]<bx+bw&&t-9<p[3]&&p[1]<t+24);
+      if(clash(cy)){
+        // Every group keeps its name. If no free slot exists the label is drawn
+        // anyway, overlapping: a group nobody can name is worse than two names
+        // that touch, and this is the only place a group is identified.
+        const alt=[cy-26,cy+26,cy-52,cy+52,cy-78,cy+78];
+        cy=alt.find(c=>!clash(c))??cy;
+      }
+      placed.push([bx,cy-9,bx+bw,cy+24]);
+      ctx.fillStyle=shade("field",.82,0);
+      ctx.fillRect(bx,cy-9,bw,18);
+      ctx.fillStyle=shadeHex(CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length],.95,0);
       ctx.fillText(lab,x,cy);
       ctx.font="9px 'IBM Plex Mono',ui-monospace,monospace";
-      ctx.fillStyle=shadeHex(CLUSTER_COLORS[ci],.45,0);
+      // the count is a caption, not a series value — it wears the muted ink
+      // token. In the group's own colour at .45 it fell below reading contrast.
+      ctx.fillStyle=shade("faint",.85,0);
       ctx.fillText(mem.length+" books",x,cy+15);
     }
   }
@@ -697,7 +813,7 @@ function predBlock(b){
     <div class="pred-l">Predicted fit${b.r>0?" (model, ignoring your actual rating)":""}</div>
     <div class="pred-n">${b.p.toFixed(1)} <small>± ${MODEL.sd}</small></div>
     ${b.weber_risk?`<div style="font-size:10.5px;color:var(--campaign-war);margin-top:6px">⚠ plain prose + formulaic — the Weber profile you bounce on</div>`:""}
-    ${b.r===0&&b.kingsim>=0.6?`<div style="font-size:10.5px;color:var(--heist);margin-top:6px">↑ King-adjacent — lifted for your guarded-ceiling King ratings</div>`:""}
+    ${b.r===0&&b.kingsim>=0.6?`<div style="font-size:10.5px;color:var(--accent);margin-top:6px">↑ King-adjacent — lifted for your guarded-ceiling King ratings</div>`:""}
     <div style="margin-top:8px">${ups.map(o=>
       `<div class="contrib"><span>${o.n}</span><b style="color:${o.c>0?"var(--quest)":"var(--campaign-war)"}">${o.c>0?"+":""}${o.c.toFixed(2)}</b></div>`).join("")}</div>
   </div>`;
@@ -774,6 +890,21 @@ const canonicalTitle=t=>{const n=nodeForTitle(t);return n?n.t:t;};
 
 /* Rate anything with a title, whether or not it exists as a node. Series lists
    contain volumes that were never in Goodreads, and those still need a record. */
+/* Half stars. Five glyphs, ten levels: a click in the left half of a star means
+   x.5 and the right half means x.0, so nothing about the layout or the size of
+   a touch target changes. Worth doing because the five-point scale had run out
+   of room at the top -- 51% of the ratings made in the app were 5s, which is a
+   ceiling, not an opinion. */
+const RSTEP=0.5;
+const starClass=(cur,v)=>cur>=v?" on":cur>=v-RSTEP?" half":"";
+function starValue(btn,ev){
+  const v=+btn.dataset.v, r=btn.getBoundingClientRect();
+  // keyboard activation reports clientX 0; treat that as the whole star
+  if(!ev||!ev.clientX)return v;
+  return ev.clientX-r.left < r.width/2 ? v-RSTEP : v;
+}
+const rateLabel=v=>v?(v%1?v.toFixed(1):String(v))+"★":"";
+
 function setRatingByTitle(title,v,note){
   title=canonicalTitle(title);
   const was=myRatings[title]??null;
@@ -1004,8 +1135,17 @@ function explainScore(b){
   featStats();
   const f=featOf(b), keys=Object.keys(AXWORD);
   const c=f.map((v,i)=>({i,v,contrib:MODEL.coef[i]*(v-_mu[i])}));
-  const up=c.filter(x=>x.contrib>0).sort((a,z)=>z.contrib-a.contrib);
-  const dn=c.filter(x=>x.contrib<0).sort((a,z)=>a.contrib-z.contrib);
+  /* community_pace is never quoted as a reason. Its coefficient is a large
+     negative (-0.385) while its raw correlation with the ratings is -0.03 — it
+     is a suppressor, not an effect. Because pace and the velocity tag overlap
+     (+0.52), the fit uses pace to subtract the part of "fast" that is merely
+     quick rather than gripping, so the number only means anything sitting
+     beside velocity. Rendered on its own it told you that reading fast held a
+     book back, which the data does not say. It still scores; it just cannot
+     narrate. */
+  const c2=c.filter(x=>keys[x.i]!=="community_pace");
+  const up=c2.filter(x=>x.contrib>0).sort((a,z)=>z.contrib-a.contrib);
+  const dn=c2.filter(x=>x.contrib<0).sort((a,z)=>a.contrib-z.contrib);
   const phrase=x=>{const w=AXWORD[keys[x.i]];return x.v>=_mu[x.i]?w[1]:w[0];};
   let out="";
   if(up.length&&up[0].contrib>0.05){
@@ -1077,7 +1217,7 @@ function renderDetail(){
       <div class="facet-label">StoryGraph readers${b.nrev?" · "+b.nrev.toLocaleString()+" reviews":""}</div>
       <div style="font-size:11.5px;color:var(--dim);line-height:1.6">
         community pace ${b.cpace.toFixed(1)}/5 vs my velocity ${b.ax[0]}/5${
-        Math.abs(b.cpace-b.ax[0])>=1.5?` <span style="color:var(--heist)">— you read this faster than its pace suggests</span>`:""}</div></div>`:""}
+        Math.abs(b.cpace-b.ax[0])>=1.5?` <span style="color:var(--accent)">— you read this faster than its pace suggests</span>`:""}</div></div>`:""}
     ${flags.map(f=>`<div class="flag"><b>${f[0]}</b>${f[1]}</div>`).join("")}
 
     <div class="why">${explainScore(b)}</div>
@@ -1087,7 +1227,7 @@ function renderDetail(){
       const d=b.r-exp, big=Math.abs(d)>MODEL.sd;
       return `<div class="vs${big?" vs-big":""}">
         <div class="vs-row"><span>You rated</span><b>${b.r}</b></div>
-        <div class="vs-row"><span>Model expected</span><b>${exp.toFixed(2)}</b></div>
+        <div class="vs-row"><span>Model expected</span><b>${exp.toFixed(1)}</b></div>
         <div class="vs-note">${big
           ? (d>0?"You liked this a lot more than its profile predicts — one of the model's blind spots."
                 :"You liked this notably less than its profile predicts; the axes are missing something here.")
@@ -1119,7 +1259,7 @@ function renderDetail(){
       <div class="near-note">Unread books closest to it on the same seven axes.</div>
       ${sim.map(({x})=>`<div class="near" data-id="${x.id}">
           <span class="near-t">${x.t}</span>
-          <span class="near-r">${x.p.toFixed(2)}</span></div>`).join("")}`;})()}
+          <span class="near-r">${x.p.toFixed(1)}</span></div>`).join("")}`;})()}
 
     ${(()=>{const near=nearestRated(b);if(!near.length)return "";
       return `<div class="divider"></div>
@@ -1143,9 +1283,9 @@ function renderDetail(){
         <b>Confidence in this score: ${lvl}</b><span>${why}</span></div>`;})():""}
 
     <div class="divider"></div>
-    <div class="eyebrow">${b.r>0?"Your rating":"Read it? Rate it"}</div>
+    <div class="eyebrow">${b.r>0?"Your rating — "+rateLabel(b.r):"Read it? Rate it"}</div>
     <div class="rate" id="rate">${[1,2,3,4,5].map(v=>
-      `<button class="rb${b.r>=v?" on":""}" data-v="${v}" aria-label="${v} stars">${v}</button>`).join("")}
+      `<button class="rb${starClass(b.r,v)}" data-v="${v}" aria-label="${v} stars">${v}</button>`).join("")}
       ${b.r>0?`<button class="rb clear" data-v="0">clear</button>`:""}</div>
     <div class="rate-note" id="rate-note">${storageOK
       ? "Saved in this browser. Back up or sync from the Filter panel."
@@ -1170,7 +1310,7 @@ function renderDetail(){
   const el=document.getElementById("clegend");
   if(!el||!CLUSTERS.length)return;
   el.innerHTML=CLUSTERS.map(c=>
-    `<div class="leg" data-cl="${c.id}"><i style="background:${CLUSTER_COLORS[c.id]}"></i>${
+    `<div class="leg" data-cl="${c.id}"><i style="background:${CLUSTER_COLORS[famOf(c.id)%CLUSTER_COLORS.length]}"></i>${
       c.label} <b>${c.n}</b></div>`).join("");
   el.querySelectorAll(".leg").forEach(d=>d.onclick=()=>{
     const ci=+d.dataset.cl;
@@ -1542,7 +1682,7 @@ function renderMood(){
     const missed=picks.filter(k=>!hit.includes(k));
     return `<div class="mcard" data-id="${b.id}">
       <div class="mcard-h"><div class="mcard-t">${b.t}<span>${b.a}${b.ser?` · ${b.ser}${b.vol?" #"+(b.vol%1?b.vol:b.vol|0):""}`:""}</span></div>
-        <div class="mcard-p">${b.p.toFixed(2)}</div></div>
+        <div class="mcard-p">${b.p.toFixed(1)}</div></div>
       <div class="mcard-why">${explainScore(b)}</div>
       ${picks.length?`<div class="mcard-tags">${
         hit.map(k=>`<span class="mtag">${MOODMAP[k].lab}</span>`).join("")+
@@ -1740,15 +1880,15 @@ function renderShelves(){
         `<div class="sb" data-id="${n.id}"><span class="sb-v">${n.vol?"#"+(n.vol%1?n.vol:n.vol|0):""}</span>
           <span class="sb-t">${n.t}</span>
           <span class="minirate" data-title="${n.t.replace(/"/g,"&quot;")}">${[1,2,3,4,5].map(v=>
-            `<button class="ms${n.r>=v?" on":""}" data-v="${v}">★</button>`).join("")}</span></div>`),
+            `<button class="ms${starClass(n.r,v)}" data-v="${v}" title="${v} stars — click the left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(n.r)}</b></span></div>`),
       ...v.unread.sort((a,b)=>(b.praw??b.p)-(a.praw??a.p)).map(n=>{
         const cur=myRatingFor(n.t);
         return `<div class="sb${cur?"":" unread"}" data-id="${n.id}">
           <span class="sb-v">${n.vol?"#"+(n.vol%1?n.vol:n.vol|0):""}</span>
           <span class="sb-t">${n.t}</span>
-          <span class="sb-fit">${cur?"":n.p.toFixed(2)}</span>
+          <span class="sb-fit">${cur?"":n.p.toFixed(1)}</span>
           <span class="minirate" data-title="${n.t.replace(/"/g,"&quot;")}">${[1,2,3,4,5].map(v=>
-            `<button class="ms${cur>=v?" on":""}" data-v="${v}">★</button>`).join("")}</span></div>`;}),
+            `<button class="ms${starClass(cur,v)}" data-v="${v}" title="${v} stars — click the left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(cur)}</b></span></div>`;}),
       ...(v.full? [] : v.extra.map(x=>
         `<div class="sb unread ext"><span class="sb-v">${x.ord?"#"+x.ord:""}</span>
           <span class="sb-t">${x.t}</span><span class="sb-r">${x.yr||""}</span></div>`))
@@ -1766,9 +1906,9 @@ function renderShelves(){
       return `<div class="sb${cur?"":" unread"}"${n?` data-id="${n.id}"`:""}>
         <span class="sb-v">${x.ord?"#"+x.ord:""}</span>
         <span class="sb-t">${x.t}${n?"":`<em class="notin">not in library</em>`}</span>
-        <span class="sb-fit">${!cur&&n?n.p.toFixed(2):""}</span>
+        <span class="sb-fit">${!cur&&n?n.p.toFixed(1):""}</span>
         <span class="minirate" data-title="${esc}">${[1,2,3,4,5].map(v=>
-          `<button class="ms${cur>=v?" on":""}" data-v="${v}" title="${v} star${v>1?"s":""}">★</button>`).join("")}
+          `<button class="ms${starClass(cur,v)}" data-v="${v}" title="${v} star${v>1?"s":""} — click the left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(cur)}</b>
         </span></div>`;}).join("") : "";
     // cross-link: from an author shelf jump to their series, and vice versa
     const cross=shelfMode==="author"
@@ -1796,7 +1936,7 @@ function renderShelves(){
   });
   shelfRows.querySelectorAll(".minirate .ms").forEach(btn=>btn.onclick=e=>{
     e.stopPropagation();
-    const title=btn.closest(".minirate").dataset.title, v=+btn.dataset.v;
+    const title=btn.closest(".minirate").dataset.title, v=starValue(btn,e);
     setRatingByTitle(title, myRatingFor(title)===v?0:v, "rated from series list");
     renderShelves(); renderSync(); update();
     if(selected!==null)renderDetail();
@@ -1872,14 +2012,14 @@ function renderNeeds(){
         <span class="needs-t">${it.t}${sub?`<em>${sub}</em>`:""}</span>
         ${key==="blocked"&&!cur?`<span class="needs-flag">author?</span>`:""}
         <span class="minirate" data-title="${esc}">${[1,2,3,4,5].map(v=>
-          `<button class="ms${cur>=v?" on":""}" data-v="${v}" aria-label="${v} stars">★</button>`).join("")}</span>
+          `<button class="ms${starClass(cur,v)}" data-v="${v}" aria-label="${v} stars, click left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(cur)}</b></span>
       </div>`;}).join("");
     h+=`</div>`;
   }
   needsRows.innerHTML=h||`<p class="mood-none">Nothing outstanding.</p>`;
   needsRows.querySelectorAll(".minirate .ms").forEach(btn=>btn.onclick=e=>{
     e.stopPropagation();
-    const title=btn.closest(".minirate").dataset.title, v=+btn.dataset.v;
+    const title=btn.closest(".minirate").dataset.title, v=starValue(btn,e);
     setRatingByTitle(title, myRatingFor(title)===v?0:v, "rated from the needs-you queue");
     renderNeeds(); renderSync(); update(); syncNeedsBadge();
   });

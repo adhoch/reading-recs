@@ -105,24 +105,33 @@ def author_for_series(series_key, books, series_name=None):
 EXPORT = os.path.join(ROOT, "library_backup.csv")
 
 
-def export_authors():
-    """The Goodreads export, if it has been dropped in. A weak source for this
-    particular job — a rating is usually orphaned precisely because the book was
-    never logged in Goodreads — but it costs nothing and removes the dependency
-    on a series sibling happening to be tagged. Gitignored: it is personal data."""
-    if not os.path.exists(EXPORT):
-        return {}
-    try:
-        import csv
-        with open(EXPORT, encoding="utf-8", newline="") as f:
-            return {snorm(re.sub(r"\s*\(.*?\)", "", row["Title"])): row["Author"]
-                    for row in csv.DictReader(f) if row.get("Author")}
-    except Exception as exc:
-        print(f"  ! couldn't read {os.path.basename(EXPORT)}: {str(exc)[:60]}")
-        return {}
-
-
 SGEXPORT = [f for f in os.listdir(ROOT) if f.startswith("storygraph") and f.endswith(".csv")]
+
+
+def export_authors():
+    """Every export that has been dropped in. Gitignored: it is personal data.
+
+    This read Goodreads only, while export_ratings() below reads Goodreads AND
+    StoryGraph — so a book logged only on StoryGraph had a rating that promoted
+    and an author that did not, and 24 of 33 titles reported as needing a human
+    had their author sitting in a file this function never opened. StoryGraph
+    calls the column "Authors"; Goodreads calls it "Author"."""
+    import csv
+    out = {}
+    for name, col in [("library_backup.csv", "Author"),
+                      *[(f, "Authors") for f in SGEXPORT]]:
+        path = os.path.join(ROOT, name)
+        if not os.path.exists(path):
+            continue
+        try:
+            with open(path, encoding="utf-8", newline="") as f:
+                for row in csv.DictReader(f):
+                    a = (row.get(col) or "").strip()
+                    if a:
+                        out.setdefault(snorm(re.sub(r"\s*\(.*?\)", "", row["Title"])), a)
+        except Exception as exc:
+            print(f"  ! couldn't read {name}: {str(exc)[:60]}")
+    return out
 
 
 def export_ratings():

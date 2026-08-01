@@ -1,9 +1,17 @@
 :root{
   --field:#17131C; --field2:#1F1826; --panel:#241C2C;
   --vellum:#E6DCC8; --dim:#9A8D7B; --faint:#6B6070; --rule:#38304A;
-  --investigation:#7FB0A3; --heist:#D9A94C; --campaign-war:#C05A48;
-  --mystery-box:#9B85C9; --ascent-of-power:#E08A46;
-  --institutional-politics:#6C9BC4; --survival:#C4628A; --quest:#8FAF5A;
+  /* Categorical, re-stepped to pass the six checks against this surface under
+     --pairs all (worst pair CVD 8.2, normal 17.6), so any two engines stay
+     apart wherever they land. The old set was hand-picked and failed the
+     normal-vision floor at 14.6. Hues keep their old associations: cool for
+     investigation, gold for heist, rust for war, violet for the mystery box. */
+  --investigation:#0ea7b5; --heist:#8c971a; --campaign-war:#955200;
+  --mystery-box:#967fe7; --ascent-of-power:#ca797c;
+  --institutional-politics:#076bb6; --survival:#99428b; --quest:#007751;
+  /* The page accent was --heist, so every fit number and sort caret wore the
+     colour that means "heist" in the graph. Chrome gets its own token. */
+  --accent:#D9A94C;
   --serif:'Spectral',Georgia,'Times New Roman',serif;
   --display:'Bodoni Moda','Didot',Georgia,serif;
   --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -19,7 +27,7 @@ body{background:var(--field);color:var(--vellum);font-family:var(--serif);
   text-transform:uppercase;color:var(--faint);margin-bottom:14px}
 h1{font-family:var(--display);font-weight:400;font-size:27px;line-height:1.08;
   letter-spacing:-.01em;margin-bottom:9px}
-h1 em{font-style:italic;color:var(--heist)}
+h1 em{font-style:italic;color:var(--accent)}
 .blurb{font-size:12.5px;line-height:1.55;color:var(--dim);margin-bottom:22px}
 .divider{height:1px;background:var(--rule);margin:24px 0 20px}
 .axis{margin-bottom:15px}
@@ -34,7 +42,7 @@ input[type=range]::-moz-range-track{height:2px;background:var(--rule)}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;
   border-radius:50%;background:var(--vellum);margin-top:-4.5px}
 input[type=range]::-moz-range-thumb{width:11px;height:11px;border:none;border-radius:50%;background:var(--vellum)}
-input[type=range]:focus-visible{outline:1px solid var(--heist);outline-offset:3px}
+input[type=range]:focus-visible{outline:1px solid var(--accent);outline-offset:3px}
 .axis-note{font-size:10.5px;color:var(--faint);margin-top:1px;font-style:italic}
 .btnrow{display:flex;gap:7px;margin-bottom:18px;flex-wrap:wrap}
 button{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.11em;
@@ -42,14 +50,14 @@ button{font-family:var(--mono);font-size:9.5px;font-weight:500;letter-spacing:.1
   padding:7px 10px;cursor:pointer;transition:color .16s,border-color .16s,background .16s}
 button:hover{color:var(--vellum);border-color:var(--dim)}
 button.on{background:var(--vellum);color:var(--field);border-color:var(--vellum)}
-button:focus-visible{outline:1px solid var(--heist);outline-offset:2px}
+button:focus-visible{outline:1px solid var(--accent);outline-offset:2px}
 #tag-search{width:100%;background:var(--field);border:1px solid var(--rule);color:var(--vellum);
   font-family:var(--serif);font-size:12px;padding:6px 8px;margin-bottom:10px;outline:none}
 #tag-search:focus{border-color:var(--dim)}
 #tag-search::placeholder{color:var(--faint);font-style:italic}
 .tag-head{display:flex;justify-content:space-between;align-items:baseline}
 .tag-clear{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--heist);cursor:pointer;border:none;background:none;padding:0}
+  color:var(--accent);cursor:pointer;border:none;background:none;padding:0}
 .tag-clear:hover{color:var(--vellum)}
 .tag-group{margin-bottom:11px}
 .tag-glabel{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;
@@ -85,7 +93,7 @@ button:focus-visible{outline:1px solid var(--heist);outline-offset:2px}
 .mcard-h{display:flex;align-items:baseline;gap:10px}
 .mcard-t{flex:1;font-size:16px;color:var(--vellum);line-height:1.25}
 .mcard-t span{display:block;font-size:11.5px;color:var(--faint);margin-top:2px}
-.mcard-p{font-family:var(--mono);font-size:14px;color:var(--heist);white-space:nowrap}
+.mcard-p{font-family:var(--mono);font-size:14px;color:var(--accent);white-space:nowrap}
 .mcard-why{font-size:12px;color:var(--dim);line-height:1.55;margin-top:7px}
 .mcard-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
 .mtag{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;
@@ -100,7 +108,7 @@ button:focus-visible{outline:1px solid var(--heist);outline-offset:2px}
 .shelf-n{flex:1;font-size:14.5px;color:var(--vellum);overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap}
 .shelf-n small{color:var(--rule);font-size:9px;margin-left:9px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.shelf-m{font-family:var(--mono);font-size:11px;color:var(--heist);white-space:nowrap}
+.shelf-m{font-family:var(--mono);font-size:11px;color:var(--accent);white-space:nowrap}
 .shelf-u{font-family:var(--mono);font-size:10px;color:var(--dim);white-space:nowrap}
 .shelf-body{margin-top:8px;display:none}
 .shelf.open .shelf-body{display:block}
@@ -119,7 +127,7 @@ button:focus-visible{outline:1px solid var(--heist);outline-offset:2px}
 .lv-head>span{font-family:var(--mono);font-size:9px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--faint)}
 .lv-sort{border:none;padding:0;text-align:right;background:none;font-size:9px;letter-spacing:.16em}
-.lv-sort.on{background:none;color:var(--heist);border:none}
+.lv-sort.on{background:none;color:var(--accent);border:none}
 .lv-row{display:grid;grid-template-columns:1fr 62px 54px 96px 68px;gap:10px;
   padding:11px 24px;cursor:pointer;align-items:baseline;border-bottom:1px solid rgba(56,48,74,.4)}
 .lv-row:hover{background:var(--field2)}
@@ -151,7 +159,7 @@ button:focus-visible{outline:1px solid var(--heist);outline-offset:2px}
 #find-results:empty{display:none}
 .fr{display:flex;align-items:baseline;gap:8px;padding:7px 11px;cursor:pointer;
   border-left:2px solid transparent;transition:background .12s}
-.fr:hover,.fr[aria-selected=true]{background:var(--panel);border-left-color:var(--heist)}
+.fr:hover,.fr[aria-selected=true]{background:var(--panel);border-left-color:var(--accent)}
 .fr-t{font-size:12px;color:var(--vellum);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .fr-s{font-family:var(--mono);font-size:9.5px;color:var(--dim);white-space:nowrap}
 .fr-none{padding:8px 11px;font-size:11.5px;color:var(--faint);font-style:italic}
@@ -227,20 +235,20 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
 .xlink{background:none;border:none;padding:0;font-family:inherit;font-size:inherit;
   color:inherit;letter-spacing:inherit;text-transform:none;cursor:pointer;
   border-bottom:1px solid var(--rule);transition:color .13s,border-color .13s}
-.xlink:hover{color:var(--heist);border-bottom-color:var(--heist)}
+.xlink:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .xlink.strong{color:var(--vellum)}
 .d-author .xlink{font-size:12px;color:var(--dim)}
 .xrow{margin-top:9px;padding-left:14px;font-size:11px;color:var(--faint);
   font-family:var(--mono);letter-spacing:.06em}
 .xrow .xlink{font-family:var(--serif);font-size:12px;color:var(--dim);letter-spacing:0}
-.shelf.flash{background:var(--field2);box-shadow:inset 2px 0 0 var(--heist)}
+.shelf.flash{background:var(--field2);box-shadow:inset 2px 0 0 var(--accent)}
 .track{margin-top:13px;font-size:11.5px;color:var(--dim);line-height:1.55}
 .track b{color:var(--vellum);font-weight:400}
 .track span{display:block;font-size:10.5px;color:var(--faint);font-style:italic;margin-top:3px}
 .near-note{font-size:10.5px;color:var(--faint);font-style:italic;margin:-8px 0 9px;line-height:1.45}
 .near{display:flex;align-items:baseline;gap:8px;padding:6px 0;cursor:pointer;
   border-bottom:1px solid rgba(56,48,74,.45)}
-.near:hover .near-t{color:var(--heist)}
+.near:hover .near-t{color:var(--accent)}
 .near-t{flex:1;font-size:12.5px;color:var(--vellum);overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap;transition:color .13s}
 .near-r{font-family:var(--mono);font-size:10.5px;color:var(--dim)}
@@ -250,14 +258,14 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
   text-transform:uppercase;font-weight:500;margin-bottom:3px}
 .conf span{font-size:11px;color:var(--dim);line-height:1.5}
 .conf-high{border-left-color:var(--quest)} .conf-high b{color:var(--quest)}
-.conf-medium{border-left-color:var(--heist)} .conf-medium b{color:var(--heist)}
+.conf-medium{border-left-color:var(--accent)} .conf-medium b{color:var(--accent)}
 .conf-low{border-left-color:var(--ascent-of-power)} .conf-low b{color:var(--ascent-of-power)}
 .conf-very{border-left-color:var(--campaign-war)} .conf-very b{color:var(--campaign-war)}
 .rate{display:flex;gap:5px;margin-bottom:7px}
 .rb{width:34px;height:34px;padding:0;font-size:11px}
 .rb.clear{width:auto;padding:0 9px}
 .rate-note{font-size:10.5px;color:var(--faint);font-style:italic;line-height:1.5}
-.linkish{background:none;border:none;padding:0;color:var(--heist);
+.linkish{background:none;border:none;padding:0;color:var(--accent);
   font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 .exp-box{width:100%;height:88px;background:var(--field);color:var(--vellum);
   border:1px solid var(--rule);font-family:var(--mono);font-size:10px;padding:7px;
@@ -269,7 +277,7 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
           mask-image:linear-gradient(180deg,#000 72%,transparent)}
 .blurb.open{max-height:none;-webkit-mask-image:none;mask-image:none}
 .blurb-more{font-family:var(--mono);font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--heist);background:none;border:none;padding:5px 0 0;cursor:pointer}
+  color:var(--accent);background:none;border:none;padding:5px 0 0;cursor:pointer}
 .blurb-more:hover{color:var(--vellum)}
 .d-author{font-size:12px;color:var(--dim);margin-bottom:12px}
 .d-rating{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
@@ -301,7 +309,7 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
     background:linear-gradient(180deg,var(--field) 32%,transparent);
     pointer-events:none}
   .topbar-t{font-family:var(--serif);font-size:15px;color:var(--vellum);letter-spacing:.01em}
-  .topbar-t em{color:var(--heist);font-style:italic}
+  .topbar-t em{color:var(--accent);font-style:italic}
   .topbar-n{font-family:var(--mono);font-size:9px;letter-spacing:.14em;
     text-transform:uppercase;color:var(--faint);white-space:nowrap}
   /* The graph is the point, so on a phone it keeps the whole screen and the
@@ -333,7 +341,7 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
     font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;
     color:var(--faint);padding:15px 4px 14px;min-height:48px}
   .tabbar button.on{color:var(--vellum);border-top-color:var(--vellum)}
-  .tabbar .count{font-family:var(--mono);color:var(--heist)}
+  .tabbar .count{font-family:var(--mono);color:var(--accent)}
   .scrim{position:fixed;inset:0;z-index:35;background:rgba(0,0,0,.5);
     opacity:0;pointer-events:none;transition:opacity .3s}
   .scrim.on{opacity:1;pointer-events:auto}
@@ -374,8 +382,8 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
 @media (prefers-reduced-motion:reduce){
   .rail,.rail.right,.scrim,button,.tchip,.fr{transition:none}
 }
-:focus-visible{outline:2px solid var(--heist);outline-offset:2px}
-.tchip:focus-visible,button:focus-visible{outline:2px solid var(--heist);outline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tchip:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* ---- ratings sync ---- */
 .sync-stat{font-size:11.5px;color:var(--dim);margin-bottom:9px}
@@ -418,14 +426,27 @@ body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
 .notin{font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--rule);margin-left:8px}
 .minirate{display:inline-flex;gap:1px;flex:0 0 auto}
-.minirate .ms{background:none;border:none;padding:1px 2px;font-size:12px;line-height:1;
+.minirate .ms{background:none;border:none;padding:1px 2px;font-size:15px;line-height:1;
   color:var(--rule);cursor:pointer;transition:color .1s}
 .minirate .ms:hover,.minirate:hover .ms{color:var(--dim)}
-.minirate .ms.on{color:var(--heist)}
+.minirate .ms.on{color:var(--accent)}
+/* A half star fills only its left side: the glyph is painted with a hard-edged
+   gradient and clipped to the text, so it stays one character and one target. */
+.minirate .ms.half,.rb.half{
+  background:linear-gradient(90deg,var(--accent) 50%,var(--rule) 50%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent}
+.rb.half{border-color:var(--rule)}
+/* The half-star fill is only a few pixels wide, so the widget also states the
+   number. Without it the ten-point scale was invisible and nobody would guess
+   the left half of a star meant anything. */
+.mr-v{font-family:var(--mono);font-size:10.5px;color:var(--dim);
+  margin-left:6px;min-width:20px;display:inline-block;text-align:left;font-weight:400}
+.minirate:hover .mr-v{color:var(--vellum)}
 .minirate .ms:hover~.ms{color:var(--rule)}
 .marklink{background:none;border:1px solid var(--rule);padding:2px 7px;font-size:9px;
   letter-spacing:.1em;color:var(--faint);cursor:pointer;text-transform:uppercase;font-family:var(--mono)}
-.marklink:hover{color:var(--heist);border-color:var(--heist)}
+.marklink:hover{color:var(--accent);border-color:var(--accent)}
 
 /* ---- polish pass ---- */
 /* Shelf rows are now three-part (number · title · stars). Give them a stable
@@ -435,7 +456,7 @@ body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
 .sb-t{min-width:0}
 .minirate .ms{padding:2px 2px}
 .sb:hover .minirate .ms{color:var(--dim)}
-.sb:hover .minirate .ms.on{color:var(--heist)}
+.sb:hover .minirate .ms.on{color:var(--accent)}
 
 /* A rated row should read as settled, an unrated one as an open question. */
 .sb:not(.unread){background:linear-gradient(90deg,rgba(191,138,74,.055),transparent 42%)}
@@ -452,7 +473,7 @@ body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
 
 /* Focus states were only on some controls. */
 .ms:focus-visible,.sb:focus-visible,.shelf-h:focus-visible{
-  outline:2px solid var(--heist);outline-offset:2px}
+  outline:2px solid var(--accent);outline-offset:2px}
 
 /* Long author/series names shouldn't push the counts off the row. */
 .shelf-h{gap:12px}
@@ -561,7 +582,7 @@ body.split #detail{max-width:1100px}
 .needs-h{display:flex;justify-content:space-between;align-items:baseline;
   font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--faint)}
-.needs-c{color:var(--heist)}
+.needs-c{color:var(--accent)}
 .needs-note{font-size:11px;color:var(--faint);font-style:italic;line-height:1.5;
   margin:5px 0 9px}
 .needs-row{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:baseline;
@@ -574,7 +595,7 @@ body.split #detail{max-width:1100px}
 .needs-flag{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--ascent-of-power);white-space:nowrap}
 .views button i{font-style:normal;font-family:var(--mono);font-size:9px;
-  margin-left:6px;color:var(--heist)}
+  margin-left:6px;color:var(--accent)}
 .views button.on i{color:var(--field)}
 @media (max-width:1000px){
   #needsview{padding-top:calc(128px + env(safe-area-inset-top))}

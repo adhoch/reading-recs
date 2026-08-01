@@ -30,6 +30,7 @@ import re
 import sys
 
 import numpy as np
+from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "data")
@@ -45,6 +46,27 @@ def load(name):
         return json.load(f)
 
 
+def merge_ratings(books):
+    """Fold src/data/ratings.json into the records, exactly as build.py does.
+
+    The fit read books.json straight, while the page reads books.json merged
+    with ratings.json, so every rating made in the browser was visible in the
+    viewer and invisible to the model that scores it. The two must see the same
+    library or the reported accuracy is for a training set that does not exist.
+    Titles are the join key, as in build.py."""
+    rat = (load("ratings") or {}).get("ratings") or {}
+    idx = {b["t"]: b for b in books}
+    n = 0
+    for title, value in rat.items():
+        b = idx.get(title)
+        if b and isinstance(value, (int, float)) and 1 <= value <= 5 and not b["r"]:
+            b["r"] = value
+            n += 1
+    if n:
+        print(f"  merged {n} rating(s) from ratings.json that books.json lacked")
+    return books
+
+
 def features(book):
     """Seven hand axes plus community pace. cpace falls back to the velocity tag
     when StoryGraph was never scraped for this book, which is what the viewer
@@ -54,11 +76,32 @@ def features(book):
     return [*book["ax"], cp if cp is not None else book["ax"][0]]
 
 
-def ridge(X, y, lam=LAMBDA):
-    mu, ym = X.mean(0), y.mean()
+def group_weights(rows):
+    """How much one row is allowed to say.
+
+    Every volume of a series used to vote once, so a fourteen-book run counted
+    for fourteen independent opinions when it is closer to one opinion held
+    fourteen times. Rating out Discworld would have moved prose_shine by 27%.
+
+    A series gets log2(1+n) votes shared among its n volumes, so the second book
+    still adds real information and the fortieth adds almost none -- fourteen
+    volumes count for 3.9 standalones, forty for 5.4. Full balancing (1/n)
+    scored the same but threw away the fact that a long run was read at all;
+    this is the same log2(1+n) the shelf sort already uses for `pull`."""
+    counts = Counter(r[2] for r in rows)
+    return np.array([np.log2(1 + counts[r[2]]) / counts[r[2]] for r in rows])
+
+
+def ridge(X, y, lam=LAMBDA, w=None):
+    if w is None:
+        w = np.ones(len(y))
+    w = np.asarray(w, float)
+    p = w / w.sum()
+    mu, ym = (X * p[:, None]).sum(0), float((y * p).sum())
     Xc = X - mu
-    w = np.linalg.solve(Xc.T @ Xc + lam * np.eye(X.shape[1]), Xc.T @ (y - ym))
-    return w, float(ym - mu @ w)
+    A = Xc * w[:, None]
+    b = np.linalg.solve(A.T @ Xc + lam * np.eye(X.shape[1]), A.T @ (y - ym))
+    return b, float(ym - mu @ b)
 
 
 def cv(rows, grouped):
@@ -70,7 +113,9 @@ def cv(rows, grouped):
     for f in folds:
         te = [i for i, r in enumerate(rows) if (r[2] == f if grouped else i == f)]
         tr = [i for i in range(len(rows)) if i not in te]
-        w, b = ridge(X[tr], y[tr])
+        # Fit weighted; score the held-out group unweighted. The test set is
+        # the world, and the world does not care how training was weighted.
+        w, b = ridge(X[tr], y[tr], w=group_weights([rows[i] for i in tr]))
         for i in te:
             pred.append(float(X[i] @ w + b))
             actual.append(y[i])
@@ -106,7 +151,7 @@ def report(label, rows):
 
 def main():
     write = "--write" in sys.argv[1:]
-    books = load("books")
+    books = merge_ratings(load("books"))
     model = load("model")
 
     print("Cross-validated fit\n")
@@ -120,7 +165,7 @@ def main():
     rows = rows_for(books)
     X = np.array([r[0] for r in rows], float)
     y = np.array([r[1] for r in rows], float)
-    w, b = ridge(X, y)
+    w, b = ridge(X, y, w=group_weights(rows))
     print(f"\n  committed model.json: r={model['r']} sd={model['sd']}")
     print(f"  {'axis':<16}{'committed':>11}{'refit':>10}{'shift':>9}")
     for name, old, new in zip(AXES, model["coef"], w):
@@ -132,13 +177,14 @@ def main():
     if "--rescore" in sys.argv[1:]:
         # Rescore from the committed model rather than fitting a new one.
         #
-        # model.json is not a fossil: it reproduces a ridge fit at lambda=5 on
-        # the original 95 rated books to a mean coefficient difference of
-        # 0.0038, so it is a real model and, on the numbers above, a better one
-        # than anything refitting the current library produces. What is stale is
-        # praw and p, which came from an earlier fit -- 115 of the original 274
-        # reproduce from the committed coefficients and the rest are off by
-        # about 0.03. This puts every book on the one verified model without
+        # Kept for reproducing an older published state, NOT because the old
+        # model was better. That claim compared model.json's stored r=0.713
+        # against refits measured on a different set, which is the same
+        # range-restriction trap this file exists to avoid. Scored on one set:
+        # the old coefficients reach r=0.649 on the current 223 rows even with
+        # 95 of them in-sample, while a log-weighted refit reaches 0.653 held
+        # out. The refit is better. This path is now only for putting every book
+        # on one named historical model without
         # changing which model that is.
         w = np.array(model["coef"], float)
         moved = 0
