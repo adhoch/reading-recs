@@ -764,7 +764,17 @@ cv.addEventListener("pointercancel",endPointer);
 cv.addEventListener("pointerleave",()=>{if(!dragging&&hover!==null){hover=null;kick()}});
 cv.addEventListener("wheel",e=>{
   e.preventDefault();
-  userZoomed=true;zoom=Math.max(.16,Math.min(3,zoom*(e.deltaY>0?.92:1.087)));kick();
+  /* Zoom toward the pointer, not the middle of the canvas. The projection is
+     PX = W/2 + panX + X*zoom, so holding the point under the cursor still means
+     panX += dx*(1-f), with dx the cursor's offset from the graph origin and f
+     the zoom ratio. Without it, zooming in on anything off-centre meant zooming
+     and then going to look for it. */
+  const before=zoom;
+  userZoomed=true;zoom=Math.max(.16,Math.min(3,zoom*(e.deltaY>0?.92:1.087)));
+  const f=zoom/before, r=cv.getBoundingClientRect();
+  panX+=(e.clientX-r.left-W/2-panX)*(1-f);
+  panY+=(e.clientY-r.top-H/2-panY)*(1-f);
+  kick();
 },{passive:false});
 
 /* ---------- detail panel ---------- */
@@ -1110,12 +1120,17 @@ function featStats(){
 }
 /* Books like this one that you haven't read — the "if you liked this" idiom the
    panel was missing. Distinct from nearestRated, which is evidence, not a rec. */
-function similarUnread(b,k=3){
+function similarUnread(b,k=8){
   featStats();
   const z=featOf(b).map((v,i)=>(v-_mu[i])/_sd[i]);
-  return nodes.filter(x=>x.r===0&&x.id!==b.id)
+  const all=nodes.filter(x=>x.r===0&&x.id!==b.id)
     .map(x=>({x,d:Math.hypot(...featOf(x).map((v,i)=>(v-_mu[i])/_sd[i]-z[i]))}))
-    .sort((a,c)=>a.d-c.d).slice(0,k);
+    .sort((a,c)=>a.d-c.d);
+  /* "How close" as a percentile, not the raw distance. The distance lives in
+     z-scored eight-axis space, so its units mean nothing to a reader — 0.9 is
+     only meaningful against the spread of everything else. The percentile says
+     the one thing worth knowing: how much of the shelf this one beats. */
+  return all.slice(0,k).map((e,i)=>({...e,pct:Math.max(1,Math.round(100*(i+1)/all.length))}));
 }
 /* Turn the heaviest axis contributions into a sentence. Measured: the top axis
    carries ~40% of the explanation, so naming one or two is defensible. */
@@ -1186,7 +1201,13 @@ function renderDetail(){
   const el=document.getElementById("detail");
   if(selected===null){ renderRanked(); return; }
   const b=nodes[selected];
-  const chips=(arr,hot)=>(arr||[]).map(v=>`<span class="chip${hot?" hot":""}">${v}</span>`).join("");
+  /* Chips drive the same activeTags filter the sidebar does, so a tag you can
+     see on a book is a tag you can pull the library down to. They were inert
+     spans, which meant reading "hidden-world-occult" here and then hunting for
+     it in the tag list to act on it. A selected one shows as on. */
+  const chips=(arr,hot)=>(arr||[]).map(v=>
+    `<button class="chip${hot?" hot":""}${activeTags.has(tagKey("",v))?" on":""}" data-tag="${
+      String(v).replace(/"/g,"&quot;")}" title="Filter the library to ${v}">${v}</button>`).join("");
   const bars=AXES.map(a=>{
     const v=b.ax[a.k],bad=a.dir==="min"?v<FIT[a.k]:v>FIT[a.k];
     return `<div class="bar"><div class="bar-head"><span>${a.n}</span><span>${v}/5</span></div>
@@ -1206,6 +1227,13 @@ function renderDetail(){
     ${b.blurb?`<div class="blurb-wrap"><div class="blurb ${b._open?"open":""}" id="blurb">${b.blurb}</div>${
       b.blurb.length>360?`<button class="blurb-more" id="blurb-more">${b._open?"less":"more"}</button>`:""}</div>`:""}
     ${predBlock(b)}
+    ${(()=>{const c=CLUSTERS[b.cl];if(!c)return "";
+      // which of the twenty groups this book sits in — the graph shows it by
+      // position and colour, but the detail panel never named it
+      return `<div class="facet"><div class="facet-label">Group</div><div class="chips">
+        <button class="chip grp" data-cl="${b.cl}" title="Show only this group"
+          style="border-color:${CLUSTER_COLORS[famOf(b.cl)%CLUSTER_COLORS.length]}"
+          >${c.label} <em>${c.n}</em></button></div></div>`;})()}
     <div class="facet"><div class="facet-label">Engine</div><div class="chips">${chips([b.en],true)}${chips(b.ea)}</div></div>
     <div class="facet"><div class="facet-label">Milieu</div><div class="chips">${chips(b.mi)}</div></div>
     <div class="facet"><div class="facet-label">System</div><div class="chips">${chips(b.sy)}</div></div>
@@ -1256,9 +1284,10 @@ function renderDetail(){
     ${(()=>{const sim=similarUnread(b);if(!sim.length)return "";
       return `<div class="divider"></div>
       <div class="eyebrow">If you like this, try</div>
-      <div class="near-note">Unread books closest to it on the same seven axes.</div>
-      ${sim.map(({x})=>`<div class="near" data-id="${x.id}">
+      <div class="near-note">Unread books closest to it on the same seven axes — &ldquo;top N%&rdquo; is where each ranks among all ${nodes.filter(x=>x.r===0).length} unread books.</div>
+      ${sim.map(({x,pct})=>`<div class="near" data-id="${x.id}">
           <span class="near-t">${x.t}</span>
+          <span class="near-k">top ${pct}%</span>
           <span class="near-r">${x.p.toFixed(1)}</span></div>`).join("")}`;})()}
 
     ${(()=>{const near=nearestRated(b);if(!near.length)return "";
@@ -1298,6 +1327,23 @@ function renderDetail(){
   });
   el.querySelectorAll(".near").forEach(d=>d.onclick=()=>{
     selected=+d.dataset.id;renderDetail();kick();});
+  el.querySelectorAll(".chip[data-tag]").forEach(d=>d.onclick=e=>{
+    e.stopPropagation();
+    const key=tagKey("",d.dataset.tag);
+    activeTags.has(key)?activeTags.delete(key):activeTags.add(key);
+    renderDetail();update();
+  });
+  el.querySelectorAll(".chip.grp").forEach(d=>d.onclick=e=>{
+    e.stopPropagation();
+    // solo this group: everything else off, or clear if it is already solo'd
+    const ci=+d.dataset.cl;
+    const solo=offClusters.size===CLUSTERS.length-1&&!offClusters.has(ci);
+    offClusters.clear();
+    if(!solo)CLUSTERS.forEach(c=>{if(c.id!==ci)offClusters.add(c.id);});
+    document.querySelectorAll("#clegend .leg").forEach(l=>
+      l.classList.toggle("off",offClusters.has(+l.dataset.cl)));
+    update();
+  });
   el.querySelectorAll(".rb").forEach(btn=>btn.onclick=()=>{
     const v=+btn.dataset.v;
     setRating(b, v===0?0:(b.r===v?0:v));
