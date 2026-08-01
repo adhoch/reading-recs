@@ -1230,8 +1230,10 @@ function renderDetail(){
     ${(()=>{const c=CLUSTERS[b.cl];if(!c)return "";
       // which of the twenty groups this book sits in — the graph shows it by
       // position and colour, but the detail panel never named it
+      const solo=offClusters.size===CLUSTERS.length-1&&!offClusters.has(b.cl);
       return `<div class="facet"><div class="facet-label">Group</div><div class="chips">
-        <button class="chip grp" data-cl="${b.cl}" title="Show only this group"
+        <button class="chip grp${solo?" on":""}" data-cl="${b.cl}"
+          title="${solo?"Showing only this group — click to show all":"Show only this group"}"
           style="border-color:${CLUSTER_COLORS[famOf(b.cl)%CLUSTER_COLORS.length]}"
           >${c.label} <em>${c.n}</em></button></div></div>`;})()}
     <div class="facet"><div class="facet-label">Engine</div><div class="chips">${chips([b.en],true)}${chips(b.ea)}</div></div>
@@ -1340,9 +1342,8 @@ function renderDetail(){
     const solo=offClusters.size===CLUSTERS.length-1&&!offClusters.has(ci);
     offClusters.clear();
     if(!solo)CLUSTERS.forEach(c=>{if(c.id!==ci)offClusters.add(c.id);});
-    document.querySelectorAll("#clegend .leg").forEach(l=>
-      l.classList.toggle("off",offClusters.has(+l.dataset.cl)));
-    update();
+    update();          // update -> syncControls repaints both legends
+    renderDetail();    // so the chip shows whether it is currently soloing
   });
   el.querySelectorAll(".rb").forEach(btn=>btn.onclick=()=>{
     const v=+btn.dataset.v;
@@ -1523,6 +1524,17 @@ const ALIAS={"All Systems Red":"murderbot wells","The Warrior's Apprentice":"vor
   "The Traitor Baru Cormorant":"masquerade","Dogs of War":"dogs of war tchaikovsky",
   "Children of Time":"children of time","Night Watch":"discworld","Small Gods":"discworld",
   "Three Parts Dead":"craft sequence","The Goblin Emperor":"goblin emperor addison"};
+/* Both legends repainted from the filter state, on every update.
+   syncControls() ran only from clear-all and one toggle, so a group hidden by
+   any other route — the detail panel's Group chip, most of all — left its
+   legend entry looking lit. Clicking an entry that looks lit is how you end up
+   hiding the last group still on screen and seeing nothing. */
+function syncLegends(){
+  document.querySelectorAll("#legend .leg").forEach(el=>
+    el.classList.toggle("off",offEngines.has(el.dataset.en)));
+  document.querySelectorAll("#clegend .leg").forEach(el=>
+    el.classList.toggle("off",offClusters.has(+el.dataset.cl)));
+}
 function syncControls(){          // push filter state back into the controls
   AXES.forEach(a=>{
     const sl=document.getElementById("s"+a.k), vl=document.getElementById("v"+a.k);
@@ -1532,8 +1544,7 @@ function syncControls(){          // push filter state back into the controls
   const tr=document.getElementById("t-read"),tc=document.getElementById("t-rec");
   if(tr)tr.classList.toggle("on",showRead);
   if(tc)tc.classList.toggle("on",showRec);
-  document.querySelectorAll("#legend .leg").forEach(el=>
-    el.classList.toggle("off",offEngines.has(el.dataset.en)));
+  syncLegends();
   if(typeof syncPresets==="function")syncPresets();
 }
 
@@ -2164,12 +2175,17 @@ mq.addEventListener("change",()=>{ if(!mq.matches&&openSheet)setSheet(openSheet)
 
 function clearAllFilters(){
   activeTags.clear();AXES.forEach(a=>limits[a.k]=a.dir==="min"?1:5);
-  showRead=showRec=true;offEngines.clear();
+  // offClusters was the one filter "clear all" did not clear, so hiding groups
+  // — now one click from the detail panel — survived every route back. Hide
+  // enough of them and you sit on "No books match" with two buttons in front of
+  // you that both claim to fix it and neither does.
+  showRead=showRec=true;offEngines.clear();offClusters.clear();
   const q=document.getElementById("tag-search"); if(q)q.value="";
   syncControls();update();
 }
 function update(){
   const live=nodes.filter(passes);
+  syncLegends();
   const v=document.getElementById("void");
   if(v)v.hidden=live.length>0||view==="list";
   if(view==="list"&&typeof renderList==="function")renderList();
