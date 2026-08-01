@@ -1402,8 +1402,10 @@ function syncPresets(){
   document.getElementById("preset-clear").classList.toggle("on",AXES.every(a=>limits[a.k]===(a.dir==="min"?1:5)));
 }
 document.getElementById("preset-fit").onclick=()=>{setLimits(FIT);syncPresets()};
-document.getElementById("preset-clear").onclick=()=>{
-  const o={};AXES.forEach(a=>o[a.k]=a.dir==="min"?1:5);setLimits(o);syncPresets();};
+// It says "No filter", so it removes the filters — all of them, not just the
+// register sliders it happens to sit next to. Reaching for the button labelled
+// no-filter and still seeing a filtered library is the whole complaint.
+document.getElementById("preset-clear").onclick=clearAllFilters;
 document.getElementById("t-read").onclick=e=>{showRead=!showRead;e.target.classList.toggle("on",showRead);update()};
 document.getElementById("t-rec").onclick=e=>{showRec=!showRec;e.target.classList.toggle("on",showRec);update()};
 document.getElementById("m-depth").onclick=()=>setMode(false);
@@ -2195,6 +2197,7 @@ function update(){
     `<b>${live.length}</b> of ${nodes.length} in range &nbsp;·&nbsp; <b>${live.filter(n=>n.r===0).length}</b> unread`;
   if(selected===null)renderRanked();
   renderTagFilter();
+  saveUI();
   kick();
 }
 /* Counted rather than written down: the header read "274 books" for as long as it
@@ -2203,8 +2206,72 @@ function update(){
   const el=document.getElementById("lede-count");
   if(el)el.textContent=`Taxonomy v1.2 · ${nodes.length} books · StoryGraph-validated`;
 }
+/* ---------- session ----------
+   A refresh used to drop you back on the mood screen with every filter reset,
+   which made the browser's own reload button destructive: narrow the library
+   down, follow a link, come back, start again.
+
+   The open book is stored by TITLE, not by node id. Ids are indices into
+   books.json, so adding a single book silently shifts every one after it and a
+   restored id would open the wrong book. Camera is included because "the same
+   spot" means the view you had, not just the filters. */
+const LS_UI="reading-network:ui";
+let uiTimer=null,wantedSplit=false;
+const uiState=()=>({
+  v:view, split:splitOn, flat, spotlight, cluster, colorBy,
+  lim:limits, tags:[...activeTags], oe:[...offEngines], oc:[...offClusters],
+  rd:showRead, rc:showRec,
+  sel:(selected!==null&&nodes[selected])?nodes[selected].t:null,
+  sm:shelfMode, sq:shelfQuery, ss:shelfStatus, so:[...shelfOpen],
+  zoom:userZoomed?zoom:null, panX, panY, yaw, pitch,
+});
+function writeUI(){try{localStorage.setItem(LS_UI,JSON.stringify(uiState()))}catch(e){}}
+function saveUI(){
+  if(!storageOK||typeof uiState!=="function")return;   // update() runs once before these consts initialise
+  clearTimeout(uiTimer);
+  uiTimer=setTimeout(writeUI,250);   // update() fires on every slider tick
+}
+function restoreUI(){
+  let s=null;
+  try{s=JSON.parse(localStorage.getItem(LS_UI)||"null")}catch(e){}
+  if(!s||typeof s!=="object")return false;
+  if(s.lim)AXES.forEach(a=>{if(typeof s.lim[a.k]==="number")limits[a.k]=s.lim[a.k];});
+  (s.tags||[]).forEach(t=>activeTags.add(t));
+  (s.oe||[]).forEach(t=>offEngines.add(t));
+  // a group id only means something if that group still exists
+  (s.oc||[]).forEach(c=>{if(CLUSTERS.some(x=>x.id===c))offClusters.add(c);});
+  if(typeof s.rd==="boolean")showRead=s.rd;
+  if(typeof s.rc==="boolean")showRec=s.rc;
+  if(typeof s.flat==="boolean")flat=s.flat;
+  if(typeof s.spotlight==="boolean")spotlight=s.spotlight;
+  if(typeof s.cluster==="boolean")cluster=s.cluster;
+  if(s.colorBy)colorBy=s.colorBy;
+  if(s.sm)shelfMode=s.sm;
+  if(typeof s.sq==="string")shelfQuery=s.sq;
+  if(s.ss)shelfStatus=s.ss;
+  (s.so||[]).forEach(k=>shelfOpen.add(k));
+  if(typeof s.yaw==="number")yaw=yawT=s.yaw;
+  if(typeof s.pitch==="number")pitch=pitchT=s.pitch;
+  if(typeof s.zoom==="number"){zoom=s.zoom;userZoomed=true;
+    if(typeof s.panX==="number")panX=s.panX;
+    if(typeof s.panY==="number")panY=s.panY;}
+  if(s.sel){const n=nodeForTitle(s.sel);if(n)selected=n.id;}
+  wantedSplit=s.split===true;
+  return s.v||null;
+}
 window.addEventListener("resize",resize);
 cv.style.cursor="grab";
 loadRatings();applyRatings();
+const wanted=restoreUI();
 resize();update();renderRanked();reheat(1);renderSync();
-renderMoodPicks();syncNeedsBadge();setView("mood");
+renderMoodPicks();syncNeedsBadge();
+syncControls();
+document.getElementById("m-spot")?.classList.toggle("on",spotlight);
+document.getElementById("m-flat")?.classList.toggle("on",flat);
+document.getElementById("m-depth")?.classList.toggle("on",!flat);
+setView(wanted||"mood");
+if(selected!==null)renderDetail();
+if(wantedSplit)setSplit(true);
+// the debounce can still be pending when the tab goes; flush it
+addEventListener("beforeunload",()=>{clearTimeout(uiTimer);writeUI();});
+addEventListener("pagehide",()=>{clearTimeout(uiTimer);writeUI();});

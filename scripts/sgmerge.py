@@ -27,6 +27,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "data")
 ROWS = os.path.join(ROOT, "sg_rows.jsonl")
+DESC = os.path.join(ROOT, "sg_desc.jsonl")
 
 WEIGHT = {"slow": 1.0, "medium": 3.0, "fast": 5.0}
 
@@ -95,8 +96,25 @@ def main():
             sys.exit("calibration failed — the pace weighting does not reproduce "
                      "the committed column; not writing")
 
-    filled = {"cpace": 0, "moods": 0, "nrev": 0, "sgdark": 0}
+    # Descriptions come from a second pass (sgdesc.py) keyed the same way, and
+    # were the step that never ran: 146 of 415 books had no summary at all.
+    descs = {}
+    if os.path.exists(DESC):
+        with open(DESC, encoding="utf-8") as f:
+            for line in f:
+                d = json.loads(line)
+                if (d.get("desc") or "").strip():
+                    descs[d["k"]] = " ".join(d["desc"].split())
+
+    filled = {"cpace": 0, "moods": 0, "nrev": 0, "sgdark": 0, "blurb": 0}
     missing = []
+    for b in books:
+        if (b.get("blurb") or "").strip():
+            continue
+        hit = lookup(descs, b["t"], b["a"])
+        if hit:
+            b["blurb"] = hit
+            filled["blurb"] += 1
     for b in books:
         r = lookup(rows, b["t"], b["a"])
         if not r:
