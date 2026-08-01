@@ -28,6 +28,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "src", "data")
 ROWS = os.path.join(ROOT, "sg_rows.jsonl")
 DESC = os.path.join(ROOT, "sg_desc.jsonl")
+HAND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "blurbs.json")
 
 WEIGHT = {"slow": 1.0, "medium": 3.0, "fast": 5.0}
 
@@ -106,7 +107,15 @@ def main():
                 if (d.get("desc") or "").strip():
                     descs[d["k"]] = " ".join(d["desc"].split())
 
-    filled = {"cpace": 0, "moods": 0, "nrev": 0, "sgdark": 0, "blurb": 0}
+    # Books StoryGraph's search will not resolve get a hand-written summary,
+    # keyed by title. Applied only where nothing else supplied one, so a later
+    # successful scrape is still preferred over the hand copy for anything else.
+    hand = {}
+    if os.path.exists(HAND):
+        with open(HAND, encoding="utf-8") as f:
+            hand = {k: v for k, v in json.load(f).items() if k != "_note"}
+
+    filled = {"cpace": 0, "moods": 0, "nrev": 0, "sgdark": 0, "blurb": 0, "hand": 0}
     missing = []
     for b in books:
         if (b.get("blurb") or "").strip():
@@ -115,6 +124,9 @@ def main():
         if hit:
             b["blurb"] = hit
             filled["blurb"] += 1
+        elif hand.get(b["t"]):
+            b["blurb"] = hand[b["t"]]
+            filled["hand"] += 1
     for b in books:
         r = lookup(rows, b["t"], b["a"])
         if not r:
