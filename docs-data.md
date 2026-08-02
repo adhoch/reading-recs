@@ -302,6 +302,14 @@ predict a 1.5-star spread from one number. Distinct-vector ratio: 0.65 for the
 old tags, **0.00** for the new ones. Across the library, 188 books now sit in
 51 identical-vector clusters with a mean internal rating spread of 0.79 stars.
 
+A later scrape filled a measured `cpace` for 125 of the 152, which broke the
+identical vectors apart — distinct-vector ratio went 0.00 to 0.86. It made no
+difference: the batch still scores r=0.190 and still drags the whole model to
+0.522. So the destroyed variance was not the whole story. The seven axes as
+assigned simply do not capture what separates a Dresden novel rated 3.5 from
+one rated 5, and adding a per-volume feature does not rescue tags that carry
+no signal.
+
 The facets are a different matter and are kept: an Inspector McLean novel
 genuinely is investigation / contemporary-earth / bureaucracy at series
 granularity, and that is what builds the graph. So the books stay as nodes —
