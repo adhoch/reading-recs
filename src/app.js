@@ -876,6 +876,23 @@ function serOffset(b){
   const k=b.ser?snorm(b.ser):"solo:"+snorm(b.t);
   return t[k]||0;
 }
+/* Where a book sits in its series, for the title block.
+   all_series.json keys four series short of what books.json calls them, so the
+   bibliography is matched on the display name — the one thing every source
+   agrees on — exactly as the shelves do. Falls back to counting what the
+   library holds when there is no bibliography at all, and says nothing rather
+   than guessing when the volume number is missing. */
+function seriesInfo(b){
+  if(!b.ser)return null;
+  const key=snorm(b.ser);
+  let entry=ALLSER[key];
+  if(!entry)for(const e of Object.values(ALLSER))
+    if(snorm(e.name)===key){entry=e;break;}
+  const total=(entry&&(entry.vols||[]).length)||
+    nodes.filter(n=>n.ser&&snorm(n.ser)===key).length;
+  const pos=(b.vol!=null&&isFinite(b.vol))?(b.vol%1?b.vol:Math.round(b.vol)):null;
+  return {name:b.ser,pos,total:total>1?total:null};
+}
 function predBlock(b){
   const ups=AXES.map(a=>({n:a.n,c:MODEL.coef[a.k]*(b.ax[a.k]-AXMEAN[a.k])}))
     .filter(o=>Math.abs(o.c)>=.08).sort((x,y)=>Math.abs(y.c)-Math.abs(x.c)).slice(0,3);
@@ -1290,6 +1307,10 @@ function renderDetail(){
     <div class="eyebrow">${b.r===0?"Recommended":"Read"}</div>
     <div class="d-title">${b.t}</div>
     <div class="d-author"><button class="xlink" data-nav="author" data-k="${b.a.replace(/"/g,"&quot;")}">${b.a}</button></div>
+    ${(()=>{const si=seriesInfo(b);if(!si)return "";
+      return `<div class="d-series"><button class="xlink" data-nav="series" data-k="${
+        si.name.replace(/"/g,"&quot;")}">${si.name}</button>${
+        si.pos!=null?`<span class="d-vol">#${si.pos}${si.total?` of ${si.total}`:""}</span>`:""}</div>`;})()}
     <div class="d-rating" style="border-color:${nodeHex(b)};color:${nodeHex(b)}">
       ${b.r===0?"not yet read":b.r+" of 5"}</div>
     ${b.blurb?`<div class="blurb-wrap"><div class="blurb ${b._open?"open":""}" id="blurb">${b.blurb}</div>${

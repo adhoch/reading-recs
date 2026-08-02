@@ -458,6 +458,8 @@ body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
 .chip.on{background:var(--vellum);color:var(--field);border-color:var(--vellum)}
 .chip.grp{font-family:var(--mono);font-size:10px;border-width:1px;border-style:solid}
 .chip.grp em{font-style:normal;color:var(--faint);margin-left:5px}
+.d-series{margin-top:3px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.d-vol{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.06em}
 .mr-v{font-family:var(--mono);font-size:10.5px;color:var(--dim);
   margin-left:6px;min-width:20px;display:inline-block;text-align:left;font-weight:400}
 .minirate:hover .mr-v{color:var(--vellum)}
