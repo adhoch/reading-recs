@@ -9,8 +9,8 @@
    "mean": 4.0
   },
   "Jim Butcher": {
-   "n": 34,
-   "mean": 4.09
+   "n": 22,
+   "mean": 4.14
   },
   "Lev Grossman": {
    "n": 2,
@@ -61,8 +61,8 @@
    "mean": 4.0
   },
   "Sebastien de Castell": {
-   "n": 1,
-   "mean": 4.0
+   "n": 7,
+   "mean": 2.93
   },
   "Benjamin Liar": {
    "n": 1,
@@ -85,8 +85,8 @@
    "mean": 3.0
   },
   "Adrian Tchaikovsky": {
-   "n": 6,
-   "mean": 4.4
+   "n": 5,
+   "mean": 4.44
   },
   "Alisa Kwitney": {
    "n": 1,
@@ -113,8 +113,8 @@
    "mean": 5.0
   },
   "Stephen King": {
-   "n": 39,
-   "mean": 4.04
+   "n": 37,
+   "mean": 4.06
   },
   "Charles Stross": {
    "n": 15,
@@ -129,16 +129,16 @@
    "mean": 5.0
   },
   "Dennis E. Taylor": {
-   "n": 6,
-   "mean": 4.17
+   "n": 5,
+   "mean": 4.2
   },
   "Miles Cameron": {
-   "n": 1,
-   "mean": 4.0
+   "n": 5,
+   "mean": 4.6
   },
   "Steven Erikson": {
    "n": 10,
-   "mean": 4.6
+   "mean": 4.3
   },
   "Matt Dinniman": {
    "n": 7,
@@ -157,7 +157,7 @@
    "mean": 5.0
   },
   "Neil Gaiman": {
-   "n": 8,
+   "n": 7,
    "mean": 4.45
   },
   "Alix E. Harrow": {
@@ -185,8 +185,8 @@
    "mean": 4.0
   },
   "Robert Jordan": {
-   "n": 3,
-   "mean": 4.0
+   "n": 11,
+   "mean": 4.14
   },
   "Pierce Brown": {
    "n": 3,
@@ -205,8 +205,8 @@
    "mean": 4.0
   },
   "Vernor Vinge": {
-   "n": 3,
-   "mean": 3.45
+   "n": 4,
+   "mean": 4.25
   },
   "David Cote": {
    "n": 1,
@@ -233,20 +233,20 @@
    "mean": 4.38
   },
   "Daniel Abraham": {
-   "n": 2,
-   "mean": 4.75
+   "n": 6,
+   "mean": 4.83
   },
   "V.E. Schwab": {
-   "n": 2,
-   "mean": 3.5
+   "n": 1,
+   "mean": 3.0
   },
   "Christopher Paolini": {
    "n": 1,
    "mean": 3.0
   },
   "Terry Pratchett": {
-   "n": 35,
-   "mean": 3.91
+   "n": 29,
+   "mean": 4.14
   },
   "James S.A. Corey": {
    "n": 2,
@@ -261,8 +261,8 @@
    "mean": 5.0
   },
   "Richard K. Morgan": {
-   "n": 6,
-   "mean": 4.0
+   "n": 4,
+   "mean": 4.25
   },
   "Erin Morgenstern": {
    "n": 1,
@@ -321,8 +321,8 @@
    "mean": 5.0
   },
   "Guillermo del Toro": {
-   "n": 2,
-   "mean": 3.5
+   "n": 1,
+   "mean": 3.0
   },
   "Mira Grant": {
    "n": 3,
@@ -485,8 +485,8 @@
    "mean": 3.0
   },
   "Chuck Dixon": {
-   "n": 2,
-   "mean": 3.5
+   "n": 1,
+   "mean": 4.0
   },
   "Greg Keyes": {
    "n": 1,
@@ -637,8 +637,8 @@
    "mean": 4.0
   },
   "Orson Scott Card": {
-   "n": 5,
-   "mean": 3.67
+   "n": 4,
+   "mean": 3.75
   },
   "Karen Traviss": {
    "n": 1,
@@ -721,7 +721,7 @@
    "mean": 4.0
   },
   "Arthur C. Clarke": {
-   "n": 6,
+   "n": 5,
    "mean": 4.0
   },
   "Margaret Atwood": {
@@ -777,8 +777,8 @@
    "mean": 2.0
   },
   "John Connolly": {
-   "n": 2,
-   "mean": 4.25
+   "n": 1,
+   "mean": 4.5
   },
   "Stina Leicht": {
    "n": 1,
@@ -821,8 +821,8 @@
    "mean": 5.0
   },
   "Glen Cook": {
-   "n": 15,
-   "mean": 4.47
+   "n": 11,
+   "mean": 4.64
   },
   "Jean Craighead George": {
    "n": 1,
@@ -833,7 +833,7 @@
    "mean": 4.0
   },
   "Robin Hobb": {
-   "n": 3,
+   "n": 2,
    "mean": 4.0
   },
   "Gene Wolfe": {
@@ -872,9 +872,25 @@
    "n": 1,
    "mean": 4.0
   },
+  "A.J. Hackwith": {
+   "n": 1,
+   "mean": 4.0
+  },
   "Mark Lawrence": {
    "n": 1,
    "mean": 3.0
+  },
+  "Sylvain Neuvel": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Jason Arnopp": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Guillermo del Toro & Chuck Hogan": {
+   "n": 1,
+   "mean": 4.0
   },
   "Lee Child": {
    "n": 1,
@@ -931,6 +947,10 @@
   "Lynn Flewelling": {
    "n": 1,
    "mean": 3.5
+  },
+  "Robert Jordan & Brandon Sanderson": {
+   "n": 3,
+   "mean": 3.67
   }
  },
  "series": {
@@ -1044,8 +1064,8 @@
   },
   "greatcoats": {
    "name": "Greatcoats",
-   "n": 1,
-   "mean": 4.0,
+   "n": 7,
+   "mean": 2.93,
    "vols": [
     1.0
    ]
@@ -1181,7 +1201,7 @@
   "malazan book of the fallen": {
    "name": "Malazan Book of the Fallen",
    "n": 10,
-   "mean": 5.0,
+   "mean": 4.3,
    "vols": [
     1.0,
     2.0,
@@ -1250,13 +1270,24 @@
    ]
   },
   "wheel of time": {
-   "name": "Wheel of Time",
-   "n": 3,
-   "mean": 4.0,
+   "name": "The Wheel of Time",
+   "n": 14,
+   "mean": 4.04,
    "vols": [
     1.0,
+    2.0,
     3.0,
-    12.0
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0
    ]
   },
   "red rising": {
@@ -1285,11 +1316,12 @@
   },
   "zones of thought": {
    "name": "Zones of Thought",
-   "n": 2,
-   "mean": 4.0,
+   "n": 3,
+   "mean": 4.67,
    "vols": [
     1.0,
-    2.0
+    2.0,
+    3.0
    ]
   },
   "masquerade": {
@@ -1336,10 +1368,14 @@
   },
   "dagger and the coin": {
    "name": "The Dagger and the Coin",
-   "n": 1,
-   "mean": 4.0,
+   "n": 5,
+   "mean": 4.8,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
    ]
   },
   "divine cities": {
@@ -1361,8 +1397,8 @@
   },
   "discworld": {
    "name": "Discworld",
-   "n": 24,
-   "mean": 3.92,
+   "n": 26,
+   "mean": 4.12,
    "vols": [
     1.0,
     2.0,
@@ -1390,7 +1426,8 @@
     26.0,
     27.0,
     30.0,
-    33.0
+    33.0,
+    38.0
    ]
   },
   "expanse": {
@@ -2543,10 +2580,26 @@
     1.0
    ]
   },
+  "hells library": {
+   "name": "Hell's Library",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1
+   ]
+  },
   "broken empire": {
    "name": "The Broken Empire",
    "n": 1,
    "mean": 3.0,
+   "vols": [
+    1
+   ]
+  },
+  "themis files": {
+   "name": "Themis Files",
+   "n": 1,
+   "mean": 4.0,
    "vols": [
     1
    ]
@@ -2573,6 +2626,18 @@
    "mean": 3.0,
    "vols": [
     1.0
+   ]
+  },
+  "traitor son cycle": {
+   "name": "The Traitor Son Cycle",
+   "n": 5,
+   "mean": 4.6,
+   "vols": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0
    ]
   }
  }

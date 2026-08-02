@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-08-01",
+ "updated": "2026-08-02T06:26:07.057Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -100,7 +100,7 @@
   "Moving Pictures": 4,
   "Reaper Man": 5,
   "Lords and Ladies": 5,
-  "Men at Arms": 5,
+  "Men at Arms": 4.5,
   "Interesting Times": 5,
   "London Falling": 5,
   "The Regulators": 4,
@@ -176,1282 +176,598 @@
   "Prayer for the Dead": 4,
   "Every Dead Thing": 4.5,
   "Fool's Assassin": 4,
-  "The Dungeon Anarchist's Cookbook": 4.5
+  "The Dungeon Anarchist's Cookbook": 4.5,
+  "The Library of the Unwritten": 4,
+  "Going Postal": 4.5,
+  "Wyrd Sisters": 4.5,
+  "Witches Abroad": 4.5,
+  "Feet of Clay": 3.5,
+  "Hogfather": 3.5,
+  "I Shall Wear Midnight": 5,
+  "Memories of Ice": 4,
+  "House of Chains": 4.5,
+  "The Bonehunters": 4,
+  "Midnight Tides": 3.5,
+  "Reaper's Gale": 4,
+  "Toll the Hounds": 5,
+  "Dust of Dreams": 4,
+  "The Crippled God": 4,
+  "The Eye of the World": 4,
+  "The Great Hunt": 4.5,
+  "The Dragon Reborn": 4.5,
+  "The Shadow Rising": 4.5,
+  "The Fires of Heaven": 5,
+  "Lord of Chaos": 5,
+  "A Crown of Swords": 4.5,
+  "The Path of Daggers": 4,
+  "Winter's Heart": 3.5,
+  "Crossroads of Twilight": 3,
+  "Knife of Dreams": 3,
+  "The Gathering Storm": 3.5,
+  "Towers of Midnight": 3.5,
+  "A Memory of Light": 4,
+  "A Fire Upon the Deep": 5,
+  "A Deepness in the Sky": 4,
+  "The Children of the Sky": 5,
+  "Knight's Shadow": 4,
+  "Saint's Blood": 3.5,
+  "Tyrant's Throne": 3.5,
+  "Crucible of Chaos": 3,
+  "Play of Shadows": 2,
+  "Our Lady of Blades": 0.5,
+  "The Dragon's Path": 5,
+  "The King's Blood": 4.5,
+  "The Tyrant's Law": 4.5,
+  "The Widow's House": 5,
+  "The Spider's War": 5,
+  "The Red Knight": 4.5,
+  "The Fell Sword": 5,
+  "The Dread Wyrm": 4.5,
+  "The Plague of Swords": 4.5,
+  "The Fall of Dragons": 4.5,
+  "The Last Days of Jack Sparks": 4,
+  "Sleeping Giants": 4
  },
  "log": [
   {
-   "t": "Furies of Calderon",
+   "t": "City of Blades",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:30:11.403Z",
+   "at": "2026-07-31T16:14:54.247Z",
    "note": "rated from series list"
   },
   {
-   "t": "Academ's Fury",
+   "t": "Saevus Corax Captures the Castle",
    "from": null,
    "to": 5,
-   "at": "2026-07-31T04:30:12.139Z",
+   "at": "2026-07-31T16:15:20.895Z",
    "note": "rated from series list"
   },
   {
-   "t": "Cursor's Fury",
+   "t": "Saevus Corax Gets Away with Murder",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T16:15:22.367Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Against the Tide of Years",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:30:12.843Z",
+   "at": "2026-07-31T16:16:02.367Z",
    "note": "rated from series list"
   },
   {
-   "t": "Captain's Fury",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:13.659Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Princeps' Fury",
+   "t": "On the Oceans of Eternity",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:30:14.371Z",
+   "at": "2026-07-31T16:16:04.190Z",
    "note": "rated from series list"
   },
   {
-   "t": "First Lord's Fury",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:15.027Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Drawing of the Three",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:21.699Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Waste Lands",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:25.211Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Wizard and Glass",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:28.451Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Wolves of the Calla",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:29.453Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Song of Susannah",
+   "t": "The Fall",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:30:31.218Z",
+   "at": "2026-07-31T16:16:24.903Z",
    "note": "rated from series list"
   },
   {
-   "t": "The Dark Tower",
+   "t": "The Shadow Throne",
+   "from": null,
+   "to": 5,
+   "at": "2026-07-31T16:17:03.079Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Price of Valor",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:30:33.643Z",
+   "at": "2026-07-31T16:17:04.240Z",
    "note": "rated from series list"
   },
   {
-   "t": "The Wind Through the Keyhole",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:30:35.995Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Black Company",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:31:39.018Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The White Rose",
+   "t": "Tilting the Balance",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:31:40.466Z",
+   "at": "2026-07-31T16:17:08.735Z",
    "note": "rated from series list"
   },
   {
-   "t": "Shadows Linger",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:31:43.594Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Lies Weeping",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:31:46.330Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Water Sleeps",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:31:49.218Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Soldiers Live",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:31:52.154Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Shadow Games",
+   "t": "Upsetting the Balance",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:31:55.002Z",
+   "at": "2026-07-31T16:17:10.439Z",
    "note": "rated from series list"
   },
   {
-   "t": "Mistborn: The Final Empire",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:10.483Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: The Well of Ascension",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:11.474Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: The Hero of Ages",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:12.217Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: The Alloy of Law",
+   "t": "Island in the Sea of Time",
    "from": null,
    "to": 4,
-   "at": "2026-07-31T04:32:14.002Z",
+   "at": "2026-07-31T16:17:40.624Z",
    "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: Shadows of Self",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:14.834Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: The Bands of Mourning",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:16.234Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Mistborn: The Lost Metal",
-   "from": null,
-   "to": 3,
-   "at": "2026-07-31T04:32:17.282Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Doctor Sleep",
-   "from": null,
-   "to": 4,
-   "at": "2026-07-31T04:32:29.690Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Empire of the Vampire",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:32:36.234Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Empire of the Dawn",
-   "from": null,
-   "to": 4,
-   "at": "2026-07-31T04:32:39.210Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Last Graduate",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:34:06.849Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Golden Enclaves",
-   "from": null,
-   "to": 5,
-   "at": "2026-07-31T04:34:07.713Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Consider Phlebas",
-   "from": null,
-   "to": 4,
-   "at": "2026-07-31T16:31:28.578Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Consider Phlebas",
-   "from": 4,
-   "to": null,
-   "at": "2026-07-31T16:31:28.585Z",
-   "note": "rated from the needs-you queue"
   },
   {
    "t": "Parable of the Sower",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T00:42:03.934Z",
+   "at": "2026-07-31T21:31:12.530Z",
    "note": "rated from the needs-you queue"
   },
   {
    "t": "Parable of the Sower",
    "from": 5,
    "to": null,
-   "at": "2026-08-01T00:42:03.979Z",
+   "at": "2026-07-31T21:31:12.560Z",
    "note": "rated from the needs-you queue"
   },
   {
    "t": "Parable of the Sower",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T00:42:05.941Z",
+   "at": "2026-07-31T21:31:14.734Z",
    "note": "rated from the needs-you queue"
   },
   {
-   "t": "Killing Floor",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:11.661Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "For Our Sins",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:14.373Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Prayer for the Dead",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:19.645Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Prayer for the Dead",
-   "from": 4,
-   "to": null,
-   "at": "2026-08-01T00:42:19.701Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Damage Done",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:24.485Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Guilty Pleasures",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:42:30.453Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Childhood's End",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:32.189Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Written in Bones",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:35.293Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "This Inevitable Ruin",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:42:38.437Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Hollow Ones",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:42.485Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Gate of the Feral Gods",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:42:46.245Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Rest Is Death",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:42:47.973Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "I Have No Mouth and I Must Scream",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:42:52.502Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Weaveworld",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:42:54.861Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Words of Radiance",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:42:59.581Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Air War",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:02.101Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Air War",
+   "t": "Parable of the Sower",
    "from": 5,
    "to": null,
-   "at": "2026-08-01T00:43:02.149Z",
+   "at": "2026-07-31T21:31:14.766Z",
    "note": "rated from the needs-you queue"
   },
   {
-   "t": "The Long Way to a Small Angry Planet",
+   "t": "The Library of the Unwritten",
    "from": null,
    "to": 4,
-   "at": "2026-08-01T00:43:04.750Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:16:31.033Z"
   },
   {
-   "t": "The Long Way to a Small Angry Planet",
+   "t": "Going Postal",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:17:32.497Z"
+  },
+  {
+   "t": "Going Postal",
+   "from": 5,
+   "to": 4,
+   "at": "2026-08-01T05:17:37.569Z"
+  },
+  {
+   "t": "Going Postal",
    "from": 4,
-   "to": null,
-   "at": "2026-08-01T00:43:04.775Z",
-   "note": "rated from the needs-you queue"
+   "to": 4.5,
+   "at": "2026-08-01T05:17:50.593Z",
+   "note": "rated from series list"
   },
   {
-   "t": "The Book of Souls",
+   "t": "Wyrd Sisters",
    "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:10.838Z",
-   "note": "rated from the needs-you queue"
+   "to": 4.5,
+   "at": "2026-08-01T05:18:06.658Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Prince of Thorns",
+   "t": "Witches Abroad",
    "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:43:12.621Z",
-   "note": "rated from the needs-you queue"
+   "to": 4.5,
+   "at": "2026-08-01T05:18:08.122Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Fated",
+   "t": "Feet of Clay",
    "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:14.149Z",
-   "note": "rated from the needs-you queue"
+   "to": 3.5,
+   "at": "2026-08-01T05:18:19.082Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Red Seas Under Red Skies",
+   "t": "Hogfather",
    "from": null,
+   "to": 3.5,
+   "at": "2026-08-01T05:18:21.345Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Soul Music",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-01T05:18:30.858Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Soul Music",
+   "from": 4.5,
    "to": 5,
-   "at": "2026-08-01T00:43:15.108Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:18:34.434Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Speaker for the Dead",
+   "t": "Men at Arms",
    "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:17.981Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Ender's Shadow",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:19.565Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Project Hail Mary",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:20.869Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Clockwork Angel",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:43:22.869Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Night",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:27.094Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Night",
-   "from": 4,
-   "to": null,
-   "at": "2026-08-01T00:43:27.150Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Bury Our Bones in the Midnight Soil",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:43:30.413Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Fool's Errand",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:33.102Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Singularity Sky",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:35.925Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Elantris",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:37.030Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Sparrow",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:37.790Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Hobbit",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:48.269Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Replay",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:51.589Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Replay",
-   "from": 4,
-   "to": null,
-   "at": "2026-08-01T00:43:51.625Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Replay",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:55.285Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Silver Spike",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:43:58.845Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Dreams of Steel",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:43:59.997Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Bleak Seasons",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:44:01.253Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "She Is the Darkness",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:44:02.789Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Sourcery",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:44:05.709Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Guards! Guards!",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T00:44:09.253Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Moving Pictures",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:44:10.532Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Reaper Man",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:44:11.709Z",
-   "note": "rated from the needs-you queue"
+   "to": 4.5,
+   "at": "2026-08-01T05:18:35.922Z",
+   "note": "rated from series list"
   },
   {
    "t": "Lords and Ladies",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T00:44:12.933Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Men at Arms",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:44:14.573Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Soul Music",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:44:15.925Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Soul Music",
-   "from": 5,
-   "to": null,
-   "at": "2026-08-01T00:44:15.951Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Interesting Times",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:44:16.629Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "London Falling",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:49:29.605Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Regulators",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:49:36.797Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Seveneves",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T00:49:43.797Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Eye of the Bedlam Bride",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T00:49:49.013Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "11/22/63",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:30:11.453Z",
+   "at": "2026-08-01T05:18:37.402Z",
    "note": "rated from series list"
   },
   {
-   "t": "11/22/63",
-   "from": 5,
-   "to": null,
-   "at": "2026-08-01T01:30:11.505Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Under the Dome",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:14.532Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Pet Sematary",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:16.125Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Needful Things",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:18.421Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Dark Half",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:19.340Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Dreamcatcher",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:20.501Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Bag of Bones",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:30:23.277Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "CryoBurn",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:31:18.445Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Steel Remains",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:31:33.253Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Woken Furies",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:31:33.966Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Anansi Boys",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:32:02.285Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "The Republic of Thieves",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:32:06.117Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Broken Angels",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:34:55.389Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Altered Carbon",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:34:56.588Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Platform Decay",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:12.893Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "System Collapse",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:15.621Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Fugitive Telemetry",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:35:17.495Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Network Effect",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:35:19.140Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Exit Strategy",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:19.932Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Rogue Protocol",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:35:20.950Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Artificial Condition",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:22.045Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Designated Targets",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:39.932Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Final Impact",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:40.557Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "We Are Legion (We Are Bob)",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:35:46.597Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "For We Are Many",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:47.357Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "All These Worlds",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:35:48.341Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Heaven's River",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:35:49.228Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Not Till We Are Lost",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T01:35:49.925Z",
-   "note": "rated from series list"
-  },
-  {
-   "t": "Soul Music",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:51:09.493Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Maskerade",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T01:51:11.261Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Jingo",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:51:12.733Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Continent",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:51:13.612Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Carpe Jugulum",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:51:15.221Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Fifth Elephant",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:51:16.069Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Truth",
+   "t": "I Shall Wear Midnight",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-01T01:51:17.397Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:18:44.497Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Thief of Time",
-   "from": null,
-   "to": 5,
-   "at": "2026-08-01T01:51:18.829Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Hero",
-   "from": null,
-   "to": 3,
-   "at": "2026-08-01T01:51:20.534Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Hero",
-   "from": 3,
-   "to": 3.5,
-   "at": "2026-08-01T01:51:21.525Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Hero",
-   "from": 3.5,
-   "to": 4,
-   "at": "2026-08-01T01:51:22.757Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Hero",
-   "from": 4,
-   "to": null,
-   "at": "2026-08-01T01:51:23.221Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Last Hero",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:51:26.589Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Amazing Maurice and His Educated Rodents",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:51:30.959Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Amazing Maurice and His Educated Rodents",
-   "from": 4,
-   "to": null,
-   "at": "2026-08-01T01:51:33.337Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Grave Peril",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:51:37.253Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Summer Knight",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:51:40.092Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Summer Knight",
+   "t": "I Shall Wear Midnight",
    "from": 4.5,
-   "to": null,
-   "at": "2026-08-01T01:51:40.141Z",
-   "note": "rated from the needs-you queue"
+   "to": 5,
+   "at": "2026-08-01T05:18:45.721Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Summer Knight",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:51:41.365Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Summer Knight",
-   "from": 3.5,
-   "to": null,
-   "at": "2026-08-01T01:51:41.813Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Summer Knight",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:51:42.861Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Death Masks",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:51:48.228Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Blood Rites",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:51:50.429Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Dead Beat",
+   "t": "Memories of Ice",
    "from": null,
    "to": 4,
-   "at": "2026-08-01T01:51:53.573Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:18:56.121Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Proven Guilty",
+   "t": "House of Chains",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-01T05:18:58.825Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Bonehunters",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-01T05:19:01.929Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Midnight Tides",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-01T05:19:03.857Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Reaper's Gale",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-01T05:19:06.113Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Toll the Hounds",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T01:51:54.969Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:19:07.090Z",
+   "note": "rated from series list"
   },
   {
-   "t": "White Night",
+   "t": "Dust of Dreams",
    "from": null,
    "to": 4,
-   "at": "2026-08-01T01:51:57.846Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:19:08.569Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Small Favor",
+   "t": "The Crippled God",
    "from": null,
    "to": 4,
-   "at": "2026-08-01T01:52:01.141Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:19:10.778Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Turn Coat",
+   "t": "The Eye of the World",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:52:02.285Z",
-   "note": "rated from the needs-you queue"
+   "to": 4,
+   "at": "2026-08-01T05:22:34.018Z"
   },
   {
-   "t": "Changes",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:04.470Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Skin Game",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:09.270Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Cold Days",
+   "t": "The Great Hunt",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T01:52:11.821Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:22:45.713Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Ghost Story",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:13.037Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Peace Talks",
-   "from": null,
+   "t": "The Great Hunt",
+   "from": 5,
    "to": 4.5,
-   "at": "2026-08-01T01:52:14.952Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:22:46.938Z",
+   "note": "rated from series list"
   },
   {
-   "t": "The Stranger",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:52:21.021Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "All That Lives",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:52:25.237Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Steelheart",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:52:28.948Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Night",
+   "t": "The Dragon Reborn",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T01:52:31.165Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:22:48.138Z",
+   "note": "rated from series list"
   },
   {
-   "t": "What Will Burn",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:33.476Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Dead Men's Bones",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:52:37.109Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Natural Causes",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:39.902Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Natural Causes",
-   "from": 3.5,
-   "to": null,
-   "at": "2026-08-01T01:52:41.478Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Natural Causes",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:52:42.109Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Long Way to a Small Angry Planet",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:45.669Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Air War",
+   "t": "The Shadow Rising",
    "from": null,
    "to": 5,
-   "at": "2026-08-01T01:52:51.869Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:22:49.714Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Luck in the Shadows",
+   "t": "The Fires of Heaven",
    "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:52:54.101Z",
-   "note": "rated from the needs-you queue"
+   "to": 5,
+   "at": "2026-08-01T05:22:52.401Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Carl's Doomsday Scenario",
+   "t": "The Shadow Rising",
+   "from": 5,
+   "to": 4.5,
+   "at": "2026-08-01T05:22:53.889Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Dragon Reborn",
+   "from": 5,
+   "to": 4.5,
+   "at": "2026-08-01T05:22:54.914Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Lord of Chaos",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:22:57.425Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "A Crown of Swords",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-01T01:52:57.975Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:22:59.121Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Later",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:53:06.077Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Cold as the Grave",
+   "t": "The Path of Daggers",
    "from": null,
    "to": 3.5,
-   "at": "2026-08-01T01:53:08.021Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:00.529Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Mr. Mercedes",
-   "from": null,
-   "to": 3.5,
-   "at": "2026-08-01T01:53:11.141Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Butcher's Masquerade",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-01T01:53:14.413Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Butcher's Masquerade",
-   "from": 4.5,
-   "to": 3.5,
-   "at": "2026-08-01T01:53:16.884Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Butcher's Masquerade",
+   "t": "The Path of Daggers",
    "from": 3.5,
    "to": 4,
-   "at": "2026-08-01T01:53:17.893Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:02.402Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Morning Star",
+   "t": "Winter's Heart",
    "from": null,
    "to": 3.5,
-   "at": "2026-08-01T01:53:23.893Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:03.794Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Golden Son",
+   "t": "Crossroads of Twilight",
+   "from": null,
+   "to": 2.5,
+   "at": "2026-08-01T05:23:07.153Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Crossroads of Twilight",
+   "from": 2.5,
+   "to": 3,
+   "at": "2026-08-01T05:23:09.089Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Knife of Dreams",
+   "from": null,
+   "to": 3,
+   "at": "2026-08-01T05:23:10.273Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Gathering Storm",
    "from": null,
    "to": 3.5,
-   "at": "2026-08-01T01:53:25.421Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:11.554Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Golden Son",
-   "from": 3.5,
-   "to": 4,
-   "at": "2026-08-01T01:53:27.317Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Golden Son",
-   "from": 4,
+   "t": "Towers of Midnight",
+   "from": null,
    "to": 3.5,
-   "at": "2026-08-01T01:53:27.748Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:12.770Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Golden Son",
-   "from": 3.5,
-   "to": 4,
-   "at": "2026-08-01T01:53:28.557Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "Prayer for the Dead",
+   "t": "A Memory of Light",
    "from": null,
    "to": 4,
-   "at": "2026-08-01T01:53:35.829Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:14.089Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Every Dead Thing",
+   "t": "A Fire Upon the Deep",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:23:21.906Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "A Deepness in the Sky",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-01T05:23:23.617Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Children of the Sky",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:23:24.529Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Knight's Shadow",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-01T05:23:36.778Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Saint's Blood",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-01T05:23:38.530Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Tyrant's Throne",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-01T05:23:40.938Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Crucible of Chaos",
+   "from": null,
+   "to": 3,
+   "at": "2026-08-01T05:23:42.433Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Play of Shadows",
+   "from": null,
+   "to": 2,
+   "at": "2026-08-01T05:23:43.873Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Our Lady of Blades",
+   "from": null,
+   "to": 0.5,
+   "at": "2026-08-01T05:23:46.650Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Dragon's Path",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:23:52.810Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The King's Blood",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-01T01:53:38.285Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:55.849Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Fool's Assassin",
-   "from": null,
-   "to": 4,
-   "at": "2026-08-01T01:54:14.260Z",
-   "note": "rated from the needs-you queue"
-  },
-  {
-   "t": "The Dungeon Anarchist's Cookbook",
+   "t": "The Tyrant's Law",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-01T01:54:25.759Z",
-   "note": "rated from the needs-you queue"
+   "at": "2026-08-01T05:23:57.321Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Widow's House",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:23:58.161Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Spider's War",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:23:58.914Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Red Knight",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:24:46.555Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Red Knight",
+   "from": 5,
+   "to": 4.5,
+   "at": "2026-08-01T05:24:47.554Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Fell Sword",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-01T05:24:48.921Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Dread Wyrm",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-01T05:24:50.433Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Plague of Swords",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-01T05:24:51.241Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Fall of Dragons",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-01T05:24:52.913Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Last Days of Jack Sparks",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-02T00:15:08.799Z"
+  },
+  {
+   "t": "Sleeping Giants",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-02T06:26:06.451Z"
   }
  ]
 }

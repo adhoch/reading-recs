@@ -360,6 +360,11 @@ def main():
                 rec[k] = spec.get(k, [])
             rec["st"] = spec.get("st") or status_for_series(key, books, name) or "standalone"
             rec["cpace"] = spec.get("cpace")
+            # Where the tags came from, carried through so the fit can tell.
+            # Without it a book's provenance died at the promote step and there
+            # was no way to exclude a batch that turned out not to predict.
+            if spec.get("tagsrc"):
+                rec["tagsrc"] = spec["tagsrc"]
             if spec.get("nrev") is not None:
                 rec["nrev"] = spec["nrev"]
             rec["praw"], rec["p"] = score(rec["ax"], rec["cpace"], model)

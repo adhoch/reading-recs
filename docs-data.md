@@ -277,3 +277,42 @@ overlap at +0.52, so the fit uses pace to subtract the part of "fast" that is
 merely quick rather than gripping. The detail panel therefore excludes it from
 "held back because…" — quoted alone it claimed reading fast was a penalty, which
 the data does not support.
+
+## The 152-book tagging pass, and why its axes are excluded
+
+152 rated books had no tags, so they generated no training row and no graph
+node — about 40% of the rated library, and the well-liked part of it (mean
+4.23, 123 of them rated 4+). Symptom that surfaced it: no straight-mystery
+recommendations, despite eleven rated Inspector McLean novels, because every
+one of them was invisible to the model.
+
+They were tagged in one pass by giving every volume of a series the same seven
+axes. That was wrong, and the measurement says so:
+
+| | rows | grouped r |
+|---|---|---|
+| pre-existing tags | 236 | **0.614** |
+| the new pass | 152 | **0.166** |
+| both together | 388 | 0.487 |
+
+r=0.166 is near noise. The cause is not that these books are harder — it is
+that the template gave every volume of a series one identical vector. Thirteen
+Dresden novels rated 3.5 to 5 share a single input, so the model is asked to
+predict a 1.5-star spread from one number. Distinct-vector ratio: 0.65 for the
+old tags, **0.00** for the new ones. Across the library, 188 books now sit in
+51 identical-vector clusters with a mean internal rating spread of 0.79 stars.
+
+The facets are a different matter and are kept: an Inspector McLean novel
+genuinely is investigation / contemporary-earth / bureaucracy at series
+granularity, and that is what builds the graph. So the books stay as nodes —
+the investigation engine went from 75 to 133 books, which is what made the
+register visible — and `fit.py` excludes them from training by `tagsrc`.
+Re-tag per volume to readmit them.
+
+Two process notes worth keeping. First, `promote.py` originally dropped
+unknown fields, so `tagsrc` died at the promote step and there was no way to
+identify a batch after the fact; it is carried through now. Second, this pass
+was made with the ratings visible, which is the contamination this project
+already measured once (0.743 -> 0.647 when the 95 rated books were retagged
+blind). It did not inflate anything here — it went the other way — but a
+per-volume retag should be done without the ratings in view.

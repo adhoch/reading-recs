@@ -1,73 +1,891 @@
 {
  "_note": "Unread books added to fill registers the library had nothing to recommend from. Tagged by hand on the same scale as books.json — see tagging-schema.md. ax order: velocity, friction, interiority, darkness, romance_load, prose_shine, formula. No rating: these are recommendations, so scripts/addrecs.py files them with r=0 and lets model.json score them. cpace is absent by design — it is scraped community data, not a judgement.",
-
- "Going Postal": {"a": "Terry Pratchett", "ser": "Discworld",
-  "ax": [4,1,2,2,2,4,2], "en": "heist", "ea": ["ascent-of-power"],
-  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["bureaucracy"],
-  "ca": ["solo-competent"], "mo": ["comedy","satire"], "st": "complete-series"},
-
- "Wyrd Sisters": {"a": "Terry Pratchett", "ser": "Discworld",
-  "ax": [4,1,2,2,1,4,2], "en": "quest", "ea": [],
-  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["none"],
-  "ca": ["ensemble-crew"], "mo": ["comedy","satire"], "st": "complete-series"},
-
- "The Eye of the World": {"a": "Robert Jordan", "ser": "The Wheel of Time",
-  "ax": [3,3,2,2,2,3,4], "en": "quest", "ea": ["campaign-war"],
-  "mi": ["secondary-world"], "sy": ["hard-magic","mythic"], "in": ["none"],
-  "ca": ["multi-pov-sprawl"], "mo": ["adventure"], "st": "complete-series"},
-
- "Assassin's Apprentice": {"a": "Robin Hobb", "ser": "The Farseer Trilogy",
-  "ax": [3,2,4,3,2,4,2], "en": "ascent-of-power", "ea": [],
-  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["none"],
-  "ca": ["naive-initiate"], "mo": ["tragedy"], "st": "complete-series"},
-
- "Port of Shadows": {"a": "Glen Cook", "ser": "The Chronicles of the Black Company",
-  "ax": [3,3,2,4,1,3,3], "en": "campaign-war", "ea": [],
-  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["military"],
-  "ca": ["ensemble-crew"], "mo": ["noir"], "st": "complete-series"},
-
- "Old Man's War": {"a": "John Scalzi", "ser": "Old Man's War",
-  "ax": [5,1,2,3,2,3,2], "en": "campaign-war", "ea": [],
-  "mi": ["far-future"], "sy": ["technological"], "in": ["military"],
-  "ca": ["solo-competent"], "mo": ["adventure"], "st": "complete-series"},
-
- "The Forever War": {"a": "Joe Haldeman",
-  "ax": [4,2,3,4,2,4,1], "en": "campaign-war", "ea": [],
-  "mi": ["far-future"], "sy": ["technological"], "in": ["military"],
-  "ca": ["solo-competent"], "mo": ["tragedy"], "st": "standalone"},
-
- "The Once and Future King": {"a": "T.H. White",
-  "ax": [2,3,4,3,3,5,1], "en": "quest", "ea": ["institutional-politics"],
-  "mi": ["historical-earth"], "sy": ["mythic"], "in": ["church"],
-  "ca": ["ensemble-crew"], "mo": ["tragedy"], "st": "standalone"},
-
- "Lud-in-the-Mist": {"a": "Hope Mirrlees",
-  "ax": [3,3,3,3,1,5,1], "en": "mystery-box", "ea": ["investigation"],
-  "mi": ["secondary-world"], "sy": ["mythic"], "in": ["bureaucracy"],
-  "ca": ["solo-competent"], "mo": ["adventure"], "st": "standalone"},
-
- "Unsouled": {"a": "Will Wight", "ser": "Cradle",
-  "ax": [5,1,2,2,1,3,4], "en": "ascent-of-power", "ea": [],
-  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["academy"],
-  "ca": ["naive-initiate"], "mo": ["adventure"], "st": "complete-series"},
-
- "He Who Fights with Monsters": {"a": "Shirtaloon", "ser": "He Who Fights with Monsters",
-  "ax": [4,1,3,2,1,2,4], "en": "ascent-of-power", "ea": ["quest"],
-  "mi": ["portal"], "sy": ["hard-magic"], "in": ["guild-corp"],
-  "ca": ["solo-competent"], "mo": ["comedy","adventure"], "st": "ongoing"},
-
- "The Rage of Dragons": {"a": "Evan Winter", "ser": "The Burning",
-  "ax": [5,2,2,4,2,4,2], "en": "campaign-war", "ea": ["ascent-of-power"],
-  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["military"],
-  "ca": ["damaged-loner"], "mo": ["tragedy"], "st": "ongoing"},
-
- "The Priory of the Orange Tree": {"a": "Samantha Shannon",
-  "ax": [3,3,3,3,3,4,1], "en": "campaign-war", "ea": ["institutional-politics"],
-  "mi": ["secondary-world"], "sy": ["hard-magic"], "in": ["church"],
-  "ca": ["multi-pov-sprawl"], "mo": ["adventure"], "st": "standalone"},
-
- "Space Opera": {"a": "Catherynne M. Valente",
-  "ax": [3,3,2,2,2,4,1], "en": "quest", "ea": [],
-  "mi": ["far-future"], "sy": ["technological"], "in": ["none"],
-  "ca": ["ensemble-crew"], "mo": ["comedy","satire"], "st": "standalone"}
+ "Going Postal": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   2,
+   4,
+   2
+  ],
+  "en": "heist",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "complete-series"
+ },
+ "Wyrd Sisters": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "complete-series"
+ },
+ "The Eye of the World": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   2,
+   2,
+   2,
+   3,
+   4
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Assassin's Apprentice": {
+  "a": "Robin Hobb",
+  "ser": "The Farseer Trilogy",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "ascent-of-power",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "Port of Shadows": {
+  "a": "Glen Cook",
+  "ser": "The Chronicles of the Black Company",
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "complete-series"
+ },
+ "Old Man's War": {
+  "a": "John Scalzi",
+  "ser": "Old Man's War",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Forever War": {
+  "a": "Joe Haldeman",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "The Once and Future King": {
+  "a": "T.H. White",
+  "ax": [
+   2,
+   3,
+   4,
+   3,
+   3,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "Lud-in-the-Mist": {
+  "a": "Hope Mirrlees",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   1,
+   5,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "Unsouled": {
+  "a": "Will Wight",
+  "ser": "Cradle",
+  "ax": [
+   5,
+   1,
+   2,
+   2,
+   1,
+   3,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "He Who Fights with Monsters": {
+  "a": "Shirtaloon",
+  "ser": "He Who Fights with Monsters",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   2,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "portal"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "st": "ongoing"
+ },
+ "The Rage of Dragons": {
+  "a": "Evan Winter",
+  "ser": "The Burning",
+  "ax": [
+   5,
+   2,
+   2,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "ongoing"
+ },
+ "The Priory of the Orange Tree": {
+  "a": "Samantha Shannon",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "Space Opera": {
+  "a": "Catherynne M. Valente",
+  "ax": [
+   3,
+   3,
+   2,
+   2,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "standalone"
+ },
+ "Knots and Crosses": {
+  "a": "Ian Rankin",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Inspector Rebus"
+ },
+ "Black and Blue": {
+  "a": "Ian Rankin",
+  "ax": [
+   4,
+   2,
+   4,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Inspector Rebus"
+ },
+ "Cold Granite": {
+  "a": "Stuart MacBride",
+  "ax": [
+   4,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Logan McRae"
+ },
+ "In the Woods": {
+  "a": "Tana French",
+  "ax": [
+   3,
+   2,
+   5,
+   4,
+   2,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "ser": "Dublin Murder Squad"
+ },
+ "The Distant Echo": {
+  "a": "Val McDermid",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "standalone"
+ },
+ "Mystic River": {
+  "a": "Dennis Lehane",
+  "ax": [
+   3,
+   2,
+   5,
+   5,
+   1,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "ea": [],
+  "st": "standalone"
+ },
+ "The Big Sleep": {
+  "a": "Raymond Chandler",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   5,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "ser": "Philip Marlowe"
+ },
+ "The Maltese Falcon": {
+  "a": "Dashiell Hammett",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "standalone"
+ },
+ "Gorky Park": {
+  "a": "Martin Cruz Smith",
+  "ax": [
+   3,
+   3,
+   4,
+   5,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Arkady Renko"
+ },
+ "The Name of the Rose": {
+  "a": "Umberto Eco",
+  "ax": [
+   2,
+   5,
+   4,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "ea": [],
+  "st": "standalone"
+ },
+ "The Silence of the Lambs": {
+  "a": "Thomas Harris",
+  "ax": [
+   5,
+   1,
+   4,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "ser": "Hannibal Lecter"
+ },
+ "Case Histories": {
+  "a": "Kate Atkinson",
+  "ax": [
+   3,
+   2,
+   4,
+   4,
+   2,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "procedural",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Jackson Brodie"
+ },
+ "The Dry": {
+  "a": "Jane Harper",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Aaron Falk"
+ },
+ "Still Life": {
+  "a": "Louise Penny",
+  "ax": [
+   3,
+   1,
+   4,
+   2,
+   2,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "ser": "Chief Inspector Gamache"
+ }
 }

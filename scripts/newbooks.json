@@ -4038,18 +4038,5006 @@
   "st": "standalone"
  },
  "We Are Legion (We Are Bob)": {
-  "a": "Dennis E. Taylor"
+  "a": "Dennis E. Taylor",
+  "ser": "Bobiverse",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
  },
  "For We Are Many": {
-  "a": "Dennis E. Taylor"
+  "a": "Dennis E. Taylor",
+  "ser": "Bobiverse",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
  },
  "All These Worlds": {
-  "a": "Dennis E. Taylor"
+  "a": "Dennis E. Taylor",
+  "ser": "Bobiverse",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
  },
  "Heaven's River": {
-  "a": "Dennis E. Taylor"
+  "a": "Dennis E. Taylor",
+  "ser": "Bobiverse",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
  },
  "Not Till We Are Lost": {
-  "a": "Dennis E. Taylor"
+  "a": "Dennis E. Taylor",
+  "ser": "Bobiverse",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Great Hunt": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   4,
+   2,
+   3,
+   2,
+   2,
+   3,
+   4
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Dragon Reborn": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Shadow Rising": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   4,
+   3,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Fires of Heaven": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Lord of Chaos": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "A Crown of Swords": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Path of Daggers": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   2,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Winter's Heart": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   2,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Crossroads of Twilight": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   1,
+   4,
+   4,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Knife of Dreams": {
+  "a": "Robert Jordan",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Gathering Storm": {
+  "a": "Robert Jordan & Brandon Sanderson",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Towers of Midnight": {
+  "a": "Robert Jordan & Brandon Sanderson",
+  "ser": "The Wheel of Time",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   3,
+   5
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "A Memory of Light": {
+  "a": "Robert Jordan & Brandon Sanderson",
+  "ser": "The Wheel of Time",
+  "ax": [
+   4,
+   3,
+   2,
+   4,
+   2,
+   3,
+   4
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Sourcery": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Moving Pictures": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Reaper Man": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Interesting Times": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Maskerade": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Carpe Jugulum": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Last Continent": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Last Hero": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Thief of Time": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "I Shall Wear Midnight": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Soul Music": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Lords and Ladies": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Men at Arms": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Guards! Guards!": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Jingo": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Fifth Elephant": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Truth": {
+  "a": "Terry Pratchett",
+  "ser": "Discworld",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Artificial Condition": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Rogue Protocol": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Exit Strategy": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Network Effect": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Fugitive Telemetry": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "System Collapse": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Platform Decay": {
+  "a": "Martha Wells",
+  "ser": "The Murderbot Diaries",
+  "ax": [
+   5,
+   1,
+   4,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Bleak Seasons": {
+  "a": "Glen Cook",
+  "ser": "The Chronicles of the Black Company",
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "noir",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Dreams of Steel": {
+  "a": "Glen Cook",
+  "ser": "The Chronicles of the Black Company",
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "noir",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "She Is the Darkness": {
+  "a": "Glen Cook",
+  "ser": "The Chronicles of the Black Company",
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "noir",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Silver Spike": {
+  "a": "Glen Cook",
+  "ser": "The Chronicles of the Black Company",
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "noir",
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Grave Peril": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Summer Knight": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Death Masks": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Blood Rites": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Dead Beat": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Proven Guilty": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "White Night": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Small Favor": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Turn Coat": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Changes": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Ghost Story": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Cold Days": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Skin Game": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Peace Talks": {
+  "a": "Jim  Butcher",
+  "ser": "The Dresden Files",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Natural Causes": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Book of Souls": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Hangman's Song": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Dead Men's Bones": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Prayer for the Dead": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Damage Done": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Written in Bones": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Cold as the Grave": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Bury Them Deep": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "What Will Burn": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "All That Lives": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "For Our Sins": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Rest Is Death": {
+  "a": "James Oswald",
+  "ser": "Inspector McLean",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Memories of Ice": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "House of Chains": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Midnight Tides": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Bonehunters": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Reaper's Gale": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Toll the Hounds": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   2,
+   5,
+   4,
+   5,
+   1,
+   5,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Dust of Dreams": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Crippled God": {
+  "a": "Steven Erikson",
+  "ser": "Malazan Book of the Fallen",
+  "ax": [
+   3,
+   5,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Carl's Doomsday Scenario": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Dungeon Anarchist's Cookbook": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Gate of the Feral Gods": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Butcher's Masquerade": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Eye of the Bedlam Bride": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "This Inevitable Ruin": {
+  "a": "Matt Dinniman",
+  "ser": "Dungeon Crawler Carl",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "technological",
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Knight's Shadow": {
+  "a": "Sebastien de Castell",
+  "ser": "Greatcoats",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Saint's Blood": {
+  "a": "Sebastien de Castell",
+  "ser": "Greatcoats",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Tyrant's Throne": {
+  "a": "Sebastien de Castell",
+  "ser": "Greatcoats",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Play of Shadows": {
+  "a": "Sebastien de Castell",
+  "ser": "Greatcoats",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Our Lady of Blades": {
+  "a": "Sebastien de Castell",
+  "ser": "Greatcoats",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Crucible of Chaos": {
+  "a": "Sebastien de Castell",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Red Knight": {
+  "a": "Miles  Cameron",
+  "ax": [
+   3,
+   4,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Fell Sword": {
+  "a": "Miles  Cameron",
+  "ser": "The Traitor Son Cycle",
+  "ax": [
+   3,
+   4,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Dread Wyrm": {
+  "a": "Miles  Cameron",
+  "ser": "The Traitor Son Cycle",
+  "ax": [
+   3,
+   4,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Plague of Swords": {
+  "a": "Miles  Cameron",
+  "ser": "The Traitor Son Cycle",
+  "ax": [
+   3,
+   4,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Fall of Dragons": {
+  "a": "Miles  Cameron",
+  "ser": "The Traitor Son Cycle",
+  "ax": [
+   3,
+   4,
+   2,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Dragon's Path": {
+  "a": "Daniel Abraham",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The King's Blood": {
+  "a": "Daniel Abraham",
+  "ser": "The Dagger and the Coin",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Tyrant's Law": {
+  "a": "Daniel Abraham",
+  "ser": "The Dagger and the Coin",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Widow's House": {
+  "a": "Daniel Abraham",
+  "ser": "The Dagger and the Coin",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Spider's War": {
+  "a": "Daniel Abraham",
+  "ser": "The Dagger and the Coin",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Shadow Throne": {
+  "a": "Django Wexler",
+  "ser": "The Shadow Campaigns",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Price of Valor": {
+  "a": "Django Wexler",
+  "ser": "The Shadow Campaigns",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Tilting the Balance": {
+  "a": "Harry Turtledove",
+  "ser": "Worldwar",
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   4
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "alt-history"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Upsetting the Balance": {
+  "a": "Harry Turtledove",
+  "ser": "Worldwar",
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   1,
+   3,
+   4
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "alt-history"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Against the Tide of Years": {
+  "a": "S.M. Stirling",
+  "ser": "Island in the Sea of Time",
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "alt-history",
+   "time-displaced"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "On the Oceans of Eternity": {
+  "a": "S.M. Stirling",
+  "ser": "Island in the Sea of Time",
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "alt-history",
+   "time-displaced"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Designated Targets": {
+  "a": "John Birmingham",
+  "ser": "Axis of Time",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "alt-history",
+   "time-displaced"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Final Impact": {
+  "a": "John Birmingham",
+  "ser": "Axis of Time",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "alt-history",
+   "time-displaced"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Saevus Corax Captures the Castle": {
+  "a": "K.J. Parker",
+  "ser": "Saevus Corax",
+  "ax": [
+   4,
+   1,
+   4,
+   3,
+   1,
+   5,
+   2
+  ],
+  "en": "heist",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "villain-protagonist"
+  ],
+  "mo": [
+   "comedy",
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Saevus Corax Gets Away with Murder": {
+  "a": "K.J. Parker",
+  "ser": "Saevus Corax",
+  "ax": [
+   4,
+   1,
+   4,
+   3,
+   1,
+   5,
+   2
+  ],
+  "en": "heist",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "villain-protagonist"
+  ],
+  "mo": [
+   "comedy",
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Altered Carbon": {
+  "a": "Richard K. Morgan",
+  "ax": [
+   5,
+   2,
+   3,
+   5,
+   2,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Broken Angels": {
+  "a": "Richard K. Morgan",
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "A Fire Upon the Deep": {
+  "a": "Vernor Vinge",
+  "ax": [
+   4,
+   4,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "A Deepness in the Sky": {
+  "a": "Vernor Vinge",
+  "ax": [
+   4,
+   4,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Children of the Sky": {
+  "a": "Vernor Vinge",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Speaker for the Dead": {
+  "a": "Orson Scott Card",
+  "ax": [
+   3,
+   2,
+   5,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Ender's Shadow": {
+  "a": "Orson Scott Card",
+  "ax": [
+   4,
+   2,
+   4,
+   3,
+   1,
+   3,
+   2
+  ],
+  "en": "ascent-of-power",
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "academy",
+   "military"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Project Hail Mary": {
+  "a": "Andy Weir",
+  "ax": [
+   5,
+   1,
+   3,
+   3,
+   1,
+   3,
+   1
+  ],
+  "en": "mystery-box",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Seveneves": {
+  "a": "Neal Stephenson",
+  "ax": [
+   3,
+   4,
+   2,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Singularity Sky": {
+  "a": "Charles Stross",
+  "ax": [
+   3,
+   4,
+   3,
+   3,
+   2,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "satire"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Childhood's End": {
+  "a": "Arthur C. Clarke",
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Sparrow": {
+  "a": "Mary Doria Russell",
+  "ax": [
+   3,
+   3,
+   5,
+   5,
+   2,
+   5,
+   1
+  ],
+  "en": "quest",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Parable of the Sower": {
+  "a": "Octavia E. Butler",
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "mi": [
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "I Have No Mouth and I Must Scream": {
+  "a": "Harlan Ellison",
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   1,
+   5,
+   1
+  ],
+  "en": "survival",
+  "mi": [
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Night": {
+  "a": "Elie Wiesel",
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   1,
+   5,
+   1
+  ],
+  "en": "survival",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Stranger": {
+  "a": "Albert Camus",
+  "ax": [
+   3,
+   3,
+   5,
+   4,
+   2,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Weaveworld": {
+  "a": "Clive Barker",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Hollow Ones": {
+  "a": "Guillermo del Toro, Chuck Hogan",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "procedural"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Fall": {
+  "a": "Guillermo del Toro & Chuck Hogan",
+  "ax": [
+   4,
+   1,
+   2,
+   5,
+   1,
+   3,
+   3
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Every Dead Thing": {
+  "a": "John Connolly",
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir",
+   "horror"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Killing Floor": {
+  "a": "Lee Child",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "London Falling": {
+  "a": "Paul Cornell",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "procedural"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Fated": {
+  "a": "Benedict Jacka",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Guilty Pleasures": {
+  "a": "Laurell K. Hamilton",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   4,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Mr. Mercedes": {
+  "a": "Stephen King",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "procedural",
+   "noir"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Later": {
+  "a": "Stephen King",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   1
+  ],
+  "en": "investigation",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Regulators": {
+  "a": "Stephen King, Richard Bachman",
+  "ax": [
+   4,
+   1,
+   2,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Anansi Boys": {
+  "a": "Neil Gaiman",
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Bury Our Bones in the Midnight Soil": {
+  "a": "V.E. Schwab",
+  "ax": [
+   3,
+   2,
+   4,
+   4,
+   3,
+   4,
+   1
+  ],
+  "en": "ascent-of-power",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
+ },
+ "Clockwork Angel": {
+  "a": "Cassandra Clare",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   4,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Luck in the Shadows": {
+  "a": "Lynn Flewelling",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   3,
+   3,
+   2
+  ],
+  "en": "heist",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Red Seas Under Red Skies": {
+  "a": "Scott Lynch",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   5,
+   2
+  ],
+  "en": "heist",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Republic of Thieves": {
+  "a": "Scott Lynch",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   3,
+   5,
+   2
+  ],
+  "en": "heist",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Steelheart": {
+  "a": "Brandon Sanderson",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "mi": [
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Words of Radiance": {
+  "a": "Brandon Sanderson",
+  "ax": [
+   4,
+   3,
+   3,
+   4,
+   2,
+   4,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "ongoing",
+  "tagsrc": "solo-2026-08"
+ },
+ "Golden Son": {
+  "a": "Pierce Brown",
+  "ax": [
+   5,
+   1,
+   2,
+   5,
+   2,
+   4,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Morning Star": {
+  "a": "Pierce Brown",
+  "ax": [
+   5,
+   1,
+   2,
+   5,
+   2,
+   4,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Fool's Errand": {
+  "a": "Robin Hobb",
+  "ax": [
+   3,
+   2,
+   5,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "Fool's Assassin": {
+  "a": "Robin Hobb",
+  "ax": [
+   2,
+   3,
+   5,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Air War": {
+  "a": "Adrian Tchaikovsky",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "complete-series",
+  "tagsrc": "solo-2026-08"
+ },
+ "The Hobbit": {
+  "a": "Chuck Dixon",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "ea": [],
+  "st": "standalone",
+  "tagsrc": "solo-2026-08"
  }
 }

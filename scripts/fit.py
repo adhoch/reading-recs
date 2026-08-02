@@ -124,10 +124,26 @@ def cv(rows, grouped):
     return r, float(np.sqrt(((actual - pred) ** 2).mean()))
 
 
+# Tag batches excluded from training, with the measurement that condemned them.
+#
+#   solo-2026-08  152 books tagged in one pass by giving every volume of a
+#                 series the same seven axes. The facets are right at that
+#                 granularity and they earn their place in the graph, but the
+#                 axes are not: thirteen Dresden novels rated 3.5 to 5 all got
+#                 one vector, so the model sees a single input and cannot tell
+#                 them apart. Scored on held-out groups they reach r=0.166
+#                 against 0.614 for the rest, and including them drags the
+#                 whole model from 0.640 to 0.487. Re-tag per volume to
+#                 readmit them; do not simply delete this line.
+EXCLUDED_TAGSRC = {"solo-2026-08"}
+
+
 def rows_for(books, measured_only=False):
     out = []
     for b in books:
         if not b["r"]:
+            continue
+        if b.get("tagsrc") in EXCLUDED_TAGSRC:
             continue
         if measured_only and b.get("cpace") is None:
             continue

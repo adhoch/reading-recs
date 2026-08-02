@@ -1,0 +1,666 @@
+[
+ {
+  "t": "Saevus Corax Captures the Castle",
+  "a": "K.J. Parker"
+ },
+ {
+  "t": "Saevus Corax Gets Away with Murder",
+  "a": "K.J. Parker"
+ },
+ {
+  "t": "Against the Tide of Years",
+  "a": "S.M. Stirling"
+ },
+ {
+  "t": "On the Oceans of Eternity",
+  "a": "S.M. Stirling"
+ },
+ {
+  "t": "The Fall",
+  "a": "Guillermo del Toro & Chuck Hogan"
+ },
+ {
+  "t": "The Shadow Throne",
+  "a": "Django Wexler"
+ },
+ {
+  "t": "The Price of Valor",
+  "a": "Django Wexler"
+ },
+ {
+  "t": "Tilting the Balance",
+  "a": "Harry Turtledove"
+ },
+ {
+  "t": "Upsetting the Balance",
+  "a": "Harry Turtledove"
+ },
+ {
+  "t": "Parable of the Sower",
+  "a": "Octavia E. Butler"
+ },
+ {
+  "t": "Killing Floor",
+  "a": "Lee Child"
+ },
+ {
+  "t": "For Our Sins",
+  "a": "James Oswald"
+ },
+ {
+  "t": "The Damage Done",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Guilty Pleasures",
+  "a": "Laurell K. Hamilton"
+ },
+ {
+  "t": "Childhood's End",
+  "a": "Arthur C. Clarke"
+ },
+ {
+  "t": "Written in Bones",
+  "a": "James Oswald"
+ },
+ {
+  "t": "This Inevitable Ruin",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "The Hollow Ones",
+  "a": "Guillermo del Toro, Chuck Hogan"
+ },
+ {
+  "t": "The Gate of the Feral Gods",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "The Rest Is Death",
+  "a": "James Oswald"
+ },
+ {
+  "t": "I Have No Mouth and I Must Scream",
+  "a": "Harlan Ellison"
+ },
+ {
+  "t": "Weaveworld",
+  "a": "Clive Barker"
+ },
+ {
+  "t": "Words of Radiance",
+  "a": "Brandon Sanderson"
+ },
+ {
+  "t": "The Book of Souls",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Fated",
+  "a": "Benedict Jacka"
+ },
+ {
+  "t": "Red Seas Under Red Skies",
+  "a": "Scott Lynch"
+ },
+ {
+  "t": "Speaker for the Dead",
+  "a": "Orson Scott Card"
+ },
+ {
+  "t": "Ender's Shadow",
+  "a": "Orson Scott Card"
+ },
+ {
+  "t": "Project Hail Mary",
+  "a": "Andy Weir"
+ },
+ {
+  "t": "Clockwork Angel",
+  "a": "Cassandra Clare"
+ },
+ {
+  "t": "Bury Our Bones in the Midnight Soil",
+  "a": "V.E. Schwab"
+ },
+ {
+  "t": "Fool's Errand",
+  "a": "Robin Hobb"
+ },
+ {
+  "t": "Singularity Sky",
+  "a": "Charles Stross"
+ },
+ {
+  "t": "The Sparrow",
+  "a": "Mary Doria Russell"
+ },
+ {
+  "t": "The Hobbit",
+  "a": "Chuck Dixon"
+ },
+ {
+  "t": "The Silver Spike",
+  "a": "Glen Cook"
+ },
+ {
+  "t": "Dreams of Steel",
+  "a": "Glen Cook"
+ },
+ {
+  "t": "Bleak Seasons",
+  "a": "Glen Cook"
+ },
+ {
+  "t": "She Is the Darkness",
+  "a": "Glen Cook"
+ },
+ {
+  "t": "Sourcery",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Guards! Guards!",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Moving Pictures",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Reaper Man",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Lords and Ladies",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Men at Arms",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Interesting Times",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "London Falling",
+  "a": "Paul Cornell"
+ },
+ {
+  "t": "The Regulators",
+  "a": "Stephen King, Richard Bachman"
+ },
+ {
+  "t": "Seveneves",
+  "a": "Neal Stephenson"
+ },
+ {
+  "t": "The Eye of the Bedlam Bride",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "Anansi Boys",
+  "a": "Neil Gaiman"
+ },
+ {
+  "t": "The Republic of Thieves",
+  "a": "Scott Lynch"
+ },
+ {
+  "t": "Broken Angels",
+  "a": "Richard K. Morgan"
+ },
+ {
+  "t": "Altered Carbon",
+  "a": "Richard K. Morgan"
+ },
+ {
+  "t": "Platform Decay",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "System Collapse",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Fugitive Telemetry",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Network Effect",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Exit Strategy",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Rogue Protocol",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Artificial Condition",
+  "a": "Martha Wells"
+ },
+ {
+  "t": "Designated Targets",
+  "a": "John Birmingham"
+ },
+ {
+  "t": "Final Impact",
+  "a": "John Birmingham"
+ },
+ {
+  "t": "We Are Legion (We Are Bob)",
+  "a": "Dennis E. Taylor"
+ },
+ {
+  "t": "For We Are Many",
+  "a": "Dennis E. Taylor"
+ },
+ {
+  "t": "All These Worlds",
+  "a": "Dennis E. Taylor"
+ },
+ {
+  "t": "Heaven's River",
+  "a": "Dennis E. Taylor"
+ },
+ {
+  "t": "Not Till We Are Lost",
+  "a": "Dennis E. Taylor"
+ },
+ {
+  "t": "Soul Music",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Maskerade",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Jingo",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "The Last Continent",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Carpe Jugulum",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "The Fifth Elephant",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "The Truth",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Thief of Time",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "The Last Hero",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Grave Peril",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Summer Knight",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Death Masks",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Blood Rites",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Dead Beat",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Proven Guilty",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "White Night",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Small Favor",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Turn Coat",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Changes",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Skin Game",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Cold Days",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Ghost Story",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "Peace Talks",
+  "a": "Jim  Butcher"
+ },
+ {
+  "t": "The Stranger",
+  "a": "Albert Camus"
+ },
+ {
+  "t": "All That Lives",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Steelheart",
+  "a": "Brandon Sanderson"
+ },
+ {
+  "t": "Night",
+  "a": "Elie Wiesel"
+ },
+ {
+  "t": "What Will Burn",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Dead Men's Bones",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Natural Causes",
+  "a": "James Oswald"
+ },
+ {
+  "t": "The Air War",
+  "a": "Adrian Tchaikovsky"
+ },
+ {
+  "t": "Luck in the Shadows",
+  "a": "Lynn Flewelling"
+ },
+ {
+  "t": "Carl's Doomsday Scenario",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "Later",
+  "a": "Stephen King"
+ },
+ {
+  "t": "Cold as the Grave",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Mr. Mercedes",
+  "a": "Stephen King"
+ },
+ {
+  "t": "The Butcher's Masquerade",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "Morning Star",
+  "a": "Pierce Brown"
+ },
+ {
+  "t": "Golden Son",
+  "a": "Pierce Brown"
+ },
+ {
+  "t": "Prayer for the Dead",
+  "a": "James Oswald"
+ },
+ {
+  "t": "Every Dead Thing",
+  "a": "John Connolly"
+ },
+ {
+  "t": "Fool's Assassin",
+  "a": "Robin Hobb"
+ },
+ {
+  "t": "The Dungeon Anarchist's Cookbook",
+  "a": "Matt Dinniman"
+ },
+ {
+  "t": "I Shall Wear Midnight",
+  "a": "Terry Pratchett"
+ },
+ {
+  "t": "Memories of Ice",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "House of Chains",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "The Bonehunters",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "Midnight Tides",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "Reaper's Gale",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "Toll the Hounds",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "Dust of Dreams",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "The Crippled God",
+  "a": "Steven Erikson"
+ },
+ {
+  "t": "The Great Hunt",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "The Dragon Reborn",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "The Shadow Rising",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "The Fires of Heaven",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "Lord of Chaos",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "A Crown of Swords",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "The Path of Daggers",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "Winter's Heart",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "Crossroads of Twilight",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "Knife of Dreams",
+  "a": "Robert Jordan"
+ },
+ {
+  "t": "The Gathering Storm",
+  "a": "Robert Jordan & Brandon Sanderson"
+ },
+ {
+  "t": "Towers of Midnight",
+  "a": "Robert Jordan & Brandon Sanderson"
+ },
+ {
+  "t": "A Memory of Light",
+  "a": "Robert Jordan & Brandon Sanderson"
+ },
+ {
+  "t": "A Fire Upon the Deep",
+  "a": "Vernor Vinge"
+ },
+ {
+  "t": "A Deepness in the Sky",
+  "a": "Vernor Vinge"
+ },
+ {
+  "t": "The Children of the Sky",
+  "a": "Vernor Vinge"
+ },
+ {
+  "t": "Knight's Shadow",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "Saint's Blood",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "Tyrant's Throne",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "Crucible of Chaos",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "Play of Shadows",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "Our Lady of Blades",
+  "a": "Sebastien de Castell"
+ },
+ {
+  "t": "The Dragon's Path",
+  "a": "Daniel Abraham"
+ },
+ {
+  "t": "The King's Blood",
+  "a": "Daniel Abraham"
+ },
+ {
+  "t": "The Tyrant's Law",
+  "a": "Daniel Abraham"
+ },
+ {
+  "t": "The Widow's House",
+  "a": "Daniel Abraham"
+ },
+ {
+  "t": "The Spider's War",
+  "a": "Daniel Abraham"
+ },
+ {
+  "t": "The Red Knight",
+  "a": "Miles  Cameron"
+ },
+ {
+  "t": "The Fell Sword",
+  "a": "Miles  Cameron"
+ },
+ {
+  "t": "The Dread Wyrm",
+  "a": "Miles  Cameron"
+ },
+ {
+  "t": "The Plague of Swords",
+  "a": "Miles  Cameron"
+ },
+ {
+  "t": "The Fall of Dragons",
+  "a": "Miles  Cameron"
+ },
+ {
+  "t": "Knots and Crosses",
+  "a": "Ian Rankin"
+ },
+ {
+  "t": "Black and Blue",
+  "a": "Ian Rankin"
+ },
+ {
+  "t": "Cold Granite",
+  "a": "Stuart MacBride"
+ },
+ {
+  "t": "In the Woods",
+  "a": "Tana French"
+ },
+ {
+  "t": "The Distant Echo",
+  "a": "Val McDermid"
+ },
+ {
+  "t": "Mystic River",
+  "a": "Dennis Lehane"
+ },
+ {
+  "t": "The Big Sleep",
+  "a": "Raymond Chandler"
+ },
+ {
+  "t": "The Maltese Falcon",
+  "a": "Dashiell Hammett"
+ },
+ {
+  "t": "Gorky Park",
+  "a": "Martin Cruz Smith"
+ },
+ {
+  "t": "The Name of the Rose",
+  "a": "Umberto Eco"
+ },
+ {
+  "t": "The Silence of the Lambs",
+  "a": "Thomas Harris"
+ },
+ {
+  "t": "Case Histories",
+  "a": "Kate Atkinson"
+ },
+ {
+  "t": "The Dry",
+  "a": "Jane Harper"
+ },
+ {
+  "t": "Still Life",
+  "a": "Louise Penny"
+ }
+]
