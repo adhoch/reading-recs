@@ -576,11 +576,28 @@ function draw(){
 
   // Cluster names, drawn at each group's centroid before book titles claim space
   CLOUDS_DONE=false;
+  /* Scale on the linear size of the frame, not its area. Area squares every
+     change, so a divisor tuned on a 1240x770 canvas let all nineteen through
+     on a 1996x1271 one — which is exactly the crowding this is meant to stop.
+     Five on a small window, nine on a large one. */
+  const CLUSTER_LABEL_CAP=Math.max(5,Math.min(CLUSTERS.length,Math.round(Math.sqrt(W*H)/180)));
+  const CLUSTER_RANK=CLUSTERS.map((c,i)=>i)
+    .sort((a,b)=>nodes.filter(n=>n.cl===b&&passes(n)).length
+                -nodes.filter(n=>n.cl===a&&passes(n)).length);
   if(cluster&&focus===null&&CLUSTERS.length){
     ctx.textAlign="center";ctx.textBaseline="middle";
     for(let ci=0;ci<CLUSTERS.length;ci++){
       const mem=nodes.filter(n=>n.cl===ci&&passes(n));
       if(mem.length<4)continue;
+      /* Not every group at once. Nineteen names on one canvas is more than the
+         frame can seat, and the small ones are the least worth the space they
+         take. Name the biggest handful always, and any group the cursor is
+         actually in — so a group you are looking at always tells you what it
+         is, and the rest stay quiet until you go there. The legend carries the
+         full list either way. */
+      const big=CLUSTER_RANK.indexOf(ci)<CLUSTER_LABEL_CAP;
+      const here=hover!==null&&nodes[hover]&&nodes[hover].cl===ci;
+      if(!big&&!here)continue;
       let x=0,y=0,k=0;
       for(const n of mem){x+=n.PX;y+=n.PY;k+=n.PK;}
       x/=mem.length;y/=mem.length;k/=mem.length;

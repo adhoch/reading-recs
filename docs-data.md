@@ -389,3 +389,30 @@ r=0.381; the batch reaches 0.245. Closing that gap would move the batch from
 about 0.377 to 0.45–0.50, not to the 0.60 that a perfect between-series
 estimate would allow. Worth measuring on one series before spending the effort
 on all 152. Do not re-run the four rows above.
+
+### Checking for groups swallowed by larger ones
+
+Three pairs looked nested when scored by facet affinity — each group's books
+compared against their own group and against every other:
+
+| pair | affinity ratio | Q if merged |
+|---|---|---|
+| Sellsword Errands → Doorstopper Quests | 1.10 | **−0.0008** |
+| Hidden Doors → Grail Quests | 0.98 | **+0.0038** |
+| Weird Campaigns → The Black Company | 0.98 | **−0.0008** |
+
+Affinity and modularity disagree on two of the three, and modularity is the
+measure the clustering optimises, so only one merge was made. The deciding
+argument was not the +0.004 anyway: **the Dark Tower was split across both
+groups** — The Gunslinger in one, the other six volumes in the other. A series
+straddling two categories is a defect whatever the score says. Merged by
+`scripts/mergegroups.py`; 20 groups → 19, all eight Dark Tower volumes in one.
+
+The other two pairs are siblings of the same split and remain genuinely
+distinct on the measure that made them.
+
+Nineteen names will not fit on one canvas, so the biggest handful are labelled
+and the rest appear when the cursor is in them; the legend carries the full
+list. The cap scales on the **linear** size of the frame, not its area — an
+area-based divisor tuned on a 1240×770 canvas let all nineteen through on a
+1996×1271 one, which was the crowding it existed to prevent.
