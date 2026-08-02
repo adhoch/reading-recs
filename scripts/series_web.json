@@ -1,0 +1,51 @@
+{
+ "_note": "Series bibliographies looked up on the web, for series the library holds books from but all_series.json has no entry for. scripts/allseries.py cannot fill these: it reads series_wd.json and isfdb_cache.json, offline scrape caches that are not in the repo. Only series whose FULL list was verified are here — a partial list is worse than none, because it makes '#3 of 4' say the series is finished when it is not. Long open-ended crime series (Rebus 25, Gamache, Logan McRae) are deliberately absent for that reason. src is recorded per series so a later ISFDB pass can tell these apart and supersede them.",
+
+ "imperial radch": {"name": "Imperial Radch", "src": "web",
+  "vols": ["Ancillary Justice","Ancillary Sword","Ancillary Mercy","Provenance","Translation State","Radiant Star"]},
+
+ "children of time": {"name": "Children of Time", "src": "web",
+  "vols": ["Children of Time","Children of Ruin","Children of Memory","Children of Strife"]},
+
+ "book of the ancestor": {"name": "Book of the Ancestor", "src": "web",
+  "vols": ["Red Sister","Grey Sister","Holy Sister"]},
+
+ "machineries of empire": {"name": "Machineries of Empire", "src": "web",
+  "vols": ["Ninefox Gambit","Raven Stratagem","Revenant Gun"]},
+
+ "dandelion dynasty": {"name": "The Dandelion Dynasty", "src": "web",
+  "vols": ["The Grace of Kings","The Wall of Storms","The Veiled Throne","Speaking Bones"]},
+
+ "craft sequence": {"name": "Craft Sequence", "src": "web",
+  "vols": ["Three Parts Dead","Two Serpents Rise","Full Fathom Five","Last First Snow","Four Roads Cross","The Ruin of Angels"]},
+
+ "dublin murder squad": {"name": "Dublin Murder Squad", "src": "web",
+  "vols": ["In the Woods","The Likeness","Faithful Place","Broken Harbour","The Secret Place","The Trespasser"]},
+
+ "winternight": {"name": "Winternight", "src": "web",
+  "vols": ["The Bear and the Nightingale","The Girl in the Tower","The Winter of the Witch"]},
+
+ "cradle": {"name": "Cradle", "src": "web",
+  "vols": ["Unsouled","Soulsmith","Blackflame","Skysworn","Ghostwater","Underlord","Uncrowned","Wintersteel","Bloodline","Reaper","Dreadgod","Waybound"]},
+
+ "age of madness": {"name": "The Age of Madness", "src": "web",
+  "vols": ["A Little Hatred","The Trouble with Peace","The Wisdom of Crowds"]},
+
+ "poppy war": {"name": "The Poppy War", "src": "web",
+  "vols": ["The Poppy War","The Dragon Republic","The Burning God"]},
+
+ "broken empire": {"name": "The Broken Empire", "src": "web",
+  "vols": ["Prince of Thorns","King of Thorns","Emperor of Thorns"]},
+
+ "farseer trilogy": {"name": "The Farseer Trilogy", "src": "web",
+  "vols": ["Assassin's Apprentice","Royal Assassin","Assassin's Quest"]},
+
+ "themis files": {"name": "Themis Files", "src": "web",
+  "vols": ["Sleeping Giants","Waking Gods","Only Human"]},
+
+ "lockwood  co": {"name": "Lockwood & Co.", "src": "web",
+  "vols": ["The Screaming Staircase","The Whispering Skull","The Hollow Boy","The Creeping Shadow","The Empty Grave"]},
+
+ "slough house": {"name": "Slough House", "src": "web",
+  "vols": ["Slow Horses","Dead Lions","Real Tigers","Spook Street","London Rules","Joe Country","Slough House","Bad Actors","Clown Town"]}
+}

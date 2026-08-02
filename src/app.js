@@ -890,7 +890,13 @@ function seriesInfo(b){
     if(snorm(e.name)===key){entry=e;break;}
   const total=(entry&&(entry.vols||[]).length)||
     nodes.filter(n=>n.ser&&snorm(n.ser)===key).length;
-  const pos=(b.vol!=null&&isFinite(b.vol))?(b.vol%1?b.vol:Math.round(b.vol)):null;
+  let pos=(b.vol!=null&&isFinite(b.vol))?(b.vol%1?b.vol:Math.round(b.vol)):null;
+  // no volume number on the record? the bibliography knows the order, so read
+  // the position off it rather than leaving the series unnumbered
+  if(pos==null&&entry){
+    const i=(entry.vols||[]).findIndex(v=>snorm(v.t)===snorm(b.t));
+    if(i>=0)pos=(entry.vols[i].ord!=null)?entry.vols[i].ord:i+1;
+  }
   return {name:b.ser,pos,total:total>1?total:null};
 }
 function predBlock(b){
