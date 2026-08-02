@@ -363,3 +363,29 @@ something new.
 
 The detail panel names the offset wherever it applies, because otherwise a
 book's score moves for a reason nothing on the page explains.
+
+### What does not rescue a badly-tagged batch
+
+Tested against the 152 excluded books, all under next-volume CV with series
+offsets, so each is a fair comparison against the 0.377 they currently reach:
+
+| attempt | r |
+|---|---|
+| as-is | **0.377** |
+| + 12 measured per-volume StoryGraph moods | 0.368 |
+| + community average rating per volume | 0.363 |
+| shrinkage swept K = 0, 0.25, 0.5, 1, 2 | 0.370 – 0.377 |
+| offsets estimated from every rated book, not just trusted rows | 0.336 |
+
+None of it helps, and the reason is the same each time: **64% of the batch's
+variance is within-series, and nothing available predicts within-series
+variation.** The sharpest single number is that the community's own
+volume-by-volume opinion correlates with this reader's at **+0.074** — which
+book of a series the crowd prefers says essentially nothing about which one
+lands here.
+
+That also bounds the upside of a retag. Well-tagged books reach within-series
+r=0.381; the batch reaches 0.245. Closing that gap would move the batch from
+about 0.377 to 0.45–0.50, not to the 0.60 that a perfect between-series
+estimate would allow. Worth measuring on one series before spending the effort
+on all 152. Do not re-run the four rows above.
