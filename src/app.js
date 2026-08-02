@@ -816,6 +816,13 @@ function renderRanked(){
   const ec=el.querySelector("#empty-clear");
   if(ec)ec.onclick=()=>clearAllFilters();
 }
+/* How far this book's series sits from the global rating scale, if the model
+   knows. Keyed the same way fit.py keys it. */
+function serOffset(b){
+  const t=(MODEL.ser_offset)||{};
+  const k=b.ser?snorm(b.ser):"solo:"+snorm(b.t);
+  return t[k]||0;
+}
 function predBlock(b){
   const ups=AXES.map(a=>({n:a.n,c:MODEL.coef[a.k]*(b.ax[a.k]-AXMEAN[a.k])}))
     .filter(o=>Math.abs(o.c)>=.08).sort((x,y)=>Math.abs(y.c)-Math.abs(x.c)).slice(0,3);
@@ -824,6 +831,14 @@ function predBlock(b){
     <div class="pred-n">${b.p.toFixed(1)} <small>± ${MODEL.sd}</small></div>
     ${b.weber_risk?`<div style="font-size:10.5px;color:var(--campaign-war);margin-top:6px">⚠ plain prose + formulaic — the Weber profile you bounce on</div>`:""}
     ${b.r===0&&b.kingsim>=0.6?`<div style="font-size:10.5px;color:var(--accent);margin-top:6px">↑ King-adjacent — lifted for your guarded-ceiling King ratings</div>`:""}
+    ${(()=>{const o=serOffset(b);if(!o)return "";
+      /* The score above already includes this. Say so, because a book whose
+         siblings you rated is not being judged on the same scale as a
+         standalone — a rating inside a long series is given relative to the
+         rest of the series, and the model now reads it that way. */
+      return `<div style="font-size:10.5px;color:${o>0?"var(--quest)":"var(--campaign-war)"};margin-top:6px">
+        ${o>0?"↑":"↓"} ${o>0?"+":""}${o.toFixed(1)} because you rate ${b.ser?"<i>"+b.ser+"</i>":"this series"} ${
+          o>0?"above":"below"} your average</div>`;})()}
     <div style="margin-top:8px">${ups.map(o=>
       `<div class="contrib"><span>${o.n}</span><b style="color:${o.c>0?"var(--quest)":"var(--campaign-war)"}">${o.c>0?"+":""}${o.c.toFixed(2)}</b></div>`).join("")}</div>
   </div>`;

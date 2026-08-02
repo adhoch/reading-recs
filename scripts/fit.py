@@ -104,6 +104,47 @@ def ridge(X, y, lam=LAMBDA, w=None):
     return b, float(ym - mu @ b)
 
 
+SHRINK = 1.0   # a 1-book series barely moves; a 14-book one moves most of the way
+
+
+def series_offsets(rows, coef, inter, k=SHRINK):
+    """How far each series sits from the global scale, partially pooled.
+
+    A rating inside a long series is given relative to its siblings, not on one
+    absolute scale — a 3.5 on a Dresden novel means "weakest Dresden", not
+    "worse than a 3.5 standalone". Measured: inside multi-book series 63% of
+    the rating variance is within-series, and the within-series half is the
+    harder one to predict from a book's own facets (r 0.38 against 0.52
+    between-series).
+
+    So each series carries its own offset, shrunk toward zero by how few books
+    support it. This buys nothing for a series you have never read — there are
+    no siblings to estimate from, and the CV below reports that case honestly
+    as unchanged. What it buys is the next-volume case: r 0.643 -> 0.720,
+    residual 0.74 -> 0.67."""
+    res = {}
+    for feats, rating, group in rows:
+        res.setdefault(group, []).append(rating - (np.array(feats) @ coef + inter))
+    return {g: round((len(v) / (len(v) + k)) * float(np.mean(v)), 4)
+            for g, v in res.items()}
+
+
+def cv_next_volume(rows, use_offset):
+    """Hold out ONE book, leaving its siblings visible — "I have read six of
+    these, is the seventh worth it?". The grouped CV below answers a different
+    question (a series you have never touched) and cannot see this effect."""
+    X = np.array([r[0] for r in rows], float)
+    y = np.array([r[1] for r in rows], float)
+    pred = np.zeros(len(rows))
+    for i in range(len(rows)):
+        tr = [j for j in range(len(rows)) if j != i]
+        coef, inter = ridge(X[tr], y[tr], w=group_weights([rows[j] for j in tr]))
+        off = series_offsets([rows[j] for j in tr], coef, inter) if use_offset else {}
+        pred[i] = float(X[i] @ coef + inter + off.get(rows[i][2], 0.0))
+    return (float(np.corrcoef(pred, y)[0, 1]),
+            float(np.sqrt(((y - pred) ** 2).mean())))
+
+
 def cv(rows, grouped):
     """Returns (r, residual sd). rows is a list of (features, rating, group)."""
     X = np.array([r[0] for r in rows], float)
@@ -189,6 +230,16 @@ def main():
     print(f"  {'intercept':<16}{model['intercept']:>+11.4f}{b:>+10.4f}{b - model['intercept']:>+9.4f}")
 
     grp_r, grp_sd = cv(rows, True)
+    nv_off, nv_off_sd = cv_next_volume(rows, True)
+    nv_raw, nv_raw_sd = cv_next_volume(rows, False)
+    # The two questions a reader actually asks, kept apart because they have
+    # different answers and one of them is much easier than the other.
+    print(f"\n  a series you have never read     r={grp_r:.3f}  resid {grp_sd:.2f}"
+          f"   (a series offset cannot help)")
+    print(f"  the next volume of one you have  r={nv_raw:.3f}  resid {nv_raw_sd:.2f}"
+          f"   without a series offset")
+    print(f"                                   r={nv_off:.3f}  resid {nv_off_sd:.2f}"
+          f"   with one")
 
     if "--rescore" in sys.argv[1:]:
         # Rescore from the committed model rather than fitting a new one.
@@ -225,14 +276,20 @@ def main():
         print("\ndry run — pass --write to refit, or --rescore to recompute "
               "p/praw from the committed model without refitting")
         return
+    off = series_offsets(rows, w, b)
     out = {"intercept": round(b, 4), "coef": [round(float(c), 4) for c in w],
-           "sd": round(grp_sd, 2), "r": round(grp_r, 3)}
+           "sd": round(grp_sd, 2), "r": round(grp_r, 3),
+           "r_next": round(nv_off, 3), "sd_next": round(nv_off_sd, 2),
+           "ser_offset": {g: v for g, v in off.items() if abs(v) >= 0.01}}
     with open(os.path.join(DATA, "model.json"), "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
     # Rescore everything from the model that was just fitted, so praw stops
     # being a fossil of a model nobody has.
     for bk in books:
-        praw = b + float(np.array(features(bk)) @ w)
+        # a book in a series you have already rated is scored on that series'
+        # own level, which is what its siblings' ratings were given relative to
+        gk = snorm(bk["ser"]) if bk.get("ser") else "solo:" + snorm(bk["t"])
+        praw = b + float(np.array(features(bk)) @ w) + off.get(gk, 0.0)
         bk["praw"] = round(praw, 3)
         bk["p"] = round(min(5.0, max(1.0, praw)), 1)
         bk["weber_risk"] = (not bk["r"]) and bk["ax"][5] <= 2 and bk["ax"][6] >= 4

@@ -324,3 +324,42 @@ was made with the ratings visible, which is the contamination this project
 already measured once (0.743 -> 0.647 when the 95 rated books were retagged
 blind). It did not inflate anything here — it went the other way — but a
 per-volume retag should be done without the ratings in view.
+
+## A rating inside a series is relative to that series
+
+Inside multi-book series, **63% of the rating variance is within-series** and
+only 37% between. And the within-series half is the harder one to predict from
+a book's own facets:
+
+| level | r |
+|---|---|
+| between series — does this series land? | +0.520 |
+| within series — is volume 7 better than 4? | +0.381 |
+
+A 3.5 on a Dresden novel means "weakest Dresden", not "worse than a 3.5
+standalone". The model read both as the same number on one absolute scale, so
+every long series quietly imported its own reference frame — the same shape of
+problem as the era drift above.
+
+Each series now carries an offset, a mean residual pooled toward zero by how
+few books support it (`SHRINK = 1.0`, so a one-book series barely moves and a
+fourteen-book one moves most of the way). 171 series carry one; the largest are
+Mistborn +1.00, Honor Harrington −0.84, Broken Empire −0.74.
+
+**It matters which question you ask**, and `fit.py` now reports both because
+they have different answers:
+
+| | r | resid |
+|---|---|---|
+| a series you have never read | 0.634 | 0.75 |
+| the next volume of one you have, no offset | 0.643 | 0.74 |
+| the next volume of one you have, with offset | **0.720** | **0.67** |
+
+The offset buys nothing for a series with no rated siblings — there is nothing
+to estimate from — and the grouped CV reports that honestly as unchanged.
+Quoting 0.720 as "the model's accuracy" would be the same error as the old
+0.713: true for one question, and not the one being asked when you are handed
+something new.
+
+The detail panel names the offset wherever it applies, because otherwise a
+book's score moves for a reason nothing on the page explains.
