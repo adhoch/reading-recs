@@ -179,10 +179,19 @@ function drawClouds(){
       if(i===0)ctx.moveTo(mx,my); else ctx.quadraticCurveTo(a[0],a[1],mx,my);
     }
     ctx.closePath();
-    ctx.fillStyle=shadeHex(CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length],flat?.10:.065,0);
+    /* Outline first, fill barely at all. Twenty translucent hulls drawn at the
+       old .065 stacked wherever they overlapped, and with twenty groups they
+       overlap almost everywhere -- the result was one muddy field with no
+       readable boundary anywhere in it. Alpha does not compose linearly, so
+       the fix is to stop relying on fill to say where a group is and let the
+       edge do it. Fill only when a group is soloed or hovered, where nothing
+       is stacked on top of it. */
+    const hue=CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length];
+    const lone=CLUSTERS.length-offClusters.size<=3;
+    ctx.fillStyle=shadeHex(hue,lone?(flat?.10:.075):.018,0);
     ctx.fill();
-    ctx.strokeStyle=shadeHex(CLUSTER_COLORS[famOf(ci)%CLUSTER_COLORS.length],flat?.22:.13,0);
-    ctx.lineWidth=1;ctx.stroke();
+    ctx.strokeStyle=shadeHex(hue,lone?.34:.26,0);
+    ctx.lineWidth=lone?1.4:1.1;ctx.stroke();
   }
 }
 
@@ -289,7 +298,7 @@ function fitView(){
      Still, the box is the one on screen -- fitView only runs while the cloud is
      settling, never during a drag, so a hand-turned view keeps its framing and
      is simply allowed to overhang, which is what turning something means. */
-  const sweep=spin&&!REDUCED;
+  const sweep=false;   // nothing spins the view on its own any more
   let minX=1e9,maxX=-1e9,minY=1e9,maxY=-1e9;
   const cb=Math.cos(pitch), sb=Math.sin(pitch);
   const steps=sweep?16:1;
@@ -575,6 +584,18 @@ function draw(){
       let x=0,y=0,k=0;
       for(const n of mem){x+=n.PX;y+=n.PY;k+=n.PK;}
       x/=mem.length;y/=mem.length;k/=mem.length;
+      /* Nudge the name outward, away from the middle of the graph. Twenty
+         centroids in a roughly round cloud mostly land near the centre, so
+         twenty names fought over the same few hundred pixels while the outside
+         of the frame sat empty. Moving each one a third of the way out along
+         its own radius spreads them without moving them off the group they
+         name -- the offset is capped by the group's own size so a small tight
+         cluster keeps its label sitting on it. */
+      let rad=0;
+      for(const n of mem)rad=Math.max(rad,Math.hypot(n.PX-x,n.PY-y));
+      const ox=x-(W/2+panX), oy=y-(H/2+panY), od=Math.hypot(ox,oy)||1;
+      const push=Math.min(rad*0.55,od*0.34);
+      x+=ox/od*push; y+=oy/od*push;
       const lab=(CLUSTERS[ci].label||"").toUpperCase();
       ctx.font="600 "+Math.max(9,10.5*Math.min(1.2,k))+"px 'IBM Plex Mono',ui-monospace,monospace";
       const w=ctx.measureText(lab).width;
@@ -676,7 +697,7 @@ function draw(){
 /* ---------- loop ---------- */
 /* Ambient rotation is atmosphere, not information — someone who asks the OS for
    less motion should get a still graph they drive themselves (REDUCED, above). */
-let dragging=false;
+let dragging=false,wasSimming=false;
 function loop(){
   let settling=false;
   if(view==="field"){                    // pinned layout ignores the cooling schedule
@@ -688,10 +709,17 @@ function loop(){
   }
   const simming=(view!=="field"&&alpha>.004)||settling;
   if(simming&&view!=="field"){step();fitView();}             // re-frame while the cloud is still expanding
-  if(spin&&!REDUCED&&!dragging&&hover===null)yawT+=.0016;
+  /* One more fit on the frame the simulation stops. Fitting only DURING the
+     settle means the frame you are left looking at was measured against a
+     cloud that was still expanding and is now smaller than the window it was
+     given — which is why the graph came to rest as a tight knot ringed by
+     empty canvas, and why pressing Recenter appeared to improve the layout
+     when all it really did was re-measure. */
+  else if(wasSimming&&!userZoomed){fitView();}
+  wasSimming=simming;
   yaw+=(yawT-yaw)*.12; pitch+=(pitchT-pitch)*.12;
   if(flat){yawT=0;pitchT=0;}
-  const moving=simming||spin&&!dragging&&hover===null||
+  const moving=simming||
     Math.abs(yawT-yaw)>1e-4||Math.abs(pitchT-pitch)>1e-4;
   draw();
   if(moving)requestAnimationFrame(loop);
@@ -774,6 +802,14 @@ cv.addEventListener("wheel",e=>{
   const f=zoom/before, r=cv.getBoundingClientRect();
   panX+=(e.clientX-r.left-W/2-panX)*(1-f);
   panY+=(e.clientY-r.top-H/2-panY)*(1-f);
+  /* Keep the graph's origin on the canvas. Zooming toward a corner walks the
+     pan a little each notch, and with nothing stopping it a dozen scrolls put
+     the whole thing off-screen with no way back except reloading. Half the
+     canvas is a generous bound -- it still allows pushing a cluster to the
+     edge to look at it -- and it guarantees there is always something to
+     see, so Recenter is a convenience rather than a rescue. */
+  panX=Math.max(-W/2,Math.min(W/2,panX));
+  panY=Math.max(-H/2,Math.min(H/2,panY));
   kick();
 },{passive:false});
 
@@ -1353,12 +1389,7 @@ function renderDetail(){
   el.querySelectorAll(".chip.grp").forEach(d=>d.onclick=e=>{
     e.stopPropagation();
     // solo this group: everything else off, or clear if it is already solo'd
-    const ci=+d.dataset.cl;
-    const solo=offClusters.size===CLUSTERS.length-1&&!offClusters.has(ci);
-    offClusters.clear();
-    if(!solo)CLUSTERS.forEach(c=>{if(c.id!==ci)offClusters.add(c.id);});
-    update();          // update -> syncControls repaints both legends
-    renderDetail();    // so the chip shows whether it is currently soloing
+    soloCluster(+d.dataset.cl);   // same verb as the legend's "only"
   });
   el.querySelectorAll(".rb").forEach(btn=>btn.onclick=()=>{
     const v=+btn.dataset.v;
@@ -1371,12 +1402,20 @@ function renderDetail(){
 (function(){
   const el=document.getElementById("clegend");
   if(!el||!CLUSTERS.length)return;
+  /* Two verbs, because hiding one of twenty groups and showing only one of
+     twenty are different jobs and the second was the one worth having: getting
+     to a single group meant nineteen clicks. The row toggles, `only` solos,
+     and `only` on a group already soloed puts everything back. */
   el.innerHTML=CLUSTERS.map(c=>
     `<div class="leg" data-cl="${c.id}"><i style="background:${CLUSTER_COLORS[famOf(c.id)%CLUSTER_COLORS.length]}"></i>${
-      c.label} <b>${c.n}</b></div>`).join("");
-  el.querySelectorAll(".leg").forEach(d=>d.onclick=()=>{
+      c.label} <b>${c.n}</b><button class="leg-only" title="Show only this group">only</button></div>`).join("");
+  el.querySelectorAll(".leg").forEach(d=>d.onclick=ev=>{
     const ci=+d.dataset.cl;
-    // clicking a group focuses it: everything else drops back
+    if(ev.target.classList.contains("leg-only")){
+      ev.stopPropagation();
+      soloCluster(ci);
+      return;
+    }
     const on=d.classList.toggle("off");
     offClusters[on?"add":"delete"](ci);
     update();
@@ -1425,13 +1464,17 @@ document.getElementById("t-read").onclick=e=>{showRead=!showRead;e.target.classL
 document.getElementById("t-rec").onclick=e=>{showRec=!showRec;e.target.classList.toggle("on",showRec);update()};
 document.getElementById("m-depth").onclick=()=>setMode(false);
 document.getElementById("m-flat").onclick=()=>setMode(true);
-document.getElementById("m-spin").onclick=e=>{
-  spin=!spin; e.target.classList.toggle("on",spin);
-  try{localStorage.setItem("reading-network:spin",spin?"1":"0")}catch(err){}
-  kick();
+/* Recenter, in place of the automatic Drift that used to live here. Drift
+   spun the graph on its own, which fought every attempt to look at something,
+   and it was the reason the frame had to be fitted to a whole yaw sweep. What
+   was actually missing was a way back: zooming toward the pointer accumulates
+   pan, and nothing undid it. */
+cv.addEventListener("dblclick",()=>document.getElementById("m-recenter").click());
+document.getElementById("m-recenter").onclick=()=>{
+  userZoomed=false; panX=panY=0;
+  yawT=yaw=0.6; pitchT=pitch=-0.22;
+  fitView(); kick();
 };
-// reflect the stored preference on load
-document.getElementById("m-spin").classList.toggle("on",spin);
 document.getElementById("m-spot").onclick=e=>{spotlight=!spotlight;e.target.classList.toggle("on",spotlight);kick()};
 function setMode(f){
   if(flat&&!f)                                // z is exactly 0 and the forces are symmetric,
@@ -1439,8 +1482,6 @@ function setMode(f){
   flat=f;
   document.getElementById("m-depth").classList.toggle("on",!f);
   document.getElementById("m-flat").classList.toggle("on",f);
-  document.getElementById("m-spin").style.opacity=f?.4:1;
-  document.getElementById("m-spin").disabled=f;
   cv.style.cursor=f?"default":"grab";
   userZoomed=false;reheat(.5);
 }
@@ -1454,9 +1495,20 @@ function setMode(f){
 const legEl=document.getElementById("legend");
 ENGINES.forEach(en=>{
   const d=document.createElement("div");d.className="leg";d.dataset.en=en;
-  d.innerHTML=`<span class="dot" style="background:${COLOR[en]}"></span>${en}`;
-  d.onclick=()=>{offEngines.has(en)?offEngines.delete(en):offEngines.add(en);
-    d.classList.toggle("off",offEngines.has(en));update()};
+  d.innerHTML=`<span class="dot" style="background:${COLOR[en]}"></span>${en}`+
+    `<button class="leg-only" title="Show only this engine">only</button>`;
+  d.onclick=ev=>{
+    if(ev.target.classList.contains("leg-only")){
+      ev.stopPropagation();
+      const solo=offEngines.size===ENGINES.length-1&&!offEngines.has(en);
+      offEngines.clear();
+      if(!solo)ENGINES.forEach(x=>{if(x!==en)offEngines.add(x)});
+      update();
+      return;
+    }
+    offEngines.has(en)?offEngines.delete(en):offEngines.add(en);
+    update();
+  };
   legEl.appendChild(d);
 });
 /* ---------- tag filter ---------- */
@@ -2190,6 +2242,13 @@ for(const k in TABS){
 function revealDetail(){ if(mq.matches&&openSheet!=="detail")setSheet("detail"); }
 mq.addEventListener("change",()=>{ if(!mq.matches&&openSheet)setSheet(openSheet); resize(); });
 
+function soloCluster(ci){
+  const solo=offClusters.size===CLUSTERS.length-1&&!offClusters.has(ci);
+  offClusters.clear();
+  if(!solo)CLUSTERS.forEach(c=>{if(c.id!==ci)offClusters.add(c.id)});
+  update();
+  if(selected!==null)renderDetail();
+}
 function clearAllFilters(){
   activeTags.clear();AXES.forEach(a=>limits[a.k]=a.dir==="min"?1:5);
   // offClusters was the one filter "clear all" did not clear, so hiding groups
