@@ -9039,5 +9039,267 @@
   "ea": [],
   "st": "standalone",
   "tagsrc": "solo-2026-08"
+ },
+ "The Name of the Wind": {
+  "a": "Patrick Rothfuss",
+  "ser": "The Kingkiller Chronicle",
+  "ax": [
+   4,
+   2,
+   4,
+   3,
+   2,
+   5,
+   1
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "stalled"
+ },
+ "Jhereg": {
+  "a": "Steven Brust",
+  "ser": "Vlad Taltos",
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   1,
+   4,
+   3
+  ],
+  "en": "heist",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir",
+   "comedy"
+  ],
+  "st": "ongoing"
+ },
+ "The Curse of Chalion": {
+  "a": "Lois McMaster Bujold",
+  "ser": "World of the Five Gods",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   2,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Road to Levenshir": {
+  "a": "Patrick Rothfuss"
+ },
+ "The Hallowed Hunt": {
+  "a": "Lois McMaster Bujold",
+  "ser": "World of the Five Gods",
+  "ax": [
+   3,
+   3,
+   4,
+   3,
+   3,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Paladin of Souls": {
+  "a": "Lois McMaster Bujold",
+  "ser": "World of the Five Gods",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   3,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "Testimony of Mute Things": {
+  "a": "Lois McMaster Bujold"
+ },
+ "The Assassins of Thasalon": {
+  "a": "Lois McMaster Bujold"
+ },
+ "Demon Daughter": {
+  "a": "Lois McMaster Bujold"
+ },
+ "Darksight Dare": {
+  "a": "Lois McMaster Bujold"
+ },
+ "Yendi": {
+  "a": "Steven Brust"
+ },
+ "Teckla": {
+  "a": "Steven Brust"
+ },
+ "Taltos": {
+  "a": "Steven Brust"
+ },
+ "Phoenix": {
+  "a": "Steven Brust"
+ },
+ "Athyra": {
+  "a": "Steven Brust"
+ },
+ "Orca": {
+  "a": "Steven Brust"
+ },
+ "Dragon": {
+  "a": "Steven Brust"
+ },
+ "Issola": {
+  "a": "Steven Brust"
+ },
+ "Dzur": {
+  "a": "Steven Brust"
+ },
+ "Jhegaala": {
+  "a": "Steven Brust"
+ },
+ "Iorich": {
+  "a": "Steven Brust"
+ },
+ "Tiassa": {
+  "a": "Steven Brust"
+ },
+ "Hawk": {
+  "a": "Steven Brust"
+ },
+ "Vallista": {
+  "a": "Steven Brust"
+ },
+ "Tsalmoth": {
+  "a": "Steven Brust"
+ },
+ "Lyorn": {
+  "a": "Steven Brust"
+ },
+ "The Wise Man's Fear": {
+  "a": "Patrick Rothfuss",
+  "ser": "The Kingkiller Chronicle",
+  "ax": [
+   3,
+   2,
+   4,
+   3,
+   3,
+   5,
+   1
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "stalled"
  }
 }

@@ -349,8 +349,8 @@
    "mean": 4.0
   },
   "Patrick Rothfuss": {
-   "n": 2,
-   "mean": 4.5
+   "n": 3,
+   "mean": 4.75
   },
   "Suzanne Collins": {
    "n": 3,
@@ -361,8 +361,8 @@
    "mean": 4.0
   },
   "Lois McMaster Bujold": {
-   "n": 10,
-   "mean": 3.91
+   "n": 14,
+   "mean": 4.08
   },
   "Alastair Reynolds": {
    "n": 3,
@@ -793,8 +793,8 @@
    "mean": 3.0
   },
   "Steven Brust": {
-   "n": 1,
-   "mean": 4.0
+   "n": 17,
+   "mean": 4.5
   },
   "Tad Williams": {
    "n": 1,
@@ -1616,8 +1616,8 @@
   },
   "kingkiller chronicle": {
    "name": "The Kingkiller Chronicle",
-   "n": 2,
-   "mean": 4.5,
+   "n": 3,
+   "mean": 4.75,
    "vols": [
     1.0,
     2.0
@@ -2397,10 +2397,26 @@
   },
   "vlad taltos": {
    "name": "Vlad Taltos",
-   "n": 1,
-   "mean": 4.0,
+   "n": 17,
+   "mean": 4.5,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    17.0
    ]
   },
   "memory sorrow and thorn": {
@@ -2475,11 +2491,16 @@
   },
   "world of the five gods": {
    "name": "World of the Five Gods",
-   "n": 2,
-   "mean": 4.0,
+   "n": 7,
+   "mean": 4.25,
    "vols": [
     1.0,
-    2.0
+    2.0,
+    3.0,
+    4.0,
+    11.0,
+    13.0,
+    16.0
    ]
   },
   "rama": {

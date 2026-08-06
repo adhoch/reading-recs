@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-08-02T06:26:07.057Z",
+ "updated": "2026-08-06T17:36:33.886357Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -226,7 +226,34 @@
   "The Plague of Swords": 4.5,
   "The Fall of Dragons": 4.5,
   "The Last Days of Jack Sparks": 4,
-  "Sleeping Giants": 4
+  "Sleeping Giants": 4,
+  "The Name of the Wind": 4.75,
+  "The Wise Man's Fear": 4.75,
+  "The Road to Levenshir": 4.75,
+  "The Hallowed Hunt": 4.25,
+  "The Curse of Chalion": 4.25,
+  "Paladin of Souls": 4.25,
+  "Testimony of Mute Things": 4.25,
+  "The Assassins of Thasalon": 4.25,
+  "Demon Daughter": 4.25,
+  "Darksight Dare": 4.25,
+  "Jhereg": 4.5,
+  "Yendi": 4.5,
+  "Teckla": 4.5,
+  "Taltos": 4.5,
+  "Phoenix": 4.5,
+  "Athyra": 4.5,
+  "Orca": 4.5,
+  "Dragon": 4.5,
+  "Issola": 4.5,
+  "Dzur": 4.5,
+  "Jhegaala": 4.5,
+  "Iorich": 4.5,
+  "Tiassa": 4.5,
+  "Hawk": 4.5,
+  "Vallista": 4.5,
+  "Tsalmoth": 4.5,
+  "Lyorn": 4.5
  },
  "log": [
   {
@@ -768,6 +795,195 @@
    "from": null,
    "to": 4,
    "at": "2026-08-02T06:26:06.451Z"
+  },
+  {
+   "t": "The Name of the Wind",
+   "from": null,
+   "to": 4.75,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "The Wise Man's Fear",
+   "from": null,
+   "to": 4.75,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "The Road to Levenshir",
+   "from": null,
+   "to": 4.75,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "The Hallowed Hunt",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "The Curse of Chalion",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Paladin of Souls",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Testimony of Mute Things",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "The Assassins of Thasalon",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Demon Daughter",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Darksight Dare",
+   "from": null,
+   "to": 4.25,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Jhereg",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Yendi",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Teckla",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Taltos",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Phoenix",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Athyra",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Orca",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Dragon",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Issola",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Dzur",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Jhegaala",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Iorich",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Tiassa",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Hawk",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Vallista",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Tsalmoth",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
+  },
+  {
+   "t": "Lyorn",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-06T17:36:33.886357Z",
+   "note": "series-level rating given in chat; per-volume values to be revised later"
   }
  ]
 }

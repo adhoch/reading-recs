@@ -887,5 +887,306 @@
   "ea": [],
   "st": "ongoing",
   "ser": "Chief Inspector Gamache"
+ },
+ "Priest of Bones": {
+  "a": "Peter McLean",
+  "ser": "War for the Rose Throne",
+  "ax": [
+   4,
+   1,
+   3,
+   5,
+   1,
+   3,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org",
+   "military"
+  ],
+  "ca": [
+   "villain-protagonist"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "complete-series"
+ },
+ "The Sword of Kaigen": {
+  "a": "M.L. Wang",
+  "ax": [
+   3,
+   2,
+   4,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "academy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "Blood Song": {
+  "a": "Anthony Ryan",
+  "ser": "Raven's Shadow",
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   1,
+   3,
+   2
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Shadow of the Gods": {
+  "a": "John Gwynne",
+  "ser": "The Bloodsworn Saga",
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Last Wish": {
+  "a": "Andrzej Sapkowski",
+  "ser": "The Witcher",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Black Prism": {
+  "a": "Brent Weeks",
+  "ser": "Lightbringer",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "church",
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Darkness That Comes Before": {
+  "a": "R. Scott Bakker",
+  "ser": "The Prince of Nothing",
+  "ax": [
+   2,
+   5,
+   4,
+   5,
+   2,
+   4,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church",
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
+ },
+ "The City of Brass": {
+  "a": "S.A. Chakraborty",
+  "ser": "The Daevabad Trilogy",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series"
+ },
+ "The Jasmine Throne": {
+  "a": "Tasha Suri",
+  "ser": "The Burning Kingdoms",
+  "ax": [
+   3,
+   3,
+   4,
+   4,
+   3,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series"
  }
 }
