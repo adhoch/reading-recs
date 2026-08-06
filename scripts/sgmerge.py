@@ -34,9 +34,25 @@ WEIGHT = {"slow": 1.0, "medium": 3.0, "fast": 5.0}
 
 
 def cpace_from(row):
+    """An absent bucket is a zero, not a missing measurement.
+
+    StoryGraph renders no bar for a bucket no reader picked, so The Darkness
+    That Comes Before arrives as 65 slow / 33 medium / absent fast. Requiring
+    all three present discarded the whole split for 39 books whose pace was
+    sitting in the scrape -- and those books then scored through the
+    velocity-substitution path in features(), which cancels 62% of the velocity
+    coefficient. 33 of them are rated, so the loss landed in the training set,
+    not just the display.
+
+    One bucket is still not a distribution, though. The Two Georges is 100%
+    slow across 34 reviews -- a handful of readers agreeing, not a measured
+    pace -- and because the pace coefficient is large and negative, a cpace of
+    1.0 made it the library's top recommendation at 4.9. Two buckets is the
+    floor."""
     parts = {k: row.get("pace_" + k) for k in WEIGHT}
-    if any(v is None for v in parts.values()):
+    if sum(1 for v in parts.values() if v is not None) < 2:
         return None
+    parts = {k: (v or 0) for k, v in parts.items()}
     total = sum(parts.values())
     if total <= 0:
         return None
