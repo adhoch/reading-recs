@@ -18,9 +18,13 @@ library_backup.csv
 __pycache__/
 .venv/
 
-# scrape caches
+# scrape caches. sg_rows.jsonl is NOT among them: it is the append-only log the
+# scraper writes as it goes and the only record of what StoryGraph said, and
+# sgmerge.py reads it rather than the cache. isfdb_cache.json and series_wd.json
+# were treated as regenerable, were never committed, and are gone — allseries.py
+# has not been able to fill a bibliography since. sg_cache.json stays ignored
+# because it rewrites whole and reconstructs from the log exactly.
 sg_cache.json
-sg_rows.jsonl
 sg_todo.json
 sg_calib.json
 sg_retry.json
