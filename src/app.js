@@ -1192,6 +1192,9 @@ function tagConfidence(b){
   if(n>=400)  return ["Low","obscure — my tags for books like this drift"];
   return ["Very low","almost no community data; treat the score as a guess"];
 }
+/* The four levels are a colour vocabulary now — a dot on every recommendation,
+   not just the box at the foot of the panel — so the slug lives in one place. */
+const confSlug=b=>tagConfidence(b)[0].split(" ")[0].toLowerCase();
 const MOOD_SHOW=45;
 const META=window.__DATA__.meta;
 const NEXTSER=window.__DATA__.next_in_series;
@@ -1209,19 +1212,38 @@ function featStats(){
     _mu[i]=m; _sd[i]=Math.sqrt(c.reduce((x,y)=>x+(y-m)**2,0)/c.length)||1;
   }
 }
+/* The scale the match number is read against: the median distance between two
+   books picked at random. Sampled on a fixed stride, so it is the same number
+   every run. */
+let _typD=null;
+function typicalDistance(){
+  if(_typD!=null)return _typD;
+  featStats();
+  const z=nodes.map(x=>featOf(x).map((v,i)=>(v-_mu[i])/_sd[i]));
+  const step=Math.max(1,Math.floor(z.length/60)), ds=[];
+  for(let i=0;i<z.length;i+=step)
+    for(let j=i+step;j<z.length;j+=step)
+      ds.push(Math.hypot(...z[i].map((v,c)=>v-z[j][c])));
+  ds.sort((a,c)=>a-c);
+  return _typD=ds[ds.length>>1]||1;
+}
 /* Books like this one that you haven't read — the "if you liked this" idiom the
    panel was missing. Distinct from nearestRated, which is evidence, not a rec. */
 function similarUnread(b,k=8){
   featStats();
   const z=featOf(b).map((v,i)=>(v-_mu[i])/_sd[i]);
-  const all=nodes.filter(x=>x.r===0&&x.id!==b.id)
+  const typ=typicalDistance();
+  /* How close, as the gap itself rather than a rank. The raw distance lives in
+     z-scored eight-axis space and means nothing to a reader; a percentile meant
+     little more, because the eighth-nearest book always ranks near the top
+     whether it is a twin or a stranger — an isolated book and a book in a
+     crowded neighbourhood both read "top 3%". Dividing by the typical gap
+     between two books fixes the two ends to something you can picture: 100 is
+     the same profile on every axis, 0 is as far off as a book picked at random. */
+  return nodes.filter(x=>x.r===0&&x.id!==b.id)
     .map(x=>({x,d:Math.hypot(...featOf(x).map((v,i)=>(v-_mu[i])/_sd[i]-z[i]))}))
-    .sort((a,c)=>a.d-c.d);
-  /* "How close" as a percentile, not the raw distance. The distance lives in
-     z-scored eight-axis space, so its units mean nothing to a reader — 0.9 is
-     only meaningful against the spread of everything else. The percentile says
-     the one thing worth knowing: how much of the shelf this one beats. */
-  return all.slice(0,k).map((e,i)=>({...e,pct:Math.max(1,Math.round(100*(i+1)/all.length))}));
+    .sort((a,c)=>a.d-c.d).slice(0,k)
+    .map(e=>({...e,match:Math.max(0,Math.round(100*(1-e.d/typ)))}));
 }
 /* Turn the heaviest axis contributions into a sentence. Measured: the top axis
    carries ~40% of the explanation, so naming one or two is defensible. */
@@ -1381,16 +1403,19 @@ function renderDetail(){
     ${(()=>{const sim=similarUnread(b);if(!sim.length)return "";
       return `<div class="divider"></div>
       <div class="eyebrow">If you like this, try</div>
-      <div class="near-note">Unread books closest to it on the same seven axes — &ldquo;top N%&rdquo; is where each ranks among all ${nodes.filter(x=>x.r===0).length} unread books.</div>
-      ${sim.map(({x,pct})=>`<div class="near" data-id="${x.id}">
+      <div class="near-note">Unread books closest to it on the seven register axes plus community pace. <b>Match</b> is how close: 100 is the same profile on every axis, 0 is as far off as a book picked at random. On the right, predicted fit.</div>
+      <div class="cf-key">Trust in that fit<i class="cf cf-high"></i>high<i class="cf cf-medium"></i>med<i class="cf cf-low"></i>low<i class="cf cf-very"></i>very low</div>
+      ${sim.map(({x,match})=>{const [lvl,why]=tagConfidence(x);
+        return `<div class="near" data-id="${x.id}">
           <span class="near-t">${x.t}</span>
-          <span class="near-k">top ${pct}%</span>
-          <span class="near-r">${x.p.toFixed(1)}</span></div>`).join("")}`;})()}
+          <span class="near-k">${match} match</span>
+          <span class="near-r" title="Confidence in this score: ${lvl} — ${why}"><i class="cf cf-${
+            confSlug(x)}"></i>${x.p.toFixed(1)}</span></div>`;}).join("")}`;})()}
 
     ${(()=>{const near=nearestRated(b);if(!near.length)return "";
       return `<div class="divider"></div>
       <div class="eyebrow">Nearest books you've rated</div>
-      <div class="near-note">The closest things in your library by the same seven axes${b.r===0?" — this is what the prediction is extrapolating from":""}.</div>
+      <div class="near-note">The closest things in your library by those same axes${b.r===0?" — this is what the prediction is extrapolating from":""}.</div>
       ${near.map(({z,d})=>`<div class="near" data-id="${z.id}">
           <span class="near-t">${z.t}</span>
           <span class="near-r">${z.r}★</span>
@@ -1405,13 +1430,15 @@ function renderDetail(){
           `<span class="chip mood-chip">${k}<i>${v}%</i></span>`).join("")}</div></div>`;})()}
 
     ${b.r===0?(()=>{const [lvl,why]=tagConfidence(b);
-      return `<div class="conf conf-${lvl.split(" ")[0].toLowerCase()}">
+      return `<div class="conf conf-${confSlug(b)}">
         <b>Confidence in this score: ${lvl}</b><span>${why}</span></div>`;})():""}
 
     <div class="divider"></div>
-    <div class="eyebrow">${b.r>0?"Your rating — "+rateLabel(b.r):"Read it? Rate it"}</div>
+    <div class="eyebrow">${b.r>0?"Your rating":"Read it? Rate it"}</div>
     <div class="rate" id="rate">${[1,2,3,4,5].map(v=>
-      `<button class="rb${starClass(b.r,v)}" data-v="${v}" aria-label="${v} stars">${v}</button>`).join("")}
+      `<button class="rb${starClass(b.r,v)}" data-v="${v}" title="${v} — click the left half for ${v-RSTEP}"
+        aria-label="Rate ${v} star${v>1?"s":""}, click the left half for ${v-RSTEP}">★</button>`).join("")}
+      <b class="rate-v">${rateLabel(b.r)||"—"}</b>
       ${b.r>0?`<button class="rb clear" data-v="0">clear</button>`:""}</div>
     <div class="rate-note" id="rate-note">${storageOK
       ? "Saved in this browser. Back up or sync from the Filter panel."
@@ -1435,8 +1462,28 @@ function renderDetail(){
     // solo this group: everything else off, or clear if it is already solo'd
     soloCluster(+d.dataset.cl);   // same verb as the legend's "only"
   });
-  el.querySelectorAll(".rb").forEach(btn=>btn.onclick=()=>{
-    const v=+btn.dataset.v;
+  /* A half you cannot see before you commit it may as well not exist, which is
+     what was wrong with the old numbered buttons: the left half of a button
+     reading "4" meant 3.5, and nothing on screen said so. Moving across the row
+     paints the value under the cursor and the readout tracks it, so the half is
+     something you aim at rather than something you discover afterwards. */
+  const stars=[...el.querySelectorAll(".rb:not(.clear)")], rv=el.querySelector(".rate-v");
+  const paint=v=>{
+    stars.forEach(s=>{const c=starClass(v,+s.dataset.v);
+      s.classList.toggle("on",c===" on");
+      s.classList.toggle("half",c===" half");});
+    rv.textContent=rateLabel(v)||"—";
+    rv.classList.toggle("ghost",v!==b.r);   // dim while it is only a preview
+  };
+  stars.forEach(s=>{
+    s.onmousemove=e=>paint(starValue(s,e));
+    s.onfocus=()=>paint(+s.dataset.v);      // keyboard lands on the whole star
+  });
+  const rateRow=el.querySelector(".rate");
+  rateRow.onmouseleave=()=>paint(b.r);
+  rateRow.onfocusout=()=>paint(b.r);   // focusout bubbles, so tabbing off reverts
+  el.querySelectorAll(".rb").forEach(btn=>btn.onclick=e=>{
+    const v=+btn.dataset.v?starValue(btn,e):0;
     setRating(b, v===0?0:(b.r===v?0:v));
     renderDetail();update();kick();
   });

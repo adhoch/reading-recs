@@ -255,6 +255,7 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
 .track b{color:var(--vellum);font-weight:400}
 .track span{display:block;font-size:10.5px;color:var(--faint);font-style:italic;margin-top:3px}
 .near-note{font-size:10.5px;color:var(--faint);font-style:italic;margin:-8px 0 9px;line-height:1.45}
+.near-note b{color:var(--dim);font-weight:400;font-style:normal}
 .near{display:flex;align-items:baseline;gap:8px;padding:6px 0;cursor:pointer;
   border-bottom:1px solid rgba(56,48,74,.45)}
 .near:hover .near-t{color:var(--accent)}
@@ -270,9 +271,20 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
 .conf-medium{border-left-color:var(--accent)} .conf-medium b{color:var(--accent)}
 .conf-low{border-left-color:var(--ascent-of-power)} .conf-low b{color:var(--ascent-of-power)}
 .conf-very{border-left-color:var(--campaign-war)} .conf-very b{color:var(--campaign-war)}
-.rate{display:flex;gap:5px;margin-bottom:7px}
-.rb{width:34px;height:34px;padding:0;font-size:11px}
-.rb.clear{width:auto;padding:0 9px}
+/* The panel's own rating widget is the same five glyphs as the series and queue
+   rows, just at a size worth aiming at: this is where rating actually happens,
+   and a 34px numbered box gave each half a 17px target. */
+.rate{display:flex;align-items:center;gap:1px;margin-bottom:8px}
+.rb{width:31px;height:31px;padding:0;font-size:25px;line-height:1;
+  background:none;border:none;color:var(--rule)}
+.rb:hover{color:var(--rule);border-color:transparent}
+.rb.on{background:none;border:none;color:var(--accent)}
+.rate-v{font-family:var(--mono);font-size:12px;color:var(--vellum);
+  font-weight:400;margin-left:10px;min-width:32px}
+.rate-v.ghost{color:var(--dim)}
+.rb.clear{width:auto;height:auto;padding:4px 9px;margin-left:8px;font-size:9px;
+  color:var(--faint);border:1px solid var(--rule)}
+.rb.clear:hover{color:var(--vellum);border-color:var(--dim)}
 .rate-note{font-size:10.5px;color:var(--faint);font-style:italic;line-height:1.5}
 .linkish{background:none;border:none;padding:0;color:var(--accent);
   font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
@@ -365,8 +377,8 @@ canvas{display:block;width:100%;height:100%;touch-action:none}
   #find-results{max-height:38vh}
   .fr{padding:13px}                         /* >=44px touch target */
   .void{padding:0 28px}
-  .rb{width:46px;height:46px;font-size:13px}   /* thumb-sized */
-  .rb.clear{width:auto;padding:0 14px}
+  .rb{width:44px;height:44px;font-size:34px}   /* thumb-sized; each half 22px */
+  .rb.clear{width:auto;height:auto;font-size:9px;padding:6px 14px}
   .near{padding:11px 0}
   .shelf{padding:14px 16px}
   .shelf-bar{padding:0 16px 12px;flex-wrap:wrap}
@@ -447,12 +459,23 @@ body.split .readout{bottom:auto;top:calc(var(--split-at) - 34px)}
   background:linear-gradient(90deg,var(--accent) 50%,var(--rule) 50%);
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;color:transparent}
-.rb.half{border-color:var(--rule)}
 /* The half-star fill is only a few pixels wide, so the widget also states the
    number. Without it the ten-point scale was invisible and nobody would guess
    the left half of a star meant anything. */
 .near-k{font-family:var(--mono);font-size:9.5px;color:var(--faint);
   white-space:nowrap;margin-left:auto;padding-right:10px}
+/* Confidence carried as colour rather than a fifth word per row: the same four
+   levels, and the same four hues, as the box at the foot of the panel. A dot
+   instead of a tinted number, because --quest at 10.5px would not be legible. */
+.cf{display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--rule);vertical-align:middle;margin-right:5px}
+.cf-high{background:var(--quest)} .cf-medium{background:var(--accent)}
+.cf-low{background:var(--ascent-of-power)} .cf-very{background:var(--campaign-war)}
+/* Spelled out once above the list, so the colours mean something without a
+   hover — the tooltips are unreachable on a phone. */
+.cf-key{display:flex;align-items:center;font-family:var(--mono);font-size:8.5px;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin:-5px 0 9px}
+.cf-key i{margin:0 4px 0 9px}
 .chip{cursor:pointer}
 .chip:hover{border-color:var(--dim);color:var(--vellum)}
 .chip.on{background:var(--vellum);color:var(--field);border-color:var(--vellum)}
