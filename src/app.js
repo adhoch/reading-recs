@@ -72,6 +72,11 @@ const links=[];
 /* ---------- state ---------- */
 const limits={};AXES.forEach(a=>limits[a.k]=a.dir==="min"?1:5);
 let showRead=true,showRec=true,offEngines=new Set();
+/* Confidence is a property of the data, not of the book, so it filters like the
+   engine and group legends rather than like a register axis: 225 reviews behind
+   a 4.7 is a different claim from 46,000 behind one, and the list had no way to
+   say so. Holds the slugs from confSlug(). */
+const offConf=new Set();
 let hover=null,selected=null;
 const REDUCED=matchMedia('(prefers-reduced-motion:reduce)').matches;
 /* Autorotation is off unless you turn it on — it competes with reading labels,
@@ -113,6 +118,7 @@ function passes(b){
   if(b.r>0&&!showRead)return false;
   if(b.r===0&&!showRec)return false;
   if(offEngines.has(b.en))return false;
+  if(offConf.has(confSlug(b)))return false;
   if(cluster&&offClusters.has(b.cl))return false;
   if(!AXES.every(a=>a.dir==="min"?b.ax[a.k]>=limits[a.k]:b.ax[a.k]<=limits[a.k]))return false;
   if(activeTags.size){
@@ -1193,8 +1199,10 @@ function tagConfidence(b){
   return ["Very low","almost no community data; treat the score as a guess"];
 }
 /* The four levels are a colour vocabulary now — a dot on every recommendation,
-   not just the box at the foot of the panel — so the slug lives in one place. */
-const confSlug=b=>tagConfidence(b)[0].split(" ")[0].toLowerCase();
+   a filter in the rail, and the box at the foot of the panel — so the slug
+   lives in one place. A declaration, not a const arrow: passes() calls it from
+   a thousand lines above, and that should not depend on evaluation order. */
+function confSlug(b){return tagConfidence(b)[0].split(" ")[0].toLowerCase();}
 const MOOD_SHOW=45;
 const META=window.__DATA__.meta;
 const NEXTSER=window.__DATA__.next_in_series;
@@ -1404,12 +1412,14 @@ function renderDetail(){
       return `<div class="divider"></div>
       <div class="eyebrow">If you like this, try</div>
       <div class="near-note">Unread books closest to it on the seven register axes plus community pace. <b>Match</b> is how close: 100 is the same profile on every axis, 0 is as far off as a book picked at random. On the right, predicted fit.</div>
-      <div class="cf-key">Trust in that fit<i class="cf cf-high"></i>high<i class="cf cf-medium"></i>med<i class="cf cf-low"></i>low<i class="cf cf-very"></i>very low</div>
+      <div class="cf-key"><span>Trust in that fit</span><span><i class="cf cf-high"></i>high</span><span><i
+        class="cf cf-medium"></i>med</span><span><i class="cf cf-low"></i>low</span><span><i
+        class="cf cf-very"></i>very low</span></div>
       ${sim.map(({x,match})=>{const [lvl,why]=tagConfidence(x);
         return `<div class="near" data-id="${x.id}">
           <span class="near-t">${x.t}</span>
           <span class="near-k">${match} match</span>
-          <span class="near-r" title="Confidence in this score: ${lvl} — ${why}"><i class="cf cf-${
+          <span class="near-r" title="Confidence in this score: ${lvl} · ${why}"><i class="cf cf-${
             confSlug(x)}"></i>${x.p.toFixed(1)}</span></div>`;}).join("")}`;})()}
 
     ${(()=>{const near=nearestRated(b);if(!near.length)return "";
@@ -1583,6 +1593,38 @@ function setMode(f){
   sk.insertAdjacentHTML("afterend",
     '<p class="sizenote">Unread books are sized by predicted fit, rounded to their band.</p>');
 }
+/* ---------- confidence legend ---------- */
+(function(){
+  const el=document.getElementById("conflegend");
+  if(!el)return;
+  /* Ordered strongest first, and each row states how many books it would take
+     off the screen — hiding a level is only a decision you can make if you can
+     see its size. The thresholds are tagConfidence()'s, named there. */
+  const LEVELS=[["high","High","20,000+ reviews"],["medium","Medium","3,000+"],
+                ["low","Low","400+"],["very","Very low","under 400"]];
+  const n={};nodes.forEach(b=>{const s=confSlug(b);n[s]=(n[s]||0)+1;});
+  el.innerHTML=LEVELS.map(([slug,label,note])=>
+    `<div class="leg" data-conf="${slug}" title="${note}"><i class="cf cf-${slug}"></i>${
+      label} <b>${n[slug]||0}</b><button class="leg-only" title="Show only this level">only</button></div>`).join("");
+  el.querySelectorAll(".leg").forEach(d=>d.onclick=ev=>{
+    const slug=d.dataset.conf;
+    if(ev.target.classList.contains("leg-only")){
+      ev.stopPropagation();
+      // same verb as the group and engine legends: solo, or un-solo if already
+      const solo=offConf.size===LEVELS.length-1&&!offConf.has(slug);
+      offConf.clear();
+      if(!solo)LEVELS.forEach(([s])=>{if(s!==slug)offConf.add(s)});
+      el.querySelectorAll(".leg").forEach(x=>
+        x.classList.toggle("off",offConf.has(x.dataset.conf)));
+      update();
+      return;
+    }
+    const on=d.classList.toggle("off");
+    offConf[on?"add":"delete"](slug);
+    update();
+  });
+})();
+
 const legEl=document.getElementById("legend");
 ENGINES.forEach(en=>{
   const d=document.createElement("div");d.className="leg";d.dataset.en=en;
