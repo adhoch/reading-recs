@@ -844,7 +844,10 @@ const AXMEAN=AXES.map(a=>{
 function renderRanked(){
   const el=document.getElementById("detail");
   const recs=nodes.filter(n=>n.r===0&&passes(n)).sort((a,b)=>(b.praw??b.p)-(a.praw??a.p));
-  let h='<div class="eyebrow">Predicted fit · '+recs.length+' unread</div>';
+  /* A fit of 4.7 off 225 reviews and one off 46,000 were the same number here.
+     The dot says which, in the same four colours the rail filters on. */
+  let h='<div class="eyebrow">Predicted fit · '+recs.length+' unread</div>'+
+        (recs.length?confKey("Trust in the score"):"");
   if(!recs.length) h+='<p class="empty">No unread books match these filters.</p>'+
     '<button id="empty-clear" type="button" style="margin-top:10px">Clear all filters</button>';
   let last=-1;
@@ -855,7 +858,7 @@ function renderRanked(){
       h+='<div class="bandhead"><span>'+BANDS[bd][1]+' fit</span><span>'+
          (bd===0?'4.6+':bd===1?'4.2–4.6':'below 4.2')+'</span></div>';
     }
-    h+='<div class="rank" data-id="'+n.id+'"><span class="rank-s">'+n.p.toFixed(1)+'</span>'+
+    h+='<div class="rank" data-id="'+n.id+'">'+confDot(n)+'<span class="rank-s">'+n.p.toFixed(1)+'</span>'+
        '<span class="rank-t">'+n.t+'<i>'+n.a+'</i></span>'+
        '<span class="rank-bar"><div style="width:'+Math.round((n.p-3.5)/1.5*100)+'%;background:'+nodeHex(n)+'"></div></span></div>';
   });
@@ -1203,6 +1206,18 @@ function tagConfidence(b){
    lives in one place. A declaration, not a const arrow: passes() calls it from
    a thousand lines above, and that should not depend on evaluation order. */
 function confSlug(b){return tagConfidence(b)[0].split(" ")[0].toLowerCase();}
+/* The dot needs saying once wherever it appears, and it now appears in two
+   panels. The label differs because the number it qualifies differs. */
+function confKey(label){
+  return `<div class="cf-key"><span>${label}</span>`+
+    [["high","high"],["medium","med"],["low","low"],["very","very low"]]
+      .map(([s,w])=>`<span><i class="cf cf-${s}"></i>${w}</span>`).join("")+`</div>`;
+}
+/* Confidence as a dot beside a predicted number, with the reason on hover. */
+function confDot(b){
+  const [lvl,why]=tagConfidence(b);
+  return `<i class="cf cf-${confSlug(b)}" title="Confidence in this score: ${lvl} · ${why}"></i>`;
+}
 const MOOD_SHOW=45;
 const META=window.__DATA__.meta;
 const NEXTSER=window.__DATA__.next_in_series;
@@ -1412,15 +1427,11 @@ function renderDetail(){
       return `<div class="divider"></div>
       <div class="eyebrow">If you like this, try</div>
       <div class="near-note">Unread books closest to it on the seven register axes plus community pace. <b>Match</b> is how close: 100 is the same profile on every axis, 0 is as far off as a book picked at random. On the right, predicted fit.</div>
-      <div class="cf-key"><span>Trust in that fit</span><span><i class="cf cf-high"></i>high</span><span><i
-        class="cf cf-medium"></i>med</span><span><i class="cf cf-low"></i>low</span><span><i
-        class="cf cf-very"></i>very low</span></div>
-      ${sim.map(({x,match})=>{const [lvl,why]=tagConfidence(x);
-        return `<div class="near" data-id="${x.id}">
+      ${confKey("Trust in that fit")}
+      ${sim.map(({x,match})=>`<div class="near" data-id="${x.id}">
           <span class="near-t">${x.t}</span>
           <span class="near-k">${match} match</span>
-          <span class="near-r" title="Confidence in this score: ${lvl} · ${why}"><i class="cf cf-${
-            confSlug(x)}"></i>${x.p.toFixed(1)}</span></div>`;}).join("")}`;})()}
+          <span class="near-r">${confDot(x)}${x.p.toFixed(1)}</span></div>`).join("")}`;})()}
 
     ${(()=>{const near=nearestRated(b);if(!near.length)return "";
       return `<div class="divider"></div>
