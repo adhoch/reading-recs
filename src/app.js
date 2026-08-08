@@ -2159,9 +2159,16 @@ function renderShelves(){
           <span class="sb-fit">${cur?"":n.p.toFixed(1)}</span>
           <span class="minirate" data-title="${n.t.replace(/"/g,"&quot;")}">${[1,2,3,4,5].map(v=>
             `<button class="ms${starClass(cur,v)}" data-v="${v}" title="${v} stars — click the left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(cur)}</b></span></div>`;}),
-      ...(v.full? [] : v.extra.map(x=>
-        `<div class="sb unread ext"><span class="sb-v">${x.ord?"#"+x.ord:""}</span>
-          <span class="sb-t">${x.t}</span><span class="sb-r">${x.yr||""}</span></div>`))
+      /* These carry no library record, so no fit and nothing to open — but the
+         full-bibliography rows below give the same kind of row a rating widget,
+         and rating one is exactly how it enters the library. Without it these
+         were the only rows on the shelf you could not act on at all. */
+      ...(v.full? [] : v.extra.map(x=>{
+        const cur=myRatingFor(x.t), esc=canonicalTitle(x.t).replace(/"/g,"&quot;");
+        return `<div class="sb${cur?"":" unread"} ext"><span class="sb-v">${x.ord?"#"+x.ord:""}</span>
+          <span class="sb-t">${x.t}</span><span class="sb-r">${x.yr||""}</span>
+          <span class="minirate" data-title="${esc}">${[1,2,3,4,5].map(v=>
+            `<button class="ms${starClass(cur,v)}" data-v="${v}" title="${v} star${v>1?"s":""} — click the left half for ${v-0.5}">★</button>`).join("")}<b class="mr-v">${rateLabel(cur)}</b></span></div>`;}))
     ].join("");
     // when a full bibliography exists it replaces the piecemeal lists: every
     // volume in order, so a book you read but never logged shows as a gap
