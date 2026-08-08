@@ -86,7 +86,7 @@
   },
   "Adrian Tchaikovsky": {
    "n": 5,
-   "mean": 4.44
+   "mean": 4.6
   },
   "Alisa Kwitney": {
    "n": 1,
@@ -97,8 +97,8 @@
    "mean": 4.33
   },
   "Django Wexler": {
-   "n": 4,
-   "mean": 4.25
+   "n": 5,
+   "mean": 4.4
   },
   "Christopher Buehlman": {
    "n": 2,
@@ -149,8 +149,8 @@
    "mean": 4.0
   },
   "C.K. McDonnell": {
-   "n": 1,
-   "mean": 4.0
+   "n": 2,
+   "mean": 4.75
   },
   "Beryl Evans": {
    "n": 1,
@@ -177,8 +177,8 @@
    "mean": 3.0
   },
   "Ben Aaronovitch": {
-   "n": 1,
-   "mean": 5.0
+   "n": 4,
+   "mean": 4.75
   },
   "Robert McCammon": {
    "n": 1,
@@ -190,7 +190,7 @@
   },
   "Pierce Brown": {
    "n": 3,
-   "mean": 3.83
+   "mean": 4.0
   },
   "Christopher Ruocchio": {
    "n": 1,
@@ -217,8 +217,8 @@
    "mean": 5.0
   },
   "Naomi Novik": {
-   "n": 6,
-   "mean": 4.0
+   "n": 7,
+   "mean": 4.07
   },
   "Arkady Martine": {
    "n": 1,
@@ -233,8 +233,8 @@
    "mean": 4.38
   },
   "Daniel Abraham": {
-   "n": 6,
-   "mean": 4.83
+   "n": 7,
+   "mean": 4.79
   },
   "V.E. Schwab": {
    "n": 1,
@@ -250,7 +250,7 @@
   },
   "James S.A. Corey": {
    "n": 2,
-   "mean": 4.0
+   "mean": 4.5
   },
   "Helen Lowe": {
    "n": 1,
@@ -305,8 +305,8 @@
    "mean": 2.0
   },
   "Joel Rosenberg": {
-   "n": 1,
-   "mean": 3.0
+   "n": 2,
+   "mean": 3.5
   },
   "Haruki Murakami": {
    "n": 1,
@@ -382,7 +382,7 @@
   },
   "Mike Shevdon": {
    "n": 1,
-   "mean": 4.0
+   "mean": 4.5
   },
   "Sarah Monette": {
    "n": 1,
@@ -410,7 +410,7 @@
   },
   "Peter F. Hamilton": {
    "n": 6,
-   "mean": 2.25
+   "mean": 2.5
   },
   "S.M. Stirling": {
    "n": 4,
@@ -422,7 +422,7 @@
   },
   "Kim Harrison": {
    "n": 2,
-   "mean": 2.5
+   "mean": 3.0
   },
   "Seth Grahame-Smith": {
    "n": 1,
@@ -453,8 +453,8 @@
    "mean": 2.0
   },
   "David Wellington": {
-   "n": 1,
-   "mean": 4.0
+   "n": 2,
+   "mean": 4.25
   },
   "Seanan McGuire": {
    "n": 1,
@@ -469,16 +469,16 @@
    "mean": 4.0
   },
   "Harry Connolly": {
-   "n": 1,
-   "mean": 4.0
+   "n": 3,
+   "mean": 4.83
   },
   "Patricia Briggs": {
    "n": 1,
    "mean": 4.0
   },
   "Dean Koontz": {
-   "n": 2,
-   "mean": 3.5
+   "n": 3,
+   "mean": 4.17
   },
   "Rob Thurman": {
    "n": 1,
@@ -641,8 +641,8 @@
    "mean": 3.75
   },
   "Karen Traviss": {
-   "n": 1,
-   "mean": 4.0
+   "n": 3,
+   "mean": 3.83
   },
   "Octavia E. Butler": {
    "n": 3,
@@ -654,7 +654,7 @@
   },
   "Michael Crichton": {
    "n": 3,
-   "mean": 3.45
+   "mean": 3.89
   },
   "Cherie Priest": {
    "n": 1,
@@ -710,7 +710,7 @@
   },
   "Kim Stanley Robinson": {
    "n": 1,
-   "mean": 5.0
+   "mean": 4.0
   },
   "Walter M. Miller Jr.": {
    "n": 1,
@@ -781,7 +781,7 @@
    "mean": 4.5
   },
   "Stina Leicht": {
-   "n": 1,
+   "n": 2,
    "mean": 4.0
   },
   "David Anthony Durham": {
@@ -833,7 +833,7 @@
    "mean": 4.0
   },
   "Robin Hobb": {
-   "n": 2,
+   "n": 3,
    "mean": 4.0
   },
   "Gene Wolfe": {
@@ -861,7 +861,7 @@
    "mean": 4.0
   },
   "Daniel O'Malley": {
-   "n": 1,
+   "n": 2,
    "mean": 4.5
   },
   "Kage Baker": {
@@ -875,6 +875,10 @@
   "A.J. Hackwith": {
    "n": 1,
    "mean": 4.0
+  },
+  "Douglas Hulick": {
+   "n": 1,
+   "mean": 4.5
   },
   "Mark Lawrence": {
    "n": 1,
@@ -1112,12 +1116,13 @@
   },
   "shadow campaigns": {
    "name": "The Shadow Campaigns",
-   "n": 3,
-   "mean": 4.33,
+   "n": 4,
+   "mean": 4.5,
    "vols": [
     1.0,
     2.0,
-    3.0
+    3.0,
+    4.0
    ]
   },
   "dark lord davi": {
@@ -1239,10 +1244,11 @@
   },
   "stranger times": {
    "name": "Stranger Times",
-   "n": 1,
-   "mean": 4.0,
+   "n": 2,
+   "mean": 4.75,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "monk  robot": {
@@ -1263,10 +1269,13 @@
   },
   "rivers of london": {
    "name": "Rivers of London",
-   "n": 1,
-   "mean": 5.0,
+   "n": 4,
+   "mean": 4.75,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0,
+    4.0
    ]
   },
   "wheel of time": {
@@ -1433,7 +1442,7 @@
   "expanse": {
    "name": "The Expanse",
    "n": 2,
-   "mean": 4.0,
+   "mean": 5.0,
    "vols": [
     1.0,
     2.0
@@ -1488,7 +1497,7 @@
   },
   "shadows of the apt": {
    "name": "Shadows of the Apt",
-   "n": 1,
+   "n": 2,
    "mean": 5.0,
    "vols": [
     1.0,
@@ -1546,10 +1555,11 @@
   },
   "guardians of the flame": {
    "name": "Guardians of the Flame",
-   "n": 1,
-   "mean": 3.0,
+   "n": 2,
+   "mean": 3.5,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "strain": {
@@ -1678,7 +1688,7 @@
   "courts of the feyre": {
    "name": "Courts of the Feyre",
    "n": 1,
-   "mean": 4.0,
+   "mean": 4.5,
    "vols": [
     1.0
    ]
@@ -1727,7 +1737,7 @@
   "nights dawn": {
    "name": "Night's Dawn",
    "n": 1,
-   "mean": 2.0,
+   "mean": 3.5,
    "vols": [
     1.0
    ]
@@ -1763,7 +1773,7 @@
   "temeraire": {
    "name": "Temeraire",
    "n": 4,
-   "mean": 3.0,
+   "mean": 3.38,
    "vols": [
     1.0,
     2.0,
@@ -1774,8 +1784,9 @@
   "hollows": {
    "name": "The Hollows",
    "n": 2,
-   "mean": 2.0,
+   "mean": 3.0,
    "vols": [
+    0.5,
     1.0,
     10.0
    ]
@@ -1822,10 +1833,11 @@
   },
   "laura caxton": {
    "name": "Laura Caxton",
-   "n": 1,
-   "mean": 4.0,
+   "n": 2,
+   "mean": 4.25,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "october daye": {
@@ -1854,10 +1866,12 @@
   },
   "twenty palaces": {
    "name": "Twenty Palaces",
-   "n": 1,
-   "mean": 4.0,
+   "n": 3,
+   "mean": 4.83,
    "vols": [
-    1.0
+    1.0,
+    2.0,
+    3.0
    ]
   },
   "magicians": {
@@ -2081,10 +2095,11 @@
   },
   "wesshar wars": {
    "name": "Wess'har Wars",
-   "n": 1,
-   "mean": 4.0,
+   "n": 2,
+   "mean": 3.75,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "neanderthal parallax": {
@@ -2261,7 +2276,7 @@
   "jurassic park": {
    "name": "Jurassic Park",
    "n": 1,
-   "mean": 4.0,
+   "mean": 5.0,
    "vols": [
     1.0
    ]
@@ -2365,10 +2380,11 @@
   },
   "long price quartet": {
    "name": "Long Price Quartet",
-   "n": 1,
-   "mean": 5.0,
+   "n": 2,
+   "mean": 4.75,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "fey and the fallen": {
@@ -2529,10 +2545,11 @@
   },
   "odd thomas": {
    "name": "Odd Thomas",
-   "n": 1,
-   "mean": 5.0,
+   "n": 2,
+   "mean": 4.75,
    "vols": [
-    1.0
+    1.0,
+    2.0
    ]
   },
   "mountain": {
@@ -2588,7 +2605,7 @@
   "red rising saga": {
    "name": "Red Rising Saga",
    "n": 3,
-   "mean": 3.83,
+   "mean": 4.0,
    "vols": [
     1.0
    ]
@@ -2601,10 +2618,26 @@
     1.0
    ]
   },
+  "checquy files": {
+   "name": "The Checquy Files",
+   "n": 1,
+   "mean": 4.5,
+   "vols": [
+    2
+   ]
+  },
   "hells library": {
    "name": "Hell's Library",
    "n": 1,
    "mean": 4.0,
+   "vols": [
+    1
+   ]
+  },
+  "tales of the kin": {
+   "name": "Tales of the Kin",
+   "n": 1,
+   "mean": 4.5,
    "vols": [
     1
    ]
@@ -2649,6 +2682,12 @@
     1.0
    ]
   },
+  "farseer trilogy": {
+   "name": "The Farseer Trilogy",
+   "n": 1,
+   "mean": 4.0,
+   "vols": []
+  },
   "traitor son cycle": {
    "name": "The Traitor Son Cycle",
    "n": 5,
@@ -2659,6 +2698,14 @@
     3.0,
     4.0,
     5.0
+   ]
+  },
+  "mars trilogy": {
+   "name": "Mars Trilogy",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1.0
    ]
   }
  }

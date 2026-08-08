@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-08-06T17:36:33.886357Z",
+ "updated": "2026-08-08T07:04:45.681Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -253,7 +253,39 @@
   "Hawk": 4.5,
   "Vallista": 4.5,
   "Tsalmoth": 4.5,
-  "Lyorn": 4.5
+  "Lyorn": 4.5,
+  "Red Rising": 4.5,
+  "Temeraire": 4,
+  "Throne of Jade": 3.5,
+  "Odd Thomas": 5,
+  "Forever Odd": 4.5,
+  "A Betrayal in Winter": 4.5,
+  "Leviathan Wakes": 5,
+  "Moon Over Soho": 4.5,
+  "Whispers Under Ground": 4.5,
+  "Broken Homes": 5,
+  "13 Bullets": 4.5,
+  "99 Coffins: A Historical Vampire Tale": 4,
+  "The Stranger Times": 4.5,
+  "This Charming Man": 5,
+  "Of Blood and Honey": 4,
+  "Child of Fire": 5,
+  "Game of Cages": 4.5,
+  "City of Pearl": 3.5,
+  "Crossing the Line": 4,
+  "The Guns of Empire": 5,
+  "Empire in Black and Gold": 5,
+  "Sixty-One Nails": 4.5,
+  "Jurassic Park": 5,
+  "Circle of Enemies": 5,
+  "The Turn": 4,
+  "The Sleeping Dragon": 3.5,
+  "The Sword and the Chain": 3.5,
+  "The Reality Dysfunction": 3.5,
+  "Red Mars": 4,
+  "Among Thieves": 4.5,
+  "Stiletto": 4.5,
+  "Assassin's Apprentice": 4
  },
  "log": [
   {
@@ -797,193 +829,284 @@
    "at": "2026-08-02T06:26:06.451Z"
   },
   {
-   "t": "The Name of the Wind",
-   "from": null,
-   "to": 4.75,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "The Wise Man's Fear",
-   "from": null,
-   "to": 4.75,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "The Road to Levenshir",
-   "from": null,
-   "to": 4.75,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "The Hallowed Hunt",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "The Curse of Chalion",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "Paladin of Souls",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "Testimony of Mute Things",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "The Assassins of Thasalon",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "Demon Daughter",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "Darksight Dare",
-   "from": null,
-   "to": 4.25,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
-  },
-  {
-   "t": "Jhereg",
+   "t": "Red Rising",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-07T01:33:32.297Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Yendi",
+   "t": "Temeraire",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "to": 3.5,
+   "at": "2026-08-07T01:33:45.620Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Teckla",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "t": "Temeraire",
+   "from": 3.5,
+   "to": 4,
+   "at": "2026-08-07T01:33:47.436Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Taltos",
+   "t": "Throne of Jade",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "to": 3.5,
+   "at": "2026-08-07T01:33:48.595Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Phoenix",
+   "t": "Odd Thomas",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:57:32.242Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Athyra",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "t": "Odd Thomas",
+   "from": 4.5,
+   "to": 5,
+   "at": "2026-08-08T06:57:35.089Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Orca",
+   "t": "Forever Odd",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "to": 4,
+   "at": "2026-08-08T06:57:36.809Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Dragon",
-   "from": null,
+   "t": "Forever Odd",
+   "from": 4,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:57:38.743Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Issola",
+   "t": "A Betrayal in Winter",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:57:42.333Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Dzur",
+   "t": "Leviathan Wakes",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "to": 5,
+   "at": "2026-08-08T06:58:02.374Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Jhegaala",
+   "t": "Moon Over Soho",
    "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "to": 3.5,
+   "at": "2026-08-08T06:58:30.572Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Iorich",
-   "from": null,
+   "t": "Moon Over Soho",
+   "from": 3.5,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:58:32.065Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Tiassa",
+   "t": "Whispers Under Ground",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:58:34.328Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Hawk",
+   "t": "Broken Homes",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:58:36.319Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Vallista",
-   "from": null,
-   "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "t": "Broken Homes",
+   "from": 4.5,
+   "to": 5,
+   "at": "2026-08-08T06:58:37.592Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Tsalmoth",
+   "t": "13 Bullets",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:59:15.678Z",
+   "note": "rated from series list"
   },
   {
-   "t": "Lyorn",
+   "t": "99 Coffins: A Historical Vampire Tale",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T06:59:17.327Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "99 Coffins: A Historical Vampire Tale",
+   "from": 5,
+   "to": null,
+   "at": "2026-08-08T06:59:19.175Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "99 Coffins: A Historical Vampire Tale",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T06:59:21.285Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Stranger Times",
    "from": null,
    "to": 4.5,
-   "at": "2026-08-06T17:36:33.886357Z",
-   "note": "series-level rating given in chat; per-volume values to be revised later"
+   "at": "2026-08-08T06:59:39.231Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "This Charming Man",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T06:59:43.300Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Of Blood and Honey",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T06:59:52.800Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Child of Fire",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T07:00:20.932Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Game of Cages",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-08T07:00:22.683Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "City of Pearl",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T07:00:28.945Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "City of Pearl",
+   "from": 4,
+   "to": 3.5,
+   "at": "2026-08-08T07:00:29.754Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Crossing the Line",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T07:00:31.799Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Guns of Empire",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T07:01:20.867Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Empire in Black and Gold",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T07:01:52.518Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Sixty-One Nails",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-08T07:02:03.027Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Jurassic Park",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T07:02:15.359Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Circle of Enemies",
+   "from": null,
+   "to": 5,
+   "at": "2026-08-08T07:02:47.569Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Turn",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T07:02:54.023Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Sleeping Dragon",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-08T07:03:04.732Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Sword and the Chain",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-08T07:03:06.073Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "The Reality Dysfunction",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-08-08T07:03:47.058Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Red Mars",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T07:04:17.796Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Among Thieves",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-08T07:04:31.270Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Stiletto",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-08T07:04:38.508Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Assassin's Apprentice",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-08T07:04:45.073Z",
+   "note": "rated from series list"
   }
  ]
 }

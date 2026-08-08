@@ -9301,5 +9301,770 @@
    "adventure"
   ],
   "st": "stalled"
+ },
+ "Forever Odd": {
+  "a": "Dean Koontz",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   3
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "nrev": 24
+ },
+ "99 Coffins: A Historical Vampire Tale": {
+  "a": "David Wellington",
+  "ax": [
+   4,
+   2,
+   2,
+   5,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth",
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "nrev": 208
+ },
+ "This Charming Man": {
+  "a": "C.K. McDonnell",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.67,
+  "nrev": 1567
+ },
+ "Game of Cages": {
+  "a": "Harry Connolly",
+  "ax": [
+   5,
+   2,
+   3,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 4.72,
+  "nrev": 418
+ },
+ "Circle of Enemies": {
+  "a": "Harry Connolly",
+  "ax": [
+   5,
+   2,
+   3,
+   4,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 4.5,
+  "nrev": 343
+ },
+ "Crossing the Line": {
+  "a": "Karen Traviss"
+ },
+ "Temeraire": {
+  "a": "Naomi Novik",
+  "ax": [
+   4,
+   2,
+   3,
+   2,
+   2,
+   4,
+   2
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "alt-history"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.2,
+  "nrev": 21683
+ },
+ "Moon Over Soho": {
+  "a": "Ben Aaronovitch",
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.61,
+  "nrev": 13888
+ },
+ "Whispers Under Ground": {
+  "a": "Ben Aaronovitch",
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.71,
+  "nrev": 11286
+ },
+ "Broken Homes": {
+  "a": "Ben Aaronovitch",
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.59,
+  "nrev": 9877
+ },
+ "A Betrayal in Winter": {
+  "a": "Daniel Abraham",
+  "ax": [
+   2,
+   3,
+   4,
+   4,
+   3,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 2.39,
+  "nrev": 1158
+ },
+ "The Guns of Empire": {
+  "a": "Django Wexler",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.48,
+  "nrev": 1001
+ },
+ "Empire in Black and Gold": {
+  "a": "Adrian Tchaikovsky",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.04,
+  "nrev": 1959
+ },
+ "The Turn": {
+  "a": "Kim Harrison",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   3,
+   2,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.2,
+  "nrev": 1175
+ },
+ "The Sword and the Chain": {
+  "a": "Joel Rosenberg",
+  "ax": [
+   3,
+   2,
+   2,
+   3,
+   2,
+   2,
+   3
+  ],
+  "en": "survival",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "portal",
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.67,
+  "nrev": 253
+ },
+ "Odd Thomas": {
+  "a": "Dean Koontz",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.22,
+  "nrev": 14597
+ },
+ "Child of Fire": {
+  "a": "Harry Connolly",
+  "ax": [
+   5,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 4.01,
+  "nrev": 816
+ },
+ "13 Bullets": {
+  "a": "David Wellington",
+  "ax": [
+   4,
+   2,
+   2,
+   5,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.6,
+  "nrev": 468
+ },
+ "The Stranger Times": {
+  "a": "C.K. McDonnell",
+  "ax": [
+   5,
+   1,
+   2,
+   2,
+   2,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.82,
+  "nrev": 3200
+ },
+ "Leviathan Wakes": {
+  "a": "James S.A. Corey",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.48,
+  "nrev": 49363
+ },
+ "Jurassic Park": {
+  "a": "Michael Crichton",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.85,
+  "nrev": 79346
+ },
+ "Red Mars": {
+  "a": "Kim Stanley Robinson",
+  "ax": [
+   2,
+   5,
+   4,
+   2,
+   2,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 1.67,
+  "nrev": 10013
+ },
+ "Sixty-One Nails": {
+  "a": "Mike Shevdon",
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "per-volume-2026-08",
+  "cpace": 3.0,
+  "nrev": 502
  }
 }
