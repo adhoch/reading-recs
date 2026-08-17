@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-08-08T07:04:45.681Z",
+ "updated": "2026-08-14T16:21:32.699Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -285,7 +285,11 @@
   "Red Mars": 4,
   "Among Thieves": 4.5,
   "Stiletto": 4.5,
-  "Assassin's Apprentice": 4
+  "Assassin's Apprentice": 4,
+  "Velocity Weapon": 4,
+  "The Gone-Away World": 4.5,
+  "The Hollow Places": 4.5,
+  "The Doors of Eden": 4.5
  },
  "log": [
   {
@@ -1107,6 +1111,30 @@
    "to": 4,
    "at": "2026-08-08T07:04:45.073Z",
    "note": "rated from series list"
+  },
+  {
+   "t": "Velocity Weapon",
+   "from": null,
+   "to": 4,
+   "at": "2026-08-14T16:19:36.799Z"
+  },
+  {
+   "t": "The Gone-Away World",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-14T16:20:02.012Z"
+  },
+  {
+   "t": "The Hollow Places",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-14T16:20:29.096Z"
+  },
+  {
+   "t": "The Doors of Eden",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-14T16:21:32.091Z"
   }
  ]
 }
