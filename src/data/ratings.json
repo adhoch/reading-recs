@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-08-14T16:21:32.699Z",
+ "updated": "2026-09-07T02:26:53.974Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -289,7 +289,14 @@
   "Velocity Weapon": 4,
   "The Gone-Away World": 4.5,
   "The Hollow Places": 4.5,
-  "The Doors of Eden": 4.5
+  "The Doors of Eden": 4.5,
+  "Senlin Ascends": 4.5,
+  "Light From Uncommon Stars": 4.5,
+  "Storm Front": 4.5,
+  "Kings of the Wyld": 4.5,
+  "Alien Clay": 4,
+  "The Silence of the Lambs": 5,
+  "Shards of Earth": 3.5
  },
  "log": [
   {
@@ -1135,6 +1142,49 @@
    "from": null,
    "to": 4.5,
    "at": "2026-08-14T16:21:32.091Z"
+  },
+  {
+   "t": "Senlin Ascends",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-27T05:25:28.191Z"
+  },
+  {
+   "t": "Light From Uncommon Stars",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-27T05:25:41.945Z"
+  },
+  {
+   "t": "Storm Front",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-08-27T05:27:31.992Z"
+  },
+  {
+   "t": "Kings of the Wyld",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-09-07T02:09:54.838Z"
+  },
+  {
+   "t": "Alien Clay",
+   "from": null,
+   "to": 4,
+   "at": "2026-09-07T02:10:19.159Z"
+  },
+  {
+   "t": "The Silence of the Lambs",
+   "from": null,
+   "to": 5,
+   "at": "2026-09-07T02:12:21.959Z"
+  },
+  {
+   "t": "Shards of Earth",
+   "from": null,
+   "to": 3.5,
+   "at": "2026-09-07T02:26:53.367Z",
+   "note": "rated from the needs-you queue"
   }
  ]
 }

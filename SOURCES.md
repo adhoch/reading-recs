@@ -1,5 +1,11 @@
 # Data sources — what's been tried, what earned its place
 
+Every figure below was measured on the library as it stood in July 2026: 274
+books, 95 of them rated, and a model tagged with the ratings in view. The
+library has since grown to 618 books and the honest model figure is lower
+(see `docs-data.md`, "What the model is actually worth"). The *relative*
+verdicts stand; the absolute numbers are of their moment.
+
 Run `python3 source_eval.py` to regenerate. Three questions per source:
 
 - **Coverage** — fraction of the 274 books it reaches

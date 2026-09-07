@@ -7,10 +7,14 @@ src/
   app.js              all behaviour
   data.js             generated dev shim (do not edit)
   data/
-    books.json        one record per book — the thing you'll edit most
-    model.json        fitted Ridge coefficients
+    books.json        one record per book — 618 records, 430 of them rated
+    ratings.json      COMMITTED — the durable record of ratings made in the app
+    model.json        fitted Ridge coefficients and per-series offsets
     meta.json         author + series aggregates from your full library
-    next_in_series.json  unread volumes, from Wikidata / ISFDB / FantasticFiction
+    meta_baseline.json  the Goodreads export's aggregates, snapshotted once
+    graph.json        k-NN edges and the 19 group definitions
+    all_series.json   full bibliographies, 169 series / 1,471 volumes
+    next_in_series.json  unread volumes only (legacy; all_series supersedes it)
 build.py              assembles src/ into dist/
 ```
 
@@ -18,9 +22,17 @@ Open `src/index.html` directly to develop — it loads `data.js`, so no server i
 needed. Run `python3 build.py` after changing any JSON to regenerate that shim.
 
 ```
-python3 build.py             dist/reading-network.html          (~543 KB)
-python3 build.py --offline   + dist/reading-network-offline.html (~974 KB, zero
-                             third-party requests, works with no network at all)
+python3 build.py             dist/reading-network.html
+python3 build.py --offline   + dist/reading-network-offline.html (zero third-party
+                             requests, works with no network at all)
+```
+
+The usual cycle after rating things in the app, in this order:
+
+```
+python3 scripts/promote.py --write   ratings with no book record -> aggregates
+python3 scripts/fit.py --write       refit, rescore every book's p / praw
+python3 build.py                     regenerate the shim and dist/
 ```
 
 ## Where a rating goes
@@ -117,10 +129,10 @@ because most of them are not measurements.
 | `r` | your Goodreads export, or told to me directly | **yours** |
 | `ax[0..6]` — velocity, friction, interiority, darkness, romance_load, prose_shine, formula | **my judgement**, assigned from reading about the book | ⚠ **guess** |
 | `mi en ea sy in ca mo st` — the facet taxonomy | **my judgement** | ⚠ **guess** |
-| `cpace` | StoryGraph community fast/medium/slow %, scraped (256/274) | measured |
-| `moods` | StoryGraph community mood %, scraped (271/274) | measured |
-| `nrev` | StoryGraph review count, scraped (271/274) | measured |
-| `blurb` | StoryGraph publisher description, scraped (269/274) | measured |
+| `cpace` | StoryGraph community fast/medium/slow %, scraped (604/618) | measured |
+| `moods` | StoryGraph community mood %, scraped (589/618) | measured |
+| `nrev` | StoryGraph review count, scraped (612/618) | measured |
+| `blurb` | StoryGraph publisher description, scraped (577/618) | measured |
 | `ser` / `vol` | Goodreads title parsing; recommendations from my own knowledge | mixed |
 | `p` / `praw` | Ridge model output from `ax` + `cpace`, plus the King lift | computed |
 | `kingsim` | standardised distance to the centroid of your 5★ King books | computed |
@@ -149,14 +161,19 @@ tag means, edit `tagging-schema.md`.
 | `next_in_series.json` | `nextvol.py` (Wikidata), `isfdb.py` (ISFDB) | ISFDB is better for SFF; FantasticFiction is manual only |
 | `meta.json` | `fixmeta.py`, then `promote.py` | `fixmeta.py` merges the Goodreads export; `promote.py` folds in every rating made since |
 | ratings with no record | `promote.py` | see above; needs hand tags in `scripts/newbooks.json` for full library membership |
-| `model.json` | `fit.py` | Ridge, leave-one-series-out; committed r = 0.713 |
+| `model.json` | `fit.py --write` | Ridge, leave-one-series-out; committed r = 0.620 for an unseen series, 0.720 for the next volume of one you have |
 
 ## What the model is actually worth
 
-**Grouped-CV r = 0.647, residual ±0.74 stars.** That explains about 42% of the
-variance in a rating. Earlier figures in this project's history — 0.713, 0.743
-— were measured against tags made while the ratings were visible, and are
-optimistic by roughly the amount you would expect from that.
+**Grouped-CV r = 0.620, residual ±0.74 stars**, on 278 training rows (September
+2026). That explains about 38% of the variance in a rating. Earlier figures in
+this project's history — 0.713, 0.743 — were measured against tags made while
+the ratings were visible, and are optimistic by roughly the amount you would
+expect from that; 0.647 was the first blind figure, on a smaller library.
+
+A running out-of-sample check: sixteen recommendations have been read after
+their prediction was baked. The first nine missed by 0.48 stars on average, the
+seven rated in August and September 2026 by 0.24.
 
 All 95 rated books in the original 274 have since been retagged by two
 independent raters each, told nothing about any rating. Their tags are what the
@@ -351,9 +368,9 @@ they have different answers:
 
 | | r | resid |
 |---|---|---|
-| a series you have never read | 0.634 | 0.75 |
-| the next volume of one you have, no offset | 0.643 | 0.74 |
-| the next volume of one you have, with offset | **0.720** | **0.67** |
+| a series you have never read | 0.620 | 0.74 |
+| the next volume of one you have, no offset | 0.630 | 0.73 |
+| the next volume of one you have, with offset | **0.720** | **0.65** |
 
 The offset buys nothing for a series with no rated siblings — there is nothing
 to estimate from — and the grouped CV reports that honestly as unchanged.

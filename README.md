@@ -20,13 +20,18 @@ Open `src/index.html` directly to develop; no server needed.
 src/index.html     markup shell
 src/style.css      styling
 src/app.js         behaviour
-src/data/          books.json, model.json, meta.json, next_in_series.json
-scripts/           scrapers and the source-evaluation harness
+src/data/          books.json, ratings.json, model.json, meta.json, graph.json, all_series.json
+scripts/           promote.py, fit.py, the scrapers, and the source-evaluation harness
 build.py           assembles src/ into dist/
-docs-data.md       where every field comes from, and how ratings are stored
+docs-data.md       where every field comes from, how ratings are stored, and every
+                   measurement behind the model
 SOURCES.md         every data source tried, with measured results
 tagging-schema.md  what the seven register axes mean
+context/           local-only (gitignored) working notes; CONTEXT.md is the handoff
 ```
+
+After rating things in the app: `scripts/promote.py --write`, then
+`scripts/fit.py --write`, then `build.py`. `docs-data.md` explains each step.
 
 ## A note before making this public
 

@@ -7,12 +7,19 @@ src/
   app.js              all behaviour
   data.js             generated dev shim (do not edit)
   data/
-    books.json        one record per book — the thing you'll edit most
-    model.json        fitted Ridge coefficients
+    books.json        one record per book — 618 records, 430 of them rated
+    ratings.json      COMMITTED — the durable record of ratings made in the app
+    model.json        fitted Ridge coefficients and per-series offsets
     meta.json         author + series aggregates from your full library
-    next_in_series.json  unread volumes, from Wikidata / ISFDB / FantasticFiction
+    meta_baseline.json  the Goodreads export's aggregates, snapshotted once
+    graph.json        k-NN edges and the 19 group definitions
+    all_series.json   full bibliographies, 169 series / 1,471 volumes
+    next_in_series.json  unread volumes only (legacy; all_series supersedes it)
 build.py              assembles src/ into dist/
 ```
+
+`../docs-data.md` is the full version of this file: field provenance, the
+promote / fit / build cycle, and every measurement behind the model.
 
 Open `src/index.html` directly to develop — it loads `data.js`, so no server is
 needed. Run `python3 build.py` after changing any JSON to regenerate that shim.
@@ -65,10 +72,10 @@ because most of them are not measurements.
 | `r` | your Goodreads export, or told to me directly | **yours** |
 | `ax[0..6]` — velocity, friction, interiority, darkness, romance_load, prose_shine, formula | **my judgement**, assigned from reading about the book | ⚠ **guess** |
 | `mi en ea sy in ca mo st` — the facet taxonomy | **my judgement** | ⚠ **guess** |
-| `cpace` | StoryGraph community fast/medium/slow %, scraped (256/274) | measured |
-| `moods` | StoryGraph community mood %, scraped (271/274) | measured |
-| `nrev` | StoryGraph review count, scraped (271/274) | measured |
-| `blurb` | StoryGraph publisher description, scraped (269/274) | measured |
+| `cpace` | StoryGraph community fast/medium/slow %, scraped (604/618) | measured |
+| `moods` | StoryGraph community mood %, scraped (589/618) | measured |
+| `nrev` | StoryGraph review count, scraped (612/618) | measured |
+| `blurb` | StoryGraph publisher description, scraped (577/618) | measured |
 | `ser` / `vol` | Goodreads title parsing; recommendations from my own knowledge | mixed |
 | `p` / `praw` | Ridge model output from `ax` + `cpace`, plus the King lift | computed |
 | `kingsim` | standardised distance to the centroid of your 5★ King books | computed |
@@ -95,5 +102,5 @@ tag means, edit `tagging-schema.md`.
 |---|---|---|
 | `books.json` moods/pace/blurbs | `sgscrape.py`, `sgdesc.py` | StoryGraph via Playwright; ~10 s per book, single worker |
 | `next_in_series.json` | `nextvol.py` (Wikidata), `isfdb.py` (ISFDB) | ISFDB is better for SFF; FantasticFiction is manual only |
-| `meta.json` | `fixmeta.py` | merges the Goodreads export with ratings given in chat |
-| `model.json` | refit in Python | Ridge + LOO; r = 0.713, residual ±0.63 |
+| `meta.json` | `fixmeta.py`, then `promote.py` | `fixmeta.py` merges the Goodreads export; `promote.py` folds in every rating made since |
+| `model.json` | `fit.py --write` | Ridge, leave-one-series-out; r = 0.620 for an unseen series, 0.720 for the next volume of one you have |

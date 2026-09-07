@@ -5,15 +5,16 @@ Assemble src/ into a deployable single-file page.
   python3 build.py            -> dist/reading-network.html   (Google Fonts, ~500 KB)
   python3 build.py --offline  -> also dist/reading-network-offline.html (fonts inlined, no
                                  third-party requests at all)
-  python3 build.py --dev      -> writes src/data.js so src/index.html opens straight from
-                                 file:// without a server (JSON via fetch would be
-                                 blocked by CORS on file://, hence the shim)
+
+Every run also writes src/data.js so src/index.html opens straight from file://
+without a server (JSON via fetch would be blocked by CORS on file://, hence the
+shim).
 
 Layout
   src/index.html   markup shell
   src/style.css    all styling
   src/app.js       all behaviour
-  src/data/*.json  books, model, meta, next_in_series
+  src/data/*.json  books, model, meta, ratings, graph, all_series, next_in_series
 """
 import base64
 import json
@@ -24,8 +25,7 @@ import sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 DIST = os.path.join(ROOT, "dist")
-DATA_FILES = ["books", "model", "meta", "next_in_series", "all_series", "ratings", "graph",
-              "needs_input"]
+DATA_FILES = ["books", "model", "meta", "next_in_series", "all_series", "ratings", "graph"]
 
 GOOGLE_FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -46,7 +46,7 @@ def load_data():
     for name in DATA_FILES:
         path = os.path.join(SRC, "data", f"{name}.json")
         if not os.path.exists(path):
-            if name in ("ratings", "all_series", "graph", "needs_input"):  # optional
+            if name in ("ratings", "all_series", "graph"):  # optional
                 out[name] = {"ratings": {}, "log": []} if name == "ratings" else {}
                 continue
             sys.exit(f"missing data file: {path}")

@@ -214,10 +214,12 @@ def main():
     print("Cross-validated fit\n")
     print(f"  {'training set':<40}{'rows':>5}{'groups':>8}{'LOO r':>9}"
           f"{'grouped':>10}{'resid':>9}{'gap':>9}")
+    # The first 274 records are the library as first published; everything after
+    # was promoted in later, so the slice is a stable historical comparison.
     original = books[:274]
     report("original 274 (as published)", rows_for(original))
-    report("all 318", rows_for(books))
-    report("all 318, only rows with real cpace", rows_for(books, measured_only=True))
+    report(f"all {len(books)}", rows_for(books))
+    report(f"all {len(books)}, only rows with real cpace", rows_for(books, measured_only=True))
 
     rows = rows_for(books)
     X = np.array([r[0] for r in rows], float)

@@ -182,7 +182,7 @@ def score(ax, cpace, model):
     Note: the p/praw already in books.json predate the current model.json and
     do not reproduce from it (see the note in the commit that added this).
     New records are scored from the committed model so they are at least
-    reproducible; the existing 274 are deliberately left alone."""
+    reproducible; existing records are deliberately left alone."""
     praw = model["intercept"] + sum(c * v for c, v in zip(model["coef"], features(ax, cpace)))
     return round(praw, 3), round(min(5.0, max(1.0, praw)), 1)
 
@@ -213,8 +213,8 @@ def rebuild_meta(books, untagged, meta, ratings):
     moment a rating landed on a title with no record — twelve Laundry Files
     ratings and Stross still read n:2.
 
-    meta.json derives from the Goodreads export, which covers 433 rated books
-    against 274 tagged ones, and that export is not in the repo. So the export's
+    meta.json derives from the Goodreads export, which covers more rated books
+    than books.json holds records for, and that export is not in the repo. So the export's
     numbers are snapshotted once as a baseline and every run recomputes
     baseline + tagged + untagged from scratch. Recomputing rather than
     incrementing is what makes this safe to run twice."""
@@ -412,7 +412,7 @@ def main():
     # Tagged additions earn graph edges: their four strongest facet-overlap
     # links, the same rule clusters.py uses. Cluster membership is inherited
     # from the strongest neighbour rather than recomputed, so adding a book
-    # never reshuffles the colours of the 274 already on screen.
+    # never reshuffles the colours of the books already on screen.
     added_edges = 0
     for i in range(start, len(books)):
         scored = sorted(((edge_weight(books[i], books[j]), j) for j in range(len(books))
