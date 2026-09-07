@@ -1188,5 +1188,869 @@
    "tragedy"
   ],
   "st": "complete-series"
+ },
+ "A Trade of Blood": {
+  "a": "Robert Jackson Bennett",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "st": "ongoing",
+  "ser": "Shadow of the Leviathan",
+  "vol": 3
+ },
+ "Sister Svangerd and the Not Quite Dead": {
+  "a": "K.J. Parker",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   1,
+   4,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "noir"
+  ],
+  "st": "ongoing",
+  "ser": "Sister Svangerd",
+  "vol": 1
+ },
+ "They Cry": {
+  "a": "Glen Cook",
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "ongoing",
+  "ser": "The Chronicles of the Black Company"
+ },
+ "Soulstealer": {
+  "a": "Miles Cameron",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "procedural",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "ser": "The Soulflake Conspiracies",
+  "vol": 1
+ },
+ "The Rouse": {
+  "a": "China Mieville",
+  "ax": [
+   3,
+   4,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "unplaceable"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "The God is Not Willing": {
+  "a": "Steven Erikson",
+  "ax": [
+   4,
+   3,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "ser": "Tales of Witness",
+  "vol": 1
+ },
+ "No Life Forsaken": {
+  "a": "Steven Erikson",
+  "ax": [
+   4,
+   3,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "ser": "Tales of Witness",
+  "vol": 2
+ },
+ "Legacies of Betrayal": {
+  "a": "Steven Erikson",
+  "ax": [
+   4,
+   3,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "ser": "Tales of Witness",
+  "vol": 3
+ },
+ "City of Others": {
+  "a": "Jared Poon",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "comedy"
+  ],
+  "st": "ongoing",
+  "ser": "DEUS Files",
+  "vol": 1
+ },
+ "Scion": {
+  "a": "James Islington",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   1,
+   3,
+   1
+  ],
+  "en": "heist",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "Ballad of the Bone Road": {
+  "a": "A.C. Wise",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "noir",
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "The Calamities": {
+  "a": "Chuck Wendig",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "ongoing",
+  "ser": "The Fiends",
+  "vol": 1
+ },
+ "Engines of Reason": {
+  "a": "Adrian Tchaikovsky",
+  "ax": [
+   4,
+   2,
+   4,
+   3,
+   1,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future",
+   "secondary-world"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing",
+  "ser": "Elder Race",
+  "vol": 2
+ },
+ "The Mercy of Gods": {
+  "a": "James S.A. Corey",
+  "ax": [
+   3,
+   3,
+   4,
+   4,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "ser": "The Captive's War",
+  "vol": 1
+ },
+ "The Faith of Beasts": {
+  "a": "James S.A. Corey",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "ser": "The Captive's War",
+  "vol": 2
+ },
+ "The Talisman": {
+  "a": "Stephen King, Peter Straub",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "portal",
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "st": "ongoing",
+  "ser": "The Talisman",
+  "vol": 1
+ },
+ "Black House": {
+  "a": "Stephen King, Peter Straub",
+  "ax": [
+   3,
+   3,
+   3,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth",
+   "portal"
+  ],
+  "sy": [
+   "mythic",
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "horror",
+   "procedural"
+  ],
+  "st": "ongoing",
+  "ser": "The Talisman",
+  "vol": 2
+ },
+ "Other Worlds Than These": {
+  "a": "Stephen King, Peter Straub",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "portal"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "st": "ongoing",
+  "ser": "The Talisman",
+  "vol": 3
+ },
+ "Off the Reservation": {
+  "a": "Stephen Graham Jones",
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "ser": "The Only Good Indians",
+  "vol": 2
+ },
+ "The Poet Empress": {
+  "a": "Shen Tao",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
+ },
+ "Dreams of the Dying": {
+  "a": "Nicolas Lietzau",
+  "ax": [
+   3,
+   4,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "ser": "The Twelfth World",
+  "vol": 1
+ },
+ "The Cure for Living, Part One": {
+  "a": "Nicolas Lietzau",
+  "ax": [
+   3,
+   4,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror",
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "ser": "The Twelfth World",
+  "vol": 2
+ },
+ "A Plagued Sea": {
+  "a": "Kim Bo-young",
+  "ax": [
+   4,
+   3,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone"
+ },
+ "And Side by Side They Wander": {
+  "a": "Molly Tanzer",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   1,
+   4,
+   1
+  ],
+  "en": "heist",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone"
+ },
+ "Palaces of the Crow": {
+  "a": "Ray Nayler",
+  "ax": [
+   3,
+   3,
+   5,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone"
  }
 }

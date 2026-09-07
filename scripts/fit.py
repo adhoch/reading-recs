@@ -256,9 +256,13 @@ def main():
         # on one named historical model without
         # changing which model that is.
         w = np.array(model["coef"], float)
+        off = model.get("ser_offset", {})
         moved = 0
         for bk in books:
-            praw = model["intercept"] + float(np.array(features(bk)) @ w)
+            # the same per-series level the refit path applies; without it a
+            # rescore silently strips every offset from the library
+            gk = snorm(bk["ser"]) if bk.get("ser") else "solo:" + snorm(bk["t"])
+            praw = model["intercept"] + float(np.array(features(bk)) @ w) + off.get(gk, 0.0)
             p = round(min(5.0, max(1.0, praw)), 1)
             if abs(bk.get("p", p) - p) > 1e-9:
                 moved += 1

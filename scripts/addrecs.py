@@ -55,6 +55,8 @@ def main():
                "st": spec.get("st", "standalone"), "cpace": None}
         if spec.get("ser"):
             rec["ser"] = spec["ser"]
+        if spec.get("vol"):
+            rec["vol"] = float(spec["vol"])
         for k in FACET_KEYS:
             rec[k] = spec.get(k, [])
         rec["praw"], rec["p"] = score(rec["ax"], rec["cpace"], model)
