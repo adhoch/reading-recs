@@ -9,8 +9,8 @@
    "mean": 4.0
   },
   "Jim Butcher": {
-   "n": 22,
-   "mean": 4.14
+   "n": 23,
+   "mean": 4.15
   },
   "Lev Grossman": {
    "n": 2,
@@ -58,7 +58,7 @@
   },
   "Thomas Harris": {
    "n": 1,
-   "mean": 4.0
+   "mean": 5.0
   },
   "Sebastien de Castell": {
    "n": 7,
@@ -85,8 +85,8 @@
    "mean": 3.0
   },
   "Adrian Tchaikovsky": {
-   "n": 5,
-   "mean": 4.6
+   "n": 8,
+   "mean": 4.38
   },
   "Alisa Kwitney": {
    "n": 1,
@@ -868,7 +868,19 @@
    "n": 1,
    "mean": 4.4
   },
+  "Josiah Bancroft": {
+   "n": 1,
+   "mean": 4.5
+  },
+  "Nick Harkaway": {
+   "n": 1,
+   "mean": 4.5
+  },
   "Ken Grimwood": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Megan E. O'Keefe": {
    "n": 1,
    "mean": 4.0
   },
@@ -880,9 +892,21 @@
    "n": 1,
    "mean": 4.5
   },
+  "Nicholas Eames": {
+   "n": 1,
+   "mean": 4.5
+  },
   "Mark Lawrence": {
    "n": 1,
    "mean": 3.0
+  },
+  "T. Kingfisher": {
+   "n": 1,
+   "mean": 4.5
+  },
+  "Ryka Aoki": {
+   "n": 1,
+   "mean": 4.5
   },
   "Sylvain Neuvel": {
    "n": 1,
@@ -977,8 +1001,8 @@
   },
   "dresden files": {
    "name": "The Dresden Files",
-   "n": 16,
-   "mean": 4.0,
+   "n": 17,
+   "mean": 4.03,
    "vols": [
     1.0,
     2.0,
@@ -1061,7 +1085,7 @@
   "hannibal lecter": {
    "name": "Hannibal Lecter",
    "n": 1,
-   "mean": 4.0,
+   "mean": 5.0,
    "vols": [
     1.0
    ]
@@ -2618,12 +2642,36 @@
     1.0
    ]
   },
+  "books of babel": {
+   "name": "The Books of Babel",
+   "n": 1,
+   "mean": 4.5,
+   "vols": [
+    1
+   ]
+  },
   "checquy files": {
    "name": "The Checquy Files",
    "n": 1,
    "mean": 4.5,
    "vols": [
     2
+   ]
+  },
+  "protectorate": {
+   "name": "The Protectorate",
+   "n": 1,
+   "mean": 4.0,
+   "vols": [
+    1
+   ]
+  },
+  "final architecture": {
+   "name": "The Final Architecture",
+   "n": 1,
+   "mean": 3.5,
+   "vols": [
+    1
    ]
   },
   "hells library": {
@@ -2636,6 +2684,14 @@
   },
   "tales of the kin": {
    "name": "Tales of the Kin",
+   "n": 1,
+   "mean": 4.5,
+   "vols": [
+    1
+   ]
+  },
+  "band": {
+   "name": "The Band",
    "n": 1,
    "mean": 4.5,
    "vols": [
