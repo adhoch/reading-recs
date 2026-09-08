@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-09-07T02:26:53.974Z",
+ "updated": "2026-09-08T05:57:56.967Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -296,7 +296,10 @@
   "Kings of the Wyld": 4.5,
   "Alien Clay": 4,
   "The Silence of the Lambs": 5,
-  "Shards of Earth": 3.5
+  "Shards of Earth": 3.5,
+  "The Talisman": 5,
+  "Finder": 4.5,
+  "The Ruins": 4
  },
  "log": [
   {
@@ -1185,6 +1188,24 @@
    "to": 3.5,
    "at": "2026-09-07T02:26:53.367Z",
    "note": "rated from the needs-you queue"
+  },
+  {
+   "t": "The Talisman",
+   "from": null,
+   "to": 5,
+   "at": "2026-09-08T05:50:03.062Z"
+  },
+  {
+   "t": "Finder",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-09-08T05:57:45.054Z"
+  },
+  {
+   "t": "The Ruins",
+   "from": null,
+   "to": 4,
+   "at": "2026-09-08T05:57:56.355Z"
   }
  ]
 }

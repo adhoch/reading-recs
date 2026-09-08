@@ -104,11 +104,42 @@ function setCamera(){
 const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;
 if(reduceMotion)spin=false;
 
+/* Four shelf-level genres, derived from the facets rather than tagged. The
+   schema deliberately has no genre field (see tagging-schema.md), so these are
+   read off system, milieu, engine and mode. Most books land in one; the ~5%
+   that land in two are science-fantasy (technological + a magic system) or an
+   earth-set crime novel played as horror. Two rated memoir-shaped books land in
+   none and that is correct. */
+const SF_MILIEU=new Set(["far-future","near-future","post-apocalyptic","alt-history","time-displaced"]);
+const MAGIC=new Set(["hard-magic","mythic","hidden-world-occult"]);
+function genresOf(b){
+  const sy=new Set(b.sy),mi=new Set(b.mi),mo=new Set(b.mo);
+  const g=new Set();
+  const mundane=sy.has("mundane");
+  const invented=mi.has("secondary-world")||(mi.has("portal")&&![...mi].some(m=>SF_MILIEU.has(m)));
+  // crime needs the real world and no magic: a secondary-world heist is fantasy
+  if(mundane&&!invented&&(["investigation","heist"].includes(b.en)||mo.has("noir")||mo.has("procedural")))
+    g.add("crime/thriller");
+  if(sy.has("technological"))g.add("sci-fi");
+  if([...sy].some(v=>MAGIC.has(v)))g.add("fantasy");
+  if(mundane){
+    if(invented)g.add("fantasy");
+    else if([...mi].some(m=>SF_MILIEU.has(m))&&!g.has("crime/thriller"))g.add("sci-fi");
+  }
+  // horror is a register, so it outranks a magic system but not an engineered
+  // one or a rule-stated one: those are fantasy/sci-fi that happen to be scary
+  if(mo.has("horror")&&!sy.has("hard-magic")&&!sy.has("technological")){g.add("horror");g.delete("fantasy");}
+  if(!g.size&&sy.has("cosmic-weird"))
+    g.add(invented||mi.has("unplaceable")?"fantasy":"sci-fi");
+  return g;
+}
+
 /* every tag a book carries, across facets + engine + thresholded SG moods */
 const MOOD_CUT=40;                              // a book "is" a mood if >=40% of readers said so
 function tagsOf(b){
   const t=new Set([b.en,...(b.ea||[]),b.st]);
   ["mi","sy","in","ca","mo"].forEach(k=>(b[k]||[]).forEach(v=>t.add(v)));
+  (b._genres||(b._genres=genresOf(b))).forEach(v=>t.add("genre:"+v));
   if(b.moods)for(const[m,pct]of Object.entries(b.moods))if(pct>=MOOD_CUT)t.add("mood:"+m);
   return t;
 }
@@ -1342,9 +1373,9 @@ function renderDetail(){
      see on a book is a tag you can pull the library down to. They were inert
      spans, which meant reading "hidden-world-occult" here and then hunting for
      it in the tag list to act on it. A selected one shows as on. */
-  const chips=(arr,hot)=>(arr||[]).map(v=>
-    `<button class="chip${hot?" hot":""}${activeTags.has(tagKey("",v))?" on":""}" data-tag="${
-      String(v).replace(/"/g,"&quot;")}" title="Filter the library to ${v}">${v}</button>`).join("");
+  const chips=(arr,hot,group="")=>(arr||[]).map(v=>
+    `<button class="chip${hot?" hot":""}${activeTags.has(tagKey(group,v))?" on":""}" data-key="${
+      tagKey(group,v).replace(/"/g,"&quot;")}" title="Filter the library to ${v}">${v}</button>`).join("");
   const bars=AXES.map(a=>{
     const v=b.ax[a.k],bad=a.dir==="min"?v<FIT[a.k]:v>FIT[a.k];
     return `<div class="bar"><div class="bar-head"><span>${a.n}</span><span>${v}/5</span></div>
@@ -1377,6 +1408,7 @@ function renderDetail(){
           title="${solo?"Showing only this group — click to show all":"Show only this group"}"
           style="border-color:${CLUSTER_COLORS[famOf(b.cl)%CLUSTER_COLORS.length]}"
           >${c.label} <em>${c.n}</em></button></div></div>`;})()}
+    <div class="facet"><div class="facet-label">Genre</div><div class="chips">${chips([...(b._genres||(b._genres=genresOf(b)))],false,"genre")}</div></div>
     <div class="facet"><div class="facet-label">Engine</div><div class="chips">${chips([b.en],true)}${chips(b.ea)}</div></div>
     <div class="facet"><div class="facet-label">Milieu</div><div class="chips">${chips(b.mi)}</div></div>
     <div class="facet"><div class="facet-label">System</div><div class="chips">${chips(b.sy)}</div></div>
@@ -1473,9 +1505,9 @@ function renderDetail(){
   });
   el.querySelectorAll(".near").forEach(d=>d.onclick=()=>{
     selected=+d.dataset.id;renderDetail();kick();});
-  el.querySelectorAll(".chip[data-tag]").forEach(d=>d.onclick=e=>{
+  el.querySelectorAll(".chip[data-key]").forEach(d=>d.onclick=e=>{
     e.stopPropagation();
-    const key=tagKey("",d.dataset.tag);
+    const key=d.dataset.key;
     activeTags.has(key)?activeTags.delete(key):activeTags.add(key);
     renderDetail();update();
   });
@@ -1658,7 +1690,7 @@ ENGINES.forEach(en=>{
 });
 /* ---------- tag filter ---------- */
 const TAG_GROUPS=[
-  ["Engine","en"],["Institution","in"],["System","sy"],
+  ["Genre","genre"],["Engine","en"],["Institution","in"],["System","sy"],
   ["Milieu","mi"],["Cast","ca"],["Mode","mo"],["Reader mood","mood"]
 ];
 function buildTagIndex(){
@@ -1666,6 +1698,7 @@ function buildTagIndex(){
   TAG_GROUPS.forEach(([,k])=>idx[k]=new Map());
   nodes.forEach(n=>{
     const bump=(k,v)=>{const m=idx[k];m.set(v,(m.get(v)||0)+1);};
+    (n._genres||(n._genres=genresOf(n))).forEach(v=>bump("genre",v));
     [n.en,...(n.ea||[])].forEach(v=>bump("en",v));
     ["in","sy","mi","ca","mo"].forEach(k=>(n[k]||[]).forEach(v=>bump(k,v)));
     if(n.moods)for(const[m,pct]of Object.entries(n.moods))if(pct>=MOOD_CUT)bump("mood",m);
@@ -1675,7 +1708,7 @@ function buildTagIndex(){
 const TAG_IDX=buildTagIndex();
 const tagFilterEl=document.getElementById("tagfilter");
 
-function tagKey(group,val){return group==="mood"?"mood:"+val:val;}
+function tagKey(group,val){return group==="mood"||group==="genre"?group+":"+val:val;}
 
 function renderTagFilter(){
   const q=(document.getElementById("tag-search").value||"").toLowerCase().trim();

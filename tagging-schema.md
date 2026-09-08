@@ -97,6 +97,30 @@ Your strongest single positive signal. Tag all that apply.
 
 `standalone` · `complete-series` · `ongoing` · `stalled`
 
+### Genre — derived, not tagged
+
+There is no genre facet, on purpose (see the top of this file). The viewer still
+offers four shelf-level filters — `fantasy` · `sci-fi` · `crime/thriller` ·
+`horror` — and reads them off the facets in `app.js` (`genresOf`):
+
+| genre | rule |
+|---|---|
+| `fantasy` | any of `hard-magic` / `mythic` / `hidden-world-occult`; or `mundane` in a `secondary-world` (Abercrombie, Parker, Lynch) or a pure `portal` |
+| `sci-fi` | `technological`; or `mundane` in an SF milieu (`far-future`, `near-future`, `post-apocalyptic`, `alt-history`, `time-displaced`) that is not also crime |
+| `crime/thriller` | `mundane`, on Earth, and either primary engine `investigation` / `heist` or mode `noir` / `procedural`. A secondary-world heist stays fantasy. |
+| `horror` | mode `horror`, unless the system is `hard-magic` or `technological` — those are fantasy/sci-fi that happen to be scary. When horror applies it replaces `fantasy`; a magic system played as horror is horror. |
+
+A book with only `cosmic-weird` and nothing above is fantasy in an invented
+world and sci-fi on Earth (*Roadside Picnic*, *The Etched City*).
+
+Measured over the 643-book library: 16 books land in two genres (2.5%), all of
+them science-fantasy (`technological` + a magic system: Dungeon Crawler Carl,
+*Ninefox Gambit*, *Foundryside*) or an Earth crime novel played as horror
+(*The Silence of the Lambs*). Two rated books land in none (*Night*, *Rage*):
+mundane, contemporary, no crime signal. Known misses: Tim Powers's secret
+histories (*Last Call*, *The Anubis Gates*) read as horror because they carry
+the mode and no `hard-magic`.
+
 ---
 
 ## Layer 2: Axes (ordinal 1–5)

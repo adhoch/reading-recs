@@ -153,6 +153,11 @@ Two measured facts about how unreliable the guesses are:
 To retag a book, edit `ax` in `data/books.json` and rebuild. To change what a
 tag means, edit `tagging-schema.md`.
 
+The four genre filters (fantasy, sci-fi, crime/thriller, horror) are not a
+field. They are derived at load time from system, milieu, engine and mode by
+`genresOf()` in `app.js`; the rules and their measured overlap are in
+`tagging-schema.md` under *Genre — derived, not tagged*.
+
 ## Regenerating the data
 
 | File | Script | Notes |
