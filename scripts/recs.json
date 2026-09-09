@@ -2052,5 +2052,387 @@
    "tragedy"
   ],
   "st": "standalone"
+ },
+ "The Jackal of Nar": {
+  "a": "John Marco",
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   3,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "Tyrants and Kings",
+  "vol": 1
+ },
+ "The Eyes of God": {
+  "a": "John Marco",
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   3,
+   3,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "The Bronze Knight",
+  "vol": 1
+ },
+ "Legend": {
+  "a": "David Gemmell",
+  "ax": [
+   5,
+   1,
+   2,
+   3,
+   2,
+   2,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "ser": "The Drenai Saga",
+  "vol": 1
+ },
+ "Waylander": {
+  "a": "David Gemmell",
+  "ax": [
+   5,
+   1,
+   2,
+   4,
+   2,
+   2,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "The Drenai Saga",
+  "vol": 3
+ },
+ "Magician": {
+  "a": "Raymond E. Feist",
+  "ax": [
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   4
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world",
+   "portal"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "The Riftwar Saga",
+  "vol": 1
+ },
+ "Dawnthief": {
+  "a": "James Barclay",
+  "ax": [
+   4,
+   2,
+   2,
+   2,
+   1,
+   2,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp",
+   "academy"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "Chronicles of the Raven",
+  "vol": 1
+ },
+ "King's Dragon": {
+  "a": "Kate Elliott",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   3,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church",
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "Crown of Stars",
+  "vol": 1
+ },
+ "Winterbirth": {
+  "a": "Brian Ruckley",
+  "ax": [
+   2,
+   3,
+   3,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "ser": "The Godless World",
+  "vol": 1
+ },
+ "The Curse of the Mistwraith": {
+  "a": "Janny Wurts",
+  "ax": [
+   2,
+   5,
+   5,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic",
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "ser": "The Wars of Light and Shadow",
+  "vol": 1
+ },
+ "The Ten Thousand": {
+  "a": "Paul Kearney",
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "ser": "The Macht",
+  "vol": 1
+ },
+ "A Cavern of Black Ice": {
+  "a": "J.V. Jones",
+  "ax": [
+   2,
+   3,
+   3,
+   5,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "stalled",
+  "ser": "Sword of Shadows",
+  "vol": 1
  }
 }
