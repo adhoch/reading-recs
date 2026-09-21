@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-09-08T05:57:56.967Z",
+ "updated": "2026-09-17T19:48:20.501Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -299,7 +299,12 @@
   "Shards of Earth": 3.5,
   "The Talisman": 5,
   "Finder": 4.5,
-  "The Ruins": 4
+  "The Ruins": 4,
+  "Red Sister": 5,
+  "Grey Sister": 4.5,
+  "Holy Sister": 4.5,
+  "Some Desperate Glory": 4,
+  "Man in the Empty Suit": 4
  },
  "log": [
   {
@@ -1206,6 +1211,38 @@
    "from": null,
    "to": 4,
    "at": "2026-09-08T05:57:56.355Z"
+  },
+  {
+   "t": "Red Sister",
+   "from": null,
+   "to": 5,
+   "at": "2026-09-16T14:39:44.177Z"
+  },
+  {
+   "t": "Grey Sister",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-09-16T14:39:52.425Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Holy Sister",
+   "from": null,
+   "to": 4.5,
+   "at": "2026-09-16T14:39:53.909Z",
+   "note": "rated from series list"
+  },
+  {
+   "t": "Some Desperate Glory",
+   "from": null,
+   "to": 4,
+   "at": "2026-09-17T19:47:02.202Z"
+  },
+  {
+   "t": "Man in the Empty Suit",
+   "from": null,
+   "to": 4,
+   "at": "2026-09-17T19:48:19.888Z"
   }
  ]
 }
