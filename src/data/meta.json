@@ -61,8 +61,8 @@
    "mean": 5.0
   },
   "Sebastien de Castell": {
-   "n": 7,
-   "mean": 2.93
+   "n": 6,
+   "mean": 3.33
   },
   "Benjamin Liar": {
    "n": 1,
@@ -109,12 +109,12 @@
    "mean": 3.0
   },
   "K.J. Parker": {
-   "n": 3,
-   "mean": 5.0
+   "n": 4,
+   "mean": 4.88
   },
   "Stephen King": {
    "n": 37,
-   "mean": 4.06
+   "mean": 4.09
   },
   "Charles Stross": {
    "n": 15,
@@ -349,7 +349,7 @@
    "mean": 4.0
   },
   "Patrick Rothfuss": {
-   "n": 3,
+   "n": 2,
    "mean": 4.75
   },
   "Suzanne Collins": {
@@ -876,13 +876,33 @@
    "n": 1,
    "mean": 4.5
   },
+  "Mark Lawrence": {
+   "n": 4,
+   "mean": 4.25
+  },
   "Ken Grimwood": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Sean Ferrell": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Scott Smith": {
+   "n": 1,
+   "mean": 4.0
+  },
+  "Emily Tesh": {
    "n": 1,
    "mean": 4.0
   },
   "Megan E. O'Keefe": {
    "n": 1,
    "mean": 4.0
+  },
+  "Suzanne Palmer": {
+   "n": 1,
+   "mean": 4.5
   },
   "A.J. Hackwith": {
    "n": 1,
@@ -895,10 +915,6 @@
   "Nicholas Eames": {
    "n": 1,
    "mean": 4.5
-  },
-  "Mark Lawrence": {
-   "n": 1,
-   "mean": 3.0
   },
   "T. Kingfisher": {
    "n": 1,
@@ -979,6 +995,18 @@
   "Robert Jordan & Brandon Sanderson": {
    "n": 3,
    "mean": 3.67
+  },
+  "Stephen King, Peter Straub": {
+   "n": 1,
+   "mean": 5.0
+  },
+  "Kim Newman": {
+   "n": 1,
+   "mean": 3.5
+  },
+  "Thomas D. Lee": {
+   "n": 1,
+   "mean": 5.0
   }
  },
  "series": {
@@ -1092,8 +1120,8 @@
   },
   "greatcoats": {
    "name": "Greatcoats",
-   "n": 7,
-   "mean": 2.93,
+   "n": 6,
+   "mean": 3.33,
    "vols": [
     1.0
    ]
@@ -1650,7 +1678,7 @@
   },
   "kingkiller chronicle": {
    "name": "The Kingkiller Chronicle",
-   "n": 3,
+   "n": 2,
    "mean": 4.75,
    "vols": [
     1.0,
@@ -2611,7 +2639,7 @@
   "talisman": {
    "name": "The Talisman",
    "n": 1,
-   "mean": 4.0,
+   "mean": 5.0,
    "vols": [
     1.0
    ]
@@ -2650,6 +2678,16 @@
     1
    ]
   },
+  "book of the ancestor": {
+   "name": "Book of the Ancestor",
+   "n": 3,
+   "mean": 4.67,
+   "vols": [
+    1,
+    2.0,
+    3.0
+   ]
+  },
   "checquy files": {
    "name": "The Checquy Files",
    "n": 1,
@@ -2670,6 +2708,14 @@
    "name": "The Final Architecture",
    "n": 1,
    "mean": 3.5,
+   "vols": [
+    1
+   ]
+  },
+  "finder chronicles": {
+   "name": "Finder Chronicles",
+   "n": 1,
+   "mean": 4.5,
    "vols": [
     1
    ]

@@ -10066,5 +10066,217 @@
   "tagsrc": "per-volume-2026-08",
   "cpace": 3.0,
   "nrev": 502
+ },
+ "Billy Summers": {
+  "a": "Stephen King",
+  "ax": [
+   4,
+   2,
+   4,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "heist",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Anno Dracula": {
+  "a": "Kim Newman",
+  "ser": "Anno Dracula",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   2,
+   5,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "alt-history"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand",
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "noir",
+   "satire",
+   "horror"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Sixteen Ways to Defend a Walled City": {
+  "a": "K.J. Parker",
+  "ser": "The Siege",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   1,
+   5,
+   4
+  ],
+  "en": "survival",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military",
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Lovecraft Country": {
+  "a": "Matt Ruff",
+  "ser": "Lovecraft Country",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "satire",
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Long Walk": {
+  "a": "Stephen King",
+  "ax": [
+   4,
+   1,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [],
+  "mi": [
+   "alt-history"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "tragedy",
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Perilous Times": {
+  "a": "Thomas D. Lee",
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   2,
+   3,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "comedy",
+   "satire"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
  }
 }

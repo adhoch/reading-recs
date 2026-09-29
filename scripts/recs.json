@@ -2434,5 +2434,1884 @@
   "st": "stalled",
   "ser": "Sword of Shadows",
   "vol": 1
+ },
+ "Wanderers": {
+  "a": "Chuck Wendig",
+  "ser": "Wanderers",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Last House on Needless Street": {
+  "a": "Catriona Ward",
+  "ax": [
+   3,
+   3,
+   5,
+   5,
+   1,
+   5,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Gentlemen of the Road": {
+  "a": "Michael Chabon",
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   1,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Gutter Prayer": {
+  "a": "Gareth Hanrahan",
+  "ser": "The Black Iron Legacy",
+  "vol": 1,
+  "ax": [
+   4,
+   3,
+   2,
+   4,
+   1,
+   5,
+   2
+  ],
+  "en": "heist",
+  "ea": [
+   "mystery-box",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "criminal-org",
+   "guild-corp",
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Devices and Desires": {
+  "a": "K.J. Parker",
+  "ser": "The Engineer Trilogy",
+  "vol": 1,
+  "ax": [
+   2,
+   4,
+   3,
+   4,
+   2,
+   5,
+   2
+  ],
+  "en": "heist",
+  "ea": [
+   "campaign-war",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "military",
+   "guild-corp"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Fifth Season": {
+  "a": "N.K. Jemisin",
+  "ser": "The Broken Earth",
+  "vol": 1,
+  "ax": [
+   3,
+   4,
+   4,
+   5,
+   2,
+   5,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world",
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy",
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Age of Ash": {
+  "a": "Daniel Abraham",
+  "ser": "Kithamar",
+  "vol": 1,
+  "ax": [
+   2,
+   3,
+   4,
+   3,
+   1,
+   5,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy",
+   "noir"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Low Town": {
+  "a": "Daniel Polansky",
+  "ser": "Low Town",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org",
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Fevre Dream": {
+  "a": "George R.R. Martin",
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   1,
+   5,
+   1
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "horror",
+   "adventure"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Sufficiently Advanced Magic": {
+  "a": "Andrew Rowe",
+  "ser": "Arcane Ascension",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   2,
+   1,
+   3,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Rosewater": {
+  "a": "Tade Thompson",
+  "ser": "The Wormwood Trilogy",
+  "vol": 1,
+  "ax": [
+   3,
+   4,
+   4,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "cosmic-weird",
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Iron Prince": {
+  "a": "Bryce O'Connor",
+  "ser": "Warformed: Stormweaver",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   2,
+   1,
+   3,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Embassytown": {
+  "a": "China Miéville",
+  "ax": [
+   2,
+   5,
+   4,
+   3,
+   1,
+   5,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Black Sun": {
+  "a": "Rebecca Roanhorse",
+  "ser": "Between Earth and Sky",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   4,
+   2,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Orconomics": {
+  "a": "J. Zachary Pike",
+  "ser": "The Dark Profit Saga",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   2,
+   2,
+   1,
+   4,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Blackfish City": {
+  "a": "Sam J. Miller",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "near-future",
+   "post-apocalyptic"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "criminal-org",
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Ember Blade": {
+  "a": "Chris Wooding",
+  "ser": "The Darkwater Legacy",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   2,
+   4,
+   3
+  ],
+  "en": "heist",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew",
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Raven Scholar": {
+  "a": "Antonia Hodgson",
+  "ser": "The Eternal Path",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   5,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "academy",
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl",
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Steerswoman": {
+  "a": "Rosemary Kirstein",
+  "ser": "The Steerswoman",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   2,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Blood Over Bright Haven": {
+  "a": "M.L. Wang",
+  "ax": [
+   4,
+   2,
+   4,
+   5,
+   2,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy",
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Tyranny of the Night": {
+  "a": "Glen Cook",
+  "ser": "Instrumentalities of the Night",
+  "vol": 1,
+  "ax": [
+   2,
+   4,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Night Film": {
+  "a": "Marisha Pessl",
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Into the Labyrinth": {
+  "a": "John Bierce",
+  "ser": "Mage Errant",
+  "vol": 1,
+  "ax": [
+   3,
+   1,
+   2,
+   2,
+   1,
+   3,
+   4
+  ],
+  "en": "ascent-of-power",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "ensemble-crew",
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Exordia": {
+  "a": "Seth Dickinson",
+  "ax": [
+   3,
+   3,
+   4,
+   5,
+   1,
+   5,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird",
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Age of Myth": {
+  "a": "Michael J. Sullivan",
+  "ser": "The Legends of the First Empire",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "institutional-politics",
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Burn Palace": {
+  "a": "Stephen Dobyns",
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   1,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "procedural",
+   "satire",
+   "noir"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Elric of Melniboné": {
+  "a": "Michael Moorcock",
+  "ser": "Elric",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   2,
+   4,
+   3
+  ],
+  "en": "quest",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Beyond Redemption": {
+  "a": "Michael R. Fletcher",
+  "ser": "Manifest Delusions",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "heist",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic",
+   "cosmic-weird"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew",
+   "villain-protagonist"
+  ],
+  "mo": [
+   "tragedy",
+   "horror"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Under Heaven": {
+  "a": "Guy Gavriel Kay",
+  "ax": [
+   2,
+   3,
+   4,
+   3,
+   3,
+   5,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl",
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Way into Chaos": {
+  "a": "Harry Connolly",
+  "ser": "The Great Way",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure",
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Glasshouse": {
+  "a": "Charles Stross",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   4,
+   1
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "satire"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Adventures of Amina al-Sirafi": {
+  "a": "Shannon Chakraborty",
+  "ser": "Amina al-Sirafi",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   2,
+   2,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Emperor's Blades": {
+  "a": "Brian Staveley",
+  "ser": "Chronicle of the Unhewn Throne",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic",
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "church",
+   "academy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Sword-Edged Blonde": {
+  "a": "Alex Bledsoe",
+  "ser": "Eddie LaCrosse",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   3,
+   3,
+   2,
+   3,
+   4
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Johannes Cabal the Necromancer": {
+  "a": "Jonathan L. Howard",
+  "ser": "Johannes Cabal",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   1,
+   5,
+   3
+  ],
+  "en": "heist",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "unplaceable"
+  ],
+  "sy": [
+   "hidden-world-occult",
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "villain-protagonist"
+  ],
+  "mo": [
+   "comedy",
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Reformatory": {
+  "a": "Tananarive Due",
+  "ax": [
+   3,
+   2,
+   4,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "survival",
+  "ea": [],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "A Crown for Cold Silver": {
+  "a": "Alex Marshall",
+  "ser": "The Crimson Empire",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   2,
+   4,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure",
+   "comedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Little Heaven": {
+  "a": "Nick Cutter",
+  "ax": [
+   3,
+   2,
+   2,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "survival",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Genesis of Misery": {
+  "a": "Neon Yang",
+  "ser": "The Nova Vita Protocol",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   4,
+   4,
+   2,
+   4,
+   2
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "institutional-politics",
+   "campaign-war"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological",
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Pariah": {
+  "a": "Anthony Ryan",
+  "ser": "The Covenant of Steel",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "campaign-war",
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "criminal-org",
+   "church"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Whisper Down the Lane": {
+  "a": "Clay McLeod Chapman",
+  "ax": [
+   4,
+   2,
+   4,
+   4,
+   1,
+   3,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Blood Trials": {
+  "a": "N.E. Davenport",
+  "ser": "Blood Gift",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   3,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "military",
+   "academy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Unspoken Name": {
+  "a": "A.K. Larkwood",
+  "ser": "The Serpent Gates",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   3,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "ascent-of-power"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "City of Lies": {
+  "a": "Sam Hawke",
+  "ser": "Poison Wars",
+  "vol": 1,
+  "ax": [
+   2,
+   3,
+   4,
+   3,
+   1,
+   3,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics",
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "procedural"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Splinter in the Sky": {
+  "a": "Kemi Ashing-Giwa",
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   3,
+   3,
+   1
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "heist"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military",
+   "bureaucracy"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Master of Sorrows": {
+  "a": "Justin Call",
+  "ser": "The Silent Gods",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   3,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Bone Shard Daughter": {
+  "a": "Andrea Stewart",
+  "ser": "The Drowning Empire",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Even Though I Knew the End": {
+  "a": "C.L. Polk",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   4,
+   4,
+   1
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "historical-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "noir"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Gunmetal Gods": {
+  "a": "Zamil Akhtar",
+  "ser": "Gunmetal Gods",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   5,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military",
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Book That Wouldn't Burn": {
+  "a": "Mark Lawrence",
+  "ser": "The Library Trilogy",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   4,
+   3,
+   3,
+   4,
+   2
+  ],
+  "en": "mystery-box",
+  "ea": [
+   "quest",
+   "survival"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Agents of Dreamland": {
+  "a": "Caitlín R. Kiernan",
+  "ser": "Tinfoil Dossier",
+  "vol": 1,
+  "ax": [
+   2,
+   4,
+   4,
+   5,
+   1,
+   5,
+   2
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "noir",
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Wolf of Oren-Yaro": {
+  "a": "K.S. Villoso",
+  "ser": "Chronicles of the Wolf Queen",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   4,
+   4,
+   3,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "tragedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Devils Kill Devils": {
+  "a": "Johnny Compton",
+  "ax": [
+   3,
+   2,
+   3,
+   5,
+   1,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mythic",
+   "hidden-world-occult"
+  ],
+  "in": [
+   "church"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Mortedant's Peril": {
+  "a": "R.J. Barker",
+  "ser": "The Trials of Irody Hasp",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   3,
+   1,
+   4,
+   2
+  ],
+  "en": "investigation",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "procedural",
+   "comedy"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
  }
 }
