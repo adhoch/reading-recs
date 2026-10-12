@@ -29,6 +29,10 @@ sg_todo.json
 sg_calib.json
 sg_retry.json
 
+# Goodreads review text. Kept local and never committed: the reviews are other
+# people's writing and the repo is served publicly. Losing it costs a re-scrape.
+gr_reviews.jsonl
+
 # conversation exports, kept locally as working notes
 context/
 tagging-blind-set.json

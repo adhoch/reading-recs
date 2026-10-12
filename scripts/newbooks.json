@@ -10278,5 +10278,40 @@
   ],
   "st": "standalone",
   "tagsrc": "ensemble-2026-09"
+ },
+ "Mickey7": {
+  "a": "Edward Ashton",
+  "ser": "Mickey7",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   4,
+   3,
+   2,
+   3,
+   2
+  ],
+  "en": "survival",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
  }
 }

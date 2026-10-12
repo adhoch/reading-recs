@@ -83,20 +83,82 @@ what everyone thinks, and the model exists to predict what *you* think.
 Retained as a possible future source: the 1.26 GB **review-text** file for the
 same subset. Review prose describes experience where shelves describe category,
 and it is the one untested signal in this dataset. Note the blurb result before
-trying it — marketing text scored 0.153 against a 0.713 baseline.
+trying it — marketing text scored 0.153 against a 0.713 baseline. Review text
+has since been tested from Goodreads instead, and failed; see October 2026 below.
 
 Licence note: the UCSD data is released "for academic use only… please do not
 redistribute them or use for commercial purposes." A personal recommender is
 non-commercial but not academic. Judgement call; nothing derived from it is
 currently shipped.
 
+## Tested October 2026: reader reviews, and Jev
+
+Measured on the 618-book library with `fit.py`'s grouped CV (a whole series
+held out), not the LOO of the tables above. Baseline is the library as it
+stands: **grouped r 0.621** over 290 training rows, 0.424 on the 95
+blind-tagged rated books alone. Each candidate replaced the seven axes of those
+95 books, offset-corrected per axis against the blind ensemble as
+`tagging-schema.md` prescribes. The LLM rater used the unanchored prompt,
+because the anchored one names six of the 95.
+
+**Where review text can come from.**
+
+| Source | Result |
+|---|---|
+| Goodreads book page | 30 reviews per book, no login. All 95 blind-set books found; median 27 reviews of 40+ words, minimum 20; star rating readable on 2,743 of 2,850. Search pages answer a headless browser with an AWS WAF challenge and book pages do not, so the searches ran in a real browser. Kept locally as `gr_reviews.jsonl`, gitignored |
+| Hardcover GraphQL | `user_books.review_raw` exists, but the volume is 0.2–0.5% of StoryGraph's: 41 reviews for *Horns* against 15,438, one for a mid-series McLean. Resets the connection under fast requests |
+| StoryGraph review pages | `/book_reviews/{id}` sits behind a Cloudflare challenge that never cleared. The stats page the scraper reads is unaffected. Not pursued |
+| Amazon | The Creators API returns count and star rating only. Logged-in review pages show 10 and ignore paging, though `filterByStar` gives 10 per star. Mid-series volumes carry one-line reviews. Scraping is against the conditions of use and runs through your account. Not pursued |
+| Amazon Reviews 2023 (McAuley) | Has the text, ends September 2023; Books is 20.1 GB plus 14.7 GB of metadata, and the card states no licence. Not downloaded |
+| Google Books | No review resource at all; still 429 without a key |
+
+**What reviews do to the axes.** Ten reviews per book, chosen across star
+levels, given to two taggers:
+
+| tags on the 95 | grouped r, library | grouped r, 95 only | velocity weight |
+|---|---|---|---|
+| blind ensemble (current) | **0.621** | **0.424** | +0.41 |
+| LLM rater, no reviews | 0.598 | 0.305 | +0.32 |
+| same rater, with reviews | 0.554 | 0.088 | +0.17 |
+| Jev, from reviews | 0.534 | 0.102 | +0.01 |
+| Jev, from blurb | 0.575 | 0.135 | |
+| ensemble + rater without reviews, as a third | 0.624 | 0.417 | |
+| ensemble + rater with reviews, as a third | 0.619 | 0.376 | |
+
+Reviews made both taggers worse, by the route `docs-data.md` already documents
+for community pace. With reviews in view the rater's velocity moved toward what
+strangers report (agreement with the ensemble r 0.81 → 0.64) and its weight in
+the model halved. Reviews describe the average reader's experience; the part of
+velocity that predicts your rating is not in it. Jev (TypeSafe, `jev-1.13.0`)
+reproduced the tags only moderately — r 0.48–0.70 per axis, offset-corrected
+MAD 0.63 against 0.39–0.45 between raters — and its velocity carried nothing.
+
+One run per arm. The rater's tags with and without reviews differ by MAD 0.24,
+which is the same-model rerun floor (0.22), so part of the 95-only drop may be
+sampling. The direction held on every measure and for both taggers.
+
+**Jev for facets.** Jev given the blurb, against rater A on the 84 books in
+`tagging-my-answers.json`, scored as `tagdiff.py` scores B and C:
+
+| | B | C | Jev |
+|---|---|---|---|
+| mean of the eight facets | 65% | 70% | 57% |
+| milieu | 85% | 89% | 89% |
+| engine | 77% | 79% | 61% |
+| institution | 56% | 61% | 40% |
+| engine_alt | 45% | 44% | 9% |
+
+Good on setting, poor on what drives the plot, which is the facet with the most
+weight. Asked as independent yes/no questions, the near-single-valued facets
+over-fire (2.4 milieus per book where A tags one) and the mean falls to 46%;
+milieu, system and cast have to be single-choice questions.
+
 ## Not yet tried
 
 | Source | Why it might work | Cost |
 |---|---|---|
-| **Hardcover** GraphQL | moods + tags + `users_count`; `users_count` is a cleaner "how well-known" proxy than review count, and that predicts where my tagging is unreliable | free token, must run from your machine |
+| **Hardcover** GraphQL | moods + tags + `users_count`; `users_count` is a cleaner "how well-known" proxy than review count, and that predicts where my tagging is unreliable. Its review text is too thin to use (above) | free token, must run from your machine |
 | **StoryGraph content warnings** | a real "not tonight" filter; existing scraper reaches the page already | ~10 s/book |
-| **Review text** (not blurbs) | blurbs are marketing and failed badly; reader reviews describe *experience*, which is what the axes measure | needs a review corpus |
 | Page count | the most common mood constraint; export has it for 82/274, none of the recommendations | one lookup per rec |
 
 ## The lesson worth keeping

@@ -1,6 +1,6 @@
 {
  "_note": "Ratings recorded in the app. Committed to git as the durable record. build.py merges these over books.json.",
- "updated": "2026-09-29T04:20:24.000Z",
+ "updated": "2026-10-09T15:14:15.000Z",
  "ratings": {
   "The Fuller Memorandum": 5,
   "The Atrocity Archives": 5,
@@ -308,7 +308,9 @@
   "Anno Dracula": 3.5,
   "Sixteen Ways to Defend a Walled City": 4.5,
   "Lovecraft Country": 4,
-  "Perilous Times": 5
+  "Perilous Times": 5,
+  "Mickey7": 5,
+  "The Black Prism": 4
  },
  "log": [
   {
@@ -1303,6 +1305,20 @@
    "to": 5,
    "at": "2026-09-29T04:20:24.000Z",
    "note": "told directly"
+  },
+  {
+   "t": "Mickey7",
+   "from": null,
+   "to": 5,
+   "at": "2026-10-09T15:05:08.000Z",
+   "note": "told directly"
+  },
+  {
+   "t": "The Black Prism",
+   "from": null,
+   "to": 4,
+   "at": "2026-10-09T15:14:15.000Z",
+   "note": "Goodreads export: read, 4 stars; was filed as an unread rec"
   }
  ]
 }

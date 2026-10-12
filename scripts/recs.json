@@ -162,37 +162,6 @@
   ],
   "st": "complete-series"
  },
- "Old Man's War": {
-  "a": "John Scalzi",
-  "ser": "Old Man's War",
-  "ax": [
-   5,
-   1,
-   2,
-   3,
-   2,
-   3,
-   2
-  ],
-  "en": "campaign-war",
-  "ea": [],
-  "mi": [
-   "far-future"
-  ],
-  "sy": [
-   "technological"
-  ],
-  "in": [
-   "military"
-  ],
-  "ca": [
-   "solo-competent"
-  ],
-  "mo": [
-   "adventure"
-  ],
-  "st": "complete-series"
- },
  "The Forever War": {
   "a": "Joe Haldeman",
   "ax": [
@@ -317,40 +286,6 @@
    "adventure"
   ],
   "st": "complete-series"
- },
- "He Who Fights with Monsters": {
-  "a": "Shirtaloon",
-  "ser": "He Who Fights with Monsters",
-  "ax": [
-   4,
-   1,
-   3,
-   2,
-   1,
-   2,
-   4
-  ],
-  "en": "ascent-of-power",
-  "ea": [
-   "quest"
-  ],
-  "mi": [
-   "portal"
-  ],
-  "sy": [
-   "hard-magic"
-  ],
-  "in": [
-   "guild-corp"
-  ],
-  "ca": [
-   "solo-competent"
-  ],
-  "mo": [
-   "comedy",
-   "adventure"
-  ],
-  "st": "ongoing"
  },
  "The Rage of Dragons": {
   "a": "Evan Winter",
@@ -1359,117 +1294,6 @@
    "horror"
   ],
   "st": "standalone"
- },
- "The God is Not Willing": {
-  "a": "Steven Erikson",
-  "ax": [
-   4,
-   3,
-   3,
-   4,
-   1,
-   5,
-   1
-  ],
-  "en": "campaign-war",
-  "ea": [
-   "survival",
-   "institutional-politics"
-  ],
-  "mi": [
-   "secondary-world"
-  ],
-  "sy": [
-   "hard-magic",
-   "mythic"
-  ],
-  "in": [
-   "military"
-  ],
-  "ca": [
-   "multi-pov-sprawl"
-  ],
-  "mo": [
-   "tragedy",
-   "adventure"
-  ],
-  "st": "ongoing",
-  "ser": "Tales of Witness",
-  "vol": 1
- },
- "No Life Forsaken": {
-  "a": "Steven Erikson",
-  "ax": [
-   4,
-   3,
-   3,
-   4,
-   1,
-   5,
-   1
-  ],
-  "en": "campaign-war",
-  "ea": [
-   "survival",
-   "institutional-politics"
-  ],
-  "mi": [
-   "secondary-world"
-  ],
-  "sy": [
-   "hard-magic",
-   "mythic"
-  ],
-  "in": [
-   "military"
-  ],
-  "ca": [
-   "multi-pov-sprawl"
-  ],
-  "mo": [
-   "tragedy",
-   "adventure"
-  ],
-  "st": "ongoing",
-  "ser": "Tales of Witness",
-  "vol": 2
- },
- "Legacies of Betrayal": {
-  "a": "Steven Erikson",
-  "ax": [
-   4,
-   3,
-   3,
-   4,
-   1,
-   5,
-   1
-  ],
-  "en": "campaign-war",
-  "ea": [
-   "survival",
-   "institutional-politics"
-  ],
-  "mi": [
-   "secondary-world"
-  ],
-  "sy": [
-   "hard-magic",
-   "mythic"
-  ],
-  "in": [
-   "military"
-  ],
-  "ca": [
-   "multi-pov-sprawl"
-  ],
-  "mo": [
-   "tragedy",
-   "adventure"
-  ],
-  "st": "ongoing",
-  "ser": "Tales of Witness",
-  "vol": 3
  },
  "City of Others": {
   "a": "Jared Poon",
@@ -4312,6 +4136,721 @@
    "comedy"
   ],
   "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "How to Rule an Empire and Get Away with It": {
+  "a": "K.J. Parker",
+  "ser": "The Siege",
+  "vol": 2,
+  "ax": [
+   4,
+   2,
+   4,
+   3,
+   1,
+   4,
+   3
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "survival",
+   "campaign-war"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mundane"
+  ],
+  "in": [
+   "bureaucracy",
+   "military"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "satire",
+   "comedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Red Wolf Conspiracy": {
+  "a": "Robert V.S. Redick",
+  "ser": "The Chathrand Voyage",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   4,
+   2
+  ],
+  "en": "institutional-politics",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "naive-initiate",
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Valor's Choice": {
+  "a": "Tanya Huff",
+  "ser": "Confederation of Valor",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Hammer and the Blade": {
+  "a": "Paul S. Kemp",
+  "ser": "Tales of Egil and Nix",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "heist",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "st": "stalled",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Way of Shadows": {
+  "a": "Brent Weeks",
+  "ser": "Night Angel",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   2,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "criminal-org"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Library of the Dead": {
+  "a": "T.L. Huchu",
+  "ser": "Edinburgh Nights",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [],
+  "mi": [
+   "near-future"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "guild-corp"
+  ],
+  "ca": [
+   "solo-competent"
+  ],
+  "mo": [
+   "noir",
+   "adventure"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Sins of Empire": {
+  "a": "Brian McClellan",
+  "ser": "Gods of Blood and Powder",
+  "vol": 1,
+  "ax": [
+   4,
+   3,
+   2,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "investigation",
+  "ea": [
+   "campaign-war",
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "bureaucracy",
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Fool's Gold": {
+  "a": "Jon Hollins",
+  "ser": "The Dragon Lords",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   3,
+   1,
+   3,
+   3
+  ],
+  "en": "heist",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Southern Book Club's Guide to Slaying Vampires": {
+  "a": "Grady Hendrix",
+  "ax": [
+   4,
+   1,
+   3,
+   4,
+   1,
+   3,
+   1
+  ],
+  "en": "investigation",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "hidden-world-occult"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "satire",
+   "horror"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Shadow of What Was Lost": {
+  "a": "James Islington",
+  "ser": "Licanius",
+  "vol": 1,
+  "ax": [
+   3,
+   3,
+   2,
+   3,
+   2,
+   3,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "mystery-box"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate",
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Another Fine Myth": {
+  "a": "Robert Asprin",
+  "ser": "Myth Adventures",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   2,
+   1,
+   1,
+   2,
+   5
+  ],
+  "en": "quest",
+  "ea": [],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate",
+   "ensemble-crew"
+  ],
+  "mo": [
+   "comedy"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Expecting Someone Taller": {
+  "a": "Tom Holt",
+  "ax": [
+   3,
+   1,
+   3,
+   1,
+   2,
+   4,
+   1
+  ],
+  "en": "quest",
+  "ea": [],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "comedy",
+   "satire"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Light Brigade": {
+  "a": "Kameron Hurley",
+  "ax": [
+   4,
+   3,
+   3,
+   5,
+   1,
+   3,
+   1
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "survival",
+   "mystery-box"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military",
+   "guild-corp"
+  ],
+  "ca": [
+   "damaged-loner"
+  ],
+  "mo": [
+   "satire",
+   "tragedy"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Bitter Seeds": {
+  "a": "Ian Tregillis",
+  "ser": "The Milkweed Triptych",
+  "vol": 1,
+  "ax": [
+   3,
+   2,
+   3,
+   5,
+   1,
+   4,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "alt-history",
+   "historical-earth"
+  ],
+  "sy": [
+   "cosmic-weird",
+   "technological"
+  ],
+  "in": [
+   "bureaucracy",
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "horror"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Skyward": {
+  "a": "Brandon Sanderson",
+  "ser": "Skyward",
+  "vol": 1,
+  "ax": [
+   4,
+   1,
+   3,
+   2,
+   1,
+   3,
+   3
+  ],
+  "en": "ascent-of-power",
+  "ea": [
+   "mystery-box",
+   "survival"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military",
+   "academy"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Angelmaker": {
+  "a": "Nick Harkaway",
+  "ax": [
+   3,
+   3,
+   3,
+   3,
+   2,
+   5,
+   1
+  ],
+  "en": "quest",
+  "ea": [
+   "survival",
+   "heist",
+   "investigation"
+  ],
+  "mi": [
+   "contemporary-earth"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "criminal-org",
+   "bureaucracy"
+  ],
+  "ca": [
+   "dual-strand"
+  ],
+  "mo": [
+   "noir",
+   "comedy",
+   "adventure"
+  ],
+  "st": "standalone",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "A Shadow of All Night Falling": {
+  "a": "Glen Cook",
+  "ser": "The Dread Empire",
+  "vol": 1,
+  "ax": [
+   3,
+   4,
+   2,
+   4,
+   2,
+   3,
+   2
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "quest"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "mythic"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "tragedy",
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "First and Only": {
+  "a": "Dan Abnett",
+  "ser": "Gaunt's Ghosts",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   2,
+   4,
+   1,
+   3,
+   4
+  ],
+  "en": "campaign-war",
+  "ea": [
+   "investigation"
+  ],
+  "mi": [
+   "far-future"
+  ],
+  "sy": [
+   "technological"
+  ],
+  "in": [
+   "military"
+  ],
+  "ca": [
+   "ensemble-crew"
+  ],
+  "mo": [
+   "adventure",
+   "procedural"
+  ],
+  "st": "ongoing",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "The Grim Company": {
+  "a": "Luke Scull",
+  "ser": "The Grim Company",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   2,
+   5,
+   1,
+   2,
+   3
+  ],
+  "en": "quest",
+  "ea": [
+   "institutional-politics"
+  ],
+  "mi": [
+   "secondary-world"
+  ],
+  "sy": [
+   "hard-magic"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "multi-pov-sprawl"
+  ],
+  "mo": [
+   "adventure"
+  ],
+  "st": "complete-series",
+  "tagsrc": "ensemble-2026-09"
+ },
+ "Beneath the Rising": {
+  "a": "Premee Mohamed",
+  "ser": "Beneath the Rising",
+  "vol": 1,
+  "ax": [
+   4,
+   2,
+   3,
+   4,
+   1,
+   4,
+   2
+  ],
+  "en": "quest",
+  "ea": [
+   "survival"
+  ],
+  "mi": [
+   "alt-history",
+   "contemporary-earth"
+  ],
+  "sy": [
+   "cosmic-weird"
+  ],
+  "in": [
+   "none"
+  ],
+  "ca": [
+   "naive-initiate"
+  ],
+  "mo": [
+   "adventure",
+   "horror"
+  ],
+  "st": "complete-series",
   "tagsrc": "ensemble-2026-09"
  }
 }
